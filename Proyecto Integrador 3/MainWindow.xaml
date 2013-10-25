@@ -15,7 +15,7 @@
                 <!--<ResourceDictionary Source="Resources/Estilos.xaml"/>-->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Steel.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Orange.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
             </ResourceDictionary.MergedDictionaries>
@@ -51,9 +51,19 @@
                                 </StackPanel>
                                 <StackPanel>
                                     <StackPanel.Resources>
-                                        <ResourceDictionary Source="Resources/Registros.xaml"></ResourceDictionary>
+                                        <!--<ResourceDictionary Source="Resources/Registros.xaml"></ResourceDictionary>-->
                                     </StackPanel.Resources>
-                                    <TextBox VerticalAlignment="Top"></TextBox>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition></ColumnDefinition>
+                                            <ColumnDefinition></ColumnDefinition>
+                                            <ColumnDefinition></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBox VerticalAlignment="Top" Grid.Column="0"></TextBox>
+                                        <TextBox VerticalAlignment="Top" Grid.Column="1"></TextBox>
+                                        <TextBox VerticalAlignment="Top" Grid.Column="2"></TextBox>
+                                    </Grid>
+                                    
                                     <TextBox VerticalAlignment="Top"></TextBox>
                                     <TextBox VerticalAlignment="Top"></TextBox>
                                 </StackPanel>
@@ -67,6 +77,9 @@
 
 
                         <StackPanel Grid.Column="1" VerticalAlignment="Top">
+                            <Grid>
+                                
+                            </Grid>
                             <StackPanel Orientation="Horizontal">
                                 <Label>Tipo de Usuario:</Label>
                                 <ComboBox x:Name="cmbTipos" SelectedIndex="0" Width="160" HorizontalAlignment="Right" />
