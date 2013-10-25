@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b5e5b9fe738a4735af7a0107259f2ba2" Name="Diagram1" ZoomLevel="83" >
+        <EntityTypeShape EntityType="PI3Model.Usuario" Width="1.5" PointX="0.5" PointY="1.5" />
+        <EntityTypeShape EntityType="PI3Model.Unidad" Width="1.5" PointX="2.625" PointY="0.5" />
+        <EntityTypeShape EntityType="PI3Model.Servicio" Width="1.5" PointX="3.125" PointY="2.875" />
+        <AssociationConnector Association="PI3Model.UnidadServicio" />
+        <AssociationConnector Association="PI3Model.ServicioUsuario" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
