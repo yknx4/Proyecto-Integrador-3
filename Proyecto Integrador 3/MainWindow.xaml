@@ -21,27 +21,62 @@
                 <!--<ResourceDictionary Source="Resources/Estilos.xaml"/>-->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.Textbox.xaml" />
+                <!--<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/VS/Textbox.xaml" />-->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Orange.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
+                <ResourceDictionary>
+                    <Style TargetType="Control" />
+                    <Thickness x:Key="MarginSize">2.5,5</Thickness>
+                    <SolidColorBrush Color="{DynamicResource AccentColor2}" x:Key="ColorAcento"/>
+                    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}">
+                        <Setter Property="Margin" Value="{StaticResource MarginSize}"></Setter>
+                    </Style>
+                    <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MetroComboBox}">
+                        <Setter Property="Margin" Value="{StaticResource MarginSize}"></Setter>
+                    </Style>
+                    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource MetroLabel}">
+                        <Setter Property="Margin" Value="{StaticResource MarginSize}"></Setter>
+                    </Style>
+                    <Style TargetType="{x:Type DatePicker}" BasedOn="{StaticResource MetroDatePicker}">
+                        <Setter Property="Margin" Value="{StaticResource MarginSize}"></Setter>
+                    </Style>
+                    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource MetroTextBlock}" x:Key="UnderLabel">
+                        <Setter Property="Margin" Value="0,-5,0,0"></Setter>
+                        <Setter Property="FontSize" Value="10"></Setter>
+                        <Setter Property="Foreground" Value="{StaticResource ColorAcento}"></Setter>
+                        
+                            
+                        
+
+                    </Style>
+                </ResourceDictionary>
+                
             </ResourceDictionary.MergedDictionaries>
+            
         </ResourceDictionary>
+        
     </Window.Resources>
-    <Grid>
-        <DockPanel>
+    <Grid >
+        <TextBox Visibility="Hidden"></TextBox>
+        <Label Visibility="Hidden"></Label>
+        <ComboBox Visibility="Hidden"></ComboBox>
+        <DatePicker Visibility="Hidden"></DatePicker>
+        <DockPanel >
+            
 
             <StatusBar DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Background="#FFF3F3F3">
                 <Label>Estado 1</Label>
                 <Separator/>
                 <Label>Informacion mas larga.</Label>
             </StatusBar>
-            <TabControl Margin="10,0">
+            <TabControl Margin="10">
                 <TabItem Header="Recarga">
                     <DockPanel></DockPanel>
                 </TabItem>
                 <TabItem Header="Registro">
-                    <Grid>
+                    <Grid MaxHeight="900" MaxWidth="1440">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -63,19 +98,15 @@
                             
                             <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Nombre:</Label>
                             <Grid>
-                                <Grid.Resources>
-                                    <Style TargetType="{x:Type TextBox}">
-                                        <Setter Property="Margin" Value="2,0"></Setter>
-                                    </Style>
-                                </Grid.Resources>
+                                
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <TextBox VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="Nombre(s)"></TextBox>
-                                <TextBox VerticalAlignment="Top" Grid.Column="1" Controls:TextboxHelper.Watermark="Apellido Paterno"></TextBox>
-                                <TextBox VerticalAlignment="Top" Grid.Column="2" Controls:TextboxHelper.Watermark="Apellido Materno"></TextBox>
+                                <TextBox VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="Nombre(s)" ></TextBox>
+                                <TextBox VerticalAlignment="Top" Grid.Column="1" Controls:TextboxHelper.Watermark="Apellido Paterno" ></TextBox>
+                                <TextBox VerticalAlignment="Top" Grid.Column="2" Controls:TextboxHelper.Watermark="Apellido Materno" ></TextBox>
                             </Grid>
 
                         </DockPanel>
@@ -83,11 +114,7 @@
 
                             
                             <Grid>
-                                <Grid.Resources>
-                                    <Style TargetType="{x:Type TextBox}">
-                                        <Setter Property="Margin" Value="2,0"></Setter>
-                                    </Style>
-                                </Grid.Resources>
+                                
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
@@ -95,7 +122,7 @@
                                 </Grid.ColumnDefinitions>
                                 <DockPanel Grid.Column="0">
                                     <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Fecha de Nacimiento:</Label>
-                                    <DatePicker></DatePicker>
+                                    <DatePicker x:Name="dtpFechaNacimiento" FirstDayOfWeek="Monday"></DatePicker>
                                 </DockPanel>
                                 <DockPanel Grid.Column="1" HorizontalAlignment="Center">
                                     <Label VerticalAlignment="Top" >Sexo:</Label>
@@ -111,11 +138,7 @@
 
                             <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Direccion:</Label>
                             <Grid>
-                                <Grid.Resources>
-                                    <Style TargetType="{x:Type TextBox}">
-                                        <Setter Property="Margin" Value="2,0"></Setter>
-                                    </Style>
-                                </Grid.Resources>
+                                
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -124,45 +147,58 @@
                                 </Grid.ColumnDefinitions>
                                 <StackPanel Grid.Column="0">
                                     <TextBox VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Calle"></TextBox>
-                                    <TextBlock HorizontalAlignment="Center">Calle</TextBlock>
+                                    <TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}">
+                                        Calle</TextBlock>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <TextBox VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Calle"></TextBox>
-                                    <TextBlock HorizontalAlignment="Center" Text="     #     "></TextBlock>
+                                    <TextBox VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="#"></TextBox>
+                                    <TextBlock HorizontalAlignment="Center" Text="         #         " Style="{StaticResource UnderLabel}"></TextBlock>
                                 </StackPanel>
                                 <StackPanel Grid.Column="2">
-                                    <TextBox VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="Calle"></TextBox>
-                                    <TextBlock HorizontalAlignment="Center">Colonia</TextBlock>
+                                    <TextBox VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="Colonia"></TextBox>
+                                    <TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}">Colonia</TextBlock>
                                 </StackPanel>
                                 <StackPanel Grid.Column="3">
-                                    <ComboBox VerticalAlignment="Top" Grid.Column="0" SelectedIndex="9">
-                                        <ComboBoxItem>Armería</ComboBoxItem>
-                                        <ComboBoxItem>Colima</ComboBoxItem>
-                                        <ComboBoxItem>Comala</ComboBoxItem>
-                                        <ComboBoxItem>Coquimatlán</ComboBoxItem>
-                                        <ComboBoxItem>Cuahutemoc</ComboBoxItem>
-                                        <ComboBoxItem>Ixtlahuacán</ComboBoxItem>
-                                        <ComboBoxItem>Manzanillo</ComboBoxItem>
-                                        <ComboBoxItem>Minatitlán</ComboBoxItem>
-                                        <ComboBoxItem>Tecomán</ComboBoxItem>
-                                        <ComboBoxItem>Villa de Alvarez</ComboBoxItem>
+                                    <ComboBox x:Name="cmbMunicipio" VerticalAlignment="Top" Grid.Column="0" >
+                                        
 
                                     </ComboBox>
-                                    <TextBlock HorizontalAlignment="Center">Municipio</TextBlock>
+                                    <TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}" >Municipio</TextBlock>
                                 </StackPanel>
                             </Grid>
 
                         </DockPanel>
 
+                        <DockPanel Grid.Row="3">
 
-                        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
+
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+
+                                </Grid.ColumnDefinitions>
+                                <DockPanel Grid.Column="0">
+                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Teléfono:</Label>
+                                    <TextBox Controls:TextboxHelper.Watermark="312-3119999"></TextBox>
+                                </DockPanel>
+                                <DockPanel Grid.Column="1" >
+                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Celular:</Label>
+                                    <TextBox Controls:TextboxHelper.Watermark="3121000000"></TextBox>
+                                </DockPanel>
+                            </Grid>
+
+                        </DockPanel>
+
+                        <DockPanel  Grid.Column="1" Grid.Row="0">
                                 <Label>Tipo de Usuario:</Label>
                                 <ComboBox x:Name="cmbTipos" SelectedIndex="0" Width="160" HorizontalAlignment="Right" />
-                            </StackPanel>
-                        <StackPanel  Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
+                        </DockPanel>
+                        <DockPanel   Grid.Column="1" Grid.Row="1">
                                 <Label>Tipo de Sangre:</Label>
                                 <ComboBox x:Name="cmbSangre" SelectedIndex="0" Width="160" HorizontalAlignment="Right" />
-                            </StackPanel>
+                        </DockPanel>
 
                         
 

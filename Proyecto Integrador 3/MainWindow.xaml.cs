@@ -30,6 +30,9 @@ namespace Proyecto_Integrador_3
             cmbTipos.ItemsSource = (from values in Tipos.Usuarios.Values select values).ToList();
             cmbSangre.ItemsSource = Tipos.Sangre;
             cmbSangre.SelectedItem = Tipos.Sangre.Last();
+            cmbMunicipio.ItemsSource = Tipos.Municipios;
+            cmbMunicipio.SelectedItem = Tipos.Municipios.Last();
+            dtpFechaNacimiento.SelectedDate = DateTime.Today.AddYears(-18);
         }
     }
 }
