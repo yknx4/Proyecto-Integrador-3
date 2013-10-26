@@ -2,9 +2,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Proyecto_Integrador_3" mc:Ignorable="d" x:Class="Proyecto_Integrador_3.MainWindow"
   xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        Title="SmartCards" Height="600" Width="800"
+        Title="SmartCards" Height="600" Width="1020"
         
-        Icon="MainLogo.ico"
+        Icon="MainLogo.ico" SizeChanged="ventanaCambiaTamaño"
                       
         >
     <Controls:MetroWindow.WindowCommands>
@@ -42,6 +42,9 @@
                     <Style TargetType="{x:Type DatePicker}" BasedOn="{StaticResource MetroDatePicker}">
                         <Setter Property="Margin" Value="{StaticResource MarginSize}"></Setter>
                     </Style>
+                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource MetroButton}">
+                        <Setter Property="Margin" Value="{StaticResource MarginSize}"></Setter>
+                    </Style>
                     <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource MetroTextBlock}" x:Key="UnderLabel">
                         <Setter Property="Margin" Value="0,-5,0,0"></Setter>
                         <Setter Property="FontSize" Value="10"></Setter>
@@ -63,11 +66,12 @@
         <Label Visibility="Hidden"></Label>
         <ComboBox Visibility="Hidden"></ComboBox>
         <DatePicker Visibility="Hidden"></DatePicker>
+        <Button Visibility="Hidden"></Button>
         <DockPanel >
             
 
             <StatusBar DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Background="#FFF3F3F3">
-                <Label>Estado 1</Label>
+                <Label x:Name="lblEstadoPrincipal">Estado 1</Label>
                 <Separator/>
                 <Label>Informacion mas larga.</Label>
             </StatusBar>
@@ -76,7 +80,7 @@
                     <DockPanel></DockPanel>
                 </TabItem>
                 <TabItem Header="Registro">
-                    <Grid MaxHeight="900" MaxWidth="1440">
+                    <Grid >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -118,7 +122,8 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
-                                    
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <DockPanel Grid.Column="0">
                                     <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Fecha de Nacimiento:</Label>
@@ -130,6 +135,14 @@
                                     <RadioButton FlowDirection="RightToLeft">Hombre</RadioButton>
                                     <Separator></Separator>
                                     <RadioButton FlowDirection="RightToLeft">Mujer</RadioButton>
+                                </DockPanel>
+                                <DockPanel  Grid.Column="2" >
+                                    <Label HorizontalAlignment="Left">Tipo de Usuario:</Label>
+                                    <ComboBox x:Name="cmbTipos" SelectedIndex="0" />
+                                </DockPanel>
+                                <DockPanel   Grid.Column="3" >
+                                    <Label HorizontalAlignment="Left">Tipo de Sangre:</Label>
+                                    <ComboBox x:Name="cmbSangre" SelectedIndex="0" />
                                 </DockPanel>
                             </Grid>
 
@@ -177,6 +190,7 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
 
                                 </Grid.ColumnDefinitions>
                                 <DockPanel Grid.Column="0">
@@ -187,18 +201,14 @@
                                     <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Celular:</Label>
                                     <TextBox Controls:TextboxHelper.Watermark="3121000000"></TextBox>
                                 </DockPanel>
+                                <DockPanel Grid.Column="2" >
+                                    <Button>Registrar</Button>
+                                </DockPanel>
                             </Grid>
 
                         </DockPanel>
 
-                        <DockPanel  Grid.Column="1" Grid.Row="0">
-                                <Label>Tipo de Usuario:</Label>
-                                <ComboBox x:Name="cmbTipos" SelectedIndex="0" Width="160" HorizontalAlignment="Right" />
-                        </DockPanel>
-                        <DockPanel   Grid.Column="1" Grid.Row="1">
-                                <Label>Tipo de Sangre:</Label>
-                                <ComboBox x:Name="cmbSangre" SelectedIndex="0" Width="160" HorizontalAlignment="Right" />
-                        </DockPanel>
+                        
 
                         
 

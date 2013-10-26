@@ -34,5 +34,10 @@ namespace Proyecto_Integrador_3
             cmbMunicipio.SelectedItem = Tipos.Municipios.Last();
             dtpFechaNacimiento.SelectedDate = DateTime.Today.AddYears(-18);
         }
+
+        private void ventanaCambiaTamaño(object sender, SizeChangedEventArgs e)
+        {
+            lblEstadoPrincipal.Content = e.NewSize.ToString();
+        }
     }
 }
