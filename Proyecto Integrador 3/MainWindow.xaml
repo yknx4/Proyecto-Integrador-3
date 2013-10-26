@@ -29,7 +29,7 @@
                 <ResourceDictionary>
                     <Style TargetType="Control" />
                     <Thickness x:Key="MarginSize">2.5,5</Thickness>
-                    <SolidColorBrush Color="{DynamicResource AccentColor2}" x:Key="ColorAcento"/>
+                    <SolidColorBrush Color="{DynamicResource Gray5}" x:Key="ColorAcento"/>
                     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}">
                         <Setter Property="Margin" Value="{StaticResource MarginSize}"></Setter>
                     </Style>
