@@ -28,6 +28,8 @@ namespace Proyecto_Integrador_3
         {
             InitializeComponent();
             cmbTipos.ItemsSource = (from values in Tipos.Usuarios.Values select values).ToList();
+            cmbSangre.ItemsSource = Tipos.Sangre;
+            cmbSangre.SelectedItem = Tipos.Sangre.Last();
         }
     }
 }

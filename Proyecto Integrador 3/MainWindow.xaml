@@ -7,6 +7,12 @@
         Icon="MainLogo.ico"
                       
         >
+    <Controls:MetroWindow.WindowCommands>
+        <Controls:WindowCommands>
+            <Button Content="Arekar Technologies" IsEnabled="False"/>
+
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.WindowCommands>
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -15,6 +21,7 @@
                 <!--<ResourceDictionary Source="Resources/Estilos.xaml"/>-->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.Textbox.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Orange.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
@@ -39,58 +46,126 @@
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <StackPanel Grid.Column="0">
-                            <DockPanel>
-                                <StackPanel>
-                                    <StackPanel.Resources>
-                                        <!--<ResourceDictionary Source="Resources/Registros.xaml"></ResourceDictionary>-->
-                                    </StackPanel.Resources>
-                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Nombre:</Label>
-                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Direccion:</Label>
-                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Teléfono:</Label>
-                                </StackPanel>
-                                <StackPanel>
-                                    <StackPanel.Resources>
-                                        <!--<ResourceDictionary Source="Resources/Registros.xaml"></ResourceDictionary>-->
-                                    </StackPanel.Resources>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition></ColumnDefinition>
-                                            <ColumnDefinition></ColumnDefinition>
-                                            <ColumnDefinition></ColumnDefinition>
-                                        </Grid.ColumnDefinitions>
-                                        <TextBox VerticalAlignment="Top" Grid.Column="0"></TextBox>
-                                        <TextBox VerticalAlignment="Top" Grid.Column="1"></TextBox>
-                                        <TextBox VerticalAlignment="Top" Grid.Column="2"></TextBox>
-                                    </Grid>
-                                    
-                                    <TextBox VerticalAlignment="Top"></TextBox>
-                                    <TextBox VerticalAlignment="Top"></TextBox>
-                                </StackPanel>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        
+                        
+                        
 
-                            </DockPanel>
+
+
+
+                        <DockPanel Grid.Row="0">
                             
-                            
-
-                        </StackPanel>
-
-
-
-                        <StackPanel Grid.Column="1" VerticalAlignment="Top">
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Nombre:</Label>
                             <Grid>
-                                
+                                <Grid.Resources>
+                                    <Style TargetType="{x:Type TextBox}">
+                                        <Setter Property="Margin" Value="2,0"></Setter>
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBox VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="Nombre(s)"></TextBox>
+                                <TextBox VerticalAlignment="Top" Grid.Column="1" Controls:TextboxHelper.Watermark="Apellido Paterno"></TextBox>
+                                <TextBox VerticalAlignment="Top" Grid.Column="2" Controls:TextboxHelper.Watermark="Apellido Materno"></TextBox>
                             </Grid>
-                            <StackPanel Orientation="Horizontal">
+
+                        </DockPanel>
+                        <DockPanel Grid.Row="1">
+
+                            
+                            <Grid>
+                                <Grid.Resources>
+                                    <Style TargetType="{x:Type TextBox}">
+                                        <Setter Property="Margin" Value="2,0"></Setter>
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    
+                                </Grid.ColumnDefinitions>
+                                <DockPanel Grid.Column="0">
+                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Fecha de Nacimiento:</Label>
+                                    <DatePicker></DatePicker>
+                                </DockPanel>
+                                <DockPanel Grid.Column="1" HorizontalAlignment="Center">
+                                    <Label VerticalAlignment="Top" >Sexo:</Label>
+                                    <Separator></Separator>
+                                    <RadioButton FlowDirection="RightToLeft">Hombre</RadioButton>
+                                    <Separator></Separator>
+                                    <RadioButton FlowDirection="RightToLeft">Mujer</RadioButton>
+                                </DockPanel>
+                            </Grid>
+
+                        </DockPanel>
+                        <DockPanel Grid.Row="2">
+
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Direccion:</Label>
+                            <Grid>
+                                <Grid.Resources>
+                                    <Style TargetType="{x:Type TextBox}">
+                                        <Setter Property="Margin" Value="2,0"></Setter>
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBox VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Calle"></TextBox>
+                                    <TextBlock HorizontalAlignment="Center">Calle</TextBlock>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBox VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Calle"></TextBox>
+                                    <TextBlock HorizontalAlignment="Center" Text="     #     "></TextBlock>
+                                </StackPanel>
+                                <StackPanel Grid.Column="2">
+                                    <TextBox VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="Calle"></TextBox>
+                                    <TextBlock HorizontalAlignment="Center">Colonia</TextBlock>
+                                </StackPanel>
+                                <StackPanel Grid.Column="3">
+                                    <ComboBox VerticalAlignment="Top" Grid.Column="0" SelectedIndex="9">
+                                        <ComboBoxItem>Armería</ComboBoxItem>
+                                        <ComboBoxItem>Colima</ComboBoxItem>
+                                        <ComboBoxItem>Comala</ComboBoxItem>
+                                        <ComboBoxItem>Coquimatlán</ComboBoxItem>
+                                        <ComboBoxItem>Cuahutemoc</ComboBoxItem>
+                                        <ComboBoxItem>Ixtlahuacán</ComboBoxItem>
+                                        <ComboBoxItem>Manzanillo</ComboBoxItem>
+                                        <ComboBoxItem>Minatitlán</ComboBoxItem>
+                                        <ComboBoxItem>Tecomán</ComboBoxItem>
+                                        <ComboBoxItem>Villa de Alvarez</ComboBoxItem>
+
+                                    </ComboBox>
+                                    <TextBlock HorizontalAlignment="Center">Municipio</TextBlock>
+                                </StackPanel>
+                            </Grid>
+
+                        </DockPanel>
+
+
+                        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
                                 <Label>Tipo de Usuario:</Label>
                                 <ComboBox x:Name="cmbTipos" SelectedIndex="0" Width="160" HorizontalAlignment="Right" />
                             </StackPanel>
-                            <StackPanel  Orientation="Horizontal">
+                        <StackPanel  Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
                                 <Label>Tipo de Sangre:</Label>
                                 <ComboBox x:Name="cmbSangre" SelectedIndex="0" Width="160" HorizontalAlignment="Right" />
                             </StackPanel>
 
-                        </StackPanel>
                         
+
 
 
 
@@ -104,4 +179,4 @@
             </TabControl>
         </DockPanel>
     </Grid>
-    </Controls:MetroWindow>
+</Controls:MetroWindow>
