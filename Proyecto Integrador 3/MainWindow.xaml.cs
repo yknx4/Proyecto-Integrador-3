@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using ResourcePool = Proyecto_Integrador_3.Properties.Resources;
 using System.Drawing;
 using MahApps.Metro.Controls;
+using Proyecto_Integrador_3.TiposDato;
 
 
 namespace Proyecto_Integrador_3
@@ -50,11 +51,11 @@ namespace Proyecto_Integrador_3
             dgtcSaldo.Binding = new Binding("Saldo");
             dgtcSexo.Binding = new Binding("Sexo");
             dgtcTipoUsuario.Binding = new Binding("TipoUsuario");
-            dtgrdBusqueda.Items.Add(new Usuario() {Nombre="Prueba",TarjetaAsignada=12345678,Saldo=519,Sexo=true });
-            dtgrdBusqueda.Items.Add(new Usuario() { Nombre = "Prueba1", TarjetaAsignada = 12345678, Saldo = 519, Sexo = true });
-            dtgrdBusqueda.Items.Add(new Usuario() { Nombre = "Prueba2", TarjetaAsignada = 12345678, Saldo = 519, Sexo = true });
-            dtgrdBusqueda.Items.Add(new Usuario() { Nombre = "Prueba3", TarjetaAsignada = 12345678, Saldo = 519, Sexo = true });
-            dtgrdBusqueda.Items.Add(new Usuario() { Nombre = "Prueba4", TarjetaAsignada = 12345678, Saldo = 519, Sexo = true });
+            dtgrdBusqueda.Items.Add(new Usuario() {Nombre="Prueba",TarjetaAsignada=12345678,Saldo=519,Sexo="Hombre" });
+            dtgrdBusqueda.Items.Add(new Usuario() { Nombre = "Prueba1", TarjetaAsignada = 12345678, Saldo = 519, Sexo = "Hombre" });
+            dtgrdBusqueda.Items.Add(new Usuario() { Nombre = "Prueba2", TarjetaAsignada = 12345678, Saldo = 519, Sexo = "Hombre" });
+            dtgrdBusqueda.Items.Add(new Usuario() { Nombre = "Prueba3", TarjetaAsignada = 12345678, Saldo = 519, Sexo = "Hombre" });
+            dtgrdBusqueda.Items.Add(new Usuario() { Nombre = "Prueba4", TarjetaAsignada = 12345678, Saldo = 519, Sexo = "Hombre" });
             dtpFechaReporteInicial.SelectedDate = DateTime.Today.AddDays(-1);
             
            
