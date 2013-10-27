@@ -23,7 +23,7 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <!--<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/VS/Textbox.xaml" />-->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Orange.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Green.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
                 <ResourceDictionary>
@@ -31,6 +31,9 @@
                     <Thickness x:Key="MarginSize">2.5,5</Thickness>
                     <SolidColorBrush Color="{DynamicResource Gray5}" x:Key="ColorAcento"/>
                     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}">
+                        <Setter Property="Margin" Value="{StaticResource MarginSize}"></Setter>
+                    </Style>
+                    <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource MetroCheckBox}">
                         <Setter Property="Margin" Value="{StaticResource MarginSize}"></Setter>
                     </Style>
                     <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MetroComboBox}">
@@ -67,6 +70,7 @@
         <ComboBox Visibility="Hidden"></ComboBox>
         <DatePicker Visibility="Hidden"></DatePicker>
         <Button Visibility="Hidden"></Button>
+        <CheckBox Visibility="Hidden"></CheckBox>
         <DockPanel >
             
 
@@ -77,7 +81,110 @@
             </StatusBar>
             <TabControl Margin="10">
                 <TabItem Header="Recarga">
-                    <DockPanel></DockPanel>
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+
+
+
+
+
+
+                        <DockPanel Grid.Row="0">
+
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Número de Tarjeta:</Label>
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBox VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="01234567891011121314" ></TextBox>
+                                <Label Grid.Column="1">Cantidad:</Label>
+                                <TextBox VerticalAlignment="Top" Grid.Column="2" Controls:TextboxHelper.Watermark="0.00$" ></TextBox>
+                            </Grid>
+
+                        </DockPanel>
+                        <DockPanel Grid.Row="1">
+
+
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    
+                                </Grid.ColumnDefinitions>
+                                <DockPanel Grid.Column="0">
+                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Nombre:</Label>
+                                    <StackPanel>
+                                    <TextBox VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Nombre(s)" TextInput="entraTexto" KeyDown="PresionarTecla_BusqNom"></TextBox>
+                                    <TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}">
+                                        Busqueda</TextBlock>
+                                    </StackPanel>
+                                </DockPanel>
+                                <Button Grid.Column="1">Recarga</Button>
+                            </Grid>
+
+                        </DockPanel>
+                        <DockPanel x:Name="dcpnlBusqueda" Grid.Row="2" Visibility="Hidden">
+
+                            <Grid>
+
+                                <DataGrid x:Name="dtgrdBusqueda">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn x:Name="dgtcTipoUsuario" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tipo de Usuario"/>
+                                        <DataGridTextColumn x:Name="dgtcNombre" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
+                                        <DataGridTextColumn x:Name="dgtcSexo" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Sexo"/>
+                                        <DataGridTextColumn x:Name="dgtcNumeroTarjeta" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Número de Tarjeta"/>
+                                        <DataGridTextColumn x:Name="dgtcSaldo" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Saldo"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </Grid>
+
+                        </DockPanel>
+
+                        <DockPanel Grid.Row="3" Visibility="Hidden">
+
+
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+
+                                </Grid.ColumnDefinitions>
+                                <DockPanel Grid.Column="0">
+                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Teléfono:</Label>
+                                    <TextBox Controls:TextboxHelper.Watermark="312-3119999"></TextBox>
+                                </DockPanel>
+                                <DockPanel Grid.Column="1" >
+                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Celular:</Label>
+                                    <TextBox Controls:TextboxHelper.Watermark="3121000000"></TextBox>
+                                </DockPanel>
+                                <DockPanel Grid.Column="2" >
+                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Alergias:</Label>
+                                    <TextBox Controls:TextboxHelper.Watermark="Alergias"></TextBox>
+                                </DockPanel>
+                            </Grid>
+
+                        </DockPanel>
+                        
+                    </Grid>
                 </TabItem>
                 <TabItem Header="Registro">
                     <Grid >
@@ -86,6 +193,9 @@
                             <ColumnDefinition Width="auto"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
@@ -108,9 +218,9 @@
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <TextBox VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="Nombre(s)" ></TextBox>
-                                <TextBox VerticalAlignment="Top" Grid.Column="1" Controls:TextboxHelper.Watermark="Apellido Paterno" ></TextBox>
-                                <TextBox VerticalAlignment="Top" Grid.Column="2" Controls:TextboxHelper.Watermark="Apellido Materno" ></TextBox>
+                                <TextBox x:Name="txtNombre" VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="Nombre(s)" ></TextBox>
+                                <TextBox x:Name="txtApellidoPaterno" VerticalAlignment="Top" Grid.Column="1" Controls:TextboxHelper.Watermark="Apellido Paterno" ></TextBox>
+                                <TextBox x:Name="txtApellidoMaterno" VerticalAlignment="Top" Grid.Column="2" Controls:TextboxHelper.Watermark="Apellido Materno" ></TextBox>
                             </Grid>
 
                         </DockPanel>
@@ -132,9 +242,9 @@
                                 <DockPanel Grid.Column="1" HorizontalAlignment="Center">
                                     <Label VerticalAlignment="Top" >Sexo:</Label>
                                     <Separator></Separator>
-                                    <RadioButton FlowDirection="RightToLeft">Hombre</RadioButton>
+                                    <RadioButton x:Name="rdbHombre" FlowDirection="RightToLeft">Hombre</RadioButton>
                                     <Separator></Separator>
-                                    <RadioButton FlowDirection="RightToLeft">Mujer</RadioButton>
+                                    <RadioButton x:Name="rdbMujer" FlowDirection="RightToLeft" IsChecked="True">Mujer</RadioButton>
                                 </DockPanel>
                                 <DockPanel  Grid.Column="2" >
                                     <Label HorizontalAlignment="Left">Tipo de Usuario:</Label>
@@ -159,23 +269,20 @@
                                     <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <StackPanel Grid.Column="0">
-                                    <TextBox VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Calle"></TextBox>
+                                    <TextBox x:Name="txtCalle" VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Calle"></TextBox>
                                     <TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}">
                                         Calle</TextBlock>
                                 </StackPanel>
                                 <StackPanel Grid.Column="1">
-                                    <TextBox VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="#"></TextBox>
+                                    <TextBox x:Name="txtNumero" VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="#"></TextBox>
                                     <TextBlock HorizontalAlignment="Center" Text="         #         " Style="{StaticResource UnderLabel}"></TextBlock>
                                 </StackPanel>
                                 <StackPanel Grid.Column="2">
-                                    <TextBox VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="Colonia"></TextBox>
+                                    <TextBox x:Name="txtColonia" VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="Colonia"></TextBox>
                                     <TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}">Colonia</TextBlock>
                                 </StackPanel>
                                 <StackPanel Grid.Column="3">
-                                    <ComboBox x:Name="cmbMunicipio" VerticalAlignment="Top" Grid.Column="0" >
-                                        
-
-                                    </ComboBox>
+                                    <ComboBox x:Name="cmbMunicipio"></ComboBox>
                                     <TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}" >Municipio</TextBlock>
                                 </StackPanel>
                             </Grid>
@@ -190,27 +297,51 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
-                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
 
                                 </Grid.ColumnDefinitions>
                                 <DockPanel Grid.Column="0">
                                     <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Teléfono:</Label>
-                                    <TextBox Controls:TextboxHelper.Watermark="312-3119999"></TextBox>
+                                    <TextBox x:Name="txtTelefono" Controls:TextboxHelper.Watermark="312-3119999"></TextBox>
                                 </DockPanel>
                                 <DockPanel Grid.Column="1" >
                                     <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Celular:</Label>
-                                    <TextBox Controls:TextboxHelper.Watermark="3121000000"></TextBox>
+                                    <TextBox x:Name="txtCelular" Controls:TextboxHelper.Watermark="3121000000"></TextBox>
                                 </DockPanel>
                                 <DockPanel Grid.Column="2" >
-                                    <Button>Registrar</Button>
+                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Alergias:</Label>
+                                    <TextBox x:Name="txtAlergias" Controls:TextboxHelper.Watermark="Alergias"></TextBox>
                                 </DockPanel>
                             </Grid>
 
                         </DockPanel>
+                        <Label Grid.Row="4" FontWeight="Bold" Foreground="{StaticResource AccentColorBrush}" >Persona de contacto en caso de accidente:</Label>
+                        <DockPanel Grid.Row="5">
 
-                        
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Nombre:</Label>
+                            <Grid>
 
-                        
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="txtNombreDeContacto" VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="Nombre(s)" ></TextBox>
+                                <TextBox x:Name="txtApellidoPaternoDeContacto" VerticalAlignment="Top" Grid.Column="1" Controls:TextboxHelper.Watermark="Apellido Paterno" ></TextBox>
+                                <TextBox x:Name="txtApellidoMaternoDeContacto" VerticalAlignment="Top" Grid.Column="2" Controls:TextboxHelper.Watermark="Apellido Materno" ></TextBox>
+                                <DockPanel Grid.Column="3" >
+                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Teléfono:</Label>
+                                    <TextBox x:Name="txtTelefonoDeContacto" Controls:TextboxHelper.Watermark="31231000000"></TextBox>
+                                </DockPanel>
+                            </Grid>
+
+                        </DockPanel>
+                        <DockPanel Grid.Row="6" HorizontalAlignment="Right">
+                            <Button x:Name="btnRegistrar" Click="onClickRegistrar">Registrar</Button>
+                        </DockPanel>
+
+
 
 
 
@@ -220,7 +351,95 @@
                     </Grid>
                 </TabItem>
                 <TabItem Header="Reportes">
-                    <DockPanel></DockPanel>
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+
+
+
+
+
+
+                        <DockPanel Grid.Row="0">
+                            <DockPanel>
+                                <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Tipo:</Label>
+                                <!--o	Estadísticos de los cobros realizados en cada unidad de transporte por tipo de usuario.
+o	Cobro total recabado en la unidad de trasporte.
+o	Frecuencia de uso del transporte por usuario específico.
+o	Frecuencia de uso del transporte por unidad de transporte.
+o	Frecuencia de uso del transporte por tipo de usuario.-->
+
+                                <ComboBox MinWidth="400" SelectedIndex="0">
+                                    <ComboBoxItem>Cobros realizados en cada unidad de transporte por tipo de usuario.</ComboBoxItem>
+                                    <ComboBoxItem>Cobro total recabado en la unidad de trasporte.</ComboBoxItem>
+                                    <ComboBoxItem>Frecuencia de uso del transporte por usuario específico.</ComboBoxItem>
+                                    <ComboBoxItem>Frecuencia de uso del transporte por unidad de transporte.</ComboBoxItem>
+                                    <ComboBoxItem>Frecuencia de uso del transporte por tipo de usuario.</ComboBoxItem>
+                                </ComboBox>
+                            </DockPanel>
+                            <DockPanel>
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Fecha:</Label>
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <DatePicker x:Name="dtpFechaReporteInicial" Grid.Column="0"></DatePicker>
+                                <Label Grid.Column="1">a</Label>
+                                <DatePicker x:Name="dtpFechaReporteFinal" Grid.Column="2" IsEnabled="False"></DatePicker>
+                                <CheckBox x:Name="chkRango" Grid.Column="3" Click="clickCheckboxRangoFecha"></CheckBox>
+                            </Grid>
+                            </DockPanel>
+                        </DockPanel>
+                        <DockPanel Grid.Row="1" Visibility="Hidden">
+
+
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+
+                                </Grid.ColumnDefinitions>
+                                <DockPanel Grid.Column="0">
+                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Nombre:</Label>
+                                    <StackPanel>
+                                        <TextBox VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Nombre(s)" TextInput="entraTexto" KeyDown="PresionarTecla_BusqNom"></TextBox>
+                                        <TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}">
+                                        Busqueda</TextBlock>
+                                    </StackPanel>
+                                </DockPanel>
+                                <Button Grid.Column="1">Recarga</Button>
+                            </Grid>
+
+                        </DockPanel>
+                        <DockPanel  Grid.Row="2" Visibility="Hidden">
+
+                            <Grid>
+
+                                
+                            </Grid>
+
+                        </DockPanel>
+
+                        
+
+                    </Grid>
                 </TabItem>
             </TabControl>
         </DockPanel>

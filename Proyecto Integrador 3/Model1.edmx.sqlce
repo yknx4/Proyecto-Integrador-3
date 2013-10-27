@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server Compact Edition
 -- --------------------------------------------------
--- Date Created: 10/24/2013 22:04:32
--- Generated from EDMX file: c:\users\yknx4\documents\visual studio 2012\Projects\Proyecto Integrador 3\Proyecto Integrador 3\Model1.edmx
+-- Date Created: 10/27/2013 01:45:05
+-- Generated from EDMX file: D:\Source Codes\Proyecto-Integrador-3\Proyecto Integrador 3\Model1.edmx
 -- --------------------------------------------------
 
 
@@ -16,6 +16,8 @@
 GO
     ALTER TABLE [Servicios] DROP CONSTRAINT [FK_ServicioUsuario];
 GO
+    ALTER TABLE [Tarjetas] DROP CONSTRAINT [FK_UsuarioTarjeta];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -27,6 +29,8 @@ GO
     DROP TABLE [Unidads];
 GO
     DROP TABLE [Servicios];
+GO
+    DROP TABLE [Tarjetas];
 GO
 
 -- --------------------------------------------------
@@ -44,7 +48,9 @@ CREATE TABLE [Usuarios] (
     [Contacto] nvarchar(4000)  NOT NULL,
     [TelefonoContacto] nvarchar(4000)  NOT NULL,
     [TipoUsuario] smallint  NOT NULL,
-    [Saldo] int  NOT NULL
+    [Saldo] int  NOT NULL,
+    [TarjetaAsignada] bigint  NOT NULL,
+    [Sexo] bit  NOT NULL
 );
 GO
 
@@ -64,6 +70,13 @@ CREATE TABLE [Servicios] (
     [Fecha] datetime  NOT NULL,
     [Unidad1_Uid] uniqueidentifier  NOT NULL,
     [Usuarios_Uid] uniqueidentifier  NOT NULL
+);
+GO
+
+-- Creating table 'Tarjetas'
+CREATE TABLE [Tarjetas] (
+    [Uid] bigint  NOT NULL,
+    [Usuario_Uid] uniqueidentifier  NOT NULL
 );
 GO
 
@@ -87,6 +100,12 @@ GO
 ALTER TABLE [Servicios]
 ADD CONSTRAINT [PK_Servicios]
     PRIMARY KEY ([Id] );
+GO
+
+-- Creating primary key on [Uid] in table 'Tarjetas'
+ALTER TABLE [Tarjetas]
+ADD CONSTRAINT [PK_Tarjetas]
+    PRIMARY KEY ([Uid] );
 GO
 
 -- --------------------------------------------------
@@ -119,6 +138,20 @@ ADD CONSTRAINT [FK_ServicioUsuario]
 CREATE INDEX [IX_FK_ServicioUsuario]
 ON [Servicios]
     ([Usuarios_Uid]);
+GO
+
+-- Creating foreign key on [Usuario_Uid] in table 'Tarjetas'
+ALTER TABLE [Tarjetas]
+ADD CONSTRAINT [FK_UsuarioTarjeta]
+    FOREIGN KEY ([Usuario_Uid])
+    REFERENCES [Usuarios]
+        ([Uid])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UsuarioTarjeta'
+CREATE INDEX [IX_FK_UsuarioTarjeta]
+ON [Tarjetas]
+    ([Usuario_Uid]);
 GO
 
 -- --------------------------------------------------

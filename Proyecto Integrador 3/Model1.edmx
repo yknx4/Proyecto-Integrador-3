@@ -9,6 +9,7 @@
     <EntitySet Name="Usuarios" EntityType="PI3Model.Store.Usuarios" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Unidads" EntityType="PI3Model.Store.Unidads" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Servicios" EntityType="PI3Model.Store.Servicios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tarjetas" EntityType="PI3Model.Store.Tarjetas" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="UnidadServicio" Association="PI3Model.Store.UnidadServicio">
       <End Role="Unidad" EntitySet="Unidads" />
       <End Role="Servicio" EntitySet="Servicios" />
@@ -16,6 +17,10 @@
     <AssociationSet Name="ServicioUsuario" Association="PI3Model.Store.ServicioUsuario">
       <End Role="Servicio" EntitySet="Servicios" />
       <End Role="Usuario" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="UsuarioTarjeta" Association="PI3Model.Store.UsuarioTarjeta">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Tarjeta" EntitySet="Tarjetas" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Usuarios">
@@ -32,6 +37,8 @@
     <Property Name="TelefonoContacto" Type="nvarchar" Nullable="false" />
     <Property Name="TipoUsuario" Type="smallint" Nullable="false" DefaultValue="1" />
     <Property Name="Saldo" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="TarjetaAsignada" Type="bigint" Nullable="false" />
+    <Property Name="Sexo" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Unidads">
     <Key>
@@ -51,6 +58,13 @@
     <Property Name="Fecha" Type="datetime" Nullable="false" />
     <Property Name="Unidad1_Uid" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Usuarios_Uid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tarjetas">
+    <Key>
+      <PropertyRef Name="Uid" />
+    </Key>
+    <Property Name="Uid" Type="bigint" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Usuario_Uid" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <Association Name="UnidadServicio">
     <End Role="Unidad" Type="PI3Model.Store.Unidads" Multiplicity="1" />
@@ -76,6 +90,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="UsuarioTarjeta">
+    <End Role="Usuario" Type="PI3Model.Store.Usuarios" Multiplicity="1" />
+    <End Role="Tarjeta" Type="PI3Model.Store.Tarjetas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Uid" />
+      </Principal>
+      <Dependent Role="Tarjeta">
+        <PropertyRef Name="Usuario_Uid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -91,6 +117,11 @@
           <AssociationSet Name="ServicioUsuario" Association="PI3Model.ServicioUsuario">
             <End Role="Servicio" EntitySet="Servicios" />
             <End Role="Usuario" EntitySet="Usuarios" />
+          </AssociationSet>
+          <EntitySet Name="Tarjetas" EntityType="PI3Model.Tarjeta" />
+          <AssociationSet Name="UsuarioTarjeta" Association="PI3Model.UsuarioTarjeta">
+            <End Role="Usuario" EntitySet="Usuarios" />
+            <End Role="Tarjeta" EntitySet="Tarjetas" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Usuario">
@@ -112,6 +143,9 @@
           <Property Type="Int16" Name="TipoUsuario" Nullable="false" DefaultValue="1" />
           <NavigationProperty Name="Servicio" Relationship="PI3Model.ServicioUsuario" FromRole="Usuario" ToRole="Servicio" />
           <Property Type="Int32" Name="Saldo" Nullable="false" DefaultValue="0" />
+          <Property Type="Int64" Name="TarjetaAsignada" Nullable="false" />
+          <NavigationProperty Name="Tarjetas" Relationship="PI3Model.UsuarioTarjeta" FromRole="Usuario" ToRole="Tarjeta" />
+          <Property Type="Boolean" Name="Sexo" Nullable="false" />
         </EntityType>
         <EntityType Name="Unidad">
           <Key>
@@ -141,6 +175,17 @@
           <End Type="PI3Model.Servicio" Role="Servicio" Multiplicity="*" />
           <End Type="PI3Model.Usuario" Role="Usuario" Multiplicity="1" />
         </Association>
+        <EntityType Name="Tarjeta">
+          <Key>
+            <PropertyRef Name="Uid" />
+          </Key>
+          <Property Type="Int64" Name="Uid" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="Usuario" Relationship="PI3Model.UsuarioTarjeta" FromRole="Tarjeta" ToRole="Usuario" />
+        </EntityType>
+        <Association Name="UsuarioTarjeta">
+          <End Type="PI3Model.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="PI3Model.Tarjeta" Role="Tarjeta" Multiplicity="0..1" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -160,6 +205,8 @@
           <ScalarProperty Name="TelefonoContacto" ColumnName="TelefonoContacto" />
           <ScalarProperty Name="TipoUsuario" ColumnName="TipoUsuario" />
           <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+          <ScalarProperty Name="TarjetaAsignada" ColumnName="TarjetaAsignada" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -182,6 +229,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Tarjetas">
+      <EntityTypeMapping TypeName="IsTypeOf(PI3Model.Tarjeta)">
+        <MappingFragment StoreEntitySet="Tarjetas">
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <AssociationSetMapping Name="UnidadServicio" TypeName="PI3Model.UnidadServicio" StoreEntitySet="Servicios">
       <EndProperty Name="Unidad">
         <ScalarProperty Name="Uid" ColumnName="Unidad1_Uid" />
@@ -196,6 +250,14 @@
       </EndProperty>
       <EndProperty Name="Servicio">
         <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsuarioTarjeta" TypeName="PI3Model.UsuarioTarjeta" StoreEntitySet="Tarjetas">
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="Uid" ColumnName="Usuario_Uid" />
+      </EndProperty>
+      <EndProperty Name="Tarjeta">
+        <ScalarProperty Name="Uid" ColumnName="Uid" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

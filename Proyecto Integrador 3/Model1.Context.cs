@@ -28,5 +28,6 @@ namespace Proyecto_Integrador_3
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Unidad> Unidads { get; set; }
         public DbSet<Servicio> Servicios { get; set; }
+        public DbSet<Tarjeta> Tarjetas { get; set; }
     }
 }

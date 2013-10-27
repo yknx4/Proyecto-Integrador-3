@@ -10,6 +10,8 @@
         <EntityTypeShape EntityType="PI3Model.Servicio" Width="1.5" PointX="3.125" PointY="2.875" />
         <AssociationConnector Association="PI3Model.UnidadServicio" />
         <AssociationConnector Association="PI3Model.ServicioUsuario" />
+        <EntityTypeShape EntityType="PI3Model.Tarjeta" Width="1.5" PointX="6.75" PointY="1.75" />
+        <AssociationConnector Association="PI3Model.UsuarioTarjeta" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

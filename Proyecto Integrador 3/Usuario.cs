@@ -31,7 +31,10 @@ namespace Proyecto_Integrador_3
         public string TelefonoContacto { get; set; }
         public short TipoUsuario { get; set; }
         public int Saldo { get; set; }
+        public long TarjetaAsignada { get; set; }
+        public bool Sexo { get; set; }
     
         public virtual ICollection<Servicio> Servicio { get; set; }
+        public virtual Tarjeta Tarjetas { get; set; }
     }
 }
