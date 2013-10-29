@@ -94,6 +94,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Generadores\CardGenerator.cs" />
     <Compile Include="ProyectoIntegradorDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -209,7 +210,6 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Generadores\" />
     <Folder Include="Manejadores\" />
     <Folder Include="Populadores\" />
   </ItemGroup>

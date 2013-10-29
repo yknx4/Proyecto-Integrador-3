@@ -8,7 +8,8 @@ namespace Proyecto_Integrador_3.TiposDato
 {
     public partial class Tarjeta
     {
-        public long Uid { get; set; }
+        private long _uid;
+        public long Uid { get { return _uid; } set { _uid = value; } }
 
         public virtual Usuario Usuario { get; set; }
     }

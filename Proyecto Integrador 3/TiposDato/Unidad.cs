@@ -13,8 +13,10 @@ namespace Proyecto_Integrador_3.TiposDato
             this.Servicios = new HashSet<Servicio>();
         }
 
-        public System.Guid Uid { get; set; }
-        public string NoUnidad { get; set; }
+        private Guid _uid;
+        public System.Guid Uid { get { return _uid; } set { _uid = value; } }
+        private string _nounidad;
+        public string NoUnidad { get { return _nounidad; } set { _nounidad = value; } }
 
         public virtual ICollection<Servicio> Servicios { get; set; }
     }

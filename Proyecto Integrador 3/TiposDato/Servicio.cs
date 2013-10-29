@@ -9,15 +9,15 @@ namespace Proyecto_Integrador_3.TiposDato
     public partial class Servicio
     {
         private int _id;
-        public int Id { get; set; }
+        public int Id { get { return _id; } set { _id = value; } }
         private short _tipoUsuario;
-        public short TipoUsuario { get; set; }
+        public short TipoUsuario { get { return _tipoUsuario; } set { _tipoUsuario = value; } }
         private System.Guid _unidad;
-        public System.Guid Unidad { get; set; }
+        public System.Guid Unidad { get { return _unidad; } set { _unidad = value; } }
         private System.Guid _usuario;
-        public System.Guid Usuario { get; set; }
+        public System.Guid Usuario { get { return _usuario; } set { _usuario = value; } }
         private DateTime _fecha;
-        public System.DateTime Fecha { get; set; }
+        public System.DateTime Fecha { get { return _fecha; } set { _fecha = value; } }
 
         public virtual Unidad Unidad1 { get; set; }
         public virtual Usuario Usuarios { get; set; }

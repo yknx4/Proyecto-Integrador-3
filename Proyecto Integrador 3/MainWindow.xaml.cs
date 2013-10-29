@@ -73,8 +73,7 @@ namespace Proyecto_Integrador_3
 
         private void PresionarTecla_BusqNom(object sender, KeyEventArgs e)
         {
-            if ((e.Source as TextBox).Text != "") { dcpnlBusqueda.Visibility = Visibility.Visible; }
-            else dcpnlBusqueda.Visibility = Visibility.Hidden;
+           
         }
 
         private void clickCheckboxRangoFecha(object sender, RoutedEventArgs e)
@@ -91,6 +90,15 @@ namespace Proyecto_Integrador_3
         private void onClickRegistrar(object sender, RoutedEventArgs e)
         {
 
+            txtNumeroTarjeta.Text = Generadores.CardGenerator.Next().ToString();
+        }
+
+        private void cambiaTextoBusqueda(object sender, TextChangedEventArgs e)
+        {
+            if ((e.Source as TextBox).Text != "") { dcpnlBusqueda.Visibility = Visibility.Visible; txtNumeroTarjetaRecarga.IsReadOnly = true; }
+            else { dcpnlBusqueda.Visibility = Visibility.Hidden;
+            txtNumeroTarjetaRecarga.IsReadOnly = false;
+            }
         }
     }
 }

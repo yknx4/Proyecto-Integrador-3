@@ -112,7 +112,7 @@
                                     <ColumnDefinition Width="auto"></ColumnDefinition>
                                     <ColumnDefinition Width="100"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <TextBox VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="01234567891011121314" ></TextBox>
+                                <TextBox x:Name="txtNumeroTarjetaRecarga" VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="01234567891011121314" ></TextBox>
                                 <Label Grid.Column="1">Cantidad:</Label>
                                 <TextBox VerticalAlignment="Top" Grid.Column="2" Controls:TextboxHelper.Watermark="0.00$" ></TextBox>
                             </Grid>
@@ -131,12 +131,12 @@
                                 <DockPanel Grid.Column="0">
                                     <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Nombre:</Label>
                                     <StackPanel>
-                                    <TextBox VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Nombre(s)" TextInput="entraTexto" KeyDown="PresionarTecla_BusqNom"></TextBox>
+                                    <TextBox VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Nombre(s)" TextInput="entraTexto" KeyDown="PresionarTecla_BusqNom" TextChanged="cambiaTextoBusqueda"></TextBox>
                                     <TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}">
                                         Busqueda</TextBlock>
                                     </StackPanel>
                                 </DockPanel>
-                                <Button Grid.Column="1">Recarga</Button>
+                                <Button Grid.Column="1" Margin="0,5,0,20">Recarga</Button>
                             </Grid>
 
                         </DockPanel>
@@ -337,8 +337,13 @@
                             </Grid>
 
                         </DockPanel>
-                        <DockPanel Grid.Row="6" HorizontalAlignment="Right">
-                            <Button x:Name="btnRegistrar" Click="onClickRegistrar">Registrar</Button>
+                        <DockPanel Grid.Row="6" Height="38">
+                            <DockPanel>
+                                <Label>Número de Tarjeta: </Label>
+                                <TextBox x:Name="txtNumeroTarjeta" IsReadOnly="True" Controls:TextboxHelper.Watermark="000000000000" Foreground="{StaticResource AccentColorBrush2}"/>    
+                            </DockPanel>
+                            
+                            <Button x:Name="btnRegistrar" Click="onClickRegistrar" DockPanel.Dock="Right" HorizontalAlignment="Right">Registrar</Button>
                         </DockPanel>
 
 
