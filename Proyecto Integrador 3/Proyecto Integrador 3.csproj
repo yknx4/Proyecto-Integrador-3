@@ -67,6 +67,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
@@ -95,9 +96,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Constantes.cs" />
+    <Compile Include="DBManagers.cs" />
+    <Compile Include="dsUsuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsUsuarios.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Generadores\CardGenerator.cs" />
     <Compile Include="Manejadores\DBManager.cs" />
     <Compile Include="Manejadores\UsuarioDBManager.cs" />
+    <Compile Include="Populadores\UsuariosPopulator.cs" />
     <Compile Include="ProyectoIntegradorDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +165,17 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="dsUsuarios.xsc">
+      <DependentUpon>dsUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="dsUsuarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUsuarios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsUsuarios.xss">
+      <DependentUpon>dsUsuarios.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -218,9 +237,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Populadores\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="ProyectoIntegrador.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

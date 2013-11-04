@@ -32,12 +32,19 @@ namespace Proyecto_Integrador_3.TiposDato
         public Domicilio mDomicilio { get; set; }
         public string Telefono { get; set; }
         public string Celular { get; set; }
-        public short TipoSangre { get; set; }
+        public int TipoSangre { get; set; }
         public string Alergias { get; set; }
         public Contacto mContacto { get; set; }
         public short TipoUsuario { get; set; }
-        public int Saldo { get; set; }
-        public long TarjetaAsignada { get; set; }
+        public string sTipoUsuario
+        {
+            get
+            {
+                return Tipos.Usuarios[TipoUsuario];
+            }
+        }
+        public decimal Saldo { get; set; }
+        public string TarjetaAsignada { get; set; }
         public bool _sexo;
         public string Sexo { get { return _sexo ? "Hombre" : "Mujer"; } set { if (value.ToLower() == "hombre" || value == "True") { _sexo = true; } else { _sexo = false; } } }
 
@@ -45,7 +52,7 @@ namespace Proyecto_Integrador_3.TiposDato
         public virtual Tarjeta Tarjetas { get; set; }
 
         public bool isAdded() {
-            return !(Uid == null);
+            return !(Uid == Guid.Empty);
         }
     }
 

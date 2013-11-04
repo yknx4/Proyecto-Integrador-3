@@ -128,7 +128,7 @@
                                     <ColumnDefinition Width="auto"></ColumnDefinition>
                                     
                                 </Grid.ColumnDefinitions>
-                                <DockPanel Grid.Column="0">
+                                <DockPanel Grid.Column="0" >
                                     <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Nombre:</Label>
                                     <StackPanel>
                                     <TextBox VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Nombre(s)" TextInput="entraTexto" KeyDown="PresionarTecla_BusqNom" TextChanged="cambiaTextoBusqueda"></TextBox>
@@ -140,11 +140,11 @@
                             </Grid>
 
                         </DockPanel>
-                        <DockPanel x:Name="dcpnlBusqueda" Grid.Row="2" Visibility="Hidden">
+                        <Grid x:Name="dcpnlBusqueda" Grid.Row="2" Visibility="Hidden">
 
                             <Grid>
 
-                                <DataGrid x:Name="dtgrdBusqueda">
+                                <DataGrid x:Name="dtgrdBusqueda" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible">
                                     <DataGrid.Columns>
                                         <DataGridTextColumn x:Name="dgtcTipoUsuario" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tipo de Usuario"/>
                                         <DataGridTextColumn x:Name="dgtcNombre" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>
@@ -155,7 +155,7 @@
                                 </DataGrid>
                             </Grid>
 
-                        </DockPanel>
+                        </Grid>
 
                         <DockPanel Grid.Row="3" Visibility="Hidden">
 
@@ -187,7 +187,7 @@
                     </Grid>
                 </TabItem>
                 <TabItem Header="Registro">
-                    <Grid >
+                    <Grid x:Name="grdRegistro" >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>

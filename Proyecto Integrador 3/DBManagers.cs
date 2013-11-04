@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Integrador_3
 {
-    static class Constantes
+    partial class DBManagers
     {
-        public const char SeparadorNombre = '&';
+        
     }
 }
