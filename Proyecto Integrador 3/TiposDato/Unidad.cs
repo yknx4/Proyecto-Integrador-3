@@ -19,5 +19,11 @@ namespace Proyecto_Integrador_3.TiposDato
         public string NoUnidad { get { return _nounidad; } set { _nounidad = value; } }
 
         public virtual ICollection<Servicio> Servicios { get; set; }
+
+        public bool isAdded()
+        {
+            return !(Uid == Guid.Empty);
+        }
+
     }
 }

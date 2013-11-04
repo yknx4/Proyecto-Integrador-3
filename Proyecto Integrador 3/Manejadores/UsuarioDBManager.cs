@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Proyecto_Integrador_3
 {
-    partial class DBManagers
+   public partial class DBManagers
     {
         public class UsuarioDBManager : DBManager<Usuario>
         {

@@ -5,14 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Proyecto_Integrador_3.dsUsuariosTableAdapters;
+using Proyecto_Integrador_3.dsUnidadTableAdapters;
 
 namespace Proyecto_Integrador_3
 {
-    partial class DBManagers
+   public partial class DBManagers
     {
         
-        /*permiso temporal - def protected*/public dsUsuarios mdsUsuarios = new dsUsuarios();
+        protected dsUsuarios mdsUsuarios = new dsUsuarios();
         protected UsuariosTableAdapter mUsuariosTableAdapter = new UsuariosTableAdapter();
+        protected dsUnidad mdsUnidades = new dsUnidad();
+        protected UnidadTableAdapter mUnidadlesTableAdapter = new UnidadTableAdapter();
+
 
         protected SqlCeConnection conn;
 
@@ -37,6 +41,7 @@ namespace Proyecto_Integrador_3
             //SqlCeDataAdapter adap = new SqlCeDataAdapter("SELECT * FROM Usuarios", conn);
             //adap.Fill(mdsUsuarios, mdsUsuarios.Tables[0].TableName);
             mUsuariosTableAdapter.Fill(mdsUsuarios.Usuarios);
+            mUnidadlesTableAdapter.Fill(mdsUnidades.Unidad);
             
             
         }

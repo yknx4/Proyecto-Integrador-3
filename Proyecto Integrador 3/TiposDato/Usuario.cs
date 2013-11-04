@@ -17,6 +17,7 @@ namespace Proyecto_Integrador_3.TiposDato
         }
         public struct Contacto{
             public string Nombre{get;set;}
+            
             public string Telefono{get;set;}
 
         }
@@ -28,6 +29,13 @@ namespace Proyecto_Integrador_3.TiposDato
         }
         public DateTime FechaNacimiento {get;set;}
         public System.Guid Uid { get; set; }
+        public string sNombre
+        {
+            get
+            {
+                return Nombre.Replace('&', ' ');
+            }
+        }
         public string Nombre { get; set; }
         public Domicilio mDomicilio { get; set; }
         public string Telefono { get; set; }

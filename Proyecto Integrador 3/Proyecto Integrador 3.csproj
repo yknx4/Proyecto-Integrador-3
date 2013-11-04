@@ -97,14 +97,22 @@
     </ApplicationDefinition>
     <Compile Include="Constantes.cs" />
     <Compile Include="DBManagers.cs" />
+    <Compile Include="dsUnidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsUnidad.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsUsuarios.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsUsuarios.xsd</DependentUpon>
     </Compile>
     <Compile Include="Generadores\CardGenerator.cs" />
+    <Compile Include="Generadores\RandChar.cs" />
+    <Compile Include="Manejadores\UnidadDBManager.cs" />
     <Compile Include="Manejadores\DBManager.cs" />
     <Compile Include="Manejadores\UsuarioDBManager.cs" />
+    <Compile Include="Populadores\UnidadPopulator.cs" />
     <Compile Include="Populadores\UsuariosPopulator.cs" />
     <Compile Include="ProyectoIntegradorDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -166,6 +174,17 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="dsUnidad.xsc">
+      <DependentUpon>dsUnidad.xsd</DependentUpon>
+    </None>
+    <None Include="dsUnidad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUnidad.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsUnidad.xss">
+      <DependentUpon>dsUnidad.xsd</DependentUpon>
+    </None>
     <None Include="dsUsuarios.xsc">
       <DependentUpon>dsUsuarios.xsd</DependentUpon>
     </None>

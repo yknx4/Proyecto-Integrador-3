@@ -6,7 +6,7 @@ using System.Windows;
 
 namespace Proyecto_Integrador_3
 {
-    partial class DBManagers
+    public partial class DBManagers
     {
        public abstract class DBManager<T>
         {

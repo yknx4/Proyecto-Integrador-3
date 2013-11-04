@@ -1,29 +1,18 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using Proyecto_Integrador_3.TiposDato;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlServerCe;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using ResourcePool = Proyecto_Integrador_3.Properties.Resources;
-using UsuarioDBManager = Proyecto_Integrador_3.DBManagers.UsuarioDBManager;
-using System.Drawing;
-using MahApps.Metro.Controls;
-using Proyecto_Integrador_3.TiposDato;
-using System.Configuration;
-using System.Data.SqlServerCe;
-
-using UsuariosPopulator = Proyecto_Integrador_3.DBManagers.UsuariosPopulator;
-using System.Timers;
 using System.Windows.Threading;
-using System.Threading;
+using UsuarioDBManager = Proyecto_Integrador_3.DBManagers.UsuarioDBManager;
+using UsuariosPopulator = Proyecto_Integrador_3.DBManagers.UsuariosPopulator;
 
 
 
@@ -75,7 +64,7 @@ namespace Proyecto_Integrador_3
             txtNumeroTarjeta.Text = Generadores.CardGenerator.Next().ToString();
             mUsuariosPopulator = new UsuariosPopulator(mDBManagers);
             generarLista();
-            dgtcNombre.Binding = new Binding("Nombre");
+            dgtcNombre.Binding = new Binding("sNombre");
             dgtcNumeroTarjeta.Binding = new Binding("TarjetaAsignada");
             dgtcSaldo.Binding = new Binding("Saldo");
             dgtcSexo.Binding = new Binding("Sexo");
@@ -246,7 +235,7 @@ namespace Proyecto_Integrador_3
             try 
             {
                 mUsuarioDBManager.AddToDB();
-                lblEstadoPrincipal.Content = usuarioNuevo.Nombre.Replace('&', ' ') + " registrado correctamente.";
+                lblEstadoPrincipal.Content = usuarioNuevo.sNombre + " registrado correctamente.";
                 lblEstadoSecundaria.Content = mDBManagers.LastMessage+" filas han sido actualizadas.";
                 limpiarVentanaRegistro();
                 txtNumeroTarjeta.Text = Generadores.CardGenerator.Next().ToString();
@@ -281,7 +270,7 @@ namespace Proyecto_Integrador_3
                 if (UsuariosBusqueda.Count>0)
                 {
                     currentUsuario = UsuariosBusqueda.First();
-                    txtNombreBusqueda.Text =currentUsuario.Nombre;
+                    txtNombreBusqueda.Text =currentUsuario.sNombre;
                 }
                 //if (UsuariosBusqueda.Count==1)
                 //{
