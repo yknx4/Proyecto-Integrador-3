@@ -57,7 +57,7 @@ namespace Proyecto_Integrador_3.TiposDato
         public string Sexo { get { return _sexo ? "Hombre" : "Mujer"; } set { if (value.ToLower() == "hombre" || value == "True") { _sexo = true; } else { _sexo = false; } } }
 
         public virtual ICollection<Servicio> Servicios { get; set; }
-        public virtual Tarjeta Tarjetas { get; set; }
+        //public virtual Tarjeta Tarjetas { get; set; }
 
         public bool isAdded() {
             return !(Uid == Guid.Empty);

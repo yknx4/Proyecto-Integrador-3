@@ -114,16 +114,10 @@
     <Compile Include="Manejadores\UsuarioDBManager.cs" />
     <Compile Include="Populadores\UnidadPopulator.cs" />
     <Compile Include="Populadores\UsuariosPopulator.cs" />
-    <Compile Include="ProyectoIntegradorDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProyectoIntegradorDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Reportes\ReporteUnidad.cs" />
     <Compile Include="Tipos.cs" />
     <Compile Include="TiposDato\DBItem.cs" />
     <Compile Include="TiposDato\Servicio.cs" />
-    <Compile Include="TiposDato\Tarjeta.cs" />
     <Compile Include="TiposDato\Unidad.cs" />
     <Compile Include="TiposDato\Usuario.cs" />
     <Page Include="MainWindow.xaml">
@@ -212,17 +206,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Entypo.ttf" />
-    <None Include="ProyectoIntegradorDataSet.xsc">
-      <DependentUpon>ProyectoIntegradorDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ProyectoIntegradorDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ProyectoIntegradorDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ProyectoIntegradorDataSet.xss">
-      <DependentUpon>ProyectoIntegradorDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Resources\MainLogo.png" />
     <None Include="Resources\MainLogo.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
