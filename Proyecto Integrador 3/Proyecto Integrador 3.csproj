@@ -94,12 +94,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Constantes.cs" />
     <Compile Include="Generadores\CardGenerator.cs" />
+    <Compile Include="Manejadores\DBManager.cs" />
+    <Compile Include="Manejadores\UsuarioDBManager.cs" />
     <Compile Include="ProyectoIntegradorDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProyectoIntegradorDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\ReporteUnidad.cs" />
     <Compile Include="Tipos.cs" />
     <Compile Include="TiposDato\Servicio.cs" />
     <Compile Include="TiposDato\Tarjeta.cs" />
@@ -129,6 +133,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -148,6 +156,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -210,7 +219,6 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Manejadores\" />
     <Folder Include="Populadores\" />
   </ItemGroup>
   <ItemGroup>

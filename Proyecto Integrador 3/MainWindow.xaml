@@ -79,7 +79,7 @@
                 <Separator/>
                 <Label>Informacion mas larga.</Label>
             </StatusBar>
-            <TabControl Margin="10">
+            <TabControl x:Name="tabcPestanas" Margin="10">
                 <TabItem Header="Recarga">
                     <Grid >
                         <Grid.ColumnDefinitions>

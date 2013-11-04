@@ -1,2 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Proyecto_Integrador_3.App" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.MainWindow" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAIAAAAAAAgABAQEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.ProyectoIntegradorDataSet">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Tipos" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Tipos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Generadores.CardGenerator" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAAAA=</HashCode>
+      <FileName>Generadores\CardGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Properties.Settings" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAABAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.TiposDato.Servicio" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADACAAABQAAAEAAAhgAAAAAAAAAgAAAAAEAAAAAgA=</HashCode>
+      <FileName>TiposDato\Servicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.TiposDato.Tarjeta">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAABAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>TiposDato\Tarjeta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.TiposDato.Unidad" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAACAABAAAIAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TiposDato\Unidad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.TiposDato.Usuario">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAgAAAAAAIAkBAwgAIAAIAAAAAAAAMAAkAAAAA=</HashCode>
+      <FileName>TiposDato\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

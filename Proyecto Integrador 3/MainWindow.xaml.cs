@@ -18,6 +18,7 @@ using MahApps.Metro.Controls;
 using Proyecto_Integrador_3.TiposDato;
 
 
+
 namespace Proyecto_Integrador_3
 {
     /// <summary>
@@ -59,6 +60,33 @@ namespace Proyecto_Integrador_3
             dtpFechaReporteInicial.SelectedDate = DateTime.Today.AddDays(-1);
             
            
+        }
+
+        Usuario generarUsuario() {
+            Usuario.Contacto tmpContacto = new Usuario.Contacto { 
+                Nombre = txtNombreDeContacto.Text,
+                Telefono = txtTelefonoDeContacto.Text
+            };
+            Usuario.Domicilio tmpDomicilio = new Usuario.Domicilio { 
+                Calle = txtCalle.Text,
+                Colonia = txtColonia.Text,
+                Municipio = (short)cmbMunicipio.SelectedIndex,
+                Numero = int.Parse(txtNumero.Text)
+            };
+
+            return new Usuario { 
+                Sexo = rdbHombre.IsChecked.ToString(),
+                Alergias = txtAlergias.Text,
+                Celular = txtCelular.Text,
+                FechaNacimiento = (DateTime)dtpFechaNacimiento.SelectedDate,
+                Nombre = txtNombre.Text+Constantes.SeparadorNombre+txtApellidoPaterno.Text+Constantes.SeparadorNombre+txtApellidoMaterno.Text,
+                TarjetaAsignada = long.Parse(txtNumeroTarjeta.Text),
+                TipoSangre = (short)(cmbSangre.SelectedIndex),
+                TipoUsuario = (short)(cmbTipos.SelectedIndex+1),               
+                Telefono = txtTelefono.Text,
+                mContacto = tmpContacto,
+                mDomicilio = tmpDomicilio
+            };
         }
 
         private void ventanaCambiaTamaño(object sender, SizeChangedEventArgs e)
