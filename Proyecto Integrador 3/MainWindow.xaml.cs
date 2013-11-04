@@ -20,7 +20,7 @@ using Proyecto_Integrador_3.TiposDato;
 using System.Configuration;
 using System.Data.SqlServerCe;
 
-using Proyecto_Integrador_3.Populadores;
+using UsuariosPopulator = Proyecto_Integrador_3.DBManagers.UsuariosPopulator;
 using System.Timers;
 using System.Windows.Threading;
 using System.Threading;
@@ -48,13 +48,17 @@ namespace Proyecto_Integrador_3
     {
         private static SqlCeConnection conn = new SqlCeConnection(@ConfigurationManager.ConnectionStrings["Proyecto_Integrador_3.Properties.Settings.ProyectoIntegradorConnectionString"].ConnectionString);
 
-        private static UsuarioDBManager mUsuarioDBManager = new UsuarioDBManager();
+        private static DBManagers mDBManagers = new DBManagers(conn);
+
+        private static UsuarioDBManager mUsuarioDBManager = new UsuarioDBManager(mDBManagers);
 
         private static UsuariosPopulator mUsuariosPopulator;
 
         private List<Usuario> Usuarios;
 
         private List<Usuario> UsuariosBusqueda;
+
+        private Usuario currentUsuario;
 
         public MainWindow()
         {
@@ -67,14 +71,10 @@ namespace Proyecto_Integrador_3
             dtpFechaNacimiento.SelectedDate = DateTime.Today.AddYears(-18);
             
             dtpFechaReporteInicial.SelectedDate = DateTime.Today.AddDays(-1);
-            mUsuarioDBManager.setConnection(conn);
-            txtNumeroTarjeta.Text = Generadores.CardGenerator.Next().ToString();
-            mUsuariosPopulator = new UsuariosPopulator(conn);
-            mUsuariosPopulator.generarLista();
-            Usuarios = mUsuariosPopulator.Usuarios;
             
-
-
+            txtNumeroTarjeta.Text = Generadores.CardGenerator.Next().ToString();
+            mUsuariosPopulator = new UsuariosPopulator(mDBManagers);
+            generarLista();
             dgtcNombre.Binding = new Binding("Nombre");
             dgtcNumeroTarjeta.Binding = new Binding("TarjetaAsignada");
             dgtcSaldo.Binding = new Binding("Saldo");
@@ -91,6 +91,14 @@ namespace Proyecto_Integrador_3
             
            
         }
+
+        void generarLista()
+        {
+
+            mUsuariosPopulator.generarLista();
+            Usuarios = mUsuariosPopulator.Usuarios;
+        }
+
         public void ClearTextBoxes(Panel panel)
         {
 
@@ -114,21 +122,22 @@ namespace Proyecto_Integrador_3
         }
 
         private void cambiaTextoBusquedaAsync(object sender, TextChangedEventArgs e)
-        {            
-            
+        {
+            dcpnlBusqueda.Visibility = Visibility.Hidden;
             TextBox origen = e.Source as TextBox;
             if (origen.Text != "" ) {
-                dcpnlBusqueda.Visibility = Visibility.Hidden;
-                UsuariosBusqueda = (from usuarios in Usuarios where usuarios.Nombre.Contains(origen.Text) select usuarios ).ToList();
+                
+                UsuariosBusqueda = (from usuarios in Usuarios where usuarios.Nombre.ToLower().Contains(origen.Text.ToLower()) select usuarios ).ToList();
                 dtgrdBusqueda.ItemsSource = UsuariosBusqueda;
-                dcpnlBusqueda.Visibility = Visibility.Visible; 
-                txtNumeroTarjetaRecarga.IsReadOnly = true;
+                if(UsuariosBusqueda.Count>0)dcpnlBusqueda.Visibility = Visibility.Visible;
+                
+                //txtNumeroTarjetaRecarga.IsReadOnly = true;
                 
             }
             else
             {
-                dcpnlBusqueda.Visibility = Visibility.Hidden;
-                txtNumeroTarjetaRecarga.IsReadOnly = false;
+                
+                //txtNumeroTarjetaRecarga.IsReadOnly = false;
             }
         }
 
@@ -185,7 +194,7 @@ namespace Proyecto_Integrador_3
                 Nombre = txtNombre.Text+Constantes.SeparadorNombre+txtApellidoPaterno.Text+Constantes.SeparadorNombre+txtApellidoMaterno.Text,
                 TarjetaAsignada = txtNumeroTarjeta.Text,
                 TipoSangre = (short)(cmbSangre.SelectedIndex),
-                TipoUsuario = (short)(cmbTipos.SelectedIndex+1),               
+                TipoUsuario = (byte)(cmbTipos.SelectedIndex+1),               
                 Telefono = txtTelefono.Text,
                 mContacto = tmpContacto,
                 mDomicilio = tmpDomicilio
@@ -195,7 +204,7 @@ namespace Proyecto_Integrador_3
         {
             Usuario.Contacto tmpContacto = new Usuario.Contacto
             {
-                Nombre = "Contacto",
+                Nombre = DateTime.Now.ToShortDateString(),
                 Telefono = "312123456"
             };
             Usuario.Domicilio tmpDomicilio = new Usuario.Domicilio
@@ -212,10 +221,10 @@ namespace Proyecto_Integrador_3
                 Alergias = "Alergias",
                 Celular = "312123",
                 FechaNacimiento = DateTime.Now,
-                Nombre = "Dalia&Nummy",
+                Nombre = DateTime.Now.ToShortDateString(),
                 TarjetaAsignada = txtNumeroTarjeta.Text,
                 TipoSangre = (short)(cmbSangre.SelectedIndex),
-                TipoUsuario = (short)(cmbTipos.SelectedIndex + 1),
+                TipoUsuario = (byte)(cmbTipos.SelectedIndex + 1),
                 Telefono = "3123123",
                 mContacto = tmpContacto,
                 mDomicilio = tmpDomicilio
@@ -232,17 +241,20 @@ namespace Proyecto_Integrador_3
         private void onClickRegistrar(object sender, RoutedEventArgs e)
         {
 
-            Usuario usuarioNuevo = generarUsuario(1);
+            Usuario usuarioNuevo = generarUsuario();
             mUsuarioDBManager.setItem(usuarioNuevo);
-            if (mUsuarioDBManager.AddToDB())
+            try 
             {
+                mUsuarioDBManager.AddToDB();
                 lblEstadoPrincipal.Content = usuarioNuevo.Nombre.Replace('&', ' ') + " registrado correctamente.";
+                lblEstadoSecundaria.Content = mDBManagers.LastMessage+" filas han sido actualizadas.";
                 limpiarVentanaRegistro();
                 txtNumeroTarjeta.Text = Generadores.CardGenerator.Next().ToString();
+                generarLista();
             }
-            else
+            catch(Exception ex)
             {
-                lblEstadoPrincipal.Content = mUsuarioDBManager.Error;
+                lblEstadoPrincipal.Content = ex.ToString();
             }
 
         }
@@ -255,6 +267,60 @@ namespace Proyecto_Integrador_3
         private void ventanaCambiaTamaño(object sender, SizeChangedEventArgs e)
         {
             lblEstadoPrincipal.Content = e.NewSize.ToString();
+        }
+
+        private void cambiaTarjetaRecargaAsync(object sender, TextChangedEventArgs e)
+        {
+            TextBox origen = e.Source as TextBox;
+            if (origen.Text != "")
+            {
+                
+                //txtNombreBusqueda.IsReadOnly = true;
+                UsuariosBusqueda = (from usuarios in Usuarios where usuarios.TarjetaAsignada == origen.Text select usuarios).ToList();
+                
+                if (UsuariosBusqueda.Count>0)
+                {
+                    currentUsuario = UsuariosBusqueda.First();
+                    txtNombreBusqueda.Text =currentUsuario.Nombre;
+                }
+                //if (UsuariosBusqueda.Count==1)
+                //{
+                //    dtgrdBusqueda.Visibility = Visibility.Hidden;
+                //}
+                
+            }
+            else
+            {
+                
+                //txtNombreBusqueda.IsReadOnly = false;
+            }
+        }
+        private void cambiaTarjetaRecarga(object sender, TextChangedEventArgs e)
+        {
+            Action<object, TextChangedEventArgs> del = (object s, TextChangedEventArgs t) => cambiaTarjetaRecargaAsync(s, t);
+            ThreadStart start = delegate()
+            {
+                Dispatcher.Invoke(
+                    DispatcherPriority.ApplicationIdle,
+                   del, sender, e
+                    );
+            };
+
+            new Thread(start).Start();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            lblEstadoPrincipal.Content = "";
+            lblEstadoSecundaria.Content = "";
+            mDBManagers.LastMessage = "";
+            mUsuarioDBManager.setItem(currentUsuario);
+            currentUsuario.Saldo += Decimal.Parse(txtSaldoRecarga.Text);
+            lblEstadoPrincipal.Content = currentUsuario.Saldo.ToString() + " saldoTotal.";
+            mUsuarioDBManager.modificarDato();
+            generarLista();
+            txtNombreBusqueda.Text = "";
+            txtNombreBusqueda.Text = currentUsuario.Nombre;
         }
     }
 }

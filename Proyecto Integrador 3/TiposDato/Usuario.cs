@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Integrador_3.TiposDato
 {
-    public partial class Usuario
+    public partial class Usuario : DBItem
     {
        public struct Domicilio{
 
@@ -35,7 +35,7 @@ namespace Proyecto_Integrador_3.TiposDato
         public int TipoSangre { get; set; }
         public string Alergias { get; set; }
         public Contacto mContacto { get; set; }
-        public short TipoUsuario { get; set; }
+        public byte TipoUsuario { get; set; }
         public string sTipoUsuario
         {
             get

@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Data.SqlServerCe;
 using System.Windows;
-using mValue = System.UInt32;
+
 
 namespace Proyecto_Integrador_3
 {
@@ -10,35 +10,34 @@ namespace Proyecto_Integrador_3
     {
        public abstract class DBManager<T>
         {
-            protected DBManager()
+            protected DBManager(DBManagers sender)
             {
-
+                this.Parent = sender;
+                this.connection = Parent.conn;
             }
 
 
-            abstract public bool AddToDB();
+            abstract public void AddToDB();
 
             virtual public void itemModified(object sender, System.ComponentModel.PropertyChangedEventArgs e)
             {
                 setItem((T)sender);
             }
 
-            abstract public bool modificarDato(mValue modificar);
+            abstract public void modificarDato();
 
             virtual public bool RemoveFromDB()
             {
                 throw new NotImplementedException();
             }
 
+            protected DBManagers Parent;
 
             protected T heldItem;
 
             protected SqlCeConnection connection;
 
-            public void setConnection(SqlCeConnection connection)
-            {
-                this.connection = connection;
-            }
+            
 
             public void setItem(T Input)
             {

@@ -113,6 +113,7 @@
     </Compile>
     <Compile Include="Reportes\ReporteUnidad.cs" />
     <Compile Include="Tipos.cs" />
+    <Compile Include="TiposDato\DBItem.cs" />
     <Compile Include="TiposDato\Servicio.cs" />
     <Compile Include="TiposDato\Tarjeta.cs" />
     <Compile Include="TiposDato\Unidad.cs" />
