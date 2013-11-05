@@ -144,7 +144,7 @@
 
                             <Grid>
 
-                                <DataGrid x:Name="dtgrdBusqueda" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible">
+                                <DataGrid x:Name="dtgrdBusqueda" IsSynchronizedWithCurrentItem="False" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True"> 
                                     <DataGrid.Columns>
                                         <DataGridTextColumn x:Name="dgtcTipoUsuario" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tipo de Usuario"/>
                                         <DataGridTextColumn x:Name="dgtcNombre" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre"/>

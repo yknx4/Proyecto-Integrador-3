@@ -9,11 +9,16 @@ using System.Windows;
 using Proyecto_Integrador_3.TiposDato;
 using Proyecto_Integrador_3.Generadores;
 using System.Data.SqlClient;
+using Proyecto_Integrador_3.dsUnidadTableAdapters;
 
 namespace Proyecto_Integrador_3
 {
    public partial class DBManagers
     {
+
+        protected dsUnidad mdsUnidades = new dsUnidad();
+        protected UnidadTableAdapter mUnidadlesTableAdapter = new UnidadTableAdapter();
+
         public class UnidadDBManager : DBManager<Unidad>
         {
 

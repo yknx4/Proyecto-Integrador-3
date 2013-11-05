@@ -97,6 +97,11 @@
     </ApplicationDefinition>
     <Compile Include="Constantes.cs" />
     <Compile Include="DBManagers.cs" />
+    <Compile Include="dsServicios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsServicios.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsUnidad.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,9 +114,11 @@
     </Compile>
     <Compile Include="Generadores\CardGenerator.cs" />
     <Compile Include="Generadores\RandChar.cs" />
+    <Compile Include="Manejadores\ServicioDBManager.cs" />
     <Compile Include="Manejadores\UnidadDBManager.cs" />
     <Compile Include="Manejadores\DBManager.cs" />
     <Compile Include="Manejadores\UsuarioDBManager.cs" />
+    <Compile Include="Populadores\ServiciosPopulator.cs" />
     <Compile Include="Populadores\UnidadPopulator.cs" />
     <Compile Include="Populadores\UsuariosPopulator.cs" />
     <Compile Include="Reportes\ReporteUnidad.cs" />
@@ -167,7 +174,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="dsServicios.xsc">
+      <DependentUpon>dsServicios.xsd</DependentUpon>
+    </None>
+    <None Include="dsServicios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsServicios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsServicios.xss">
+      <DependentUpon>dsServicios.xsd</DependentUpon>
+    </None>
     <None Include="dsUnidad.xsc">
       <DependentUpon>dsUnidad.xsd</DependentUpon>
     </None>

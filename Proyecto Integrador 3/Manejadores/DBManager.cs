@@ -13,7 +13,7 @@ namespace Proyecto_Integrador_3
             protected DBManager(DBManagers sender)
             {
                 this.Parent = sender;
-                this.connection = Parent.conn;
+                
             }
 
 

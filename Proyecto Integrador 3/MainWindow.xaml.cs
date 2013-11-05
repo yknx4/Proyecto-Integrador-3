@@ -35,9 +35,9 @@ namespace Proyecto_Integrador_3
         public int Saldo { get; set; }*/
     public partial class MainWindow : MetroWindow
     {
-        private static SqlCeConnection conn = new SqlCeConnection(@ConfigurationManager.ConnectionStrings["Proyecto_Integrador_3.Properties.Settings.ProyectoIntegradorConnectionString"].ConnectionString);
+        //private static SqlCeConnection conn = new SqlCeConnection(@ConfigurationManager.ConnectionStrings["Proyecto_Integrador_3.Properties.Settings.ProyectoIntegradorConnectionString"].ConnectionString);
 
-        private static DBManagers mDBManagers = new DBManagers(conn);
+        private static DBManagers mDBManagers = new DBManagers();
 
         private static UsuarioDBManager mUsuarioDBManager = new UsuarioDBManager(mDBManagers);
 
@@ -52,6 +52,7 @@ namespace Proyecto_Integrador_3
         public MainWindow()
         {
             InitializeComponent();
+            mDBManagers.Fill();
             cmbTipos.ItemsSource = (from values in Tipos.Usuarios.Values select values).ToList();
             cmbSangre.ItemsSource = Tipos.Sangre;
             cmbSangre.SelectedItem = Tipos.Sangre.Last();

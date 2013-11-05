@@ -21,9 +21,9 @@ namespace PI_Simuladores
     public partial class Form1 : Form
     {
 
-        private static SqlCeConnection conn = new SqlCeConnection(@Proyecto_Integrador_3.Constantes.getConnectionString);
+        //private static SqlCeConnection conn = new SqlCeConnection(@Proyecto_Integrador_3.Constantes.getConnectionString);
 
-        private static DBManagers mDBManagers = new DBManagers(conn);
+        private static DBManagers mDBManagers = new DBManagers();
 
         private static UsuarioDBManager mUsuarioDBManager = new UsuarioDBManager(mDBManagers);
 
@@ -73,6 +73,7 @@ namespace PI_Simuladores
         public Form1()
         {
             InitializeComponent();
+            mDBManagers.Fill();
             mUsuariosPopulator = new UsuariosPopulator(mDBManagers);
             mUnidadPopulator = new UnidadPopulator(mDBManagers);
             generarLista();
@@ -81,6 +82,7 @@ namespace PI_Simuladores
             cmbTarjetas.SelectedIndex = -1;
             cmbTarjetas.DataSource = Tarjetas;
             txtTarjeta.AutoCompleteCustomSource = ToAutoCompleteStringCollection(Tarjetas);
+            lblStatus.Text = Usuarios.Count.ToString() + " usuarios cargados.";
             
         }
 

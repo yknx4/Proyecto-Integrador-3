@@ -37,7 +37,11 @@ namespace Proyecto_Integrador_3
                 {
                     Servicio actual = new Servicio
                     {
-                        Uid = Row.Uid,
+                        Id=Row.id,
+                        TipoUsuario = short.Parse(Row.tipoUsuario),
+                        Unidad=Row.unidad,
+                        Usuario=Row.usuario,
+                        Fecha = Row.fecha
                         
                     };
                     //actual.PropertyChanged += cuentaModificada;

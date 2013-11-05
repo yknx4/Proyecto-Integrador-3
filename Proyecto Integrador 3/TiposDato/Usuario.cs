@@ -59,7 +59,7 @@ namespace Proyecto_Integrador_3.TiposDato
         public virtual ICollection<Servicio> Servicios { get; set; }
         //public virtual Tarjeta Tarjetas { get; set; }
 
-        public bool isAdded() {
+        public override bool isAdded() {
             return !(Uid == Guid.Empty);
         }
     }

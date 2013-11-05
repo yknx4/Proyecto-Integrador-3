@@ -8,11 +8,18 @@ using System.Data.SqlServerCe;
 using System.Windows;
 using Proyecto_Integrador_3.TiposDato;
 using System.Data.SqlClient;
+using Proyecto_Integrador_3.dsUsuariosTableAdapters;
+using Proyecto_Integrador_3.dsServiciosTableAdapters;
 
 namespace Proyecto_Integrador_3
 {
    public partial class DBManagers
     {
+
+        
+        protected dsServicios mdsServicios = new dsServicios();
+        protected ServiciosTableAdapter mServiciosTableAdapter = new ServiciosTableAdapter();
+
         public class ServicioDBManager : DBManager<Servicio>
         {
 
@@ -37,11 +44,10 @@ namespace Proyecto_Integrador_3
                 }
                 if (heldItem.isAdded())
                 {
-                    Error = "El servicio con ID " + heldItem.Uid.ToString() + " ya está en la base de datos";
+                    Error = "El servicio con ID " + heldItem.Id.ToString() + " ya está en la base de datos";
                     notifyError();
                 }
-                heldItem.Saldo = 0;
-                heldItem.Uid = Guid.NewGuid();
+                
                 dsServicios.ServiciosRow nuevoServicio = getServicioRow();
                 Parent.mdsServicios.Servicios.AddServiciosRow(nuevoServicio);
                 Parent.LastMessage = Parent.mServiciosTableAdapter.Update(Parent.mdsServicios).ToString();
@@ -55,66 +61,13 @@ namespace Proyecto_Integrador_3
             private dsServicios.ServiciosRow getServicioRow()
             {
                 dsServicios.ServiciosRow nuevoServicio = Parent.mdsServicios.Servicios.NewServiciosRow();
-                nuevoServicio.Uid = heldItem.Uid;
-                nuevoServicio.Nombre = heldItem.Nombre;
-                nuevoServicio.Calle = heldItem.mDomicilio.Calle;
-                nuevoServicio.Telefono = heldItem.Telefono;
-                nuevoServicio.TipoSangre = heldItem.TipoSangre;
-                nuevoServicio.Alergias = heldItem.Alergias;
-                nuevoServicio.NombreContacto = heldItem.mContacto.Nombre;
-                nuevoServicio.TelefonoContacto = heldItem.mContacto.Telefono;
-                nuevoServicio.TipoServicio = heldItem.TipoServicio;
-                nuevoServicio.Saldo = heldItem.Saldo;
-                nuevoServicio.TarjetaAsignada = heldItem.TarjetaAsignada;
-                nuevoServicio.sexo = heldItem._sexo;
-                nuevoServicio.FechaNacimiento = heldItem.FechaNacimiento;
-                nuevoServicio.NumeroCalle = heldItem.mDomicilio.Numero;
-                nuevoServicio.Colonia = heldItem.mDomicilio.Colonia;
-                nuevoServicio.Municipio = heldItem.mDomicilio.Municipio;
-                nuevoServicio.Celular = heldItem.Celular;
-
+                nuevoServicio.fecha = heldItem.Fecha;
+                nuevoServicio.tipoUsuario = heldItem.TipoUsuario.ToString();
+                nuevoServicio.unidad = heldItem.Unidad;
+                nuevoServicio.usuario = heldItem.Usuario;
                 return nuevoServicio;
             }
 
-            public bool anadirServicio(Servicio servicio)
-            {
-
-                if (!Active()) return false;
-                //connection.Open();
-                //SqlCeCommand cmd = new SqlCeCommand("INSERT INTO Asistencias(idClub, idAlumno, parcial, date)VALUES(@club, @cuenta, @parcial, @date)", connection);
-                //cmd.Parameters.AddWithValue("@club", club);
-                //cmd.Parameters.AddWithValue("@cuenta", heldItem.numeroCuenta);
-                //cmd.Parameters.AddWithValue("@parcial", parcial);
-                //cmd.Parameters.AddWithValue("@date", DateTime.Now);
-
-                ////MessageBox.Show(DateTime.Now.Ticks);
-                //try
-                //{
-                //    cmd.ExecuteNonQuery();
-                //}
-                //catch (System.InvalidOperationException ex)
-                //{
-                //    //MessageBoxResult mes = MessageBox.Show(ex.ToString());
-                //    connection.Close();
-                //    return false;
-                //}
-                //catch (SqlCeException ex)
-                //{
-                //    //MessageBoxResult mes = MessageBox.Show(ex.ToString());
-                //    connection.Close();
-                //    return false;
-                //}
-                //connection.Close();
-
-                //Holder.asistencias++;
-                //heldItem.Asistencias.Add(new Asistencia()
-                //{
-                //    Date = DateTime.Now,
-                //    Parcial = parcial,
-                //});
-
-                return true;
-            }
 
             public override void itemModified(object sender, PropertyChangedEventArgs e)
             {
@@ -147,7 +100,7 @@ namespace Proyecto_Integrador_3
                 }
                /* dsServicios.ServiciosRow servicioAModificar = Parent.mdsServicios.Servicios.FindByUid(heldItem.Uid);
                 servicioAModificar = getServicioRow();*/
-                int index = Parent.mdsServicios.Servicios.Rows.IndexOf(Parent.mdsServicios.Servicios.FindByUid(heldItem.Uid));
+                int index = Parent.mdsServicios.Servicios.Rows.IndexOf(Parent.mdsServicios.Servicios.FindByid(heldItem.Id));
                 Parent.mdsServicios.Servicios.Rows[index].ItemArray = getServicioRow().ItemArray;
                 Parent.LastMessage = Parent.mServiciosTableAdapter.Update(Parent.mdsServicios).ToString();
                 Parent.Refresh();

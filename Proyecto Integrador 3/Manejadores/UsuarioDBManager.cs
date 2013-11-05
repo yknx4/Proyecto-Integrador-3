@@ -1,25 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel;
-using System.Data.SqlServerCe;
-using System.Windows;
+﻿using Proyecto_Integrador_3.dsUsuariosTableAdapters;
 using Proyecto_Integrador_3.TiposDato;
-using System.Data.SqlClient;
+using System;
+using System.ComponentModel;
 
 namespace Proyecto_Integrador_3
 {
-   public partial class DBManagers
+    public partial class DBManagers
     {
+        protected dsUsuarios mdsUsuarios = new dsUsuarios();
+        protected UsuariosTableAdapter mUsuariosTableAdapter = new UsuariosTableAdapter();
+
         public class UsuarioDBManager : DBManager<Usuario>
         {
-
             public UsuarioDBManager(DBManagers sender)
                 : base(sender)
             {
-
             }
 
             private void notifyError()
@@ -29,7 +24,6 @@ namespace Proyecto_Integrador_3
 
             public override void AddToDB()
             {
-                
                 if (!Active())
                 {
                     Error = "No hay ningun usuario seleccionado";
@@ -46,10 +40,6 @@ namespace Proyecto_Integrador_3
                 Parent.mdsUsuarios.Usuarios.AddUsuariosRow(nuevoUsuario);
                 Parent.LastMessage = Parent.mUsuariosTableAdapter.Update(Parent.mdsUsuarios).ToString();
                 Parent.Refresh();
-                
-                
-
-                
             }
 
             private dsUsuarios.UsuariosRow getUsuarioRow()
@@ -78,8 +68,8 @@ namespace Proyecto_Integrador_3
 
             public bool anadirServicio(Servicio servicio)
             {
-
                 if (!Active()) return false;
+
                 //connection.Open();
                 //SqlCeCommand cmd = new SqlCeCommand("INSERT INTO Asistencias(idClub, idAlumno, parcial, date)VALUES(@club, @cuenta, @parcial, @date)", connection);
                 //cmd.Parameters.AddWithValue("@club", club);
@@ -145,8 +135,8 @@ namespace Proyecto_Integrador_3
                     Error = "No hay ningun usuario seleccionado";
                     notifyError();
                 }
-               /* dsUsuarios.UsuariosRow usuarioAModificar = Parent.mdsUsuarios.Usuarios.FindByUid(heldItem.Uid);
-                usuarioAModificar = getUsuarioRow();*/
+                /* dsUsuarios.UsuariosRow usuarioAModificar = Parent.mdsUsuarios.Usuarios.FindByUid(heldItem.Uid);
+                 usuarioAModificar = getUsuarioRow();*/
                 int index = Parent.mdsUsuarios.Usuarios.Rows.IndexOf(Parent.mdsUsuarios.Usuarios.FindByUid(heldItem.Uid));
                 Parent.mdsUsuarios.Usuarios.Rows[index].ItemArray = getUsuarioRow().ItemArray;
                 Parent.LastMessage = Parent.mUsuariosTableAdapter.Update(Parent.mdsUsuarios).ToString();
