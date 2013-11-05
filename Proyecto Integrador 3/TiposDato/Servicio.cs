@@ -19,7 +19,12 @@ namespace Proyecto_Integrador_3.TiposDato
         private DateTime _fecha;
         public System.DateTime Fecha { get { return _fecha; } set { _fecha = value; } }
 
-        public virtual Unidad Unidad1 { get; set; }
-        public virtual Usuario Usuarios { get; set; }
+        public virtual Unidad UnidadObject { get; set; }
+        public virtual Usuario UsuarioObject { get; set; }
+
+        public bool isAdded()
+        {
+            return !(Id == 0);
+        }
     }
 }

@@ -11,16 +11,15 @@ namespace Proyecto_Integrador_3
 {
    public partial class DBManagers
     {
-        
-        protected dsUsuarios mdsUsuarios = new dsUsuarios();
-        protected UsuariosTableAdapter mUsuariosTableAdapter = new UsuariosTableAdapter();
-        protected dsUnidad mdsUnidades = new dsUnidad();
-        protected UnidadTableAdapter mUnidadlesTableAdapter = new UnidadTableAdapter();
+
+
+
 
 
         protected SqlCeConnection conn;
 
-        public void setConnection(SqlCeConnection conn){
+        public void setConnection(SqlCeConnection conn)
+        {
 
             this.conn = conn;
         }
