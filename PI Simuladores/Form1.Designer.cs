@@ -47,6 +47,7 @@
             this.txtCantidadUnidades = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnRandom = new System.Windows.Forms.Button();
             this.grpServicio.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tb.SuspendLayout();
@@ -105,13 +106,15 @@
             // 
             this.btnServico.Location = new System.Drawing.Point(9, 101);
             this.btnServico.Name = "btnServico";
-            this.btnServico.Size = new System.Drawing.Size(211, 23);
+            this.btnServico.Size = new System.Drawing.Size(182, 23);
             this.btnServico.TabIndex = 5;
             this.btnServico.Text = "Servicio!";
             this.btnServico.UseVisualStyleBackColor = true;
+            this.btnServico.Click += new System.EventHandler(this.btnServico_Click);
             // 
             // grpServicio
             // 
+            this.grpServicio.Controls.Add(this.btnRandom);
             this.grpServicio.Controls.Add(this.label1);
             this.grpServicio.Controls.Add(this.btnServico);
             this.grpServicio.Controls.Add(this.txtTarjeta);
@@ -227,6 +230,16 @@
             this.lblStatus.Size = new System.Drawing.Size(151, 20);
             this.lblStatus.Text = "toolStripStatusLabel1";
             // 
+            // btnRandom
+            // 
+            this.btnRandom.Location = new System.Drawing.Point(197, 101);
+            this.btnRandom.Name = "btnRandom";
+            this.btnRandom.Size = new System.Drawing.Size(23, 23);
+            this.btnRandom.TabIndex = 6;
+            this.btnRandom.Text = "?";
+            this.btnRandom.UseVisualStyleBackColor = true;
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -239,6 +252,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Simulador Autobuses";
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.cuandoDobleClick);
             this.grpServicio.ResumeLayout(false);
             this.grpServicio.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -272,6 +286,7 @@
         private System.Windows.Forms.TextBox txtCantidadUnidades;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
+        private System.Windows.Forms.Button btnRandom;
     }
 }
 

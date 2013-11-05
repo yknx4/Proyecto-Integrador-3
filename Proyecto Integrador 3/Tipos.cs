@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Integrador_3
 {
-    static class Tipos
+    public static class Tipos
     {
         public static readonly Dictionary<int, string> Usuarios;
         public static readonly Dictionary<int, int> Precio;

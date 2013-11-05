@@ -131,7 +131,7 @@
                                 <DockPanel Grid.Column="0" >
                                     <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Nombre:</Label>
                                     <StackPanel>
-                                    <TextBox x:Name="txtNombreBusqueda" VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Nombre(s)" TextInput="entraTexto" KeyDown="PresionarTecla_BusqNom" TextChanged="cambiaTextoBusqueda"></TextBox>
+                                    <TextBox x:Name="txtNombreBusqueda" VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Nombre(s)" TextInput="entraTexto" KeyDown="PresionarTecla_BusqNom" TextChanged="cambiaTextoBusqueda" KeyUp="alPresionarEnterBusqueda"></TextBox>
                                     <TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}">
                                         Busqueda</TextBlock>
                                     </StackPanel>

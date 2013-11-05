@@ -24,18 +24,24 @@ namespace Proyecto_Integrador_3
 
             public override void AddToDB()
             {
-                if (!Active())
-                {
-                    Error = "No hay ningun usuario seleccionado";
-                    notifyError();
-                }
                 if (heldItem.isAdded())
                 {
                     Error = "El usuario con ID " + heldItem.Uid.ToString() + " ya está en la base de datos";
                     notifyError();
                 }
+                AddToDB(Guid.NewGuid());
+            }
+
+            public void AddToDB(Guid Uid)
+            {
+                if (!Active())
+                {
+                    Error = "No hay ningun usuario seleccionado";
+                    notifyError();
+                }
+                
                 heldItem.Saldo = 0;
-                heldItem.Uid = Guid.NewGuid();
+                heldItem.Uid = Uid;
                 dsUsuarios.UsuariosRow nuevoUsuario = getUsuarioRow();
                 Parent.mdsUsuarios.Usuarios.AddUsuariosRow(nuevoUsuario);
                 Parent.LastMessage = Parent.mUsuariosTableAdapter.Update(Parent.mdsUsuarios).ToString();
@@ -66,45 +72,7 @@ namespace Proyecto_Integrador_3
                 return nuevoUsuario;
             }
 
-            public bool anadirServicio(Servicio servicio)
-            {
-                if (!Active()) return false;
-
-                //connection.Open();
-                //SqlCeCommand cmd = new SqlCeCommand("INSERT INTO Asistencias(idClub, idAlumno, parcial, date)VALUES(@club, @cuenta, @parcial, @date)", connection);
-                //cmd.Parameters.AddWithValue("@club", club);
-                //cmd.Parameters.AddWithValue("@cuenta", heldItem.numeroCuenta);
-                //cmd.Parameters.AddWithValue("@parcial", parcial);
-                //cmd.Parameters.AddWithValue("@date", DateTime.Now);
-
-                ////MessageBox.Show(DateTime.Now.Ticks);
-                //try
-                //{
-                //    cmd.ExecuteNonQuery();
-                //}
-                //catch (System.InvalidOperationException ex)
-                //{
-                //    //MessageBoxResult mes = MessageBox.Show(ex.ToString());
-                //    connection.Close();
-                //    return false;
-                //}
-                //catch (SqlCeException ex)
-                //{
-                //    //MessageBoxResult mes = MessageBox.Show(ex.ToString());
-                //    connection.Close();
-                //    return false;
-                //}
-                //connection.Close();
-
-                //Holder.asistencias++;
-                //heldItem.Asistencias.Add(new Asistencia()
-                //{
-                //    Date = DateTime.Now,
-                //    Parcial = parcial,
-                //});
-
-                return true;
-            }
+            
 
             public override void itemModified(object sender, PropertyChangedEventArgs e)
             {

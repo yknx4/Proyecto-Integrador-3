@@ -35,7 +35,7 @@ namespace Proyecto_Integrador_3
 
             protected T heldItem;
 
-            protected SqlCeConnection connection;
+            //protected SqlCeConnection connection;
 
             
 
@@ -51,7 +51,7 @@ namespace Proyecto_Integrador_3
 
             protected bool Active()
             {
-                if (heldItem == null || connection == null) return false;
+                if (heldItem == null) return false;
                 return true;
             }
 

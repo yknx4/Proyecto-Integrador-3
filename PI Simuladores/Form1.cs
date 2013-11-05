@@ -1,26 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Proyecto_Integrador_3;
+﻿using Proyecto_Integrador_3;
 using Proyecto_Integrador_3.TiposDato;
-using UsuarioDBManager = Proyecto_Integrador_3.DBManagers.UsuarioDBManager;
-using UsuariosPopulator = Proyecto_Integrador_3.DBManagers.UsuariosPopulator;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Windows.Forms;
+using ServicioDBManager = Proyecto_Integrador_3.DBManagers.ServicioDBManager;
 using UnidadDBManager = Proyecto_Integrador_3.DBManagers.UnidadDBManager;
 using UnidadPopulator = Proyecto_Integrador_3.DBManagers.UnidadPopulator;
-using System.Data.SqlServerCe;
-
+using UsuarioDBManager = Proyecto_Integrador_3.DBManagers.UsuarioDBManager;
+using UsuariosPopulator = Proyecto_Integrador_3.DBManagers.UsuariosPopulator;
+using System.IO;
 
 namespace PI_Simuladores
 {
     public partial class Form1 : Form
     {
-
         //private static SqlCeConnection conn = new SqlCeConnection(@Proyecto_Integrador_3.Constantes.getConnectionString);
 
         private static DBManagers mDBManagers = new DBManagers();
@@ -28,6 +23,8 @@ namespace PI_Simuladores
         private static UsuarioDBManager mUsuarioDBManager = new UsuarioDBManager(mDBManagers);
 
         private static UsuariosPopulator mUsuariosPopulator;
+
+        private static ServicioDBManager mServicioDBManager = new ServicioDBManager(mDBManagers);
 
         private List<Usuario> Usuarios;
 
@@ -44,9 +41,10 @@ namespace PI_Simuladores
 
         private Usuario currentUsuario;
 
-        void generarLista()
-        {
+        private static Random mRandom = new Random();
 
+        private void generarLista()
+        {
             mUsuariosPopulator.generarLista();
             Usuarios = mUsuariosPopulator.Usuarios;
             mUnidadPopulator.generarLista();
@@ -69,7 +67,6 @@ namespace PI_Simuladores
             return autoComplete;
         }
 
-
         public Form1()
         {
             InitializeComponent();
@@ -77,23 +74,22 @@ namespace PI_Simuladores
             mUsuariosPopulator = new UsuariosPopulator(mDBManagers);
             mUnidadPopulator = new UnidadPopulator(mDBManagers);
             generarLista();
-            Tarjetas= (from usuarios in Usuarios select usuarios.TarjetaAsignada).ToList();
+            Tarjetas = (from usuarios in Usuarios select usuarios.TarjetaAsignada).ToList();
             Nombres = (from usuarios in Usuarios select usuarios.sNombre).ToList();
             cmbTarjetas.SelectedIndex = -1;
             cmbTarjetas.DataSource = Tarjetas;
             txtTarjeta.AutoCompleteCustomSource = ToAutoCompleteStringCollection(Tarjetas);
             lblStatus.Text = Usuarios.Count.ToString() + " usuarios cargados.";
-            
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void cuandoValorCambia(object sender, EventArgs e)
         {
             ComboBox origen = sender as ComboBox;
+            if (origen.SelectedItem == null) return;
             txtTarjeta.Text = origen.SelectedValue.ToString();
         }
 
@@ -102,7 +98,6 @@ namespace PI_Simuladores
             TextBox origen = sender as TextBox;
             if (origen.Text != "")
             {
-
                 //txtNombreBusqueda.IsReadOnly = true;
                 UsuariosBusqueda = (from usuarios in Usuarios where usuarios.TarjetaAsignada == origen.Text select usuarios).ToList();
 
@@ -112,29 +107,27 @@ namespace PI_Simuladores
                     txtNombre.Text = currentUsuario.sNombre;
                     txtSaldo.Text = currentUsuario.Saldo.ToString();
                 }
+
                 //if (UsuariosBusqueda.Count==1)
                 //{
                 //    dtgrdBusqueda.Visibility = Visibility.Hidden;
                 //}
-
             }
             else
             {
-
                 //txtNombreBusqueda.IsReadOnly = false;
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnGenerarUnidades_Click(object sender, EventArgs e)
         {
             int Unidades = int.Parse(txtCantidadUnidades.Text);
             Unidad unidadNueva;
-            for (int i = 0; i < Unidades;i++ )
+            for (int i = 0; i < Unidades; i++)
             {
                 unidadNueva = new Unidad();
                 mUnidadDBManager.setItem(unidadNueva);
@@ -146,10 +139,94 @@ namespace PI_Simuladores
                 {
                     MessageBox.Show(ex.ToString());
                 }
-
             }
             generarLista();
-            
+        }
+
+        private Unidad NextUnidad()
+        {
+            return Unidades[mRandom.Next(Unidades.Count)];
+        }
+
+        private DateTime NextFecha()
+        {
+            DateTime startDate = new DateTime(2013, 1, 1);
+            DateTime endDate = DateTime.Now;
+            TimeSpan timeSpan = endDate - startDate;
+            TimeSpan newSpan = new TimeSpan(mRandom.Next(0, (int)timeSpan.TotalDays), 0, 0, 0);
+            DateTime newDate = startDate + newSpan;
+            return newDate;
+        }
+
+        private Usuario NextUsuario()
+        {
+            return Usuarios[mRandom.Next(Usuarios.Count)];
+        }
+
+        private void AnadirServicio(Usuario user, DateTime deeto)
+        {
+            Servicio nuevoServicio;
+            Unidad tmpUnidad = NextUnidad();
+            nuevoServicio = new Servicio
+            {
+                TipoUsuario = user.TipoUsuario,
+                Unidad = tmpUnidad.Uid,
+                Usuario = user.Uid,
+                Fecha = deeto,
+                UnidadObject = tmpUnidad,
+                UsuarioObject = user
+            };
+            mServicioDBManager.setItem(nuevoServicio);
+            try
+            {
+                mServicioDBManager.AddToDB();
+                lblStatus.Text = nuevoServicio.UsuarioObject.sNombre + " ha abordado la unidad " + tmpUnidad.NoUnidad.ToString() + " el día " + nuevoServicio.Fecha.ToShortDateString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void AnadirServicio()
+        {
+            AnadirServicio(currentUsuario, dtpFecha.Value);
+        }
+
+        private void btnServico_Click(object sender, EventArgs e)
+        {
+            AnadirServicio();
+        }
+
+        private void cuandoDobleClick(object sender, MouseEventArgs e)
+        {
+            mDBManagers.Refresh();
+            generarLista();
+            Tarjetas = (from usuarios in Usuarios select usuarios.TarjetaAsignada).ToList();
+            Nombres = (from usuarios in Usuarios select usuarios.sNombre).ToList();
+            cmbTarjetas.SelectedIndex = -1;
+            cmbTarjetas.DataSource = Tarjetas;
+            txtTarjeta.AutoCompleteCustomSource = ToAutoCompleteStringCollection(Tarjetas);
+            lblStatus.Text = Usuarios.Count.ToString() + " usuarios recargados.";
+        }
+
+        private void btnRandom_Click(object sender, EventArgs e)
+                {
+                    
+                    
+            Usuario tmpUsuario;
+            DateTime tmpFecha;
+            string tmpLog = "";
+            for (int i = 0; i < 10000; i++)
+            {
+                tmpUsuario = NextUsuario();
+                tmpFecha = NextFecha();
+                AnadirServicio(tmpUsuario, tmpFecha);
+                tmpLog += tmpUsuario.sNombre + " ha abordado el día " + tmpFecha.ToShortDateString() + Environment.NewLine;
+                //File.AppendAllText(@"D:\ServiciosFalsos.txt", tmpUsuario.sNombre + " ha abordado el día " + tmpFecha.ToShortDateString() + Environment.NewLine);
+            }
+            MessageBox.Show(tmpLog);
+            File.AppendAllText(@"ServiciosRecord.txt", tmpLog);
         }
     }
 }

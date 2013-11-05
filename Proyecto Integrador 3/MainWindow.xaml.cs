@@ -59,9 +59,7 @@ namespace Proyecto_Integrador_3
             cmbMunicipio.ItemsSource = Tipos.Municipios;
             cmbMunicipio.SelectedItem = Tipos.Municipios.Last();
             dtpFechaNacimiento.SelectedDate = DateTime.Today.AddYears(-18);
-            
             dtpFechaReporteInicial.SelectedDate = DateTime.Today.AddDays(-1);
-            
             txtNumeroTarjeta.Text = Generadores.CardGenerator.Next().ToString();
             mUsuariosPopulator = new UsuariosPopulator(mDBManagers);
             generarLista();
@@ -111,10 +109,10 @@ namespace Proyecto_Integrador_3
 
         }
 
-        private void cambiaTextoBusquedaAsync(object sender, TextChangedEventArgs e)
+        private void cambiaTextoBusquedaAsync(object sender)
         {
             dcpnlBusqueda.Visibility = Visibility.Hidden;
-            TextBox origen = e.Source as TextBox;
+            TextBox origen = sender as TextBox;
             if (origen.Text != "" ) {
                 
                 UsuariosBusqueda = (from usuarios in Usuarios where usuarios.Nombre.ToLower().Contains(origen.Text.ToLower()) select usuarios ).ToList();
@@ -134,15 +132,7 @@ namespace Proyecto_Integrador_3
         
         private void cambiaTextoBusqueda(object sender, TextChangedEventArgs e)
         {
-            Action<object, TextChangedEventArgs> del = (object s, TextChangedEventArgs t) => cambiaTextoBusquedaAsync(s, t);
-            ThreadStart start = delegate() { 
-                Dispatcher.Invoke(
-                    DispatcherPriority.ApplicationIdle, 
-                   del,sender,e
-                    ); 
-            };
-
-            new Thread(start).Start();
+            
             
         }
 
@@ -259,9 +249,9 @@ namespace Proyecto_Integrador_3
             lblEstadoPrincipal.Content = e.NewSize.ToString();
         }
 
-        private void cambiaTarjetaRecargaAsync(object sender, TextChangedEventArgs e)
+        private void cambiaTarjetaRecargaAsync(object sender)
         {
-            TextBox origen = e.Source as TextBox;
+            TextBox origen = sender as TextBox;
             if (origen.Text != "")
             {
                 
@@ -287,12 +277,12 @@ namespace Proyecto_Integrador_3
         }
         private void cambiaTarjetaRecarga(object sender, TextChangedEventArgs e)
         {
-            Action<object, TextChangedEventArgs> del = (object s, TextChangedEventArgs t) => cambiaTarjetaRecargaAsync(s, t);
+            Action<object> del = (object s) => cambiaTarjetaRecargaAsync(s);
             ThreadStart start = delegate()
             {
                 Dispatcher.Invoke(
                     DispatcherPriority.ApplicationIdle,
-                   del, sender, e
+                   del, sender
                     );
             };
 
@@ -311,6 +301,24 @@ namespace Proyecto_Integrador_3
             generarLista();
             txtNombreBusqueda.Text = "";
             txtNombreBusqueda.Text = currentUsuario.Nombre;
+        }
+
+        private void alPresionarEnterBusqueda(object sender, KeyEventArgs e)
+        {
+            if (e.Key != Key.Enter)
+            {
+                return;
+            }
+            Action<object> del = (object s) => cambiaTextoBusquedaAsync(s);
+            ThreadStart start = delegate()
+            {
+                Dispatcher.Invoke(
+                    DispatcherPriority.ApplicationIdle,
+                   del, txtNombreBusqueda
+                    );
+            };
+
+            new Thread(start).Start();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Integrador_3.Generadores
 {
-    static class CardGenerator
+    public static class CardGenerator
     {
         static private int _posicion=0;
         static public int Posicion {
