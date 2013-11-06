@@ -64,7 +64,7 @@
     </Controls:MetroWindow.WindowCommands>
     <Grid>
         <DockPanel>
-            <DataGrid x:Name="dtgrReportes" IsReadOnly="True">
+            <DataGrid x:Name="dtgrReportes" IsReadOnly="True" LoadingRowDetails="alCargarFilas">
                 <DataGrid.Columns>
                     <DataGridTextColumn x:Name="dgtcUnidad" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Número de Unidad"/>
                     <DataGridTextColumn x:Name="dgtcTotal" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Total"/>

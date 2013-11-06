@@ -96,39 +96,39 @@ namespace Proyecto_Integrador_3.Reportes
                     return _unidad.NoUnidad.ToString();
                 }
             }
-           public String Total
+           public Decimal Total
             {
                 get
                 {
-                    return "$" + ((general * Constantes.PrecioNormal) + ((estudiante + terceraedad + discapacitado) * Constantes.PrecioEspecial)).ToString();
+                    return UsuarioGeneral + UsuarioEstudiante + UsuarioDiscapacitado + UsuarioTerceraEdad;
                 }
             }
-           public String UsuarioGeneral
+           public Decimal UsuarioGeneral
             {
                 get
                 {
-                    return "$" + (general * Constantes.PrecioNormal).ToString();
+                    return (general * Constantes.PrecioNormal);
                 }
             }
-           public String UsuarioEstudiante
+           public Decimal UsuarioEstudiante
             {
                 get
                 {
-                    return "$" + (estudiante * Constantes.PrecioEspecial).ToString();
+                    return (estudiante * Constantes.PrecioEspecial);
                 }
             }
-           public String UsuarioTerceraEdad
+           public Decimal UsuarioTerceraEdad
             {
                 get
                 {
-                    return "$"+(terceraedad * Constantes.PrecioEspecial).ToString();
+                    return (terceraedad * Constantes.PrecioEspecial);
                 }
             }
-           public String UsuarioDiscapacitado
+           public Decimal UsuarioDiscapacitado
             {
                 get
                 {
-                    return "$" + (discapacitado * Constantes.PrecioEspecial).ToString();
+                    return (discapacitado * Constantes.PrecioEspecial);
                 }
             }
         }
@@ -165,14 +165,29 @@ namespace Proyecto_Integrador_3.Reportes
 
             }
 
-
+            string defaultStringFormat = "${0}";
             dtgrReportes.AutoGenerateColumns = false;
             dgtcUnidad.Binding = new Binding("Unidad");
             dgtcTotal.Binding = new Binding("Total");
+            dgtcTotal.Binding.StringFormat = defaultStringFormat;
             dgtcGeneral.Binding = new Binding("UsuarioGeneral");
+            dgtcGeneral.Binding.StringFormat = defaultStringFormat;
             dgtcEstudiante.Binding = new Binding("UsuarioEstudiante");
+            dgtcEstudiante.Binding.StringFormat = defaultStringFormat;
             dgtcTerceraEdad.Binding = new Binding("UsuarioTerceraEdad");
+            dgtcTerceraEdad.Binding.StringFormat = defaultStringFormat;
             dgtcDiscapacitado.Binding = new Binding("UsuarioDiscapacitado");
+            dgtcDiscapacitado.Binding.StringFormat = defaultStringFormat;
+            bool first = true;
+            foreach (DataGridColumn dtgc in dtgrReportes.Columns)
+            {
+                if (first)
+                {
+                    first = false;
+                    continue;
+                }
+                
+            }
             dtgrReportes.ItemsSource = reportesIndividuales;
         }
 
@@ -192,6 +207,10 @@ namespace Proyecto_Integrador_3.Reportes
             {
                 dtgrReportes.ItemsSource = reportesIndividuales;
             }
+        }
+
+        private void alCargarFilas(object sender, DataGridRowDetailsEventArgs e)
+        {
         }
     }
 }
