@@ -64,10 +64,11 @@ namespace ServiciosFalsos
             return Usuarios[mRandom.Next(Usuarios.Count)];
         }
 
+        Servicio nuevoServicio;
+        Unidad tmpUnidad;
         private void AnadirServicio(Usuario user, DateTime deeto)
         {
-            Servicio nuevoServicio;
-            Unidad tmpUnidad = NextUnidad();
+            tmpUnidad = NextUnidad();
             nuevoServicio = new Servicio
             {
                 TipoUsuario = user.TipoUsuario,
@@ -80,7 +81,7 @@ namespace ServiciosFalsos
             mServicioDBManager.setItem(nuevoServicio);
             try
             {
-                mServicioDBManager.AddToDB();
+                mServicioDBManager.AddToDataset();
                 Console.WriteLine(nuevoServicio.UsuarioObject.sNombre + " ha abordado la unidad " + tmpUnidad.NoUnidad.ToString() + " el día " + nuevoServicio.Fecha.ToShortDateString());
             }
             catch (Exception ex)
@@ -109,14 +110,19 @@ namespace ServiciosFalsos
             Usuario tmpUsuario;
             DateTime tmpFecha;
             string tmpLog = "";
-            for (int i = 0; i < 10000; i++)
+            for (var i = 0; i < 2000000; i++)
             {
+                Console.Title = "Servicio: "+i.ToString();
                 tmpUsuario = NextUsuario();
                 tmpFecha = NextFecha();
                 AnadirServicio(tmpUsuario, tmpFecha);
                 tmpLog = tmpUsuario.sNombre + " ha abordado el día " + tmpFecha.ToShortDateString() + Environment.NewLine;
                 File.AppendAllText(@"ServiciosFalsos_.txt", tmpLog);
+                if (i % 50000 == 0 || mRandom.Next(100000) == 5) {
+                    mServicioDBManager.UpdateDBFromDataset();
+                }
             }
+            mServicioDBManager.UpdateDBFromDataset();
 
         }
     }

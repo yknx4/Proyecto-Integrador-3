@@ -36,7 +36,16 @@ namespace Proyecto_Integrador_3
 
             public override void AddToDB()
             {
+
+                AddToDataset();
+                UpdateDBFromDataset();
                 
+                
+                
+                
+            }
+
+            public void AddToDataset() {
                 if (!Active())
                 {
                     Error = "No hay ningun servicio seleccionado";
@@ -47,16 +56,16 @@ namespace Proyecto_Integrador_3
                     Error = "El servicio con ID " + heldItem.Id.ToString() + " ya está en la base de datos";
                     notifyError();
                 }
-                
                 dsServicios.ServiciosRow nuevoServicio = getServicioRow();
                 Parent.mdsServicios.Servicios.AddServiciosRow(nuevoServicio);
+
+            }
+            public void UpdateDBFromDataset() {
                 Parent.LastMessage = Parent.mServiciosTableAdapter.Update(Parent.mdsServicios).ToString();
                 Parent.Refresh();
-                
-                
-
-                
             }
+
+
 
             private dsServicios.ServiciosRow getServicioRow()
             {

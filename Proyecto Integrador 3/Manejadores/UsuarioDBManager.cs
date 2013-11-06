@@ -34,19 +34,33 @@ namespace Proyecto_Integrador_3
 
             public void AddToDB(Guid Uid)
             {
+                
+                
+                
+                AddToDataset(Uid);
+                UpdateDBFromDataset();
+                
+            }
+
+            public void AddToDataset(Guid Uid) {
                 if (!Active())
                 {
                     Error = "No hay ningun usuario seleccionado";
                     notifyError();
                 }
-                
                 heldItem.Saldo = 0;
                 heldItem.Uid = Uid;
                 dsUsuarios.UsuariosRow nuevoUsuario = getUsuarioRow();
                 Parent.mdsUsuarios.Usuarios.AddUsuariosRow(nuevoUsuario);
+
+            }
+
+            public void UpdateDBFromDataset() {
                 Parent.LastMessage = Parent.mUsuariosTableAdapter.Update(Parent.mdsUsuarios).ToString();
                 Parent.Refresh();
             }
+
+
 
             private dsUsuarios.UsuariosRow getUsuarioRow()
             {
