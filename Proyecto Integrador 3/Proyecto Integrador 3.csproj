@@ -122,6 +122,9 @@
     <Compile Include="Populadores\ServiciosPopulator.cs" />
     <Compile Include="Populadores\UnidadPopulator.cs" />
     <Compile Include="Populadores\UsuariosPopulator.cs" />
+    <Compile Include="Reportes\ReportePorUnidad.xaml.cs">
+      <DependentUpon>ReportePorUnidad.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\ReporteUnidad.cs" />
     <Compile Include="Tipos.cs" />
     <Compile Include="TiposDato\DBItem.cs" />
@@ -140,6 +143,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Reportes\ReportePorUnidad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Colours.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

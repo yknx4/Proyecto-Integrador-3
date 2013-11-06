@@ -20,26 +20,20 @@ namespace Proyecto_Integrador_3
         {
             private List<Unidad> _unidades = new List<Unidad>();
             private DBManagers Parent;
-            
-            //public void cuentaModificada(object sender, PropertyChangedEventArgs e)
-            //{
-            //    mUsuarioDBManager.itemModified(sender, e);
-            //}
+            private static ServiciosPopulator mServiciosPopulator;
 
             public UnidadPopulator(DBManagers sender)
             {
                 Parent = sender;
-                
+                mServiciosPopulator = new ServiciosPopulator(Parent);
+                mServiciosPopulator.generarLista();
                 generarLista();
             }
-
-
-
-
 
             public void generarLista()
             {
                 _unidades.Clear();
+                List<Servicio> tmpServicios;
                 foreach (UnidadRow Row in Parent.mdsUnidades.Unidad.Rows)
                 {
                     Unidad actual = new Unidad
@@ -49,6 +43,10 @@ namespace Proyecto_Integrador_3
                         
                     };
                     //actual.PropertyChanged += cuentaModificada;
+                    
+                     tmpServicios = (from servicio in mServiciosPopulator.Servicios where servicio.Unidad == actual.Uid select servicio).ToList();
+                    //MessageBox.Show(tmpServicios.Count.ToString());
+                    actual.Servicios = tmpServicios;
                     _unidades.Add(actual);
                 }
 

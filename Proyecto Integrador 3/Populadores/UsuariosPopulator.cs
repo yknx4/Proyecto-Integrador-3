@@ -20,16 +20,14 @@ namespace Proyecto_Integrador_3
         {
             private List<Usuario> _usuarios = new List<Usuario>();
             private DBManagers Parent;
-            
-            //public void cuentaModificada(object sender, PropertyChangedEventArgs e)
-            //{
-            //    mUsuarioDBManager.itemModified(sender, e);
-            //}
 
+            private static ServiciosPopulator mServiciosPopulator;
+            
             public UsuariosPopulator(DBManagers sender)
             {
                 Parent = sender;
-                
+                mServiciosPopulator = new ServiciosPopulator(Parent);
+                mServiciosPopulator.generarLista();
                 generarLista();
             }
 
@@ -42,33 +40,6 @@ namespace Proyecto_Integrador_3
                 _usuarios.Clear();
                 foreach (UsuariosRow Row in Parent.mdsUsuarios.Usuarios.Rows)
                 {
-                    
-
-                    /*
-                    //DataTable Asistencias = new DataTable();
-                    //SqlCeDataAdapter asist = new SqlCeDataAdapter("SELECT Asistencias.* FROM Asistencias WHERE (idClub = " + clubSeleccionado.Id + ") AND (idAlumno = " + accountValue + ") AND (parcial = " + parcial + ")", conn);
-                    //asist.Fill(Asistencias);
-                    //List<Asistencia> Asistencia = new List<Asistencia>();
-                    //foreach (DataRow aRow in Asistencias.Rows)
-                    //{
-                    //    DateTime tmpDate;
-                    //    try
-                    //    {
-                    //        tmpDate = Convert.ToDateTime(aRow["date"]);
-                    //    }
-                    //    catch (System.InvalidCastException)
-                    //    {
-                    //        tmpDate = new DateTime(0);
-                    //    }
-                    //    Asistencia tmpAsistencia = new Asistencia()
-                    //    {
-                    //        //ID = Convert.ToInt32(aRow["id"].ToString()),
-                    //        Date = tmpDate,
-                    //        Parcial = parcial,
-                    //    };
-                    //    Asistencia.Add(tmpAsistencia);
-                    //}*/
-
                     Usuario.Contacto tmpContacto = new Usuario.Contacto
                     {
                         Nombre = Row.NombreContacto,
@@ -98,6 +69,8 @@ namespace Proyecto_Integrador_3
                         mContacto = tmpContacto,
                         mDomicilio = tmpDomicilio
                     };
+
+                    actual.Servicios = (from servicio in mServiciosPopulator.Servicios where servicio.Usuario == actual.Uid select servicio).ToList();
                     //actual.PropertyChanged += cuentaModificada;
                     _usuarios.Add(actual);
                 }

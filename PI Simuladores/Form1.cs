@@ -217,7 +217,7 @@ namespace PI_Simuladores
             Usuario tmpUsuario;
             DateTime tmpFecha;
             string tmpLog = "";
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 40; i++)
             {
                 tmpUsuario = NextUsuario();
                 tmpFecha = NextFecha();

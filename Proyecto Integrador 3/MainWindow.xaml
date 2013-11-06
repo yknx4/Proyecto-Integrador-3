@@ -112,7 +112,7 @@
                                     <ColumnDefinition Width="auto"></ColumnDefinition>
                                     <ColumnDefinition Width="100"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="txtNumeroTarjetaRecarga" VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="01234567891011121314" TextChanged="cambiaTarjetaRecarga" ></TextBox>
+                                <TextBox x:Name="txtNumeroTarjetaRecarga" VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="133994658745" TextChanged="cambiaTarjetaRecarga" ></TextBox>
                                 <Label Grid.Column="1">Cantidad:</Label>
                                 <TextBox x:Name="txtSaldoRecarga" VerticalAlignment="Top" Grid.Column="2" Controls:TextboxHelper.Watermark="0.00$" ></TextBox>
                             </Grid>
@@ -387,8 +387,7 @@ o	Frecuencia de uso del transporte por unidad de transporte.
 o	Frecuencia de uso del transporte por tipo de usuario.-->
 
                                 <ComboBox MinWidth="400" SelectedIndex="0">
-                                    <ComboBoxItem>Cobros realizados en cada unidad de transporte por tipo de usuario.</ComboBoxItem>
-                                    <ComboBoxItem>Cobro total recabado en la unidad de trasporte.</ComboBoxItem>
+                                    <ComboBoxItem>Cobro total recabado en las unidades de trasporte.</ComboBoxItem>
                                     <ComboBoxItem>Frecuencia de uso del transporte por usuario específico.</ComboBoxItem>
                                     <ComboBoxItem>Frecuencia de uso del transporte por unidad de transporte.</ComboBoxItem>
                                     <ComboBoxItem>Frecuencia de uso del transporte por tipo de usuario.</ComboBoxItem>
@@ -403,13 +402,16 @@ o	Frecuencia de uso del transporte por tipo de usuario.-->
                                     <ColumnDefinition Width="auto"></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition Width="auto"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
                                 <DatePicker x:Name="dtpFechaReporteInicial" Grid.Column="0"></DatePicker>
                                 <Label Grid.Column="1">a</Label>
                                 <DatePicker x:Name="dtpFechaReporteFinal" Grid.Column="2" IsEnabled="False"></DatePicker>
                                 <CheckBox x:Name="chkRango" Grid.Column="3" Click="clickCheckboxRangoFecha"></CheckBox>
-                            </Grid>
+                                    <Button x:Name="btnMostrarReporte" HorizontalAlignment="Right" Grid.Column="4" Click="btnMostrarReporte_Click">Mostrar</Button>
+                                </Grid>
                             </DockPanel>
+                            
                         </DockPanel>
                         <DockPanel Grid.Row="1" Visibility="Hidden">
 

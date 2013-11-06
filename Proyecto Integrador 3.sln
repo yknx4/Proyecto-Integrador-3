@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PI Simuladores", "PI Simula
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bulk Usuarios Parser", "Bulk Usuarios Parser\Bulk Usuarios Parser.csproj", "{90D96A4B-107E-43E2-85E9-CFEDF2035BE3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiciosFalsos", "ServiciosFalsos\ServiciosFalsos.csproj", "{9C760061-CAA5-4A72-889F-F3703B9036A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{90D96A4B-107E-43E2-85E9-CFEDF2035BE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90D96A4B-107E-43E2-85E9-CFEDF2035BE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90D96A4B-107E-43E2-85E9-CFEDF2035BE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C760061-CAA5-4A72-889F-F3703B9036A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C760061-CAA5-4A72-889F-F3703B9036A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C760061-CAA5-4A72-889F-F3703B9036A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C760061-CAA5-4A72-889F-F3703B9036A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -14,7 +14,11 @@ namespace Proyecto_Integrador_3
             get{
                 return @"Data Source=|DataDirectory|\ProyectoIntegrador.sdf"; 
             }
+        
         }
+        public static decimal PrecioNormal = 6;
+        public static decimal PrecioEspecial = 3;
+
 
         
             

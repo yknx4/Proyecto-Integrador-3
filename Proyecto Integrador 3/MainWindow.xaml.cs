@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro.Controls;
+using Proyecto_Integrador_3.Reportes;
 using Proyecto_Integrador_3.TiposDato;
 using System;
 using System.Collections.Generic;
@@ -319,6 +320,14 @@ namespace Proyecto_Integrador_3
             };
 
             new Thread(start).Start();
+        }
+
+        private void btnMostrarReporte_Click(object sender, RoutedEventArgs e)
+        {
+            ReportePorUnidad test = new ReportePorUnidad(ref mDBManagers);
+            test.inicial = dtpFechaReporteInicial.SelectedDate;
+            test.final = dtpFechaReporteFinal.SelectedDate;
+            test.Show();
         }
     }
 }
