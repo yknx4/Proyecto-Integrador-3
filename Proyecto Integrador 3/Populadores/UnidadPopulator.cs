@@ -30,6 +30,13 @@ namespace Proyecto_Integrador_3
                 generarLista();
             }
 
+            public void clear()
+            {
+                _unidades.Clear();
+                System.GC.Collect();
+
+            }
+
             public void generarLista()
             {
                 _unidades.Clear();

@@ -212,5 +212,10 @@ namespace Proyecto_Integrador_3.Reportes
         private void alCargarFilas(object sender, DataGridRowDetailsEventArgs e)
         {
         }
+
+        private void cuantoVentanaCierra(object sender, EventArgs e)
+        {
+            mUnidadPopulator.clear();
+        }
     }
 }

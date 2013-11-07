@@ -414,7 +414,9 @@ namespace Proyecto_Integrador_3
             ReportePorUnidad test = new ReportePorUnidad(ref mDBManagers);
             test.inicial = dtpFechaReporteInicial.SelectedDate;
             test.final = dtpFechaReporteFinal.SelectedDate;
-            test.Show();
+            test.ShowDialog();
+            test = null;
+            System.GC.Collect();
         }
 
         private void alDobleClickBusqueda(object sender, MouseButtonEventArgs e)
