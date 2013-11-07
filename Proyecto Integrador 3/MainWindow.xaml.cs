@@ -3,6 +3,7 @@ using Proyecto_Integrador_3.Reportes;
 using Proyecto_Integrador_3.TiposDato;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Configuration;
 using System.Data.SqlServerCe;
 using System.Linq;
@@ -50,6 +51,9 @@ namespace Proyecto_Integrador_3
 
         private Usuario currentUsuario;
 
+        private BackgroundWorker mBackgroundGenerarLista= new BackgroundWorker();
+        private BackgroundWorker mBackgroundRegistrar = new BackgroundWorker();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -70,45 +74,91 @@ namespace Proyecto_Integrador_3
             dgtcSexo.Binding = new Binding("Sexo");
             Binding bTipoUsuario = new Binding("sTipoUsuario");
             dgtcTipoUsuario.Binding = bTipoUsuario;
-            /*Código Placeholder*/
-           /* dtgrdBusqueda.Items.Add(new Usuario() {Nombre="Prueba",TarjetaAsignada=12345678,Saldo=519,Sexo="Hombre" });
-            dtgrdBusqueda.Items.Add(new Usuario() { Nombre = "Prueba1", TarjetaAsignada = 12345678, Saldo = 519, Sexo = "Hombre" });
-            dtgrdBusqueda.Items.Add(new Usuario() { Nombre = "Prueba2", TarjetaAsignada = 12345678, Saldo = 519, Sexo = "Hombre" });
-            dtgrdBusqueda.Items.Add(new Usuario() { Nombre = "Prueba3", TarjetaAsignada = 12345678, Saldo = 519, Sexo = "Hombre" });
-            dtgrdBusqueda.Items.Add(new Usuario() { Nombre = "Prueba4", TarjetaAsignada = 12345678, Saldo = 519, Sexo = "Hombre" });*/
-            /*##END##*/
+            SetBackgroundWorkers();
             
            
         }
 
+        void SetBackgroundWorkers() {
+            mBackgroundGenerarLista.DoWork += _backgroundWorker_DoWork_GenerarLista;
+            mBackgroundGenerarLista.RunWorkerCompleted += _backgroundWorker_RunWorkerCompleted_GenerarLista; // Run the Background Worker 
+            mBackgroundRegistrar.DoWork += _backgroundWorker_DoWork_Registro;
+            mBackgroundRegistrar.RunWorkerCompleted += _backgroundWorker_RunWorkerCompleted_Registro;
+        }
+
         void generarLista()
         {
-
-            mUsuariosPopulator.generarLista();
-            Usuarios = mUsuariosPopulator.Usuarios;
+            mBackgroundGenerarLista.RunWorkerAsync(); 
         }
+
+        void _backgroundWorker_DoWork_GenerarLista(object sender, DoWorkEventArgs e)
+        {
+            mUsuariosPopulator.generarLista();
+        }
+
+        void _backgroundWorker_RunWorkerCompleted_GenerarLista(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled)
+            {
+                lblEstadoPrincipal.Content = "Evento Cancelado";
+                //statusText.Text = "Cancelled";
+            }
+            else if (e.Error != null)
+            {
+                //statusText.Text = "Exception Thrown";
+            }
+            else
+            {
+                Usuarios = mUsuariosPopulator.Usuarios;
+                //.Text = "Completed";
+            }
+        }
+
+        
 
         public void ClearTextBoxes(Panel panel)
         {
-
             foreach (Control c in panel.Children.OfType<Control>())
             {
-
                 if (c is TextBox)
                 {
-
                     ((TextBox)c).Clear();
-
                 }
-
             }
             foreach (Panel p in panel.Children.OfType<Panel>())
             {
-
                 ClearTextBoxes(p);
             }
-
         }
+        public void DisableControls(Panel panel)
+        {
+            foreach (Control c in panel.Children.OfType<Control>())
+            {
+                
+                    c.IsEnabled = false;
+                
+            }
+            foreach (Panel p in panel.Children.OfType<Panel>())
+            {
+                DisableControls(p);
+            }
+        }
+        public void EnableControls(Panel panel)
+        {
+            foreach (Control c in panel.Children.OfType<Control>())
+            {
+                
+                   c.IsEnabled = true ;
+              
+            }
+            foreach (Panel p in panel.Children.OfType<Panel>())
+            {
+                EnableControls(p);
+            }
+        }
+
+
+
 
         private void cambiaTextoBusquedaAsync(object sender)
         {
@@ -219,26 +269,70 @@ namespace Proyecto_Integrador_3
             
         }
 
+
+        //void registrarAsync(Usuario usuarioNuevo) {
+            
+            
+        //    //try
+        //    //{
+        //        mUsuarioDBManager.AddToDB();
+        //        //lblEstadoPrincipal.Content = usuarioNuevo.sNombre + " registrado correctamente.";
+        //        //lblEstadoSecundaria.Content = mDBManagers.LastMessage + " filas han sido actualizadas.";
+                
+        //        generarLista();
+
+        //    //}
+        //    //catch (Exception ex)
+        //    //{
+        //    //    lblEstadoPrincipal.Content = ex.ToString();
+        //    //}
+        //        MessageBox.Show(usuarioNuevo.sNombre + " registrado correctamente.");
+        //}
+
         private void onClickRegistrar(object sender, RoutedEventArgs e)
         {
-
+            
+            ((Control)sender).IsEnabled = false;
+            DisableControls((Panel)grdRegistro);
+            pgrRegistrar.IsEnabled = true;
+            pgrRegistrar.IsActive = true;
             Usuario usuarioNuevo = generarUsuario();
-            mUsuarioDBManager.setItem(usuarioNuevo);
-            try 
+            mBackgroundRegistrar.RunWorkerAsync(usuarioNuevo);
+            
+        }
+
+        void _backgroundWorker_DoWork_Registro(object sender, DoWorkEventArgs e)
+        {
+            mUsuarioDBManager.setItem((Usuario)e.Argument);
+            mUsuarioDBManager.AddToDB();
+            generarLista();
+        }
+
+        void _backgroundWorker_RunWorkerCompleted_Registro(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled)
             {
-                mUsuarioDBManager.AddToDB();
-                lblEstadoPrincipal.Content = usuarioNuevo.sNombre + " registrado correctamente.";
-                lblEstadoSecundaria.Content = mDBManagers.LastMessage+" filas han sido actualizadas.";
+                lblEstadoPrincipal.Content = "Evento Cancelado";
+                //statusText.Text = "Cancelled";
+            }
+            else if (e.Error != null)
+            {
+                lblEstadoPrincipal.Content = "Error al registrar";
+                //statusText.Text = "Exception Thrown";
+            }
+            else
+            {
+                lblEstadoPrincipal.Content = mUsuarioDBManager.getItem().sNombre + " registrado correctamente.";
+                lblEstadoSecundaria.Content = mDBManagers.LastMessage + " filas han sido actualizadas.";
                 limpiarVentanaRegistro();
                 txtNumeroTarjeta.Text = Generadores.CardGenerator.Next().ToString();
-                generarLista();
+                btnRegistrar.IsEnabled = true;
+                //.Text = "Completed";
             }
-            catch(Exception ex)
-            {
-                lblEstadoPrincipal.Content = ex.ToString();
-            }
-
+            EnableControls((Panel)grdRegistro);
+            pgrRegistrar.IsActive = false;
         }
+
 
         private void PresionarTecla_BusqNom(object sender, KeyEventArgs e)
         {
@@ -306,6 +400,8 @@ namespace Proyecto_Integrador_3
 
         private void alPresionarEnterBusqueda(object sender, KeyEventArgs e)
         {
+
+            /*http://msdn.microsoft.com/en-us/magazine/cc163328.aspx*/
             if (e.Key != Key.Enter)
             {
                 return;

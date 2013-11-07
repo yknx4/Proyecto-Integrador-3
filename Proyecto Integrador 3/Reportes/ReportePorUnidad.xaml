@@ -14,7 +14,7 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <!--<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/VS/Textbox.xaml" />-->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Olive.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Teal.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
                 <ResourceDictionary>
@@ -58,8 +58,10 @@
     <Controls:MetroWindow.WindowCommands>
         <Controls:WindowCommands Loaded="alCargar">
             <!--<Button Content="Arekar Technologies" IsEnabled="False"/>-->
+            <StackPanel>
+                <Button IsEnabled="False">Busqueda: </Button>
             <TextBox x:Name="txtBusqueda" Controls:TextboxHelper.Watermark="Buscar" Margin="5" Width="80" TextInput="entradaBusqueda" KeyUp="enterEnBusqueda"></TextBox>
-
+            </StackPanel>
         </Controls:WindowCommands>
     </Controls:MetroWindow.WindowCommands>
     <Grid>

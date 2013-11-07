@@ -4,7 +4,7 @@
   xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         Title="SmartCards" Height="600" Width="1020"
         
-        Icon="MainLogo.ico" SizeChanged="ventanaCambiaTamaño"
+        Icon="MainLogo.ico" SizeChanged="ventanaCambiaTamaño" 
                       
         >
     <Controls:MetroWindow.WindowCommands>
@@ -200,6 +200,7 @@
                             <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
                         </Grid.RowDefinitions>
                         
                         
@@ -345,7 +346,7 @@
                             
                             <Button x:Name="btnRegistrar" Click="onClickRegistrar" DockPanel.Dock="Right" HorizontalAlignment="Right">Registrar</Button>
                         </DockPanel>
-
+                        <Controls:ProgressRing Margin="40" Grid.Row="7" x:Name="pgrRegistrar" IsActive="False" HorizontalAlignment="Center" DockPanel.Dock="Right" Height="80" Width="80" />
 
 
 

@@ -41,6 +41,9 @@ namespace Proyecto_Integrador_3
                 UpdateDBFromDataset();
                 
             }
+            public Usuario getItem() {
+                return heldItem;
+            }
 
             public void AddToDataset(Guid Uid) {
                 if (!Active())
