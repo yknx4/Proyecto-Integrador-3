@@ -115,6 +115,7 @@
     <Compile Include="Generadores\CardGenerator.cs" />
     <Compile Include="Generadores\RandChar.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="MainWindow.Properties.xaml.cs" />
     <Compile Include="Manejadores\ServicioDBManager.cs" />
     <Compile Include="Manejadores\UnidadDBManager.cs" />
     <Compile Include="Manejadores\DBManager.cs" />
@@ -270,6 +271,8 @@
     <Content Include="ProyectoIntegrador.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <SplashScreen Include="Splash.png" />
+    <None Include="SplashScreen1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

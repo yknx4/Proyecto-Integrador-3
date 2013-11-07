@@ -104,13 +104,13 @@ namespace ServiciosFalsos
         void iniciar()
         {
             mDBManagers.Fill();
-            mUsuariosPopulator = new UsuariosPopulator(mDBManagers);
+            mUsuariosPopulator = new UsuariosPopulator(mDBManagers,false);
             mUnidadPopulator = new UnidadPopulator(mDBManagers);
             generarLista();
             Usuario tmpUsuario;
             DateTime tmpFecha;
             string tmpLog = "";
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 1000000; i++)
             {
                 Console.Title = "Servicio: "+i.ToString();
                 tmpUsuario = NextUsuario();

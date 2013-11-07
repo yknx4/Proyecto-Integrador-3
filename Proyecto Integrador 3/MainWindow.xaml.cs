@@ -4,8 +4,6 @@ using Proyecto_Integrador_3.TiposDato;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
-using System.Data.SqlServerCe;
 using System.Linq;
 using System.Threading;
 using System.Windows;
@@ -16,14 +14,12 @@ using System.Windows.Threading;
 using UsuarioDBManager = Proyecto_Integrador_3.DBManagers.UsuarioDBManager;
 using UsuariosPopulator = Proyecto_Integrador_3.DBManagers.UsuariosPopulator;
 
-
-
 namespace Proyecto_Integrador_3
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    /// 
+    ///
 
     /*public System.Guid Uid { get; set; }
         public string Nombre { get; set; }
@@ -35,6 +31,7 @@ namespace Proyecto_Integrador_3
         public string TelefonoContacto { get; set; }
         public short TipoUsuario { get; set; }
         public int Saldo { get; set; }*/
+
     public partial class MainWindow : MetroWindow
     {
         //private static SqlCeConnection conn = new SqlCeConnection(@ConfigurationManager.ConnectionStrings["Proyecto_Integrador_3.Properties.Settings.ProyectoIntegradorConnectionString"].ConnectionString);
@@ -51,7 +48,7 @@ namespace Proyecto_Integrador_3
 
         private Usuario currentUsuario;
 
-        private BackgroundWorker mBackgroundGenerarLista= new BackgroundWorker();
+        private BackgroundWorker mBackgroundGenerarLista = new BackgroundWorker();
         private BackgroundWorker mBackgroundRegistrar = new BackgroundWorker();
 
         public MainWindow()
@@ -66,7 +63,7 @@ namespace Proyecto_Integrador_3
             dtpFechaNacimiento.SelectedDate = DateTime.Today.AddYears(-18);
             dtpFechaReporteInicial.SelectedDate = DateTime.Today.AddDays(-1);
             txtNumeroTarjeta.Text = Generadores.CardGenerator.Next().ToString();
-            mUsuariosPopulator = new UsuariosPopulator(mDBManagers);
+            mUsuariosPopulator = new UsuariosPopulator(mDBManagers, false);
             generarLista();
             dgtcNombre.Binding = new Binding("sNombre");
             dgtcNumeroTarjeta.Binding = new Binding("TarjetaAsignada");
@@ -76,31 +73,33 @@ namespace Proyecto_Integrador_3
             dgtcTipoUsuario.Binding = bTipoUsuario;
             SetBackgroundWorkers();
             
-           
         }
 
-        void SetBackgroundWorkers() {
+        private void SetBackgroundWorkers()
+        {
             mBackgroundGenerarLista.DoWork += _backgroundWorker_DoWork_GenerarLista;
-            mBackgroundGenerarLista.RunWorkerCompleted += _backgroundWorker_RunWorkerCompleted_GenerarLista; // Run the Background Worker 
+            mBackgroundGenerarLista.RunWorkerCompleted += _backgroundWorker_RunWorkerCompleted_GenerarLista; // Run the Background Worker
             mBackgroundRegistrar.DoWork += _backgroundWorker_DoWork_Registro;
             mBackgroundRegistrar.RunWorkerCompleted += _backgroundWorker_RunWorkerCompleted_Registro;
         }
 
-        void generarLista()
+        private void generarLista()
         {
-            mBackgroundGenerarLista.RunWorkerAsync(); 
+            DisableControls((Panel)tbRecarga.Content);
+            mBackgroundGenerarLista.RunWorkerAsync();
         }
 
-        void _backgroundWorker_DoWork_GenerarLista(object sender, DoWorkEventArgs e)
+        private void _backgroundWorker_DoWork_GenerarLista(object sender, DoWorkEventArgs e)
         {
             mUsuariosPopulator.generarLista();
         }
 
-        void _backgroundWorker_RunWorkerCompleted_GenerarLista(object sender, RunWorkerCompletedEventArgs e)
+        private void _backgroundWorker_RunWorkerCompleted_GenerarLista(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Cancelled)
             {
                 lblEstadoPrincipal.Content = "Evento Cancelado";
+
                 //statusText.Text = "Cancelled";
             }
             else if (e.Error != null)
@@ -110,11 +109,11 @@ namespace Proyecto_Integrador_3
             else
             {
                 Usuarios = mUsuariosPopulator.Usuarios;
+
                 //.Text = "Completed";
             }
+            EnableControls((Panel)tbRecarga.Content);
         }
-
-        
 
         public void ClearTextBoxes(Panel panel)
         {
@@ -130,26 +129,24 @@ namespace Proyecto_Integrador_3
                 ClearTextBoxes(p);
             }
         }
+
         public void DisableControls(Panel panel)
         {
             foreach (Control c in panel.Children.OfType<Control>())
             {
-                
-                    c.IsEnabled = false;
-                
+                c.IsEnabled = false;
             }
             foreach (Panel p in panel.Children.OfType<Panel>())
             {
                 DisableControls(p);
             }
         }
+
         public void EnableControls(Panel panel)
         {
             foreach (Control c in panel.Children.OfType<Control>())
             {
-                
-                   c.IsEnabled = true ;
-              
+                c.IsEnabled = true;
             }
             foreach (Panel p in panel.Children.OfType<Panel>())
             {
@@ -157,34 +154,26 @@ namespace Proyecto_Integrador_3
             }
         }
 
-
-
-
         private void cambiaTextoBusquedaAsync(object sender)
         {
             dcpnlBusqueda.Visibility = Visibility.Hidden;
             TextBox origen = sender as TextBox;
-            if (origen.Text != "" ) {
-                
-                UsuariosBusqueda = (from usuarios in Usuarios where usuarios.Nombre.ToLower().Contains(origen.Text.ToLower()) select usuarios ).ToList();
+            if (origen.Text != "")
+            {
+                UsuariosBusqueda = (from usuarios in Usuarios where usuarios.Nombre.ToLower().Contains(origen.Text.ToLower()) select usuarios).ToList();
                 dtgrdBusqueda.ItemsSource = UsuariosBusqueda;
-                if(UsuariosBusqueda.Count>0)dcpnlBusqueda.Visibility = Visibility.Visible;
-                
+                if (UsuariosBusqueda.Count > 0) dcpnlBusqueda.Visibility = Visibility.Visible;
+
                 //txtNumeroTarjetaRecarga.IsReadOnly = true;
-                
             }
             else
             {
-                
                 //txtNumeroTarjetaRecarga.IsReadOnly = false;
             }
         }
 
-        
         private void cambiaTextoBusqueda(object sender, TextChangedEventArgs e)
         {
-            
-            
         }
 
         private void clickCheckboxRangoFecha(object sender, RoutedEventArgs e)
@@ -201,37 +190,40 @@ namespace Proyecto_Integrador_3
 
         private void entraTexto(object sender, TextCompositionEventArgs e)
         {
-
         }
 
-        Usuario generarUsuario()
+        private Usuario generarUsuario()
         {
-            Usuario.Contacto tmpContacto = new Usuario.Contacto { 
+            Usuario.Contacto tmpContacto = new Usuario.Contacto
+            {
                 Nombre = txtNombreDeContacto.Text,
                 Telefono = txtTelefonoDeContacto.Text
             };
-            Usuario.Domicilio tmpDomicilio = new Usuario.Domicilio { 
+            Usuario.Domicilio tmpDomicilio = new Usuario.Domicilio
+            {
                 Calle = txtCalle.Text,
                 Colonia = txtColonia.Text,
                 Municipio = (short)cmbMunicipio.SelectedIndex,
                 Numero = int.Parse(txtNumero.Text)
             };
 
-            return new Usuario { 
+            return new Usuario
+            {
                 Sexo = rdbHombre.IsChecked.ToString(),
                 Alergias = txtAlergias.Text,
                 Celular = txtCelular.Text,
                 FechaNacimiento = (DateTime)dtpFechaNacimiento.SelectedDate,
-                Nombre = txtNombre.Text+Constantes.SeparadorNombre+txtApellidoPaterno.Text+Constantes.SeparadorNombre+txtApellidoMaterno.Text,
+                Nombre = txtNombre.Text + Constantes.SeparadorNombre + txtApellidoPaterno.Text + Constantes.SeparadorNombre + txtApellidoMaterno.Text,
                 TarjetaAsignada = txtNumeroTarjeta.Text,
                 TipoSangre = (short)(cmbSangre.SelectedIndex),
-                TipoUsuario = (byte)(cmbTipos.SelectedIndex+1),               
+                TipoUsuario = (byte)(cmbTipos.SelectedIndex + 1),
                 Telefono = txtTelefono.Text,
                 mContacto = tmpContacto,
                 mDomicilio = tmpDomicilio
             };
         }
-        Usuario generarUsuario(int i)
+
+        private Usuario generarUsuario(int i)
         {
             Usuario.Contacto tmpContacto = new Usuario.Contacto
             {
@@ -261,24 +253,21 @@ namespace Proyecto_Integrador_3
                 mDomicilio = tmpDomicilio
             };
         }
-        void limpiarVentanaRegistro()
+
+        private void limpiarVentanaRegistro()
         {
             cmbSangre.SelectedItem = Tipos.Sangre.Last();
             cmbMunicipio.SelectedItem = Tipos.Municipios.Last();
             ClearTextBoxes((Panel)grdRegistro);
-            
         }
 
-
         //void registrarAsync(Usuario usuarioNuevo) {
-            
-            
         //    //try
         //    //{
         //        mUsuarioDBManager.AddToDB();
         //        //lblEstadoPrincipal.Content = usuarioNuevo.sNombre + " registrado correctamente.";
         //        //lblEstadoSecundaria.Content = mDBManagers.LastMessage + " filas han sido actualizadas.";
-                
+
         //        generarLista();
 
         //    //}
@@ -291,33 +280,32 @@ namespace Proyecto_Integrador_3
 
         private void onClickRegistrar(object sender, RoutedEventArgs e)
         {
-            
             ((Control)sender).IsEnabled = false;
             DisableControls((Panel)grdRegistro);
             pgrRegistrar.IsEnabled = true;
             pgrRegistrar.IsActive = true;
             Usuario usuarioNuevo = generarUsuario();
             mBackgroundRegistrar.RunWorkerAsync(usuarioNuevo);
-            
         }
 
-        void _backgroundWorker_DoWork_Registro(object sender, DoWorkEventArgs e)
+        private void _backgroundWorker_DoWork_Registro(object sender, DoWorkEventArgs e)
         {
             mUsuarioDBManager.setItem((Usuario)e.Argument);
             mUsuarioDBManager.AddToDB();
-            generarLista();
         }
 
-        void _backgroundWorker_RunWorkerCompleted_Registro(object sender, RunWorkerCompletedEventArgs e)
+        private void _backgroundWorker_RunWorkerCompleted_Registro(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Cancelled)
             {
                 lblEstadoPrincipal.Content = "Evento Cancelado";
+
                 //statusText.Text = "Cancelled";
             }
             else if (e.Error != null)
             {
                 lblEstadoPrincipal.Content = "Error al registrar";
+
                 //statusText.Text = "Exception Thrown";
             }
             else
@@ -327,16 +315,17 @@ namespace Proyecto_Integrador_3
                 limpiarVentanaRegistro();
                 txtNumeroTarjeta.Text = Generadores.CardGenerator.Next().ToString();
                 btnRegistrar.IsEnabled = true;
+                mUsuarioDBManager.Refresh();
+                generarLista();
+
                 //.Text = "Completed";
             }
             EnableControls((Panel)grdRegistro);
             pgrRegistrar.IsActive = false;
         }
 
-
         private void PresionarTecla_BusqNom(object sender, KeyEventArgs e)
         {
-
         }
 
         private void ventanaCambiaTamaño(object sender, SizeChangedEventArgs e)
@@ -349,27 +338,26 @@ namespace Proyecto_Integrador_3
             TextBox origen = sender as TextBox;
             if (origen.Text != "")
             {
-                
                 //txtNombreBusqueda.IsReadOnly = true;
                 UsuariosBusqueda = (from usuarios in Usuarios where usuarios.TarjetaAsignada == origen.Text select usuarios).ToList();
-                
-                if (UsuariosBusqueda.Count>0)
+
+                if (UsuariosBusqueda.Count > 0)
                 {
                     currentUsuario = UsuariosBusqueda.First();
-                    txtNombreBusqueda.Text =currentUsuario.sNombre;
+                    txtNombreBusqueda.Text = currentUsuario.sNombre;
                 }
+
                 //if (UsuariosBusqueda.Count==1)
                 //{
                 //    dtgrdBusqueda.Visibility = Visibility.Hidden;
                 //}
-                
             }
             else
             {
-                
                 //txtNombreBusqueda.IsReadOnly = false;
             }
         }
+
         private void cambiaTarjetaRecarga(object sender, TextChangedEventArgs e)
         {
             Action<object> del = (object s) => cambiaTarjetaRecargaAsync(s);
@@ -400,7 +388,6 @@ namespace Proyecto_Integrador_3
 
         private void alPresionarEnterBusqueda(object sender, KeyEventArgs e)
         {
-
             /*http://msdn.microsoft.com/en-us/magazine/cc163328.aspx*/
             if (e.Key != Key.Enter)
             {
@@ -427,5 +414,3 @@ namespace Proyecto_Integrador_3
         }
     }
 }
-
-

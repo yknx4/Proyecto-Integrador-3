@@ -23,17 +23,30 @@ namespace Proyecto_Integrador_3
 
             private static ServiciosPopulator mServiciosPopulator;
             
-            public UsuariosPopulator(DBManagers sender)
+            public UsuariosPopulator(DBManagers sender, bool Servicios)
             {
+                this.Servicios = Servicios;
                 Parent = sender;
+                if (Servicios)
+                {
+                    generarServicios();
+                } 
+                else
+                    {
+                        generarLista();
+                }
+                
+            }
+
+            bool Servicios;
+
+            void generarServicios()
+            {
                 mServiciosPopulator = new ServiciosPopulator(Parent);
                 mServiciosPopulator.generarLista();
                 generarLista();
+
             }
-
-
-
-
 
             public void generarLista()
             {
@@ -70,7 +83,7 @@ namespace Proyecto_Integrador_3
                         mDomicilio = tmpDomicilio
                     };
 
-                    actual.Servicios = (from servicio in mServiciosPopulator.Servicios where servicio.Usuario == actual.Uid select servicio).ToList();
+                    if(Servicios)actual.Servicios = (from servicio in mServiciosPopulator.Servicios where servicio.Usuario == actual.Uid select servicio).ToList();
                     //actual.PropertyChanged += cuentaModificada;
                     _usuarios.Add(actual);
                 }

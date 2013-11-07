@@ -34,9 +34,6 @@ namespace Proyecto_Integrador_3
 
             public void AddToDB(Guid Uid)
             {
-                
-                
-                
                 AddToDataset(Uid);
                 UpdateDBFromDataset();
                 
@@ -60,7 +57,13 @@ namespace Proyecto_Integrador_3
 
             public void UpdateDBFromDataset() {
                 Parent.LastMessage = Parent.mUsuariosTableAdapter.Update(Parent.mdsUsuarios).ToString();
-                Parent.Refresh();
+                
+            }
+
+            public void Refresh()
+            {
+                Parent.mdsUsuarios.Clear();
+                Parent.mUsuariosTableAdapter.Fill(Parent.mdsUsuarios.Usuarios);
             }
 
 
