@@ -110,7 +110,7 @@ namespace ServiciosFalsos
             Usuario tmpUsuario;
             DateTime tmpFecha;
             string tmpLog = "";
-            for (var i = 0; i < 2000000; i++)
+            for (int i = 0; i < 10000; i++)
             {
                 Console.Title = "Servicio: "+i.ToString();
                 tmpUsuario = NextUsuario();
