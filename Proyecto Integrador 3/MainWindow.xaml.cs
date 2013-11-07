@@ -54,7 +54,9 @@ namespace Proyecto_Integrador_3
         public MainWindow()
         {
             InitializeComponent();
+            /*Carga los datos de la DB*/
             mDBManagers.Fill();
+            /*Se establecen los valores predeterminados*/
             cmbTipos.ItemsSource = (from values in Tipos.Usuarios.Values select values).ToList();
             cmbSangre.ItemsSource = Tipos.Sangre;
             cmbSangre.SelectedItem = Tipos.Sangre.Last();
@@ -62,16 +64,20 @@ namespace Proyecto_Integrador_3
             cmbMunicipio.SelectedItem = Tipos.Municipios.Last();
             dtpFechaNacimiento.SelectedDate = DateTime.Today.AddYears(-18);
             dtpFechaReporteInicial.SelectedDate = DateTime.Today.AddDays(-1);
+            /*Se genera la primera tarjeta del día*/
             txtNumeroTarjeta.Text = Generadores.CardGenerator.Next().ToString();
+            /*Se genera la estructura del Datagrid*/
             mUsuariosPopulator = new UsuariosPopulator(mDBManagers, false);
-            generarLista();
             dgtcNombre.Binding = new Binding("sNombre");
             dgtcNumeroTarjeta.Binding = new Binding("TarjetaAsignada");
             dgtcSaldo.Binding = new Binding("Saldo");
             dgtcSexo.Binding = new Binding("Sexo");
             Binding bTipoUsuario = new Binding("sTipoUsuario");
             dgtcTipoUsuario.Binding = bTipoUsuario;
+            /*Se asignan los hilos de fondo*/
             SetBackgroundWorkers();
+            /*Se genera la primera lista*/
+            generarLista();
             
         }
 
@@ -160,7 +166,7 @@ namespace Proyecto_Integrador_3
             TextBox origen = sender as TextBox;
             if (origen.Text != "")
             {
-                UsuariosBusqueda = (from usuarios in Usuarios where usuarios.Nombre.ToLower().Contains(origen.Text.ToLower()) select usuarios).ToList();
+                UsuariosBusqueda = (from usuarios in Usuarios where usuarios.sNombre.ToLower().Contains(origen.Text.ToLower()) select usuarios).ToList();
                 dtgrdBusqueda.ItemsSource = UsuariosBusqueda;
                 if (UsuariosBusqueda.Count > 0) dcpnlBusqueda.Visibility = Visibility.Visible;
 
@@ -261,22 +267,6 @@ namespace Proyecto_Integrador_3
             ClearTextBoxes((Panel)grdRegistro);
         }
 
-        //void registrarAsync(Usuario usuarioNuevo) {
-        //    //try
-        //    //{
-        //        mUsuarioDBManager.AddToDB();
-        //        //lblEstadoPrincipal.Content = usuarioNuevo.sNombre + " registrado correctamente.";
-        //        //lblEstadoSecundaria.Content = mDBManagers.LastMessage + " filas han sido actualizadas.";
-
-        //        generarLista();
-
-        //    //}
-        //    //catch (Exception ex)
-        //    //{
-        //    //    lblEstadoPrincipal.Content = ex.ToString();
-        //    //}
-        //        MessageBox.Show(usuarioNuevo.sNombre + " registrado correctamente.");
-        //}
 
         private void onClickRegistrar(object sender, RoutedEventArgs e)
         {
@@ -346,11 +336,6 @@ namespace Proyecto_Integrador_3
                     currentUsuario = UsuariosBusqueda.First();
                     txtNombreBusqueda.Text = currentUsuario.sNombre;
                 }
-
-                //if (UsuariosBusqueda.Count==1)
-                //{
-                //    dtgrdBusqueda.Visibility = Visibility.Hidden;
-                //}
             }
             else
             {
@@ -381,9 +366,28 @@ namespace Proyecto_Integrador_3
             currentUsuario.Saldo += Decimal.Parse(txtSaldoRecarga.Text);
             lblEstadoPrincipal.Content = currentUsuario.Saldo.ToString() + " saldoTotal.";
             mUsuarioDBManager.modificarDato();
-            generarLista();
-            txtNombreBusqueda.Text = "";
-            txtNombreBusqueda.Text = currentUsuario.Nombre;
+            PerformBusquedaEnter();
+            //generarLista();
+        }
+
+        void PerformBusquedaEnter()
+        {
+            var key = Key.Enter;
+            System.Windows.Media.Visual target = txtNombreBusqueda;
+            var routedEvent = Keyboard.KeyUpEvent;
+            txtNombreBusqueda.RaiseEvent(
+                new KeyEventArgs(
+                    Keyboard.PrimaryDevice,
+                    PresentationSource.FromVisual(target),
+                    0,
+                    key
+                    )
+                    {
+                        RoutedEvent=routedEvent
+                    }
+
+                );
+
         }
 
         private void alPresionarEnterBusqueda(object sender, KeyEventArgs e)
@@ -411,6 +415,16 @@ namespace Proyecto_Integrador_3
             test.inicial = dtpFechaReporteInicial.SelectedDate;
             test.final = dtpFechaReporteFinal.SelectedDate;
             test.Show();
+        }
+
+        private void alDobleClickBusqueda(object sender, MouseButtonEventArgs e)
+        {
+            //MessageBox.Show("Doble Click"+dtgrdBusqueda.SelectedCells.Count.ToString());
+            if (dtgrdBusqueda.SelectedItems.Count == 1)
+            {
+                currentUsuario = (Usuario)dtgrdBusqueda.SelectedItems[0];
+                txtNumeroTarjetaRecarga.Text = currentUsuario.TarjetaAsignada;
+            }
         }
     }
 }

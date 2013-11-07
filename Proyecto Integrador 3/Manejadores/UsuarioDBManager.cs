@@ -128,7 +128,7 @@ namespace Proyecto_Integrador_3
                 int index = Parent.mdsUsuarios.Usuarios.Rows.IndexOf(Parent.mdsUsuarios.Usuarios.FindByUid(heldItem.Uid));
                 Parent.mdsUsuarios.Usuarios.Rows[index].ItemArray = getUsuarioRow().ItemArray;
                 Parent.LastMessage = Parent.mUsuariosTableAdapter.Update(Parent.mdsUsuarios).ToString();
-                Parent.Refresh();
+                //Parent.Refresh();
             }
         }
     }

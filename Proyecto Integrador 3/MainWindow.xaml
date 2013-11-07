@@ -125,7 +125,7 @@
 
                             <Grid>
 
-                                <DataGrid x:Name="dtgrdBusqueda" IsSynchronizedWithCurrentItem="False" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
+                                <DataGrid x:Name="dtgrdBusqueda" IsSynchronizedWithCurrentItem="False" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" MouseDoubleClick="alDobleClickBusqueda">
                                     <DataGrid.Columns>
                                         <DataGridTextColumn x:Name="dgtcTipoUsuario" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tipo de Usuario" />
                                         <DataGridTextColumn x:Name="dgtcNombre" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre" />
@@ -267,7 +267,7 @@
                                 </Grid.ColumnDefinitions>
                                 <DockPanel Grid.Column="0">
                                     <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Teléfono:</Label>
-                                    <TextBox x:Name="txtTelefono" Controls:TextboxHelper.Watermark="312-3160000"></TextBox>
+                                    <TextBox x:Name="txtTelefono" Controls:TextboxHelper.Watermark="3123160000"></TextBox>
                                 </DockPanel>
                                 <DockPanel Grid.Column="1">
                                     <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Celular:</Label>
