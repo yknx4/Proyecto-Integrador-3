@@ -336,11 +336,11 @@ o	Frecuencia de uso del transporte por usuario específico.
 o	Frecuencia de uso del transporte por unidad de transporte.
 o	Frecuencia de uso del transporte por tipo de usuario.-->
 
-                                <ComboBox MinWidth="400" SelectedIndex="0">
+                                <ComboBox x:Name="cmbTipoReporte" MinWidth="400" SelectedIndex="0">
                                     <ComboBoxItem>Cobro total recabado en las unidades de trasporte.</ComboBoxItem>
-                                    <ComboBoxItem>Frecuencia de uso del transporte por usuario específico.</ComboBoxItem>
-                                    <ComboBoxItem>Frecuencia de uso del transporte por unidad de transporte.</ComboBoxItem>
-                                    <ComboBoxItem>Frecuencia de uso del transporte por tipo de usuario.</ComboBoxItem>
+                                    <ComboBoxItem>Frecuencia de uso del transporte</ComboBoxItem>
+                                    <!--<ComboBoxItem>Frecuencia de uso del transporte por unidad de transporte.</ComboBoxItem>
+                                    <ComboBoxItem>Frecuencia de uso del transporte por tipo de usuario.</ComboBoxItem>-->
                                 </ComboBox>
                             </DockPanel>
                             <DockPanel>
