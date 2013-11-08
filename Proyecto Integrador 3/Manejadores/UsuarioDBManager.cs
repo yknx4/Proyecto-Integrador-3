@@ -29,12 +29,14 @@ namespace Proyecto_Integrador_3
                     Error = "El usuario con ID " + heldItem.Uid.ToString() + " ya está en la base de datos";
                     notifyError();
                 }
-                AddToDB(Guid.NewGuid());
+                heldItem.Uid = Guid.NewGuid();
+                AddToDB();
             }
 
             public void AddToDB(Guid Uid)
             {
-                AddToDataset(Uid);
+                heldItem.Uid = Uid;
+                AddToDataset();
                 UpdateDBFromDataset();
                 
             }
@@ -42,20 +44,19 @@ namespace Proyecto_Integrador_3
                 return heldItem;
             }
 
-            public void AddToDataset(Guid Uid) {
+            public override void AddToDataset() {
                 if (!Active())
                 {
                     Error = "No hay ningun usuario seleccionado";
                     notifyError();
                 }
                 heldItem.Saldo = 0;
-                heldItem.Uid = Uid;
                 dsUsuarios.UsuariosRow nuevoUsuario = getUsuarioRow();
                 Parent.mdsUsuarios.Usuarios.AddUsuariosRow(nuevoUsuario);
 
             }
 
-            public void UpdateDBFromDataset() {
+            public override void UpdateDBFromDataset() {
                 Parent.LastMessage = Parent.mUsuariosTableAdapter.Update(Parent.mdsUsuarios).ToString();
                 
             }

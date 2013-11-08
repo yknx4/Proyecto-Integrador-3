@@ -45,7 +45,7 @@ namespace Proyecto_Integrador_3
                 
             }
 
-            public void AddToDataset() {
+            public override void AddToDataset() {
                 if (!Active())
                 {
                     Error = "No hay ningun servicio seleccionado";
@@ -60,7 +60,7 @@ namespace Proyecto_Integrador_3
                 Parent.mdsServicios.Servicios.AddServiciosRow(nuevoServicio);
 
             }
-            public void UpdateDBFromDataset() {
+            public override void UpdateDBFromDataset() {
                 Parent.LastMessage = Parent.mServiciosTableAdapter.Update(Parent.mdsServicios).ToString();
                 Parent.Refresh();
             }

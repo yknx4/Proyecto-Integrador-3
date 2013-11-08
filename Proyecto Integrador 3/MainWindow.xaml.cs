@@ -55,7 +55,8 @@ namespace Proyecto_Integrador_3
         {
             InitializeComponent();
             /*Carga los datos de la DB*/
-            mDBManagers.Fill();
+            //mDBManagers.Fill();
+            mDBManagers.FillUsuarios();
             /*Se establecen los valores predeterminados*/
             cmbTipos.ItemsSource = (from values in Tipos.Usuarios.Values select values).ToList();
             cmbSangre.ItemsSource = Tipos.Sangre;
@@ -413,7 +414,7 @@ namespace Proyecto_Integrador_3
         {
             ReportePorUnidad test = new ReportePorUnidad(ref mDBManagers);
             test.inicial = dtpFechaReporteInicial.SelectedDate;
-            test.final = dtpFechaReporteFinal.SelectedDate;
+            if(dtpFechaReporteFinal.IsEnabled)test.final = dtpFechaReporteFinal.SelectedDate;
             test.ShowDialog();
             test = null;
             System.GC.Collect();

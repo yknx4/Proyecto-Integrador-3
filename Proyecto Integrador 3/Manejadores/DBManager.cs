@@ -19,6 +19,10 @@ namespace Proyecto_Integrador_3
 
             abstract public void AddToDB();
 
+            abstract public void AddToDataset();
+
+            abstract public void UpdateDBFromDataset();
+
             virtual public void itemModified(object sender, System.ComponentModel.PropertyChangedEventArgs e)
             {
                 setItem((T)sender);

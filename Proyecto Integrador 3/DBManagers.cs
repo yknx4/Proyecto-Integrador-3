@@ -14,22 +14,73 @@
 
         public DBManagers()
         {
-            
+            AreUsuariosFilled = false;
+            AreServiciosFilled = false;
+            AreUnidadesFilled = false;
         }
 
         public void Clear()
         {
-            mdsUsuarios.Clear();
-            mdsServicios.Clear();
-            mdsUnidades.Clear();
+            ClearUsuarios();
+            ClearUnidades();
+            ClearServicios();
 
         }
 
         public void Fill()
         {
+            FillUnidades();
+            FillUsuarios();
+            FillServicios();
+            
+            
+        }
+
+        public bool AreUsuariosFilled
+        {
+            get;
+            set;
+        }
+        public bool AreUnidadesFilled
+        {
+            get;
+            set;
+        }
+        public bool AreServiciosFilled
+        {
+            get;
+            set;
+        }
+
+        public void FillUsuarios()
+        {
             mUsuariosTableAdapter.Fill(mdsUsuarios.Usuarios);
+            AreUsuariosFilled = true; 
+        }
+        public void FillUnidades()
+        {
             mUnidadlesTableAdapter.Fill(mdsUnidades.Unidad);
+            AreUnidadesFilled = true; 
+        }
+        public void FillServicios()
+        {
             mServiciosTableAdapter.Fill(mdsServicios.Servicios);
+            AreServiciosFilled = true; 
+        }
+        public void ClearUsuarios()
+        {
+            mdsUsuarios.Clear();
+            AreUsuariosFilled = false;
+        }
+        public void ClearUnidades()
+        {
+            mdsUnidades.Clear();
+            AreUnidadesFilled = false;
+        }
+        public void ClearServicios()
+        {
+            mdsServicios.Clear();
+            AreServiciosFilled = false;
         }
         
     }

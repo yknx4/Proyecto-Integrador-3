@@ -27,14 +27,14 @@ namespace Proyecto_Integrador_3
             {
                 this.Servicios = Servicios;
                 Parent = sender;
-                if (Servicios)
-                {
-                    generarServicios();
-                } 
-                else
-                    {
-                        generarLista();
-                }
+                //if (Servicios)
+                //{
+                //    generarServicios();
+                //} 
+                //else
+                //    {
+                //        generarLista();
+                //}
                 
             }
 
@@ -44,12 +44,13 @@ namespace Proyecto_Integrador_3
             {
                 mServiciosPopulator = new ServiciosPopulator(Parent);
                 mServiciosPopulator.generarLista();
-                generarLista();
+                //generarLista();
 
             }
 
             public void generarLista()
             {
+                if (Servicios) generarServicios();
                 _usuarios.Clear();
                 foreach (UsuariosRow Row in Parent.mdsUsuarios.Usuarios.Rows)
                 {

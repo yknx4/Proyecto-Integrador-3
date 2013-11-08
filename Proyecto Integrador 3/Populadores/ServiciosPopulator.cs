@@ -30,6 +30,13 @@ namespace Proyecto_Integrador_3
                 generarLista();
             }
 
+            public void clear()
+            {
+                _servicios = new List<Servicio>();
+                System.GC.Collect();
+
+            }
+
             public void generarLista()
             {
                 _servicios.Clear();

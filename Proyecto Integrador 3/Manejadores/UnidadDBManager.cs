@@ -37,7 +37,11 @@ namespace Proyecto_Integrador_3
 
             public override void AddToDB()
             {
-                
+                AddToDataset();
+                UpdateDBFromDataset();
+            }
+
+            public override void AddToDataset(){
                 if (!Active())
                 {
                     Error = "No hay ningun usuario seleccionado";
@@ -52,12 +56,11 @@ namespace Proyecto_Integrador_3
                 heldItem.Uid = Guid.NewGuid();
                 dsUnidad.UnidadRow nuevoUsuario = getUnidadRow();
                 Parent.mdsUnidades.Unidad.AddUnidadRow(nuevoUsuario);
-                Parent.LastMessage = Parent.mUnidadlesTableAdapter.Update(Parent.mdsUnidades).ToString();
-                Parent.Refresh();
-                
-                
+            }
 
-                
+            public override void UpdateDBFromDataset()
+            {
+                Parent.LastMessage = Parent.mUnidadlesTableAdapter.Update(Parent.mdsUnidades).ToString();
             }
 
             private dsUnidad.UnidadRow getUnidadRow()

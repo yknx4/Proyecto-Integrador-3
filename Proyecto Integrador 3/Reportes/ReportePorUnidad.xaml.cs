@@ -75,7 +75,10 @@ namespace Proyecto_Integrador_3.Reportes
             public ReporteDeUnidad(Unidad unidad, DateTime inicial, DateTime final)
             {
                 _unidad = unidad;
+                //MessageBox.Show(final.ToShortDateString() +" + "+inicial.ToShortDateString());
                 servicios = (from servicio in _unidad.Servicios where servicio.Fecha >= inicial && servicio.Fecha <= final select servicio).ToList();
+                //servicios = _unidad.Servicios.ToList();
+                //MessageBox.Show(servicios.Count.ToString());
                 Contar();
 
             }
@@ -147,11 +150,12 @@ namespace Proyecto_Integrador_3.Reportes
             else
                 this.Title += " (" + inicial.Value.ToShortDateString() +" - " +final.Value.ToShortDateString()+")";
 
-
+            dbMgr.FillUnidades();
             mUnidadPopulator = new UnidadPopulator(dbMgr);
             mUnidadPopulator.generarLista();
             foreach (Unidad unidad in mUnidadPopulator.Unidades)
             {
+                
                 if (!inicial.HasValue && !final.HasValue)
                 {
                     reportesIndividuales.Add(new ReporteDeUnidad(unidad));
@@ -178,16 +182,6 @@ namespace Proyecto_Integrador_3.Reportes
             dgtcTerceraEdad.Binding.StringFormat = defaultStringFormat;
             dgtcDiscapacitado.Binding = new Binding("UsuarioDiscapacitado");
             dgtcDiscapacitado.Binding.StringFormat = defaultStringFormat;
-            bool first = true;
-            foreach (DataGridColumn dtgc in dtgrReportes.Columns)
-            {
-                if (first)
-                {
-                    first = false;
-                    continue;
-                }
-                
-            }
             dtgrReportes.ItemsSource = reportesIndividuales;
         }
 
@@ -215,7 +209,9 @@ namespace Proyecto_Integrador_3.Reportes
 
         private void cuantoVentanaCierra(object sender, EventArgs e)
         {
+            dbMgr.ClearUnidades();
             mUnidadPopulator.clear();
+            
         }
     }
 }
