@@ -247,6 +247,7 @@ namespace Proyecto_Integrador_3
 
             return new Usuario
             {
+                Uid = Guid.Empty,
                 Sexo = "Hombre",
                 Alergias = "Alergias",
                 Celular = "312123",

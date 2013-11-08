@@ -65,8 +65,22 @@
         </Controls:WindowCommands>
     </Controls:MetroWindow.WindowCommands>
     <Grid>
+        <DatePicker Visibility="Hidden"/>
+        <TextBlock Visibility="Hidden"></TextBlock>
+        <Button Visibility="Hidden"></Button>
+        <CheckBox Visibility="Hidden"></CheckBox>
         <DockPanel>
-            <DataGrid x:Name="dtgrReportes" IsReadOnly="True" LoadingRowDetails="alCargarFilas">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                
+                <DatePicker x:Name="dtpFechaReporteInicial"></DatePicker>
+                <TextBlock Text="   a   " TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <DatePicker x:Name="dtpFechaReporteFinal"></DatePicker>
+                <CheckBox x:Name="chkRango"></CheckBox>
+                <Button x:Name="btnMostrarReporte" Click="btnMostrarReporte_Click">Generar</Button>
+                
+                
+            </StackPanel>
+            <DataGrid x:Name="dtgrReportes" IsReadOnly="True" LoadingRowDetails="alCargarFilas" DockPanel.Dock="Bottom">
                 <DataGrid.Columns>
                     <DataGridTextColumn x:Name="dgtcUnidad" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Número de Unidad"/>
                     <DataGridTextColumn x:Name="dgtcTotal" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Total"/>

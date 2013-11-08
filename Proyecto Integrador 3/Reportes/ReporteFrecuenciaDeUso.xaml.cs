@@ -11,13 +11,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls;
 
 namespace Proyecto_Integrador_3.Reportes
 {
     /// <summary>
     /// Interaction logic for ReporteFrecuenciaDeUso.xaml
     /// </summary>
-    public partial class ReporteFrecuenciaDeUso : Window
+    public partial class ReporteFrecuenciaDeUso : MetroWindow
     {
         public ReporteFrecuenciaDeUso()
         {

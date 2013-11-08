@@ -32,7 +32,19 @@ namespace Proyecto_Integrador_3.Reportes
         {
             InitializeComponent();
             this.dbMgr = dbMgr;
-            
+            string defaultStringFormat = "${0}";
+            dtgrReportes.AutoGenerateColumns = false;
+            dgtcUnidad.Binding = new Binding("Unidad");
+            dgtcTotal.Binding = new Binding("Total");
+            dgtcTotal.Binding.StringFormat = defaultStringFormat;
+            dgtcGeneral.Binding = new Binding("UsuarioGeneral");
+            dgtcGeneral.Binding.StringFormat = defaultStringFormat;
+            dgtcEstudiante.Binding = new Binding("UsuarioEstudiante");
+            dgtcEstudiante.Binding.StringFormat = defaultStringFormat;
+            dgtcTerceraEdad.Binding = new Binding("UsuarioTerceraEdad");
+            dgtcTerceraEdad.Binding.StringFormat = defaultStringFormat;
+            dgtcDiscapacitado.Binding = new Binding("UsuarioDiscapacitado");
+            dgtcDiscapacitado.Binding.StringFormat = defaultStringFormat;
             
         }
 
@@ -136,26 +148,26 @@ namespace Proyecto_Integrador_3.Reportes
             }
         }
 
-        private void alCargar(object sender, RoutedEventArgs e)
-        {
 
+        private void Generar() {
+            dtgrReportes.ItemsSource = new List<ReportePorUnidad>();
             if (!inicial.HasValue && !final.HasValue)
             {
-                
+
             }
             else if (!final.HasValue)
             {
                 this.Title += " (" + inicial.Value.ToShortDateString() + ")";
             }
             else
-                this.Title += " (" + inicial.Value.ToShortDateString() +" - " +final.Value.ToShortDateString()+")";
+                this.Title += " (" + inicial.Value.ToShortDateString() + " - " + final.Value.ToShortDateString() + ")";
 
             dbMgr.FillUnidades();
             mUnidadPopulator = new UnidadPopulator(dbMgr);
             mUnidadPopulator.generarLista();
             foreach (Unidad unidad in mUnidadPopulator.Unidades)
             {
-                
+
                 if (!inicial.HasValue && !final.HasValue)
                 {
                     reportesIndividuales.Add(new ReporteDeUnidad(unidad));
@@ -168,21 +180,16 @@ namespace Proyecto_Integrador_3.Reportes
                     reportesIndividuales.Add(new ReporteDeUnidad(unidad, inicial.Value, final.Value));
 
             }
-
-            string defaultStringFormat = "${0}";
-            dtgrReportes.AutoGenerateColumns = false;
-            dgtcUnidad.Binding = new Binding("Unidad");
-            dgtcTotal.Binding = new Binding("Total");
-            dgtcTotal.Binding.StringFormat = defaultStringFormat;
-            dgtcGeneral.Binding = new Binding("UsuarioGeneral");
-            dgtcGeneral.Binding.StringFormat = defaultStringFormat;
-            dgtcEstudiante.Binding = new Binding("UsuarioEstudiante");
-            dgtcEstudiante.Binding.StringFormat = defaultStringFormat;
-            dgtcTerceraEdad.Binding = new Binding("UsuarioTerceraEdad");
-            dgtcTerceraEdad.Binding.StringFormat = defaultStringFormat;
-            dgtcDiscapacitado.Binding = new Binding("UsuarioDiscapacitado");
-            dgtcDiscapacitado.Binding.StringFormat = defaultStringFormat;
             dtgrReportes.ItemsSource = reportesIndividuales;
+        }
+
+        private void alCargar(object sender, RoutedEventArgs e)
+        {
+
+            
+
+            
+            
         }
 
         private void entradaBusqueda(object sender, TextCompositionEventArgs e)
@@ -210,8 +217,15 @@ namespace Proyecto_Integrador_3.Reportes
         private void cuantoVentanaCierra(object sender, EventArgs e)
         {
             dbMgr.ClearUnidades();
-            mUnidadPopulator.clear();
+            //mUnidadPopulator.clear();
             
+        }
+
+        private void btnMostrarReporte_Click(object sender, RoutedEventArgs e)
+        {
+            this.inicial = dtpFechaReporteInicial.SelectedDate;
+            this.final = dtpFechaReporteFinal.SelectedDate;
+            Generar();
         }
     }
 }

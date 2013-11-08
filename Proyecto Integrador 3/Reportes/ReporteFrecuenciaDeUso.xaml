@@ -55,11 +55,11 @@
 
     </Window.Resources>
     <Controls:MetroWindow.WindowCommands>
-        <Controls:WindowCommands Loaded="alCargar">
+        <Controls:WindowCommands >
             <!--<Button Content="Arekar Technologies" IsEnabled="False"/>-->
             <StackPanel Orientation="Horizontal">
                 <Button IsEnabled="False">Busqueda:</Button>
-                <TextBox x:Name="txtBusqueda" Controls:TextboxHelper.Watermark="Buscar" Margin="5" Width="80" TextInput="entradaBusqueda" KeyUp="enterEnBusqueda"></TextBox>
+                <TextBox x:Name="txtBusqueda" Controls:TextboxHelper.Watermark="Buscar" Margin="5" Width="80" ></TextBox>
             </StackPanel>
         </Controls:WindowCommands>
     </Controls:MetroWindow.WindowCommands>
