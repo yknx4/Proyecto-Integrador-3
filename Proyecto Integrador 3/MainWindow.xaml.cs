@@ -55,6 +55,7 @@ namespace Proyecto_Integrador_3
         {
             InitializeComponent();
             /*Carga los datos de la DB*/
+
             //mDBManagers.Fill();
             mDBManagers.FillUsuarios();
             /*Se establecen los valores predeterminados*/
@@ -79,7 +80,6 @@ namespace Proyecto_Integrador_3
             SetBackgroundWorkers();
             /*Se genera la primera lista*/
             generarLista();
-            
         }
 
         private void SetBackgroundWorkers()
@@ -216,6 +216,7 @@ namespace Proyecto_Integrador_3
 
             return new Usuario
             {
+                Uid = Guid.Empty,
                 Sexo = rdbHombre.IsChecked.ToString(),
                 Alergias = txtAlergias.Text,
                 Celular = txtCelular.Text,
@@ -269,7 +270,6 @@ namespace Proyecto_Integrador_3
             ClearTextBoxes((Panel)grdRegistro);
         }
 
-
         private void onClickRegistrar(object sender, RoutedEventArgs e)
         {
             ((Control)sender).IsEnabled = false;
@@ -296,7 +296,7 @@ namespace Proyecto_Integrador_3
             }
             else if (e.Error != null)
             {
-                lblEstadoPrincipal.Content = "Error al registrar";
+                lblEstadoPrincipal.Content = "Error al registrar. " + e.Error.ToString();
 
                 //statusText.Text = "Exception Thrown";
             }
@@ -369,10 +369,11 @@ namespace Proyecto_Integrador_3
             lblEstadoPrincipal.Content = currentUsuario.Saldo.ToString() + " saldoTotal.";
             mUsuarioDBManager.modificarDato();
             PerformBusquedaEnter();
+
             //generarLista();
         }
 
-        void PerformBusquedaEnter()
+        private void PerformBusquedaEnter()
         {
             var key = Key.Enter;
             System.Windows.Media.Visual target = txtNombreBusqueda;
@@ -385,11 +386,10 @@ namespace Proyecto_Integrador_3
                     key
                     )
                     {
-                        RoutedEvent=routedEvent
+                        RoutedEvent = routedEvent
                     }
 
                 );
-
         }
 
         private void alPresionarEnterBusqueda(object sender, KeyEventArgs e)
@@ -414,8 +414,8 @@ namespace Proyecto_Integrador_3
         private void btnMostrarReporte_Click(object sender, RoutedEventArgs e)
         {
             ReportePorUnidad test = new ReportePorUnidad(ref mDBManagers);
-            test.inicial = dtpFechaReporteInicial.SelectedDate;
-            if(dtpFechaReporteFinal.IsEnabled)test.final = dtpFechaReporteFinal.SelectedDate;
+            //test.inicial = dtpFechaReporteInicial.SelectedDate;
+            //if (dtpFechaReporteFinal.IsEnabled) test.final = dtpFechaReporteFinal.SelectedDate;
             test.ShowDialog();
             test = null;
             System.GC.Collect();

@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Proyecto_Integrador_3.Reportes" mc:Ignorable="d" x:Class="Proyecto_Integrador_3.Reportes.ReportePorUnidad"
   xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        Title="Reporte por Autobuses" Height="310" Width="725" Closed="cuantoVentanaCierra">
+        Title="Reporte por Autobuses" Height="310" Width="725" Closed="cuantoVentanaCierra" Loaded="reportesCargan">
     
     <Window.Resources>
         <ResourceDictionary>
@@ -49,12 +49,13 @@
 
                     </Style>
                 </ResourceDictionary>
-
+                
             </ResourceDictionary.MergedDictionaries>
 
         </ResourceDictionary>
 
     </Window.Resources>
+    
     <Controls:MetroWindow.WindowCommands>
         <Controls:WindowCommands Loaded="alCargar">
             <!--<Button Content="Arekar Technologies" IsEnabled="False"/>-->
@@ -69,17 +70,30 @@
         <TextBlock Visibility="Hidden"></TextBlock>
         <Button Visibility="Hidden"></Button>
         <CheckBox Visibility="Hidden"></CheckBox>
+        <Controls:MetroProgressBar Visibility="Hidden"></Controls:MetroProgressBar>
+        <Controls:ProgressRing Visibility="Hidden"></Controls:ProgressRing>
         <DockPanel>
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
                 
                 <DatePicker x:Name="dtpFechaReporteInicial"></DatePicker>
                 <TextBlock Text="   a   " TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                <DatePicker x:Name="dtpFechaReporteFinal"></DatePicker>
-                <CheckBox x:Name="chkRango"></CheckBox>
-                <Button x:Name="btnMostrarReporte" Click="btnMostrarReporte_Click">Generar</Button>
+                <DatePicker x:Name="dtpFechaReporteFinal" IsEnabled="False"></DatePicker>
+                <CheckBox x:Name="chkRango" Click="clickCheckboxRangoFecha"></CheckBox>
+                <Button x:Name="btnMostrarReporte" Click="btnMostrarReporte_Click" IsEnabled="False">Generar</Button>
                 
                 
             </StackPanel>
+            <StatusBar DockPanel.Dock="Bottom">
+                <StatusBarItem>
+                    <TextBlock x:Name="txtbEstado" Style="{DynamicResource MetroTextBlock}">Barra de estado bonis bonis</TextBlock>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <Controls:MetroProgressBar></Controls:MetroProgressBar>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <Controls:ProgressRing x:Name="pgrEstado" Width="Auto" Height="Auto"></Controls:ProgressRing>
+                </StatusBarItem>
+            </StatusBar>
             <DataGrid x:Name="dtgrReportes" IsReadOnly="True" LoadingRowDetails="alCargarFilas" DockPanel.Dock="Bottom">
                 <DataGrid.Columns>
                     <DataGridTextColumn x:Name="dgtcUnidad" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Número de Unidad"/>
@@ -91,6 +105,7 @@
                 </DataGrid.Columns>
 
             </DataGrid>
+            
         </DockPanel>
     </Grid>
 </Controls:MetroWindow>

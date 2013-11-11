@@ -52,7 +52,7 @@ namespace ServiciosFalsos
         private DateTime NextFecha()
         {
             DateTime startDate = new DateTime(2013, 1, 1);
-            DateTime endDate = DateTime.Now;
+            DateTime endDate = new DateTime(2013, 12, 31);
             TimeSpan timeSpan = endDate - startDate;
             TimeSpan newSpan = new TimeSpan(mRandom.Next(0, (int)timeSpan.TotalDays), 0, 0, 0);
             DateTime newDate = startDate + newSpan;

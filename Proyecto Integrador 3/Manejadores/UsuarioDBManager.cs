@@ -29,8 +29,8 @@ namespace Proyecto_Integrador_3
                     Error = "El usuario con ID " + heldItem.Uid.ToString() + " ya está en la base de datos";
                     notifyError();
                 }
-                heldItem.Uid = Guid.NewGuid();
-                AddToDB();
+                
+                AddToDB(Guid.NewGuid());
             }
 
             public void AddToDB(Guid Uid)
