@@ -44,6 +44,7 @@ namespace Proyecto_Integrador_3.Reportes
             dgtcDiscapacitado.Binding = new Binding("UsuarioDiscapacitado");
             dgtcDiscapacitado.Binding.StringFormat = defaultStringFormat;
             SetBackgroundWorkers();
+            dtpFechaReporteInicial.SelectedDate = DateTime.Today.AddDays(-1);
         }
 
         private void clickCheckboxRangoFecha(object sender, RoutedEventArgs e)
@@ -165,7 +166,7 @@ namespace Proyecto_Integrador_3.Reportes
                 _unidad = unidad;
 
                 //MessageBox.Show(final.ToShortDateString() +" + "+inicial.ToShortDateString());
-                servicios = (from servicio in _unidad.Servicios where servicio.Fecha >= inicial && servicio.Fecha <= final select servicio).ToList();
+                servicios = (from servicio in _unidad.Servicios where servicio.Fecha.Date >= inicial.Date && servicio.Fecha.Date <= final select servicio).ToList();
 
                 //servicios = _unidad.Servicios.ToList();
                 //MessageBox.Show(servicios.Count.ToString());

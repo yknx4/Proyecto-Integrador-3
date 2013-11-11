@@ -65,7 +65,7 @@ namespace Proyecto_Integrador_3
             cmbMunicipio.ItemsSource = Tipos.Municipios;
             cmbMunicipio.SelectedItem = Tipos.Municipios.Last();
             dtpFechaNacimiento.SelectedDate = DateTime.Today.AddYears(-18);
-            dtpFechaReporteInicial.SelectedDate = DateTime.Today.AddDays(-1);
+            
             /*Se genera la primera tarjeta del día*/
             txtNumeroTarjeta.Text = Generadores.CardGenerator.Next().ToString();
             /*Se genera la estructura del Datagrid*/
@@ -183,17 +183,17 @@ namespace Proyecto_Integrador_3
         {
         }
 
-        private void clickCheckboxRangoFecha(object sender, RoutedEventArgs e)
-        {
-            if (((sender as CheckBox).IsChecked).Value)
-            {
-                dtpFechaReporteFinal.IsEnabled = true;
-            }
-            else
-            {
-                dtpFechaReporteFinal.IsEnabled = false;
-            }
-        }
+        //private void clickCheckboxRangoFecha(object sender, RoutedEventArgs e)
+        //{
+        //    if (((sender as CheckBox).IsChecked).Value)
+        //    {
+        //        dtpFechaReporteFinal.IsEnabled = true;
+        //    }
+        //    else
+        //    {
+        //        dtpFechaReporteFinal.IsEnabled = false;
+        //    }
+        //}
 
         private void entraTexto(object sender, TextCompositionEventArgs e)
         {
@@ -413,11 +413,22 @@ namespace Proyecto_Integrador_3
 
         private void btnMostrarReporte_Click(object sender, RoutedEventArgs e)
         {
-            ReportePorUnidad test = new ReportePorUnidad(ref mDBManagers);
-            //test.inicial = dtpFechaReporteInicial.SelectedDate;
-            //if (dtpFechaReporteFinal.IsEnabled) test.final = dtpFechaReporteFinal.SelectedDate;
-            test.ShowDialog();
-            test = null;
+            switch (cmbTipoReporte.SelectedIndex)
+            {
+                default:
+                    break;
+                case 0:
+                    ReportePorUnidad mReporteUnidad = new ReportePorUnidad(ref mDBManagers);
+                    mReporteUnidad.ShowDialog();
+                    break;
+                case 1:
+                    ReporteFrecuenciaDeUso mReporteFrecuencia = new ReporteFrecuenciaDeUso();
+                    mReporteFrecuencia.ShowDialog();
+                    break;
+
+            }
+            
+            
             System.GC.Collect();
         }
 

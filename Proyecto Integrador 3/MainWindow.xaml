@@ -314,6 +314,7 @@
                 <TabItem Header="Reportes">
                     <Grid>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
@@ -327,65 +328,22 @@
                             <RowDefinition Height="Auto"></RowDefinition>
                         </Grid.RowDefinitions>
 
-                        <DockPanel Grid.Row="0">
-                            <DockPanel>
-                                <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Tipo:</Label>
+                        
+                                <Label HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0">Tipo:</Label>
                                 <!--o	Estadísticos de los cobros realizados en cada unidad de transporte por tipo de usuario.
 o	Cobro total recabado en la unidad de trasporte.
 o	Frecuencia de uso del transporte por usuario específico.
 o	Frecuencia de uso del transporte por unidad de transporte.
 o	Frecuencia de uso del transporte por tipo de usuario.-->
 
-                                <ComboBox x:Name="cmbTipoReporte" MinWidth="400" SelectedIndex="0">
+                        <ComboBox x:Name="cmbTipoReporte" SelectedIndex="0" Grid.Column="1">
                                     <ComboBoxItem>Cobro total recabado en las unidades de trasporte.</ComboBoxItem>
                                     <ComboBoxItem>Frecuencia de uso del transporte</ComboBoxItem>
                                     <!--<ComboBoxItem>Frecuencia de uso del transporte por unidad de transporte.</ComboBoxItem>
                                     <ComboBoxItem>Frecuencia de uso del transporte por tipo de usuario.</ComboBoxItem>-->
                                 </ComboBox>
-                            </DockPanel>
-                            <DockPanel>
-                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Fecha:</Label>
-                            <Grid>
-
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition></ColumnDefinition>
-                                    <ColumnDefinition Width="auto"></ColumnDefinition>
-                                    <ColumnDefinition></ColumnDefinition>
-                                    <ColumnDefinition Width="auto"></ColumnDefinition>
-                                        <ColumnDefinition Width="auto"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                <DatePicker x:Name="dtpFechaReporteInicial" Grid.Column="0"></DatePicker>
-                                <Label Grid.Column="1">a</Label>
-                                <DatePicker x:Name="dtpFechaReporteFinal" Grid.Column="2" IsEnabled="False"></DatePicker>
-                                <CheckBox x:Name="chkRango" Grid.Column="3" Click="clickCheckboxRangoFecha"></CheckBox>
-                                    <Button x:Name="btnMostrarReporte" HorizontalAlignment="Right" Grid.Column="4" Click="btnMostrarReporte_Click">Mostrar</Button>
-                                </Grid>
-                            </DockPanel>
-                        </DockPanel>
-                        <DockPanel Grid.Row="1" Visibility="Hidden">
-
-                            <Grid>
-
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition></ColumnDefinition>
-                                    <ColumnDefinition Width="auto"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                                <DockPanel Grid.Column="0">
-                                    <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Nombre:</Label>
-                                    <StackPanel>
-                                        <TextBox VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Nombre(s)" TextInput="entraTexto" KeyDown="PresionarTecla_BusqNom"></TextBox>
-                                        <TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}">
-                                        Busqueda</TextBlock>
-                                    </StackPanel>
-                                </DockPanel>
-                                <Button Grid.Column="1">Recarga</Button>
-                            </Grid>
-                        </DockPanel>
-                        <DockPanel  Grid.Row="2" Visibility="Hidden">
-
-                            <Grid>
-                            </Grid>
-                        </DockPanel>
+                                    <Button x:Name="btnMostrarReporte" HorizontalAlignment="Right" Grid.Column="2" Click="btnMostrarReporte_Click">Mostrar</Button>
+                                
                     </Grid>
                 </TabItem>
             </TabControl>

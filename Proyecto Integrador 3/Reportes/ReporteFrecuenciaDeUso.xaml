@@ -64,28 +64,159 @@
         </Controls:WindowCommands>
     </Controls:MetroWindow.WindowCommands>
     <Grid>
-        <TabControl >
-            <TabItem Header="Usuarios">
-                <DockPanel Background="#FFE5E5E5">
-                    <DataGrid x:Name="dtgrReportesUsuarioEspecifico" IsReadOnly="True" >
-                        <DataGrid.Columns>
-                            <DataGridTextColumn x:Name="dgtcUnidad" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Número de Unidad"/>
-                            <DataGridTextColumn x:Name="dgtcTotal" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Total"/>
-                            <DataGridTextColumn x:Name="dgtcGeneral" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="General"/>
-                            <DataGridTextColumn x:Name="dgtcEstudiante" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Estudiante"/>
-                            <DataGridTextColumn x:Name="dgtcTerceraEdad" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tercerda Edad"/>
-                            <DataGridTextColumn x:Name="dgtcDiscapacitado" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Capacidades Diferentes"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </DockPanel>
-            </TabItem>
-            <TabItem Header="Unidades">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
-            <TabItem Header="Tipo de Usuario">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
-        </TabControl>
+        <DatePicker Visibility="Hidden"/>
+        <TextBlock Visibility="Hidden"></TextBlock>
+        <TextBox Visibility="Hidden"></TextBox>
+        <Label Visibility="Hidden"/>
+        <Button Visibility="Hidden"></Button>
+        <CheckBox Visibility="Hidden"></CheckBox>
+        <Controls:MetroProgressBar Visibility="Hidden"></Controls:MetroProgressBar>
+        <Controls:ProgressRing Visibility="Hidden"></Controls:ProgressRing>
+        <DockPanel>
+            <StatusBar DockPanel.Dock="Bottom">
+                <StatusBarItem>
+                    <TextBlock x:Name="txtbEstado" Style="{DynamicResource MetroTextBlock}">Barra de estado bonis bonis</TextBlock>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <Controls:MetroProgressBar></Controls:MetroProgressBar>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <Controls:ProgressRing x:Name="pgrEstado" Width="Auto" Height="Auto"></Controls:ProgressRing>
+                </StatusBarItem>
+            </StatusBar>
+            <TabControl DockPanel.Dock="Top" >
+                <TabItem Header="Usuarios">
+                    <Grid x:Name="grdRegistro">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="15"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
 
+                        <DockPanel Grid.Row="0">
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0">Número de Tarjeta:</Label>
+                                <TextBox x:Name="txtApellidoMaterno" VerticalAlignment="Top" Grid.Column="1" Text="000000000000" IsReadOnly="False" Width="90"></TextBox>
+                                <Label Grid.Column="2">Nombre: </Label>
+                                <TextBox x:Name="txtApellidoPaterno" VerticalAlignment="Top" Grid.Column="3" ></TextBox>
+                                <Label Grid.Column="4">Edad:</Label>
+                                <Label x:Name="txtEdad" Grid.Column="5" VerticalAlignment="Center" >00</Label>
+
+                            </Grid>
+                        </DockPanel>
+                        <DockPanel Grid.Row="1">
+
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                
+                                <DockPanel  Grid.Column="0">
+                                    <Label HorizontalAlignment="Left">Tipo de Usuario:</Label>
+                                    <Label></Label>
+                                </DockPanel>
+                                <DockPanel   Grid.Column="1">
+                                    <Label HorizontalAlignment="Left">Saldo:</Label>
+                                    <Label></Label>
+                                </DockPanel>
+                                <DockPanel   Grid.Column="2">
+                                    <Label HorizontalAlignment="Left">Consumo:</Label>
+                                    <Label></Label>
+                                </DockPanel>
+                            </Grid>
+                        </DockPanel>
+                        <DockPanel Grid.Row="3">
+
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Unidad mas abordada:</Label>
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    
+                                    <TextBox x:Name="txtCalle" VerticalAlignment="Top"  ></TextBox>
+                                    <!--<TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}">
+                                        Calle</TextBlock>-->
+                                </StackPanel>
+                            </Grid>
+                        </DockPanel>
+                        <DockPanel Grid.Row="4">
+
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Día mas activo:</Label>
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBox x:Name="txtDiaM" VerticalAlignment="Top"  ></TextBox>
+                                    <!--<TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}">
+                                        Calle</TextBlock>-->
+                                </StackPanel>
+                            </Grid>
+                        </DockPanel>
+                        <DockPanel Grid.Row="5">
+
+                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" >Mes mas activo:</Label>
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <TextBox x:Name="txtMesM" VerticalAlignment="Top"  ></TextBox>
+                                    <!--<TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}">
+                                        Calle</TextBlock>-->
+                                </StackPanel>
+                            </Grid>
+                        </DockPanel>
+
+                        
+                        
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Unidades">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="Tipo de Usuario">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+            </TabControl>
+
+        </DockPanel>
+        
     </Grid>
 </Controls:MetroWindow>
