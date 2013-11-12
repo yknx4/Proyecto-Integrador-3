@@ -414,7 +414,7 @@ namespace Proyecto_Integrador_3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ServiciosRow FindByid(int id) {
+            public ServiciosRow FindByid(long id) {
                 return ((ServiciosRow)(this.Rows.Find(new object[] {
                             id})));
             }
@@ -446,7 +446,7 @@ namespace Proyecto_Integrador_3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
                 this.columntipoUsuario = new global::System.Data.DataColumn("tipoUsuario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntipoUsuario);
@@ -464,6 +464,7 @@ namespace Proyecto_Integrador_3 {
                 this.columnid.ReadOnly = true;
                 this.columnid.Unique = true;
                 this.columntipoUsuario.AllowDBNull = false;
+                this.columntipoUsuario.DefaultValue = ((string)("1"));
                 this.columntipoUsuario.MaxLength = 1;
                 this.columnunidad.AllowDBNull = false;
                 this.columnusuario.AllowDBNull = false;
@@ -610,9 +611,9 @@ namespace Proyecto_Integrador_3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int id {
+            public long id {
                 get {
-                    return ((int)(this[this.tableServicios.idColumn]));
+                    return ((long)(this[this.tableServicios.idColumn]));
                 }
                 set {
                     this[this.tableServicios.idColumn] = value;

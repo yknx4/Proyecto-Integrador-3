@@ -23,7 +23,7 @@ namespace Proyecto_Integrador_3
             
             
 
-            public ServiciosPopulator(DBManagers sender)
+            public ServiciosPopulator(ref DBManagers sender)
             {
                 Parent = sender;
                 
@@ -44,7 +44,7 @@ namespace Proyecto_Integrador_3
                 {
                     Servicio actual = new Servicio
                     {
-                        Id=Row.id,
+                        //Id=Row.id,
                         TipoUsuario = short.Parse(Row.tipoUsuario),
                         Unidad=Row.unidad,
                         Usuario=Row.usuario,

@@ -81,7 +81,7 @@ namespace Bulk_Usuarios_Parser
                         tmpTUsuario = 4;
                     }
                 }
-
+                int tipoS = TiposSange.FindIndex(s => s == separados[4]);
                 Usuario actual = new Usuario
                 {
                     Uid = Guid.Parse(separados[0]),
@@ -92,7 +92,7 @@ namespace Bulk_Usuarios_Parser
                     FechaNacimiento = bday,
                     Nombre = separados[1] +" "+ separados[6],
                     TarjetaAsignada = Proyecto_Integrador_3.Generadores.CardGenerator.Next().ToString(),
-                    TipoSangre = TiposSange.FindIndex(s => s == separados[4]),
+                    TipoSangre = tipoS==-1?1:tipoS,
                     TipoUsuario = tmpTUsuario,
                     Telefono = separados[3],
                     mContacto = tmpContacto,

@@ -23,7 +23,7 @@ namespace Proyecto_Integrador_3
 
             private static ServiciosPopulator mServiciosPopulator;
             
-            public UsuariosPopulator(DBManagers sender, bool Servicios)
+            public UsuariosPopulator(ref DBManagers sender, bool Servicios)
             {
                 this.Servicios = Servicios;
                 Parent = sender;
@@ -42,7 +42,7 @@ namespace Proyecto_Integrador_3
 
             void generarServicios()
             {
-                mServiciosPopulator = new ServiciosPopulator(Parent);
+                mServiciosPopulator = new ServiciosPopulator(ref Parent);
                 mServiciosPopulator.generarLista();
                 //generarLista();
 

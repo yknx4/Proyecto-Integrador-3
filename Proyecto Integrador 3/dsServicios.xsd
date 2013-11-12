@@ -70,8 +70,8 @@ FROM     Servicios</CommandText>
         <xs:element name="Servicios" msprop:Generator_TableClassName="ServiciosDataTable" msprop:Generator_TableVarName="tableServicios" msprop:Generator_TablePropName="Servicios" msprop:Generator_RowDeletingName="ServiciosRowDeleting" msprop:Generator_RowChangingName="ServiciosRowChanging" msprop:Generator_RowEvHandlerName="ServiciosRowChangeEventHandler" msprop:Generator_RowDeletedName="ServiciosRowDeleted" msprop:Generator_UserTableName="Servicios" msprop:Generator_RowChangedName="ServiciosRowChanged" msprop:Generator_RowEvArgName="ServiciosRowChangeEvent" msprop:Generator_RowClassName="ServiciosRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="tipoUsuario" msprop:Generator_ColumnVarNameInTable="columntipoUsuario" msprop:Generator_ColumnPropNameInRow="tipoUsuario" msprop:Generator_ColumnPropNameInTable="tipoUsuarioColumn" msprop:Generator_UserColumnName="tipoUsuario">
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:nullValue="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:long" />
+              <xs:element name="tipoUsuario" msprop:nullValue="1" msprop:Generator_ColumnPropNameInRow="tipoUsuario" msprop:Generator_ColumnVarNameInTable="columntipoUsuario" msprop:Generator_ColumnPropNameInTable="tipoUsuarioColumn" msprop:Generator_UserColumnName="tipoUsuario" default="1">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />

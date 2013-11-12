@@ -44,9 +44,9 @@ namespace Proyecto_Integrador_3
 
         private List<Usuario> Usuarios;
 
-        private List<Usuario> UsuariosBusqueda;
-
         private Usuario currentUsuario;
+
+        private List<Usuario> UsuariosBusqueda;
 
         private BackgroundWorker mBackgroundGenerarLista = new BackgroundWorker();
         private BackgroundWorker mBackgroundRegistrar = new BackgroundWorker();
@@ -69,7 +69,7 @@ namespace Proyecto_Integrador_3
             /*Se genera la primera tarjeta del día*/
             txtNumeroTarjeta.Text = Generadores.CardGenerator.Next().ToString();
             /*Se genera la estructura del Datagrid*/
-            mUsuariosPopulator = new UsuariosPopulator(mDBManagers, false);
+            mUsuariosPopulator = new UsuariosPopulator(ref mDBManagers, false);
             dgtcNombre.Binding = new Binding("sNombre");
             dgtcNumeroTarjeta.Binding = new Binding("TarjetaAsignada");
             dgtcSaldo.Binding = new Binding("Saldo");
@@ -92,7 +92,7 @@ namespace Proyecto_Integrador_3
 
         private void generarLista()
         {
-            DisableControls((Panel)tbRecarga.Content);
+            Helpers.DisableControls((Panel)tbRecarga.Content);
             mBackgroundGenerarLista.RunWorkerAsync();
         }
 
@@ -119,47 +119,10 @@ namespace Proyecto_Integrador_3
 
                 //.Text = "Completed";
             }
-            EnableControls((Panel)tbRecarga.Content);
+            Helpers.EnableControls((Panel)tbRecarga.Content);
         }
 
-        public void ClearTextBoxes(Panel panel)
-        {
-            foreach (Control c in panel.Children.OfType<Control>())
-            {
-                if (c is TextBox)
-                {
-                    ((TextBox)c).Clear();
-                }
-            }
-            foreach (Panel p in panel.Children.OfType<Panel>())
-            {
-                ClearTextBoxes(p);
-            }
-        }
-
-        public void DisableControls(Panel panel)
-        {
-            foreach (Control c in panel.Children.OfType<Control>())
-            {
-                c.IsEnabled = false;
-            }
-            foreach (Panel p in panel.Children.OfType<Panel>())
-            {
-                DisableControls(p);
-            }
-        }
-
-        public void EnableControls(Panel panel)
-        {
-            foreach (Control c in panel.Children.OfType<Control>())
-            {
-                c.IsEnabled = true;
-            }
-            foreach (Panel p in panel.Children.OfType<Panel>())
-            {
-                EnableControls(p);
-            }
-        }
+        
 
         private void cambiaTextoBusquedaAsync(object sender)
         {
@@ -267,13 +230,13 @@ namespace Proyecto_Integrador_3
         {
             cmbSangre.SelectedItem = Tipos.Sangre.Last();
             cmbMunicipio.SelectedItem = Tipos.Municipios.Last();
-            ClearTextBoxes((Panel)grdRegistro);
+            Helpers.ClearTextBoxes((Panel)grdRegistro);
         }
 
         private void onClickRegistrar(object sender, RoutedEventArgs e)
         {
             ((Control)sender).IsEnabled = false;
-            DisableControls((Panel)grdRegistro);
+            Helpers.DisableControls((Panel)grdRegistro);
             pgrRegistrar.IsEnabled = true;
             pgrRegistrar.IsActive = true;
             Usuario usuarioNuevo = generarUsuario();
@@ -312,7 +275,7 @@ namespace Proyecto_Integrador_3
 
                 //.Text = "Completed";
             }
-            EnableControls((Panel)grdRegistro);
+            Helpers.EnableControls((Panel)grdRegistro);
             pgrRegistrar.IsActive = false;
         }
 
@@ -422,7 +385,7 @@ namespace Proyecto_Integrador_3
                     mReporteUnidad.ShowDialog();
                     break;
                 case 1:
-                    ReporteFrecuenciaDeUso mReporteFrecuencia = new ReporteFrecuenciaDeUso();
+                    ReporteFrecuenciaDeUso mReporteFrecuencia = new ReporteFrecuenciaDeUso(ref mDBManagers);
                     mReporteFrecuencia.ShowDialog();
                     break;
 

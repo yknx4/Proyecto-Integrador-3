@@ -8,8 +8,8 @@ namespace Proyecto_Integrador_3.TiposDato
 {
     public partial class Servicio
     {
-        private int _id;
-        public int Id { get { return _id; } set { _id = value; } }
+        private long _id;
+        public long Id { get { return _id; } set { _id = value; } }
         private short _tipoUsuario;
         public short TipoUsuario { get { return _tipoUsuario; } set { _tipoUsuario = value; } }
         private System.Guid _unidad;

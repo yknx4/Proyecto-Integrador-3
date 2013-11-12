@@ -97,7 +97,7 @@ namespace Proyecto_Integrador_3.Reportes
 
         private void _backgroundWorker_DoWork_GenerarLista(object sender, DoWorkEventArgs e)
         {
-            mUnidadPopulator = new UnidadPopulator(dbMgr);
+            mUnidadPopulator = new UnidadPopulator(ref dbMgr,true);
             mUnidadPopulator.generarLista();
         }
 

@@ -9,7 +9,7 @@ namespace Proyecto_Integrador_3.Generadores
     public static class RandChar
     {
         static Random mRandom = new Random();
-        static public long Next()
+        static public char Next()
         {
             
             int compRand = mRandom.Next(64, 91);

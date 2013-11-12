@@ -22,8 +22,9 @@ namespace Proyecto_Integrador_3
             private DBManagers Parent;
             private static ServiciosPopulator mServiciosPopulator;
 
-            public UnidadPopulator(DBManagers sender)
+            public UnidadPopulator(ref DBManagers sender, bool Servicios)
             {
+                this.Servicios = Servicios;
                 Parent = sender;
                 
             }
@@ -35,13 +36,27 @@ namespace Proyecto_Integrador_3
 
             }
 
+
+            bool Servicios;
+
+            void generarServicios()
+            {
+                Parent.FillServicios();
+                mServiciosPopulator = new ServiciosPopulator(ref Parent);
+                mServiciosPopulator.generarLista();
+                //generarLista();
+
+            }
+
+
             public void generarLista()
             {
                 _unidades.Clear();
-                Parent.FillServicios();
-                mServiciosPopulator = new ServiciosPopulator(Parent);
-                mServiciosPopulator.generarLista();
-                List<Servicio> tmpServicios;
+                
+                //mServiciosPopulator = new ServiciosPopulator(Parent);
+                //mServiciosPopulator.generarLista();
+                if (Servicios) generarServicios();
+                List<Servicio> tmpServicios ;
                 foreach (UnidadRow Row in Parent.mdsUnidades.Unidad.Rows)
                 {
                     Unidad actual = new Unidad
@@ -51,16 +66,18 @@ namespace Proyecto_Integrador_3
                         
                     };
                     //actual.PropertyChanged += cuentaModificada;
-                    
-                     tmpServicios = (from servicio in mServiciosPopulator.Servicios where servicio.Unidad == actual.Uid select servicio).ToList();
-                    //MessageBox.Show(tmpServicios.Count.ToString());
-                    //actual.Servicios = tmpServicios;
-                    actual.Servicios = tmpServicios.ToList();
+
+                    if (Servicios)
+                    {
+                        tmpServicios = (from servicio in mServiciosPopulator.Servicios where servicio.Unidad == actual.Uid select servicio).ToList();
+                        
+                        actual.Servicios = tmpServicios;
+                    }
                     _unidades.Add(actual);
                 }
                 //MessageBox.Show(mServiciosPopulator.Servicios.Count.ToString());
-                mServiciosPopulator.clear();
-                Parent.ClearServicios();
+                if (Servicios) mServiciosPopulator.clear();
+                if (Servicios) Parent.ClearServicios();
                 //MessageBox.Show(mServiciosPopulator.Servicios.Count.ToString());
                 //MessageBox.Show(_unidades.Count.ToString());
             }

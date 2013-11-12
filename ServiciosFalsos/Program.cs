@@ -51,7 +51,7 @@ namespace ServiciosFalsos
 
         private DateTime NextFecha()
         {
-            DateTime startDate = new DateTime(2013, 1, 1);
+            DateTime startDate = new DateTime(2013, 10, 1);
             DateTime endDate = new DateTime(2013, 12, 31);
             TimeSpan timeSpan = endDate - startDate;
             TimeSpan newSpan = new TimeSpan(mRandom.Next(0, (int)timeSpan.TotalDays), 0, 0, 0);
@@ -104,13 +104,13 @@ namespace ServiciosFalsos
         void iniciar()
         {
             mDBManagers.Fill();
-            mUsuariosPopulator = new UsuariosPopulator(mDBManagers,false);
-            mUnidadPopulator = new UnidadPopulator(mDBManagers);
+            mUsuariosPopulator = new UsuariosPopulator(ref mDBManagers,false);
+            mUnidadPopulator = new UnidadPopulator(ref mDBManagers,false);
             generarLista();
             Usuario tmpUsuario;
             DateTime tmpFecha;
             string tmpLog = "";
-            for (int i = 0; i < 1000000; i++)
+            for (var i = 0; i < 100000; i++)
             {
                 Console.Title = "Servicio: "+i.ToString();
                 tmpUsuario = NextUsuario();
@@ -118,7 +118,7 @@ namespace ServiciosFalsos
                 AnadirServicio(tmpUsuario, tmpFecha);
                 tmpLog = tmpUsuario.sNombre + " ha abordado el día " + tmpFecha.ToShortDateString() + Environment.NewLine;
                 File.AppendAllText(@"ServiciosFalsos_.txt", tmpLog);
-                if (i % 50000 == 0 || mRandom.Next(100000) == 5) {
+                if (i % 10000 == 0 ) {
                     mServicioDBManager.UpdateDBFromDataset();
                 }
             }
