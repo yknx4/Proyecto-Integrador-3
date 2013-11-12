@@ -179,7 +179,7 @@ namespace Proyecto_Integrador_3.Reportes
                 if (e.Result != null)
                 {
                     currentUsuario = (Usuario)e.Result;
-
+                    txtbEstado.Text = "Usuario encontrado.";
                     loadUsuario(currentUsuario);
                 }
                 else
