@@ -5,11 +5,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Threading;
 using UsuarioDBManager = Proyecto_Integrador_3.DBManagers.UsuarioDBManager;
 using UsuariosPopulator = Proyecto_Integrador_3.DBManagers.UsuariosPopulator;
@@ -78,6 +80,8 @@ namespace Proyecto_Integrador_3
             dgtcTipoUsuario.Binding = bTipoUsuario;
             /*Se asignan los hilos de fondo*/
             SetBackgroundWorkers();
+            SetEventHandlers();
+            Helpers.SetValidationTextBoxes(grdRegistro);
             /*Se genera la primera lista*/
             generarLista();
         }
@@ -88,6 +92,11 @@ namespace Proyecto_Integrador_3
             mBackgroundGenerarLista.RunWorkerCompleted += _backgroundWorker_RunWorkerCompleted_GenerarLista; // Run the Background Worker
             mBackgroundRegistrar.DoWork += _backgroundWorker_DoWork_Registro;
             mBackgroundRegistrar.RunWorkerCompleted += _backgroundWorker_RunWorkerCompleted_Registro;
+        }
+
+        private void SetEventHandlers()
+        {
+            //txtNumeroTarjetaRecarga.TextChanged+=Helpers.validarTarjeta;
         }
 
         private void generarLista()
@@ -235,6 +244,10 @@ namespace Proyecto_Integrador_3
 
         private void onClickRegistrar(object sender, RoutedEventArgs e)
         {
+            if (!validarRegistro())
+            {
+                return;
+            }
             ((Control)sender).IsEnabled = false;
             Helpers.DisableControls((Panel)grdRegistro);
             pgrRegistrar.IsEnabled = true;
@@ -320,10 +333,25 @@ namespace Proyecto_Integrador_3
             };
 
             new Thread(start).Start();
+            
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void recargaClick(object sender, RoutedEventArgs e)
         {
+            
+            if (!Helpers.validarCuenta(txtNumeroTarjetaRecarga.Text) || currentUsuario==null)
+            {
+                txtNumeroTarjetaRecarga.Focus();
+                txtNumeroTarjetaRecarga.Background = Brushes.OrangeRed;
+                return;
+            }
+            txtSaldoRecarga.Background = Brushes.White;
+            if (!Helpers.validarDinero(txtSaldoRecarga.Text))
+            {
+                txtSaldoRecarga.Background = Brushes.OrangeRed;
+                txtSaldoRecarga.Focus();
+                return;
+            }
             lblEstadoPrincipal.Content = "";
             lblEstadoSecundaria.Content = "";
             mDBManagers.LastMessage = "";
@@ -404,5 +432,34 @@ namespace Proyecto_Integrador_3
                 txtNumeroTarjetaRecarga.Text = currentUsuario.TarjetaAsignada;
             }
         }
+
+        private bool validarRegistro()
+        {
+            bool estado = true;
+            TextBox[] validarTexto = { txtNombre, txtApellidoMaterno, txtApellidoPaterno, txtNombreDeContacto, txtCalle, txtColonia, txtApellidoMaternoDeContacto, txtApellidoPaternoDeContacto };
+            TextBox[] validarNumero = { };
+            foreach (TextBox txt in validarTexto)
+            {
+                estado &= validarTextBoxEstandar(txt);
+            }
+            
+            return estado;
+        }
+
+        private bool validarTextBoxEstandar(TextBox txt)
+        {
+            var regexItem = new Regex("^[a-zA-Z0-9 ]*$");
+            bool estado = true;
+            if (!regexItem.IsMatch(txt.Text))estado=false;
+            if (txt.Text.Length < 3) estado = false;
+            
+            if (!estado)
+            {
+                txt.Background = Brushes.OrangeRed;
+            }
+            return estado;
+        }
+
+       
     }
 }

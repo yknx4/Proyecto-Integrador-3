@@ -97,7 +97,7 @@
                                     <ColumnDefinition Width="auto"></ColumnDefinition>
                                     <ColumnDefinition Width="100"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="txtNumeroTarjetaRecarga" VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="133994658745" TextChanged="cambiaTarjetaRecarga" ></TextBox>
+                                <TextBox x:Name="txtNumeroTarjetaRecarga" VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="133994658745" TextChanged="cambiaTarjetaRecarga"  ></TextBox>
                                 <Label Grid.Column="1">Cantidad:</Label>
                                 <TextBox x:Name="txtSaldoRecarga" VerticalAlignment="Top" Grid.Column="2" Controls:TextboxHelper.Watermark="0.00$" ></TextBox>
                             </Grid>
@@ -118,7 +118,7 @@
                                         Busqueda</TextBlock>
                                     </StackPanel>
                                 </DockPanel>
-                                <Button Grid.Column="1" Margin="0,5,0,20" Click="Button_Click_1">Recarga</Button>
+                                <Button Grid.Column="1" Margin="0,5,0,20" Click="recargaClick" >Recarga</Button>
                             </Grid>
                         </DockPanel>
                         <Grid x:Name="dcpnlBusqueda" Grid.Row="2" Visibility="Hidden">
@@ -189,7 +189,7 @@
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="txtNombre" VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="Nombre(s)" ></TextBox>
+                                <TextBox x:Name="txtNombre" VerticalAlignment="Top" Grid.Column="0" Controls:TextboxHelper.Watermark="Nombre(s)"  ></TextBox>
                                 <TextBox x:Name="txtApellidoPaterno" VerticalAlignment="Top" Grid.Column="1" Controls:TextboxHelper.Watermark="Apellido Paterno" ></TextBox>
                                 <TextBox x:Name="txtApellidoMaterno" VerticalAlignment="Top" Grid.Column="2" Controls:TextboxHelper.Watermark="Apellido Materno" ></TextBox>
                             </Grid>

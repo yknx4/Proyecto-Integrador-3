@@ -9,6 +9,7 @@ namespace Proyecto_Integrador_3
     public static class Tipos
     {
         public static readonly Dictionary<int, string> Usuarios;
+        public static readonly Dictionary<int, string> Meses;
         public static readonly Dictionary<int, int> Precio;
         public static readonly List<string> Sangre;
         public static readonly List<string> Municipios;
@@ -30,6 +31,19 @@ namespace Proyecto_Integrador_3
             Sangre.Sort();
             Municipios = new List<string>(municipios);
             Municipios.Sort();
+            Meses = new Dictionary<int,string>();
+            Meses[1] = "Enero";
+            Meses[2] = "Febrero";
+            Meses[3] = "Marzo";
+            Meses[4] = "Abril";
+            Meses[5] = "Mayo";
+            Meses[6] = "Junio";
+            Meses[7] = "Julio";
+            Meses[8] = "Agosto";
+            Meses[9] = "Septiembre";
+            Meses[10] = "Octube";
+            Meses[11] = "Noviembre";
+            Meses[12] = "Diciembre";
         }
     }
 }

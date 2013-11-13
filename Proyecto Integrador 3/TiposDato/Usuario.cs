@@ -57,8 +57,46 @@ namespace Proyecto_Integrador_3.TiposDato
         public string Sexo { get { return _sexo ? "Hombre" : "Mujer"; } set { if (value.ToLower() == "hombre" || value == "True") { _sexo = true; } else { _sexo = false; } } }
 
         public virtual ICollection<Servicio> Servicios { get; set; }
-        //public virtual Tarjeta Tarjetas { get; set; }
-
+        public virtual int ServiciosCount
+        {
+            get
+            {
+                if (Servicios == null)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return Servicios.Count;
+                }
+            }
+        }
+        public virtual Decimal Consumo
+        {
+            get
+            {
+                if (Servicios == null)
+                {
+                    return 0;
+                }
+                else
+                {
+                    decimal consumo=0;
+                    foreach (Servicio serv in Servicios)
+                    {
+                        if (serv.TipoUsuario == 1)
+                        {
+                            consumo += Constantes.PrecioNormal;
+                        } 
+                        else
+                        {
+                            consumo += Constantes.PrecioEspecial;
+                        }
+                    }
+                    return consumo;
+                }
+            }
+        }
         public override bool isAdded() {
             return !(Uid == Guid.Empty);
         }

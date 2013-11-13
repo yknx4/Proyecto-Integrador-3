@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media;
 
 namespace Proyecto_Integrador_3
 {
@@ -23,6 +26,35 @@ namespace Proyecto_Integrador_3
                 ClearTextBoxes(p);
             }
         }
+
+        public static void SetValidationTextBoxes(Panel panel)
+        {
+            foreach (Control c in panel.Children.OfType<Control>())
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).TextChanged += Helpers.validarTextBoxtColor;
+                }
+            }
+            foreach (Panel p in panel.Children.OfType<Panel>())
+            {
+                SetValidationTextBoxes(p);
+            }
+        }
+
+        static public bool validarCuenta(string input)
+        {
+            long t;
+            if (input.Length==12 && long.TryParse(input,out t)) return true;
+            return false;
+        }
+        static public bool validarDinero(string input)
+        {
+            decimal t;
+            if (decimal.TryParse(input,out t)) return true;
+            return false;
+        }
+        
 
         public static void DisableControls(Panel panel)
         {
@@ -48,6 +80,11 @@ namespace Proyecto_Integrador_3
             }
         }
 
+        public static void validarTextBoxtColor(object sender, TextChangedEventArgs e)
+        {
+            ((TextBox)sender).Background = Brushes.White;
+        }
+
         public static int Age(DateTime bday)
         {
             int age = DateTime.Now.Year - bday.Year;
@@ -56,9 +93,14 @@ namespace Proyecto_Integrador_3
 
         }
 
-        public static void masRepetido<T>(List<T> datos, out List<T> moda) where T : IComparable<T>
+        public static int masRepetido<T>(List<T> datos, out HashSet<T> moda) where T : IComparable<T>
         {
-            moda= new List<T>();
+            
+            moda= new HashSet<T>();
+            if (datos.Count == 0)
+            {
+                return 0;
+            }
             T valorActual = datos.First();
             int countValorActual = 0;
             int countValorMasFrecuente = 0;
@@ -91,6 +133,12 @@ namespace Proyecto_Integrador_3
                     countValorActual = 1;
                 }
             }
+            return countValorMasFrecuente;
         }
+
+        
     }
+
+
+
 }
