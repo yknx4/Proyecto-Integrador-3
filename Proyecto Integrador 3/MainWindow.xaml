@@ -4,7 +4,7 @@
   xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         Title="SmartCards" Height="600" Width="1020"
 
-        Icon="MainLogo.ico" SizeChanged="ventanaCambiaTamaño"
+        Icon="MainLogo.ico" SizeChanged="ventanaCambiaTamaño" WindowStartupLocation="CenterScreen" WindowState="Maximized"
 
 >
     <Controls:MetroWindow.WindowCommands>

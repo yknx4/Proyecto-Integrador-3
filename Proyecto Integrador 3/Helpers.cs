@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -40,6 +41,51 @@ namespace Proyecto_Integrador_3
             {
                 SetValidationTextBoxes(p);
             }
+        }
+
+       public static bool validarTextBoxEstandar(TextBox txt)
+        {
+            //var regexItem = new Regex("^[a-zA-Z0-9 ]*$");
+            var regexItem = new Regex(@"^\w*(\s\w*)*$");
+            bool estado = true;
+            if (!regexItem.IsMatch(txt.Text)) estado = false;
+            if (txt.Text.Length < 3) estado = false;
+
+            if (!estado)
+            {
+                txt.Background = Constantes.ErrorBrush;
+                //txt.Background.Opacity = 70;
+            }
+            return estado;
+        }
+       public static bool validarTextBoxTelefono(TextBox txt)
+        {
+            var regexItem = new Regex("^[a-zA-Z0-9 ]*$");
+            bool estado = true;
+            long t;
+            if (!regexItem.IsMatch(txt.Text)) estado = false;
+            if (!long.TryParse(txt.Text, out t)) estado = false;
+            if (txt.Text.Length != 10) estado = false;
+            if (!estado)
+            {
+                txt.Background = Constantes.ErrorBrush;
+                //txt.Background.Opacity = 70;
+            }
+            return estado;
+        }
+       public static bool validarTextBoxNumero(TextBox txt)
+        {
+            bool estado = true;
+            int t;
+            if (!int.TryParse(txt.Text, out t)) estado = false;
+            if (txt.Text.Length < 1) estado = false;
+
+            if (!estado)
+            {
+                txt.Background = Constantes.ErrorBrush;
+                //txt.Background.Opacity = 70;
+            }
+            return estado;
         }
 
         static public bool validarCuenta(string input)

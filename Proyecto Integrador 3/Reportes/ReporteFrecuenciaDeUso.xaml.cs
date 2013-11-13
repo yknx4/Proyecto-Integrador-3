@@ -5,9 +5,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Media;
 using UnidadPopulator = Proyecto_Integrador_3.DBManagers.UnidadPopulator;
 using UsuariosPopulator = Proyecto_Integrador_3.DBManagers.UsuariosPopulator;
 
@@ -43,6 +45,7 @@ namespace Proyecto_Integrador_3.Reportes
             InitializeComponent();
             SetBackgroundWorkers();
             SetBindings();
+            txtTarjetaUsuario.TextChanged += Helpers.validarTextBoxtColor;
         }
 
         private void SetBackgroundWorkers()
@@ -408,8 +411,16 @@ namespace Proyecto_Integrador_3.Reportes
 
         private void alModificarNumeroTarjeta(object sender, KeyEventArgs e)
         {
+            TextBox origen = sender as TextBox;
             if (e.Key != Key.Enter)
             {
+                return;
+            }
+            origen.Background = Brushes.White;
+            if (!Helpers.validarCuenta(origen.Text))
+            {
+                origen.Focus();
+                origen.Background = Constantes.ErrorBrush;
                 return;
             }
             pgrEstado.IsEnabled = true;

@@ -338,17 +338,17 @@ namespace Proyecto_Integrador_3
 
         private void recargaClick(object sender, RoutedEventArgs e)
         {
-            
+            txtNumeroTarjetaRecarga.Background = Brushes.White;
             if (!Helpers.validarCuenta(txtNumeroTarjetaRecarga.Text) || currentUsuario==null)
             {
                 txtNumeroTarjetaRecarga.Focus();
-                txtNumeroTarjetaRecarga.Background = Brushes.OrangeRed;
+                txtNumeroTarjetaRecarga.Background = Constantes.ErrorBrush;
                 return;
             }
             txtSaldoRecarga.Background = Brushes.White;
             if (!Helpers.validarDinero(txtSaldoRecarga.Text))
             {
-                txtSaldoRecarga.Background = Brushes.OrangeRed;
+                txtSaldoRecarga.Background = Constantes.ErrorBrush;
                 txtSaldoRecarga.Focus();
                 return;
             }
@@ -437,28 +437,25 @@ namespace Proyecto_Integrador_3
         {
             bool estado = true;
             TextBox[] validarTexto = { txtNombre, txtApellidoMaterno, txtApellidoPaterno, txtNombreDeContacto, txtCalle, txtColonia, txtApellidoMaternoDeContacto, txtApellidoPaternoDeContacto };
-            TextBox[] validarNumero = { };
+            TextBox[] validarNumero = {txtNumero };
+            TextBox[] validarTelefono = {txtTelefono,txtTelefonoDeContacto,txtCelular };
             foreach (TextBox txt in validarTexto)
             {
-                estado &= validarTextBoxEstandar(txt);
+                estado &= Helpers.validarTextBoxEstandar(txt);
+            }
+            foreach (TextBox txt in validarNumero)
+            {
+                estado &= Helpers.validarTextBoxNumero(txt);
+            }
+            foreach (TextBox txt in validarTelefono)
+            {
+                estado &= Helpers.validarTextBoxTelefono(txt);
             }
             
             return estado;
         }
 
-        private bool validarTextBoxEstandar(TextBox txt)
-        {
-            var regexItem = new Regex("^[a-zA-Z0-9 ]*$");
-            bool estado = true;
-            if (!regexItem.IsMatch(txt.Text))estado=false;
-            if (txt.Text.Length < 3) estado = false;
-            
-            if (!estado)
-            {
-                txt.Background = Brushes.OrangeRed;
-            }
-            return estado;
-        }
+        
 
        
     }
