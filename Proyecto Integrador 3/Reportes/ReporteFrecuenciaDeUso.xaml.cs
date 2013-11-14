@@ -442,7 +442,7 @@ namespace Proyecto_Integrador_3.Reportes
             }
             pgrEstado.IsEnabled = true;
             pgrEstado.IsActive = true;
-            txtNuUnidadR.Text = txtNuUnidadR.Text.ToUpper();
+            txtNuUnidadR.Text = txtNuUnidadR.Text.ToUpper().Trim();
             txtbEstado.Text = "Buscando " + txtNuUnidadR.Text;
             mBackgroundBusquedaUnidad.RunWorkerAsync(txtNuUnidadR.Text);
         }
