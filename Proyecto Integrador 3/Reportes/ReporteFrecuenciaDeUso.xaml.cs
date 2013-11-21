@@ -75,11 +75,14 @@ namespace Proyecto_Integrador_3.Reportes
            
             public struct Datos
             {
-                public string Unidades;
+                //public string Unidades;
+                public List<String> Unidades;
                 public int Ucount;
-                public string Meses;
+                public List<String> Meses;
+                //public string Meses;
                 public int Mcount;
-                public string Dias;
+                public List<String> Dias;
+                //public string Dias;
                 public int Dcount;
             }
         }
@@ -94,22 +97,30 @@ namespace Proyecto_Integrador_3.Reportes
             HashSet<int> ResM;
             HashSet<Guid> ResU;
             resultado.Dcount = Helpers.masRepetido<DateTime>(Fecha, out Res);
+            resultado.Dias = new List<string>();
             foreach (DateTime valor in Res.Cast<DateTime>().ToList())
             {
-                resultado.Dias += valor.ToShortDateString() + " ";
+                //resultado.Dias += valor.ToShortDateString() + " ";
+                resultado.Dias.Add(valor.ToShortDateString());
             }
             resultado.Mcount = Helpers.masRepetido<int>(Mes, out ResM);
+            resultado.Meses = new List<string>();
             foreach (int valor in ResM)
             {
-                resultado.Meses += Tipos.Meses[valor] + " ";
+                //resultado.Meses += Tipos.Meses[valor] + " ";
+                resultado.Meses.Add(Tipos.Meses[valor]);
             }
             resultado.Ucount = Helpers.masRepetido<Guid>(UnidadesID, out ResU);
             Unidad res;
+            resultado.Unidades = new List<string>();
             foreach (Guid valor in ResU)
             {
                 res = mUnidadPopulator.Unidades.Find(Unidad => Unidad.Uid == valor);
-                resultado.Unidades+= res.NoUnidad + " ";
+                //resultado.Unidades+= res.NoUnidad + " ";
+                resultado.Unidades.Add(res.NoUnidad);
             }
+            //lstGUnidadM.ItemsSource = unidades;
+
             /*resultado.Mcount = (from unidades)*/
 
 
@@ -172,18 +183,19 @@ namespace Proyecto_Integrador_3.Reportes
                 txtETotal.Text = "$" + (r.Estudiante * Constantes.PrecioEspecial).ToString();
                 txtTTotal.Text = "$" + (r.TerceraEdad * Constantes.PrecioEspecial).ToString();
                 txtCTotal.Text = "$" + (r.Discapacidad * Constantes.PrecioEspecial).ToString();
-                txtGUnidadM.Text = r.GData.Unidades;
-                txtGDiasM.Text = r.GData.Dias;
-                txtGMesesM.Text = r.GData.Meses;
-                txtEUnidadM.Text = r.EData.Unidades;
-                txtEDiasM.Text = r.EData.Dias;
-                txtEMesesM.Text = r.EData.Meses;
-                txtTUnidadM.Text = r.TData.Unidades;
-                txtTDiasM.Text = r.TData.Dias;
-                txtTMesesM.Text = r.TData.Meses;
-                txtCUnidadM.Text = r.CData.Unidades;
-                txtCDiasM.Text = r.CData.Dias;
-                txtCMesesM.Text = r.CData.Meses;
+                //txtGUnidadM.Text = r.GData.Unidades;
+                lstGUnidadM.ItemsSource = r.GData.Unidades;
+                lstGDiasM.ItemsSource = r.GData.Dias;
+                lstGMesesM.ItemsSource = r.GData.Meses;
+                lstEUnidadM.ItemsSource = r.EData.Unidades;
+                lstEDiasM.ItemsSource = r.EData.Dias;
+                lstEMesesM.ItemsSource = r.EData.Meses;
+                lstTUnidadM.ItemsSource = r.TData.Unidades;
+                lstTDiasM.ItemsSource = r.TData.Dias;
+                lstTMesesM.ItemsSource = r.TData.Meses;
+                lstCUnidadM.ItemsSource = r.CData.Unidades;
+                lstCDiasM.ItemsSource = r.CData.Dias;
+                lstCMesesM.ItemsSource = r.CData.Meses;
 
                 Helpers.EnableControls(grdTipoUsuarios);
                 pgrTipoUsuario.IsActive = false;
@@ -390,15 +402,24 @@ namespace Proyecto_Integrador_3.Reportes
             lblEdad.Content = Helpers.Age(user.FechaNacimiento).ToString();
             lblConsumo.Content = "$" + user.Consumo.ToString();
             EstadisticaResult.Datos Result = parseServicios(user.Servicios.ToList());
-            txtDiaM.Text = Result.Dias;
-            txtMesM.Text = Result.Meses;
-            txtUnidadM.Text = Result.Unidades;
+            txtDiaM.Text = listToString(Result.Dias);
+            txtMesM.Text = listToString(Result.Meses);
+            txtUnidadM.Text = listToString(Result.Unidades);
             txtCantidadDiasU.Text = Result.Dcount.ToString();
             txtCantidadMesU.Text = Result.Mcount.ToString();
             txtCantidadUnidadU.Text = Result.Ucount.ToString();
             txtTarjetaUsuario.Text = user.TarjetaAsignada;
             
         }
+
+        private string listToString(List<String> input){
+            string res="";
+            foreach(string var in input){
+                res+=var+" ";
+            }
+            return res;
+        }
+
 
         private void cuandoCargaFormulario(object sender, RoutedEventArgs e)
         {
