@@ -275,6 +275,7 @@ namespace Proyecto_Integrador_3.Reportes
         {
             if (e.Key == Key.Enter)
             {
+                txtBusqueda.Text = txtBusqueda.Text.ToUpper().Trim();
                 e.Handled = true;
                 dtgrReportes.ItemsSource = (from reporte in reportesIndividuales where reporte.Unidad.Contains(txtBusqueda.Text) select reporte).ToList();
             }

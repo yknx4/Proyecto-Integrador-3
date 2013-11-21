@@ -396,6 +396,7 @@ namespace Proyecto_Integrador_3.Reportes
             txtCantidadDiasU.Text = Result.Dcount.ToString();
             txtCantidadMesU.Text = Result.Mcount.ToString();
             txtCantidadUnidadU.Text = Result.Ucount.ToString();
+            txtTarjetaUsuario.Text = user.TarjetaAsignada;
             
         }
 
@@ -489,6 +490,16 @@ namespace Proyecto_Integrador_3.Reportes
                 usuariosDgrid.Add(mUsuariosPopulator.Usuarios.Find(Usuario => Usuario.Uid == user));
             }
             dtgrdReporteUnidad.ItemsSource = usuariosDgrid;
+        }
+
+        private void dobleClickDtgrd(object sender, MouseButtonEventArgs e)
+        {
+            if (dtgrdReporteUnidad.SelectedItems.Count == 1)
+            {
+                currentUsuario = (Usuario)dtgrdReporteUnidad.SelectedItems[0];
+                loadUsuario(currentUsuario);
+                tbsControles.SelectedIndex = 0;
+            }
         }
 
         

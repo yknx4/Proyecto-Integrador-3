@@ -78,8 +78,8 @@
                     
                 </StatusBarItem>
             </StatusBar>
-            <TabControl DockPanel.Dock="Top">
-                <TabItem x:Name="___No_Name_" Header="Usuarios">
+            <TabControl x:Name="tbsControles" DockPanel.Dock="Top">
+                <TabItem x:Name="usuariosTab" Header="Usuarios">
                     <Grid x:Name="grdUsuarios" Margin="10,0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="auto" ></ColumnDefinition>
@@ -138,7 +138,7 @@
                         </DockPanel>
                     </Grid>
                 </TabItem>
-                <TabItem Header="Unidades">
+                <TabItem x:Name="unidadesTab" Header="Unidades">
                     <Grid x:Name="grdUnidades">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition></ColumnDefinition>
@@ -186,7 +186,7 @@
                                 <RowDefinition></RowDefinition>
                             </Grid.RowDefinitions>
                             <Label FontWeight="Bold" Foreground="{DynamicResource AccentColorBrush}">Usuarios mas frecuentes</Label>
-                            <DataGrid x:Name="dtgrdReporteUnidad"  CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" AutoGenerateColumns="False" Grid.Row="1">
+                            <DataGrid x:Name="dtgrdReporteUnidad"  CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" AutoGenerateColumns="False" Grid.Row="1" MouseDoubleClick="dobleClickDtgrd">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn x:Name="dgtcNombre" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nombre" />
                                     <DataGridTextColumn x:Name="dgtcNumeroTarjeta" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Número de Tarjeta" />
