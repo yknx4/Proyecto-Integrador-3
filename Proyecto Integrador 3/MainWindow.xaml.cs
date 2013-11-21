@@ -173,20 +173,8 @@ namespace Proyecto_Integrador_3
 
         private Usuario generarUsuario()
         {
-            Usuario.Contacto tmpContacto = new Usuario.Contacto
-            {
-                Nombre = txtNombreDeContacto.Text,
-                Telefono = txtTelefonoDeContacto.Text
-            };
-            Usuario.Domicilio tmpDomicilio = new Usuario.Domicilio
-            {
-                Calle = txtCalle.Text,
-                Colonia = txtColonia.Text,
-                Municipio = (short)cmbMunicipio.SelectedIndex,
-                Numero = int.Parse(txtNumero.Text)
-            };
 
-            return new Usuario
+            Usuario tmp = new Usuario(mDBManagers.newUsuarioRow())
             {
                 Uid = Guid.Empty,
                 Sexo = rdbHombre.IsChecked.ToString(),
@@ -198,42 +186,58 @@ namespace Proyecto_Integrador_3
                 TipoSangre = (short)(cmbSangre.SelectedIndex),
                 TipoUsuario = (byte)(cmbTipos.SelectedIndex + 1),
                 Telefono = txtTelefono.Text,
-                mContacto = tmpContacto,
-                mDomicilio = tmpDomicilio
-            };
-        }
-
-        private Usuario generarUsuario(int i)
-        {
-            Usuario.Contacto tmpContacto = new Usuario.Contacto
-            {
-                Nombre = DateTime.Now.ToShortDateString(),
-                Telefono = "312123456"
-            };
-            Usuario.Domicilio tmpDomicilio = new Usuario.Domicilio
-            {
-                Calle = "Calle",
-                Colonia = "Colonia",
-                Municipio = 1,
-                Numero = 123
             };
 
-            return new Usuario
+            Usuario.Contacto tmpContacto = new Usuario.Contacto(ref tmp)
             {
-                Uid = Guid.Empty,
-                Sexo = "Hombre",
-                Alergias = "Alergias",
-                Celular = "312123",
-                FechaNacimiento = DateTime.Now,
-                Nombre = DateTime.Now.ToShortDateString(),
-                TarjetaAsignada = txtNumeroTarjeta.Text,
-                TipoSangre = (short)(cmbSangre.SelectedIndex),
-                TipoUsuario = (byte)(cmbTipos.SelectedIndex + 1),
-                Telefono = "3123123",
-                mContacto = tmpContacto,
-                mDomicilio = tmpDomicilio
+                Nombre = txtNombreDeContacto.Text,
+                Telefono = txtTelefonoDeContacto.Text
             };
+            Usuario.Domicilio tmpDomicilio = new Usuario.Domicilio(ref tmp)
+            {
+                Calle = txtCalle.Text,
+                Colonia = txtColonia.Text,
+                Municipio = (short)cmbMunicipio.SelectedIndex,
+                Numero = int.Parse(txtNumero.Text)
+            };
+            
+                tmp.mContacto = tmpContacto;
+                tmp.mDomicilio = tmpDomicilio;
+            return tmp;
+            
         }
+
+        //private Usuario generarUsuario(int i)
+        //{
+        //    Usuario.Contacto tmpContacto = new Usuario.Contacto
+        //    {
+        //        Nombre = DateTime.Now.ToShortDateString(),
+        //        Telefono = "312123456"
+        //    };
+        //    Usuario.Domicilio tmpDomicilio = new Usuario.Domicilio
+        //    {
+        //        Calle = "Calle",
+        //        Colonia = "Colonia",
+        //        Municipio = 1,
+        //        Numero = 123
+        //    };
+
+        //    return new Usuario(null)
+        //    {
+        //        Uid = Guid.Empty,
+        //        Sexo = "Hombre",
+        //        Alergias = "Alergias",
+        //        Celular = "312123",
+        //        FechaNacimiento = DateTime.Now,
+        //        Nombre = DateTime.Now.ToShortDateString(),
+        //        TarjetaAsignada = txtNumeroTarjeta.Text,
+        //        TipoSangre = (short)(cmbSangre.SelectedIndex),
+        //        TipoUsuario = (byte)(cmbTipos.SelectedIndex + 1),
+        //        Telefono = "3123123",
+        //        mContacto = tmpContacto,
+        //        mDomicilio = tmpDomicilio
+        //    };
+        //}
 
         private void limpiarVentanaRegistro()
         {

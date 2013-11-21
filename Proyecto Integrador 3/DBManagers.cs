@@ -36,6 +36,13 @@
             
         }
 
+        public dsServicios.ServiciosRow newServicioRow() { 
+            return mdsServicios.Servicios.NewServiciosRow();
+        }
+        public dsUsuarios.UsuariosRow newUsuarioRow() {
+            return mdsUsuarios.Usuarios.NewUsuariosRow();
+        }
+
         public bool AreUsuariosFilled
         {
             get;

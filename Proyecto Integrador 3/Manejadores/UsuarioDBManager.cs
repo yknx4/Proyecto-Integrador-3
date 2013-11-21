@@ -83,7 +83,7 @@ namespace Proyecto_Integrador_3
                 nuevoUsuario.TipoUsuario = heldItem.TipoUsuario;
                 nuevoUsuario.Saldo = heldItem.Saldo;
                 nuevoUsuario.TarjetaAsignada = heldItem.TarjetaAsignada;
-                nuevoUsuario.sexo = heldItem._sexo;
+                nuevoUsuario.sexo = heldItem.bSexo;
                 nuevoUsuario.FechaNacimiento = heldItem.FechaNacimiento;
                 nuevoUsuario.NumeroCalle = heldItem.mDomicilio.Numero;
                 nuevoUsuario.Colonia = heldItem.mDomicilio.Colonia;

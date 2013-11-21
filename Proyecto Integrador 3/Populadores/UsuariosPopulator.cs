@@ -54,35 +54,26 @@ namespace Proyecto_Integrador_3
                 _usuarios.Clear();
                 foreach (UsuariosRow Row in Parent.mdsUsuarios.Usuarios.Rows)
                 {
-                    Usuario.Contacto tmpContacto = new Usuario.Contacto
-                    {
-                        Nombre = Row.NombreContacto,
-                        Telefono = Row.TelefonoContacto
-                    };
-                    Usuario.Domicilio tmpDomicilio = new Usuario.Domicilio
-                    {
-                        Calle = Row.Calle,
-                        Colonia = Row.Colonia,
-                        Municipio = Row.Municipio,
-                        Numero = Row.NumeroCalle
-                    };
+                    
 
-                    Usuario actual = new Usuario
-                    {
-                        Uid = Row.Uid,
-                        Saldo = Row.Saldo,
-                        Sexo = Row.sexo.ToString(),
-                        Alergias = Row.Alergias,
-                        Celular = Row.Celular,
-                        FechaNacimiento = Row.FechaNacimiento,
-                        Nombre = Row.Nombre,
-                        TarjetaAsignada = Row.TarjetaAsignada,
-                        TipoSangre = Row.TipoSangre,
-                        TipoUsuario = Row.TipoUsuario,
-                        Telefono = Row.Telefono,
-                        mContacto = tmpContacto,
-                        mDomicilio = tmpDomicilio
-                    };
+                    Usuario actual = new Usuario(Row);
+
+                    Usuario.Contacto tmpContacto = new Usuario.Contacto(ref actual);
+                    //{
+                    //    Nombre = Row.NombreContacto,
+                    //    Telefono = Row.TelefonoContacto
+                    //};
+                    Usuario.Domicilio tmpDomicilio = new Usuario.Domicilio(ref actual);
+                    //{
+                    //    Calle = Row.Calle,
+                    //    Colonia = Row.Colonia,
+                    //    Municipio = Row.Municipio,
+                    //    Numero = Row.NumeroCalle
+                    //};
+
+                    
+                    actual.mContacto = tmpContacto;
+                    actual.mDomicilio = tmpDomicilio;
 
                     if(Servicios)actual.Servicios = (from servicio in mServiciosPopulator.Servicios where servicio.Usuario == actual.Uid select servicio).ToList();
                     //actual.PropertyChanged += cuentaModificada;
