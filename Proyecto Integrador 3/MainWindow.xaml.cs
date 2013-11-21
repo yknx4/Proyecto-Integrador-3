@@ -135,13 +135,13 @@ namespace Proyecto_Integrador_3
 
         private void cambiaTextoBusquedaAsync(object sender)
         {
-            dcpnlBusqueda.Visibility = Visibility.Hidden;
+            dtgrdBusqueda.Visibility = Visibility.Hidden;
             TextBox origen = sender as TextBox;
             if (origen.Text != "")
             {
                 UsuariosBusqueda = (from usuarios in Usuarios where usuarios.sNombre.ToLower().Contains(origen.Text.ToLower()) select usuarios).ToList();
                 dtgrdBusqueda.ItemsSource = UsuariosBusqueda;
-                if (UsuariosBusqueda.Count > 0) dcpnlBusqueda.Visibility = Visibility.Visible;
+                if (UsuariosBusqueda.Count > 0) dtgrdBusqueda.Visibility = Visibility.Visible;
 
                 //txtNumeroTarjetaRecarga.IsReadOnly = true;
             }

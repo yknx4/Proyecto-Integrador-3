@@ -73,6 +73,7 @@ namespace PI_Simuladores
             mDBManagers.Fill();
             mUsuariosPopulator = new UsuariosPopulator(ref mDBManagers,false);
             mUnidadPopulator = new UnidadPopulator(ref mDBManagers,false);
+            mDBManagers.FillServicios();
             generarLista();
             Tarjetas = (from usuarios in Usuarios select usuarios.TarjetaAsignada).ToList();
             Nombres = (from usuarios in Usuarios select usuarios.sNombre).ToList();
