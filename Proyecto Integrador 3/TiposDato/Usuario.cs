@@ -100,6 +100,10 @@ namespace Proyecto_Integrador_3.TiposDato
         public override bool isAdded() {
             return !(Uid == Guid.Empty);
         }
+        public override string ToString()
+        {
+            return sNombre;
+        }
     }
 
 }

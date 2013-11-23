@@ -54,8 +54,8 @@
         <Controls:WindowCommands>
             <!--<Button Content="Arekar Technologies" IsEnabled="False" />-->
             <StackPanel Orientation="Horizontal">
-                <Button IsEnabled="False">Busqueda:</Button>
-                <TextBox x:Name="txtBusqueda" Controls:TextboxHelper.Watermark="Buscar" Margin="5" Width="80" ></TextBox>
+                <Button IsEnabled="False" >Busqueda:</Button>
+                <TextBox x:Name="txtBusqueda" Controls:TextboxHelper.Watermark="Buscar" Margin="5" Width="80" KeyUp="busquedaEnter" ></TextBox>
             </StackPanel>
         </Controls:WindowCommands>
     </Controls:MetroWindow.WindowCommands>
@@ -69,6 +69,30 @@
         <CheckBox Visibility="Hidden"></CheckBox>
         <Controls:MetroProgressBar Visibility="Hidden"></Controls:MetroProgressBar>
         <Controls:ProgressRing Visibility="Hidden"></Controls:ProgressRing>
+        <Grid x:Name="grdBusqueda" Panel.ZIndex="1000" Visibility="Hidden">
+            <Grid Background="{DynamicResource WhiteBrush}"  Opacity=".8" ></Grid>
+            <Grid Background="{DynamicResource WhiteBrush}" Margin="250,100" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel>
+
+                    <Label FontSize="24">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource AccentColor}"/>
+                        </Label.Foreground> Busqueda
+                    </Label>
+                    <ListBox x:Name="lstBusqueda" MinHeight="100" MinWidth="200" MaxHeight="250">
+                        
+                        
+                    </ListBox>
+                    <StackPanel Orientation="Horizontal">
+                        <Button HorizontalAlignment="Right" Margin="10" Click="seleccionarBusqueda">Seleccionar</Button>
+                        <Button HorizontalAlignment="Right" Margin="10" Click="cancelarBusqueda">Cancelar</Button>
+                    </StackPanel>
+
+                </StackPanel>
+            </Grid>
+        </Grid>
+        
+       
         <Controls:ProgressRing x:Name="pgrEstado" Width="300" Height="300" Panel.ZIndex="100" HorizontalAlignment="Center" VerticalAlignment="Center"></Controls:ProgressRing>
         <DockPanel>
             <StatusBar DockPanel.Dock="Bottom">

@@ -32,6 +32,7 @@ namespace Proyecto_Integrador_3.Reportes
         private BackgroundWorker mBackgroundGenerarLista = new BackgroundWorker();
         private BackgroundWorker mBackgroundBusquedaUsuario = new BackgroundWorker();
         private BackgroundWorker mBackgroundBusquedaUnidad = new BackgroundWorker();
+        private BackgroundWorker mBackgroundBusquedaGeneral = new BackgroundWorker();
         private BackgroundWorker mBackgroundCargarDataset = new BackgroundWorker();
         private BackgroundWorker mBackgroundEstadisticasTipoUsuario = new BackgroundWorker();
 
@@ -60,6 +61,59 @@ namespace Proyecto_Integrador_3.Reportes
             mBackgroundBusquedaUnidad.RunWorkerCompleted += _backgroundWorker_RunWorkerCompleted_BuscarUnidad;
             mBackgroundEstadisticasTipoUsuario.DoWork += _backgroundWorker_DoWork_EstadisticasTipoUsuario;
             mBackgroundEstadisticasTipoUsuario.RunWorkerCompleted += _backgroundWorker_RunWorkerCompleted_EstadisticasTipoUsuario;
+            mBackgroundBusquedaGeneral.DoWork += _backgroundWorker_DoWork_BuscarGeneral;
+            mBackgroundBusquedaGeneral.RunWorkerCompleted += _backgroundWorker_RunWorkerCompleted_BuscarGeneral;
+        }
+
+        private void _backgroundWorker_DoWork_BuscarGeneral(object sender, DoWorkEventArgs e)
+        { //MessageBox.Show("Ejecuto");
+            string arg = e.Argument as String;
+            arg=arg.ToLower();
+            if (arg != "")
+            {
+                try
+                {
+                  e.Result = (from usuario in mUsuariosPopulator.Usuarios where usuario.Nombre.ToLower().Contains(arg) select usuario).ToList();
+                }
+                catch (System.Exception)
+                {
+                    e.Result = null;
+                }
+            }
+            else
+            {
+                //txtNumeroTarjetaRecarga.IsReadOnly = false;
+            }
+        }
+
+        private void _backgroundWorker_RunWorkerCompleted_BuscarGeneral(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled)
+            {
+                //lblEstadoPrincipal.Content = "Evento Cancelado";
+
+                //statusText.Text = "Cancelled";
+            }
+            else if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.ToString());
+            }
+            else
+            {
+                if (e.Result != null)
+                {
+                    List<Usuario> result =(List<Usuario>)e.Result;
+                    if (result.Count > 0) {
+                        grdBusqueda.Visibility = Visibility.Visible;
+                        lstBusqueda.ItemsSource = result;
+                    }
+                }
+                else
+                {
+                    txtbEstado.Text = "No se encontró nada.";
+                }
+            }
+            pgrEstado.IsActive = false;
         }
 
         struct EstadisticaResult
@@ -523,6 +577,30 @@ namespace Proyecto_Integrador_3.Reportes
             }
         }
 
+        private void busquedaEnter(object sender, KeyEventArgs e)
+        {
+            if (e.Key != Key.Enter)
+            {
+                return;
+            }
+            pgrEstado.IsEnabled = true;
+            pgrEstado.IsActive = true;
+            ((TextBox)sender).Text = ((TextBox)sender).Text.Trim();
+            txtbEstado.Text = "Buscando " + ((TextBox)sender).Text;
+            mBackgroundBusquedaGeneral.RunWorkerAsync(((TextBox)sender).Text);
+        }
+
+        private void seleccionarBusqueda(object sender, RoutedEventArgs e)
+        {
+            if(lstBusqueda.SelectedItem!=null){
+                loadUsuario((Usuario)lstBusqueda.SelectedItem);
+            }
+            grdBusqueda.Visibility = Visibility.Hidden;
+        }
+        private void cancelarBusqueda(object sender, RoutedEventArgs e)
+        {
+            grdBusqueda.Visibility = Visibility.Hidden;
+        }
         
     }
 }
