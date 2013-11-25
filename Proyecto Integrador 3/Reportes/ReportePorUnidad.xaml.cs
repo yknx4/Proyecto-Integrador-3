@@ -118,6 +118,10 @@ namespace Proyecto_Integrador_3.Reportes
                 pgrEstado.IsActive = false;
                 txtbEstado.Text = mUnidadPopulator.Unidades.Count.ToString()+" unidades cargadas.";
                 btnMostrarReporte.IsEnabled = true;
+                if (tmpFuncion != null)
+                {
+                    tmpFuncion();
+                }
                 //.Text = "Completed";
             }
         }
@@ -232,7 +236,7 @@ namespace Proyecto_Integrador_3.Reportes
             }
         }
 
-        private void Generar()
+        public void Generar()
         {
             if (reportesIndividuales != null) reportesIndividuales.Clear();
             
@@ -275,14 +279,19 @@ namespace Proyecto_Integrador_3.Reportes
         {
             if (e.Key == Key.Enter)
             {
-                txtBusqueda.Text = txtBusqueda.Text.ToUpper().Trim();
+                
                 e.Handled = true;
-                dtgrReportes.ItemsSource = (from reporte in reportesIndividuales where reporte.Unidad.Contains(txtBusqueda.Text) select reporte).ToList();
+                realizarBusqueda(txtBusqueda.Text);
             }
             if (((TextBox)sender).Text == "")
             {
                 dtgrReportes.ItemsSource = reportesIndividuales;
             }
+        }
+
+        public void realizarBusqueda(string busqueda){
+            txtBusqueda.Text = txtBusqueda.Text.ToUpper().Trim();
+            dtgrReportes.ItemsSource = (from reporte in reportesIndividuales where reporte.Unidad.Contains(busqueda) select reporte).ToList();
         }
 
         private void alCargarFilas(object sender, DataGridRowDetailsEventArgs e)
@@ -303,6 +312,11 @@ namespace Proyecto_Integrador_3.Reportes
             this.final = null;
             this.inicial = dtpFechaReporteInicial.SelectedDate;
             if(dtpFechaReporteFinal.IsEnabled)this.final = dtpFechaReporteFinal.SelectedDate;
+            generarReporte();
+        }
+
+        public void generarReporte() {
+
             Generar();
             dtgrReportes.Visibility = Visibility.Visible;
         }
@@ -313,6 +327,11 @@ namespace Proyecto_Integrador_3.Reportes
             pgrEstado.IsActive = true;
             mBackgroundCargarDataset.RunWorkerAsync();
             
+            
         }
+
+        public delegate void funcionOpcional();
+
+        public funcionOpcional tmpFuncion;
     }
 }

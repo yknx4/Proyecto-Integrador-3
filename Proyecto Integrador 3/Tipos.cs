@@ -41,7 +41,7 @@ namespace Proyecto_Integrador_3
             Meses[7] = "Julio";
             Meses[8] = "Agosto";
             Meses[9] = "Septiembre";
-            Meses[10] = "Octube";
+            Meses[10] = "Octubre";
             Meses[11] = "Noviembre";
             Meses[12] = "Diciembre";
         }

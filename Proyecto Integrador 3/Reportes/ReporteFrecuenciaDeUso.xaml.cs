@@ -47,6 +47,14 @@ namespace Proyecto_Integrador_3.Reportes
             SetBackgroundWorkers();
             SetBindings();
             txtTarjetaUsuario.TextChanged += Helpers.validarTextBoxtColor;
+            mReportePorUnidad = new ReportePorUnidad(ref mDBManagers);
+            mReportePorUnidad.Closed += reporteCerrado;
+        }
+
+        private void reporteCerrado(object sender, EventArgs e)
+        {
+            mReportePorUnidad = new ReportePorUnidad(ref mDBManagers);
+            mReportePorUnidad.Closed += reporteCerrado;
         }
 
         private void SetBackgroundWorkers()
@@ -601,6 +609,77 @@ namespace Proyecto_Integrador_3.Reportes
         {
             grdBusqueda.Visibility = Visibility.Hidden;
         }
+
+        ReportePorUnidad mReportePorUnidad;
+
+        string helperString;
+
+        private void dobleClickUnidades(object sender, MouseButtonEventArgs e)
+        {
+            ListBox origen = sender as ListBox;
+            if(origen.SelectedItem!=null){
+                helperString = origen.SelectedItem.ToString();
+                mReportePorUnidad.tmpFuncion = dobleClickUnidadesHelper;
+                mReportePorUnidad.ShowDialog();
+            }
+            
+        }
+
+        private void dobleClickUnidadesHelper()
+        {
+            mReportePorUnidad.Generar();
+            mReportePorUnidad.realizarBusqueda(helperString);
+        }
+
+        private void dobleClickDias(object sender, MouseButtonEventArgs e)
+        {
+            ListBox origen = sender as ListBox;
+            if (origen.SelectedItem != null)
+            {
+                helperString = origen.SelectedItem.ToString();
+                dobleClickFecha(DateTime.Parse(helperString));
+            }
+        }
+
+        private void dobleClickMeses(object sender, MouseButtonEventArgs e)
+        {
+            ListBox origen = sender as ListBox;
+            if (origen.SelectedItem != null)
+            {
+                helperString = origen.SelectedItem.ToString();
+                int mes = (from p in Tipos.Meses
+                           where p.Value.Contains(helperString)
+                           select p.Key)
+    .FirstOrDefault();
+
+                DateTime inicial = new DateTime(DateTime.Today.Year, mes, 1);
+                DateTime final = new DateTime(DateTime.Today.Year, mes, 1);
+                final = final.AddMonths(1).AddDays(-1);
+
+
+                dobleClickFecha(inicial,final);
+                
+            }
+        }
+
+        private void dobleClickFecha(DateTime inicial) {
+            dobleClickFecha(inicial, null);
+        }
+
+        private void dobleClickFecha(DateTime inicial, DateTime? final) {
+            mReportePorUnidad.inicial = inicial;
+            mReportePorUnidad.final = final;
+
+            mReportePorUnidad.tmpFuncion = dobleClickFechaHelper;
+            mReportePorUnidad.ShowDialog();
+        }
+
+        private void dobleClickFechaHelper() {
+            mReportePorUnidad.Generar();
+        }
+
+
+
         
     }
 }

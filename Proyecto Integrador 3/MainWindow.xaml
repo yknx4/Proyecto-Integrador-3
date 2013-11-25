@@ -4,7 +4,7 @@
   xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         Title="SmartCards" Height="600" Width="1020"
 
-        Icon="MainLogo.ico" SizeChanged="ventanaCambiaTamaño" WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        Icon="MainLogo.ico"  WindowStartupLocation="CenterScreen" WindowState="Maximized"
 
 >
     <Controls:MetroWindow.WindowCommands>
@@ -106,7 +106,7 @@
 
                     <Label HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" >Nombre:</Label>
                     <StackPanel Grid.Row="1" Grid.ColumnSpan="7">
-                        <TextBox x:Name="txtNombreBusqueda" VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Nombre(s)" TextInput="entraTexto" KeyDown="PresionarTecla_BusqNom" TextChanged="cambiaTextoBusqueda" KeyUp="alPresionarEnterBusqueda"></TextBox>
+                        <TextBox x:Name="txtNombreBusqueda" VerticalAlignment="Top"  Controls:TextboxHelper.Watermark="Nombre(s)"   KeyUp="alPresionarEnterBusqueda"></TextBox>
                         <TextBlock HorizontalAlignment="Center" Style="{StaticResource UnderLabel}">
                                         Busqueda</TextBlock>
                     </StackPanel>
@@ -312,9 +312,9 @@ o	Frecuencia de uso del transporte por tipo de usuario.-->
             </TabItem>
         </TabControl>
         <StatusBar Background="#FFF3F3F3" Grid.Row="1">
-            <Label x:Name="lblEstadoPrincipal">Estado 1</Label>
+            <Label x:Name="lblEstadoPrincipal" Content=""/>
             <Separator />
-            <Label x:Name="lblEstadoSecundaria">Informacion mas larga.</Label>
+            <Label x:Name="lblEstadoSecundaria" Content="SmartCards"/>
         </StatusBar>
     </Grid>
 </Controls:MetroWindow>

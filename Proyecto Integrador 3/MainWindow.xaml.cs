@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
@@ -82,8 +81,15 @@ namespace Proyecto_Integrador_3
             SetBackgroundWorkers();
             SetEventHandlers();
             Helpers.SetValidationTextBoxes(grdRegistro);
+            
             /*Se genera la primera lista*/
             generarLista();
+        }
+
+        private void alCerrarReporte(object sender, EventArgs e)
+        {
+            mReporteFrecuencia = null;
+            System.GC.Collect();
         }
 
         private void SetBackgroundWorkers()
@@ -120,12 +126,11 @@ namespace Proyecto_Integrador_3
             }
             else if (e.Error != null)
             {
-                //statusText.Text = "Exception Thrown";
+                throw e.Error;
             }
             else
             {
                 Usuarios = mUsuariosPopulator.Usuarios;
-
                 //.Text = "Completed";
             }
             Helpers.EnableControls((Panel)tbRecarga.Content);
@@ -151,25 +156,8 @@ namespace Proyecto_Integrador_3
             }
         }
 
-        private void cambiaTextoBusqueda(object sender, TextChangedEventArgs e)
-        {
-        }
+       
 
-        //private void clickCheckboxRangoFecha(object sender, RoutedEventArgs e)
-        //{
-        //    if (((sender as CheckBox).IsChecked).Value)
-        //    {
-        //        dtpFechaReporteFinal.IsEnabled = true;
-        //    }
-        //    else
-        //    {
-        //        dtpFechaReporteFinal.IsEnabled = false;
-        //    }
-        //}
-
-        private void entraTexto(object sender, TextCompositionEventArgs e)
-        {
-        }
 
         private Usuario generarUsuario()
         {
@@ -292,14 +280,7 @@ namespace Proyecto_Integrador_3
             pgrRegistrar.IsActive = false;
         }
 
-        private void PresionarTecla_BusqNom(object sender, KeyEventArgs e)
-        {
-        }
 
-        private void ventanaCambiaTamaño(object sender, SizeChangedEventArgs e)
-        {
-            lblEstadoPrincipal.Content = e.NewSize.ToString();
-        }
 
         private void cambiaTarjetaRecargaAsync(object sender)
         {
@@ -401,7 +382,7 @@ namespace Proyecto_Integrador_3
 
             new Thread(start).Start();
         }
-
+        ReporteFrecuenciaDeUso mReporteFrecuencia;
         private void btnMostrarReporte_Click(object sender, RoutedEventArgs e)
         {
             switch (cmbTipoReporte.SelectedIndex)
@@ -413,8 +394,19 @@ namespace Proyecto_Integrador_3
                     mReporteUnidad.ShowDialog();
                     break;
                 case 1:
-                    ReporteFrecuenciaDeUso mReporteFrecuencia = new ReporteFrecuenciaDeUso(ref mDBManagers);
-                    mReporteFrecuencia.ShowDialog();
+                    if (mReporteFrecuencia != null)
+                    {
+                        
+                        mReporteFrecuencia.Focus();
+                    }
+                    else
+                    {
+                        mReporteFrecuencia = new ReporteFrecuenciaDeUso(ref mDBManagers);
+
+                        /*Se asignan Manejadores de eventos*/
+                        mReporteFrecuencia.Closed += alCerrarReporte;
+                        mReporteFrecuencia.Show();
+                    }
                     break;
 
             }
@@ -422,6 +414,8 @@ namespace Proyecto_Integrador_3
             
             System.GC.Collect();
         }
+
+        
 
         private void alDobleClickBusqueda(object sender, MouseButtonEventArgs e)
         {

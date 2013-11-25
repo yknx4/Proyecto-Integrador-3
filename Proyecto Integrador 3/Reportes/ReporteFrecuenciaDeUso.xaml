@@ -257,9 +257,9 @@
                             <Label Grid.Row="4">Meses:</Label>
                             <Label Grid.Row="5">Servicios:</Label>
                             <Label Grid.Row="6">Total:</Label>
-                            <ListBox x:Name="lstGUnidadM" Grid.Column="1" Grid.Row="2" MaxHeight="90"></ListBox>
-                            <ListBox x:Name="lstGDiasM" Grid.Column="1" Grid.Row="3" MaxHeight="90"></ListBox>
-                            <ListBox x:Name="lstGMesesM" Grid.Column="1" Grid.Row="4" MaxHeight="90"></ListBox>
+                            <ListBox x:Name="lstGUnidadM" Grid.Column="1" Grid.Row="2" MaxHeight="90" MouseDoubleClick="dobleClickUnidades" ></ListBox>
+                            <ListBox x:Name="lstGDiasM" Grid.Column="1" Grid.Row="3" MaxHeight="90" MouseDoubleClick="dobleClickDias"></ListBox>
+                            <ListBox x:Name="lstGMesesM" Grid.Column="1" Grid.Row="4" MaxHeight="90" MouseDoubleClick="dobleClickMeses"></ListBox>
                             <TextBox x:Name="txtGServicios" Grid.Column="1" Grid.Row="5" IsReadOnly="True"></TextBox>
                             <TextBox x:Name="txtGTotal" Grid.Column="1" Grid.Row="6" IsReadOnly="True"></TextBox>
                             
@@ -286,9 +286,9 @@
                             <Label Grid.Row="4">Meses:</Label>
                             <Label Grid.Row="5">Servicios:</Label>
                             <Label Grid.Row="6">Total:</Label>
-                            <ListBox x:Name="lstEUnidadM" Grid.Column="1" Grid.Row="2" MaxHeight="90"></ListBox>
-                            <ListBox x:Name="lstEDiasM" Grid.Column="1" Grid.Row="3" MaxHeight="90"></ListBox>
-                            <ListBox x:Name="lstEMesesM" Grid.Column="1" Grid.Row="4" MaxHeight="90"></ListBox>
+                            <ListBox x:Name="lstEUnidadM" Grid.Column="1" Grid.Row="2" MaxHeight="90" MouseDoubleClick="dobleClickUnidades"></ListBox>
+                            <ListBox x:Name="lstEDiasM" Grid.Column="1" Grid.Row="3" MaxHeight="90" MouseDoubleClick="dobleClickDias"></ListBox>
+                            <ListBox x:Name="lstEMesesM" Grid.Column="1" Grid.Row="4" MaxHeight="90" MouseDoubleClick="dobleClickMeses"></ListBox>
                             <TextBox x:Name="txtEServicios" Grid.Column="1" Grid.Row="5" IsReadOnly="True"></TextBox>
                             <TextBox x:Name="txtETotal" Grid.Column="1" Grid.Row="6" IsReadOnly="True"></TextBox>
                         </Grid>
@@ -314,9 +314,9 @@
                             <Label Grid.Row="4">Meses:</Label>
                             <Label Grid.Row="5">Servicios:</Label>
                             <Label Grid.Row="6">Total:</Label>
-                            <ListBox x:Name="lstTUnidadM" Grid.Column="1" Grid.Row="2" MaxHeight="90"></ListBox>
-                            <ListBox x:Name="lstTDiasM" Grid.Column="1" Grid.Row="3" MaxHeight="90"></ListBox>
-                            <ListBox x:Name="lstTMesesM" Grid.Column="1" Grid.Row="4" MaxHeight="90"></ListBox>
+                            <ListBox x:Name="lstTUnidadM" Grid.Column="1" Grid.Row="2" MaxHeight="90" MouseDoubleClick="dobleClickUnidades"></ListBox>
+                            <ListBox x:Name="lstTDiasM" Grid.Column="1" Grid.Row="3" MaxHeight="90" MouseDoubleClick="dobleClickDias"></ListBox>
+                            <ListBox x:Name="lstTMesesM" Grid.Column="1" Grid.Row="4" MaxHeight="90" MouseDoubleClick="dobleClickMeses"></ListBox>
                             <TextBox x:Name="txtTServicios" Grid.Column="1" Grid.Row="5" IsReadOnly="True"></TextBox>
                             <TextBox x:Name="txtTTotal" Grid.Column="1" Grid.Row="6" IsReadOnly="True"></TextBox>
                         </Grid>
@@ -342,9 +342,9 @@
                             <Label Grid.Row="4">Meses:</Label>
                             <Label Grid.Row="5">Servicios:</Label>
                             <Label Grid.Row="6">Total:</Label>
-                            <ListBox x:Name="lstCUnidadM" Grid.Column="1" Grid.Row="2" MaxHeight="90"></ListBox>
-                            <ListBox x:Name="lstCDiasM" Grid.Column="1" Grid.Row="3" MaxHeight="90"></ListBox>
-                            <ListBox x:Name="lstCMesesM" Grid.Column="1" Grid.Row="4" MaxHeight="90"></ListBox>
+                            <ListBox x:Name="lstCUnidadM" Grid.Column="1" Grid.Row="2" MaxHeight="90" MouseDoubleClick="dobleClickUnidades"></ListBox>
+                            <ListBox x:Name="lstCDiasM" Grid.Column="1" Grid.Row="3" MaxHeight="90" MouseDoubleClick="dobleClickDias"></ListBox>
+                            <ListBox x:Name="lstCMesesM" Grid.Column="1" Grid.Row="4" MaxHeight="90" MouseDoubleClick="dobleClickMeses"></ListBox>
                             <TextBox x:Name="txtCServicios" Grid.Column="1" Grid.Row="5" IsReadOnly="True"></TextBox>
                             <TextBox x:Name="txtCTotal" Grid.Column="1" Grid.Row="6" IsReadOnly="True"></TextBox>
                         </Grid>
