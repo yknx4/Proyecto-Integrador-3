@@ -651,6 +651,8 @@ namespace Proyecto_Integrador_3 {
                 this.columnAlergias.MaxLength = 100;
                 this.columnNombreContacto.MaxLength = 100;
                 this.columnTelefonoContacto.MaxLength = 100;
+                this.columnTipoUsuario.AllowDBNull = false;
+                this.columnTipoUsuario.DefaultValue = ((byte)(1));
                 this.columnTarjetaAsignada.MaxLength = 12;
                 this.columnColonia.MaxLength = 100;
                 this.columnCelular.MaxLength = 100;
@@ -921,12 +923,7 @@ namespace Proyecto_Integrador_3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public byte TipoUsuario {
                 get {
-                    try {
-                        return ((byte)(this[this.tableUsuarios.TipoUsuarioColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TipoUsuario\' in table \'Usuarios\' is DBNull.", e);
-                    }
+                    return ((byte)(this[this.tableUsuarios.TipoUsuarioColumn]));
                 }
                 set {
                     this[this.tableUsuarios.TipoUsuarioColumn] = value;
@@ -1143,18 +1140,6 @@ namespace Proyecto_Integrador_3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTelefonoContactoNull() {
                 this[this.tableUsuarios.TelefonoContactoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTipoUsuarioNull() {
-                return this.IsNull(this.tableUsuarios.TipoUsuarioColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTipoUsuarioNull() {
-                this[this.tableUsuarios.TipoUsuarioColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1588,7 +1573,7 @@ namespace Proyecto_Integrador_3.dsUsuariosTableAdapters {
                     string Alergias, 
                     string NombreContacto, 
                     string TelefonoContacto, 
-                    global::System.Nullable<byte> TipoUsuario, 
+                    byte TipoUsuario, 
                     global::System.Nullable<decimal> Saldo, 
                     string TarjetaAsignada, 
                     global::System.Nullable<bool> sexo, 
@@ -1640,12 +1625,7 @@ namespace Proyecto_Integrador_3.dsUsuariosTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(TelefonoContacto));
             }
-            if ((TipoUsuario.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((byte)(TipoUsuario.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[8].Value = ((byte)(TipoUsuario));
             if ((Saldo.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = ((decimal)(Saldo.Value));
             }
@@ -1723,7 +1703,7 @@ namespace Proyecto_Integrador_3.dsUsuariosTableAdapters {
                     string Alergias, 
                     string NombreContacto, 
                     string TelefonoContacto, 
-                    global::System.Nullable<byte> TipoUsuario, 
+                    byte TipoUsuario, 
                     global::System.Nullable<decimal> Saldo, 
                     string TarjetaAsignada, 
                     global::System.Nullable<bool> sexo, 
@@ -1776,12 +1756,7 @@ namespace Proyecto_Integrador_3.dsUsuariosTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(TelefonoContacto));
             }
-            if ((TipoUsuario.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((byte)(TipoUsuario.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((byte)(TipoUsuario));
             if ((Saldo.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Saldo.Value));
             }
@@ -1859,7 +1834,7 @@ namespace Proyecto_Integrador_3.dsUsuariosTableAdapters {
                     string Alergias, 
                     string NombreContacto, 
                     string TelefonoContacto, 
-                    global::System.Nullable<byte> TipoUsuario, 
+                    byte TipoUsuario, 
                     global::System.Nullable<decimal> Saldo, 
                     string TarjetaAsignada, 
                     global::System.Nullable<bool> sexo, 
