@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using System.Windows.Media;
 
 namespace Proyecto_Integrador_3
 {
-    static class Helpers
+    internal static class Helpers
     {
         public static void ClearTextBoxes(Panel panel)
         {
@@ -43,7 +39,7 @@ namespace Proyecto_Integrador_3
             }
         }
 
-       public static bool validarTextBoxEstandar(TextBox txt)
+        public static bool validarTextBoxEstandar(TextBox txt)
         {
             //var regexItem = new Regex("^[a-zA-Z0-9 ]*$");
             var regexItem = new Regex(@"^\w*(\s\w*)*$");
@@ -54,11 +50,13 @@ namespace Proyecto_Integrador_3
             if (!estado)
             {
                 txt.Background = Constantes.ErrorBrush;
+
                 //txt.Background.Opacity = 70;
             }
             return estado;
         }
-       public static bool validarTextBoxTelefono(TextBox txt)
+
+        public static bool validarTextBoxTelefono(TextBox txt)
         {
             var regexItem = new Regex("^[a-zA-Z0-9 ]*$");
             bool estado = true;
@@ -69,11 +67,13 @@ namespace Proyecto_Integrador_3
             if (!estado)
             {
                 txt.Background = Constantes.ErrorBrush;
+
                 //txt.Background.Opacity = 70;
             }
             return estado;
         }
-       public static bool validarTextBoxNumero(TextBox txt)
+
+        public static bool validarTextBoxNumero(TextBox txt)
         {
             bool estado = true;
             int t;
@@ -83,6 +83,7 @@ namespace Proyecto_Integrador_3
             if (!estado)
             {
                 txt.Background = Constantes.ErrorBrush;
+
                 //txt.Background.Opacity = 70;
             }
             return estado;
@@ -91,16 +92,16 @@ namespace Proyecto_Integrador_3
         static public bool validarCuenta(string input)
         {
             long t;
-            if (input.Length==12 && long.TryParse(input,out t)) return true;
+            if (input.Length == 12 && long.TryParse(input, out t)) return true;
             return false;
         }
+
         static public bool validarDinero(string input)
         {
             decimal t;
-            if (decimal.TryParse(input,out t)) return true;
+            if (decimal.TryParse(input, out t)) return true;
             return false;
         }
-        
 
         public static void DisableControls(Panel panel)
         {
@@ -136,13 +137,11 @@ namespace Proyecto_Integrador_3
             int age = DateTime.Now.Year - bday.Year;
             if (bday > DateTime.Now.AddYears(-age)) age--;
             return age;
-
         }
 
         public static int masRepetido<T>(List<T> datos, out HashSet<T> moda) where T : IComparable<T>
         {
-            
-            moda= new HashSet<T>();
+            moda = new HashSet<T>();
             if (datos.Count == 0)
             {
                 return 0;
@@ -159,7 +158,7 @@ namespace Proyecto_Integrador_3
                     valor = datos[j];
                 }
 
-                if (valor.CompareTo(valorActual)==0 && !last)
+                if (valor.CompareTo(valorActual) == 0 && !last)
                 {
                     countValorActual++;
                 }
@@ -181,10 +180,5 @@ namespace Proyecto_Integrador_3
             }
             return countValorMasFrecuente;
         }
-
-        
     }
-
-
-
 }

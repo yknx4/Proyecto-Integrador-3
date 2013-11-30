@@ -76,23 +76,19 @@
 
                     <Label FontSize="24">
                         <Label.Foreground>
-                            <SolidColorBrush Color="{DynamicResource AccentColor}"/>
+                            <SolidColorBrush Color="{DynamicResource AccentColor}" />
                         </Label.Foreground> Busqueda
                     </Label>
                     <ListBox x:Name="lstBusqueda" MinHeight="100" MinWidth="200" MaxHeight="250">
-                        
-                        
                     </ListBox>
                     <StackPanel Orientation="Horizontal">
                         <Button HorizontalAlignment="Right" Margin="10" Click="seleccionarBusqueda">Seleccionar</Button>
                         <Button HorizontalAlignment="Right" Margin="10" Click="cancelarBusqueda">Cancelar</Button>
                     </StackPanel>
-
                 </StackPanel>
             </Grid>
         </Grid>
-        
-       
+
         <Controls:ProgressRing x:Name="pgrEstado" Width="300" Height="300" Panel.ZIndex="100" HorizontalAlignment="Center" VerticalAlignment="Center"></Controls:ProgressRing>
         <DockPanel>
             <StatusBar DockPanel.Dock="Bottom">
@@ -103,7 +99,6 @@
                     <Controls:MetroProgressBar Visibility="Hidden"></Controls:MetroProgressBar>
                 </StatusBarItem>
                 <StatusBarItem>
-                    
                 </StatusBarItem>
             </StatusBar>
             <TabControl x:Name="tbsControles" DockPanel.Dock="Top">
@@ -120,7 +115,6 @@
                             <ColumnDefinition Width="auto"></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>
-                            
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"></RowDefinition>
@@ -152,15 +146,15 @@
                         <TextBox x:Name="txtDiaM" VerticalAlignment="Top" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4" IsReadOnly="True"  ></TextBox>
                         <Label HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="5" >Meses mas activos:</Label>
                         <TextBox x:Name="txtMesM" VerticalAlignment="Top" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="4" IsReadOnly="True"  ></TextBox>
-                        <DockPanel Grid.Row="3" Grid.Column="6" >
+                        <DockPanel Grid.Row="3" Grid.Column="6">
                             <Label HorizontalAlignment="Left" VerticalAlignment="Top"  >Cantidad:</Label>
                             <TextBox x:Name="txtCantidadUnidadU" VerticalAlignment="Top"  IsReadOnly="True"  ></TextBox>
                         </DockPanel>
-                        <DockPanel Grid.Row="4" Grid.Column="6" >
+                        <DockPanel Grid.Row="4" Grid.Column="6">
                             <Label HorizontalAlignment="Left" VerticalAlignment="Top"  >Cantidad:</Label>
                             <TextBox x:Name="txtCantidadDiasU" VerticalAlignment="Top"  IsReadOnly="True"  ></TextBox>
                         </DockPanel>
-                        <DockPanel Grid.Row="5" Grid.Column="6" >
+                        <DockPanel Grid.Row="5" Grid.Column="6">
                             <Label HorizontalAlignment="Left" VerticalAlignment="Top"  >Cantidad:</Label>
                             <TextBox x:Name="txtCantidadMesU" VerticalAlignment="Top"  IsReadOnly="True"  ></TextBox>
                         </DockPanel>
@@ -262,7 +256,6 @@
                             <ListBox x:Name="lstGMesesM" Grid.Column="1" Grid.Row="4" MaxHeight="90" MouseDoubleClick="dobleClickMeses"></ListBox>
                             <TextBox x:Name="txtGServicios" Grid.Column="1" Grid.Row="5" IsReadOnly="True"></TextBox>
                             <TextBox x:Name="txtGTotal" Grid.Column="1" Grid.Row="6" IsReadOnly="True"></TextBox>
-                            
                         </Grid>
                         <Grid Grid.Column="1" Margin="5,0">
                             <Grid.RowDefinitions>

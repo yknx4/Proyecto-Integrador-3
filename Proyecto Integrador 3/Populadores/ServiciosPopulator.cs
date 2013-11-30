@@ -1,16 +1,7 @@
-﻿using System;
+﻿using Proyecto_Integrador_3.TiposDato;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlServerCe;
-using Proyecto_Integrador_3.TiposDato;
-
-using Proyecto_Integrador_3.dsServiciosTableAdapters;
 using ServiciosRow = Proyecto_Integrador_3.dsServicios.ServiciosRow;
-using System.Windows;
 
 namespace Proyecto_Integrador_3
 {
@@ -20,13 +11,11 @@ namespace Proyecto_Integrador_3
         {
             private List<Servicio> _servicios = new List<Servicio>();
             private DBManagers Parent;
-            
-            
 
             public ServiciosPopulator(ref DBManagers sender)
             {
                 Parent = sender;
-                
+
                 generarLista();
             }
 
@@ -34,7 +23,6 @@ namespace Proyecto_Integrador_3
             {
                 _servicios = new List<Servicio>();
                 System.GC.Collect();
-
             }
 
             public void generarLista()
@@ -46,15 +34,14 @@ namespace Proyecto_Integrador_3
                     {
                         //Id=Row.id,
                         TipoUsuario = short.Parse(Row.tipoUsuario),
-                        Unidad=Row.unidad,
-                        Usuario=Row.usuario,
+                        Unidad = Row.unidad,
+                        Usuario = Row.usuario,
                         Fecha = Row.fecha
-                        
                     };
+
                     //actual.PropertyChanged += cuentaModificada;
                     _servicios.Add(actual);
                 }
-
             }
 
             public List<Servicio> Servicios
@@ -62,7 +49,6 @@ namespace Proyecto_Integrador_3
                 set { throw new NotImplementedException(); }
                 get { return _servicios; }
             }
-           
         }
     }
 }

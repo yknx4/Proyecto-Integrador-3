@@ -1,16 +1,8 @@
-﻿using System;
+﻿using Proyecto_Integrador_3.TiposDato;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlServerCe;
-using Proyecto_Integrador_3.TiposDato;
-
-using Proyecto_Integrador_3.dsUsuariosTableAdapters;
 using UsuariosRow = Proyecto_Integrador_3.dsUsuarios.UsuariosRow;
-using System.Windows;
 
 namespace Proyecto_Integrador_3
 {
@@ -22,30 +14,30 @@ namespace Proyecto_Integrador_3
             private DBManagers Parent;
 
             private static ServiciosPopulator mServiciosPopulator;
-            
+
             public UsuariosPopulator(ref DBManagers sender, bool Servicios)
             {
                 this.Servicios = Servicios;
                 Parent = sender;
+
                 //if (Servicios)
                 //{
                 //    generarServicios();
-                //} 
+                //}
                 //else
                 //    {
                 //        generarLista();
                 //}
-                
             }
 
-            bool Servicios;
+            private bool Servicios;
 
-            void generarServicios()
+            private void generarServicios()
             {
                 mServiciosPopulator = new ServiciosPopulator(ref Parent);
                 mServiciosPopulator.generarLista();
-                //generarLista();
 
+                //generarLista();
             }
 
             public void generarLista()
@@ -84,11 +76,11 @@ namespace Proyecto_Integrador_3
                         mDomicilio = tmpDomicilio
                     };
 
-                    if(Servicios)actual.Servicios = (from servicio in mServiciosPopulator.Servicios where servicio.Usuario == actual.Uid select servicio).ToList();
+                    if (Servicios) actual.Servicios = (from servicio in mServiciosPopulator.Servicios where servicio.Usuario == actual.Uid select servicio).ToList();
+
                     //actual.PropertyChanged += cuentaModificada;
                     _usuarios.Add(actual);
                 }
-
             }
 
             public List<Usuario> Usuarios
@@ -96,9 +88,9 @@ namespace Proyecto_Integrador_3
                 set { throw new NotImplementedException(); }
                 get { return _usuarios; }
             }
+
             //public void generarLista(int i)
             //{
-
             //    UsuariosQueryResult.Clear();
             //    _usuarios = new List<Usuario>();
             //    SqlCeDataAdapter adap = new SqlCeDataAdapter("SELECT Usuarios.* FROM Usuarios", conn);

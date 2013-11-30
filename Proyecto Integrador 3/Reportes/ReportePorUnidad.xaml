@@ -3,13 +3,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Proyecto_Integrador_3.Reportes" mc:Ignorable="d" x:Class="Proyecto_Integrador_3.Reportes.ReportePorUnidad"
   xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         Title="Reporte por Autobuses" Height="310" Width="725" Closed="cuantoVentanaCierra" Loaded="reportesCargan">
-    
+
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!--<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colours.xaml" />-->
-                <ResourceDictionary Source="../Resources/Colours.xaml"/>
-                <!--<ResourceDictionary Source="Resources/Estilos.xaml"/>-->
+                <ResourceDictionary Source="../Resources/Colours.xaml" />
+                <!--<ResourceDictionary Source="Resources/Estilos.xaml" />-->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <!--<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/VS/Textbox.xaml" />-->
@@ -20,7 +20,7 @@
                 <ResourceDictionary>
                     <Style TargetType="Control" />
                     <Thickness x:Key="MarginSize">2.5,5</Thickness>
-                    <SolidColorBrush Color="{DynamicResource Gray5}" x:Key="ColorAcento"/>
+                    <SolidColorBrush Color="{DynamicResource Gray5}" x:Key="ColorAcento" />
                     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MetroTextBox}">
                         <Setter Property="Margin" Value="{StaticResource MarginSize}"></Setter>
                     </Style>
@@ -43,30 +43,23 @@
                         <Setter Property="Margin" Value="0,-5,0,0"></Setter>
                         <Setter Property="FontSize" Value="10"></Setter>
                         <Setter Property="Foreground" Value="{StaticResource ColorAcento}"></Setter>
-
-
-
-
                     </Style>
                 </ResourceDictionary>
-                
             </ResourceDictionary.MergedDictionaries>
-
         </ResourceDictionary>
-
     </Window.Resources>
-    
+
     <Controls:MetroWindow.WindowCommands>
         <Controls:WindowCommands Loaded="alCargar">
-            <!--<Button Content="Arekar Technologies" IsEnabled="False"/>-->
+            <!--<Button Content="Arekar Technologies" IsEnabled="False" />-->
             <StackPanel Orientation="Horizontal">
-                <Button IsEnabled="False">Busqueda: </Button>
-            <TextBox x:Name="txtBusqueda" Controls:TextboxHelper.Watermark="Buscar" Margin="5" Width="80" TextInput="entradaBusqueda" KeyUp="enterEnBusqueda" x:FieldModifier="public"></TextBox>
+                <Button IsEnabled="False">Busqueda:</Button>
+                <TextBox x:Name="txtBusqueda" Controls:TextboxHelper.Watermark="Buscar" Margin="5" Width="80" TextInput="entradaBusqueda" KeyUp="enterEnBusqueda" x:FieldModifier="public"></TextBox>
             </StackPanel>
         </Controls:WindowCommands>
     </Controls:MetroWindow.WindowCommands>
     <Grid>
-        <DatePicker Visibility="Hidden"/>
+        <DatePicker Visibility="Hidden" />
         <TextBlock Visibility="Hidden"></TextBlock>
         <Button Visibility="Hidden"></Button>
         <CheckBox Visibility="Hidden"></CheckBox>
@@ -74,14 +67,12 @@
         <Controls:ProgressRing Visibility="Hidden"></Controls:ProgressRing>
         <DockPanel>
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
-                
+
                 <DatePicker x:Name="dtpFechaReporteInicial"></DatePicker>
                 <TextBlock Text="   a   " TextAlignment="Center" VerticalAlignment="Center"></TextBlock>
                 <DatePicker x:Name="dtpFechaReporteFinal" IsEnabled="False"></DatePicker>
                 <CheckBox x:Name="chkRango" Click="clickCheckboxRangoFecha"></CheckBox>
                 <Button x:Name="btnMostrarReporte" Click="btnMostrarReporte_Click" IsEnabled="False">Generar</Button>
-                
-                
             </StackPanel>
             <StatusBar DockPanel.Dock="Bottom">
                 <StatusBarItem>
@@ -96,16 +87,14 @@
             </StatusBar>
             <DataGrid x:Name="dtgrReportes" IsReadOnly="True" LoadingRowDetails="alCargarFilas" DockPanel.Dock="Bottom">
                 <DataGrid.Columns>
-                    <DataGridTextColumn x:Name="dgtcUnidad" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Número de Unidad"/>
-                    <DataGridTextColumn x:Name="dgtcTotal" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Total"/>
-                    <DataGridTextColumn x:Name="dgtcGeneral" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="General"/>
-                    <DataGridTextColumn x:Name="dgtcEstudiante" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Estudiante"/>
-                    <DataGridTextColumn x:Name="dgtcTerceraEdad" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tercerda Edad"/>
-                    <DataGridTextColumn x:Name="dgtcDiscapacitado" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Capacidades Diferentes"/>
+                    <DataGridTextColumn x:Name="dgtcUnidad" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Número de Unidad" />
+                    <DataGridTextColumn x:Name="dgtcTotal" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Total" />
+                    <DataGridTextColumn x:Name="dgtcGeneral" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="General" />
+                    <DataGridTextColumn x:Name="dgtcEstudiante" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Estudiante" />
+                    <DataGridTextColumn x:Name="dgtcTerceraEdad" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tercerda Edad" />
+                    <DataGridTextColumn x:Name="dgtcDiscapacitado" Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Capacidades Diferentes" />
                 </DataGrid.Columns>
-
             </DataGrid>
-            
         </DockPanel>
     </Grid>
 </Controls:MetroWindow>

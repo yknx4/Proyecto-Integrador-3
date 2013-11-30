@@ -29,7 +29,7 @@ namespace Proyecto_Integrador_3
                     Error = "El usuario con ID " + heldItem.Uid.ToString() + " ya está en la base de datos";
                     notifyError();
                 }
-                
+
                 AddToDB(Guid.NewGuid());
             }
 
@@ -38,13 +38,15 @@ namespace Proyecto_Integrador_3
                 heldItem.Uid = Uid;
                 AddToDataset();
                 UpdateDBFromDataset();
-                
             }
-            public Usuario getItem() {
+
+            public Usuario getItem()
+            {
                 return heldItem;
             }
 
-            public override void AddToDataset() {
+            public override void AddToDataset()
+            {
                 if (!Active())
                 {
                     Error = "No hay ningun usuario seleccionado";
@@ -53,12 +55,11 @@ namespace Proyecto_Integrador_3
                 heldItem.Saldo = 0;
                 dsUsuarios.UsuariosRow nuevoUsuario = getUsuarioRow();
                 Parent.mdsUsuarios.Usuarios.AddUsuariosRow(nuevoUsuario);
-
             }
 
-            public override void UpdateDBFromDataset() {
+            public override void UpdateDBFromDataset()
+            {
                 Parent.LastMessage = Parent.mUsuariosTableAdapter.Update(Parent.mdsUsuarios).ToString();
-                
             }
 
             public void Refresh()
@@ -66,8 +67,6 @@ namespace Proyecto_Integrador_3
                 Parent.mdsUsuarios.Clear();
                 Parent.mUsuariosTableAdapter.Fill(Parent.mdsUsuarios.Usuarios);
             }
-
-
 
             private dsUsuarios.UsuariosRow getUsuarioRow()
             {
@@ -92,8 +91,6 @@ namespace Proyecto_Integrador_3
 
                 return nuevoUsuario;
             }
-
-            
 
             public override void itemModified(object sender, PropertyChangedEventArgs e)
             {
@@ -129,6 +126,7 @@ namespace Proyecto_Integrador_3
                 int index = Parent.mdsUsuarios.Usuarios.Rows.IndexOf(Parent.mdsUsuarios.Usuarios.FindByUid(heldItem.Uid));
                 Parent.mdsUsuarios.Usuarios.Rows[index].ItemArray = getUsuarioRow().ItemArray;
                 Parent.LastMessage = Parent.mUsuariosTableAdapter.Update(Parent.mdsUsuarios).ToString();
+
                 //Parent.Refresh();
             }
         }

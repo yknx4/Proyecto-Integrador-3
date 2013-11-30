@@ -76,12 +76,12 @@ namespace Proyecto_Integrador_3.Reportes
         private void _backgroundWorker_DoWork_BuscarGeneral(object sender, DoWorkEventArgs e)
         { //MessageBox.Show("Ejecuto");
             string arg = e.Argument as String;
-            arg=arg.ToLower();
+            arg = arg.ToLower();
             if (arg != "")
             {
                 try
                 {
-                  e.Result = (from usuario in mUsuariosPopulator.Usuarios where usuario.Nombre.ToLower().Contains(arg) select usuario).ToList();
+                    e.Result = (from usuario in mUsuariosPopulator.Usuarios where usuario.Nombre.ToLower().Contains(arg) select usuario).ToList();
                 }
                 catch (System.Exception)
                 {
@@ -110,8 +110,9 @@ namespace Proyecto_Integrador_3.Reportes
             {
                 if (e.Result != null)
                 {
-                    List<Usuario> result =(List<Usuario>)e.Result;
-                    if (result.Count > 0) {
+                    List<Usuario> result = (List<Usuario>)e.Result;
+                    if (result.Count > 0)
+                    {
                         grdBusqueda.Visibility = Visibility.Visible;
                         lstBusqueda.ItemsSource = result;
                     }
@@ -124,7 +125,7 @@ namespace Proyecto_Integrador_3.Reportes
             pgrEstado.IsActive = false;
         }
 
-        struct EstadisticaResult
+        private struct EstadisticaResult
         {
             public int General;
             public int Estudiante;
@@ -134,16 +135,20 @@ namespace Proyecto_Integrador_3.Reportes
             public Datos EData;
             public Datos TData;
             public Datos CData;
-           
+
             public struct Datos
             {
                 //public string Unidades;
                 public List<String> Unidades;
+
                 public int Ucount;
                 public List<String> Meses;
+
                 //public string Meses;
                 public int Mcount;
+
                 public List<String> Dias;
+
                 //public string Dias;
                 public int Dcount;
             }
@@ -178,14 +183,14 @@ namespace Proyecto_Integrador_3.Reportes
             foreach (Guid valor in ResU)
             {
                 res = mUnidadPopulator.Unidades.Find(Unidad => Unidad.Uid == valor);
+
                 //resultado.Unidades+= res.NoUnidad + " ";
                 resultado.Unidades.Add(res.NoUnidad);
             }
+
             //lstGUnidadM.ItemsSource = unidades;
 
             /*resultado.Mcount = (from unidades)*/
-
-
 
             return resultado;
         }
@@ -228,7 +233,7 @@ namespace Proyecto_Integrador_3.Reportes
         {
             if (e.Cancelled)
             {
-                               //statusText.Text = "Cancelled";
+                //statusText.Text = "Cancelled";
             }
             else if (e.Error != null)
             {
@@ -241,10 +246,11 @@ namespace Proyecto_Integrador_3.Reportes
                 txtEServicios.Text = r.Estudiante.ToString();
                 txtTServicios.Text = r.TerceraEdad.ToString();
                 txtCServicios.Text = r.Discapacidad.ToString();
-                txtGTotal.Text = "$"+(r.General * Constantes.PrecioNormal).ToString();
+                txtGTotal.Text = "$" + (r.General * Constantes.PrecioNormal).ToString();
                 txtETotal.Text = "$" + (r.Estudiante * Constantes.PrecioEspecial).ToString();
                 txtTTotal.Text = "$" + (r.TerceraEdad * Constantes.PrecioEspecial).ToString();
                 txtCTotal.Text = "$" + (r.Discapacidad * Constantes.PrecioEspecial).ToString();
+
                 //txtGUnidadM.Text = r.GData.Unidades;
                 lstGUnidadM.ItemsSource = r.GData.Unidades;
                 lstGDiasM.ItemsSource = r.GData.Dias;
@@ -272,7 +278,6 @@ namespace Proyecto_Integrador_3.Reportes
             dgtcServicios.Binding = new Binding("ServiciosCount");
             dgtcConsumo.Binding = new Binding("Consumo");
             dgtcConsumo.Binding.StringFormat = "${0}";
-
         }
 
         private void _backgroundWorker_DoWork_BuscarUnidad(object sender, DoWorkEventArgs e)
@@ -471,17 +476,17 @@ namespace Proyecto_Integrador_3.Reportes
             txtCantidadMesU.Text = Result.Mcount.ToString();
             txtCantidadUnidadU.Text = Result.Ucount.ToString();
             txtTarjetaUsuario.Text = user.TarjetaAsignada;
-            
         }
 
-        private string listToString(List<String> input){
-            string res="";
-            foreach(string var in input){
-                res+=var+" ";
+        private string listToString(List<String> input)
+        {
+            string res = "";
+            foreach (string var in input)
+            {
+                res += var + " ";
             }
             return res;
         }
-
 
         private void cuandoCargaFormulario(object sender, RoutedEventArgs e)
         {
@@ -553,6 +558,7 @@ namespace Proyecto_Integrador_3.Reportes
             foreach (int valor in ResM)
             {
                 txtMesMUnidad.Text += Tipos.Meses[valor] + " ";
+
                 //txtMesMUnidad.Text += valor.ToString() + " ";
             }
             HashSet<Guid> usuariosMasFrecuentes = new HashSet<Guid>();
@@ -564,7 +570,7 @@ namespace Proyecto_Integrador_3.Reportes
                 foreach (Guid valor in ResU)
                 {
                     usuariosMasFrecuentes.Add(valor);
-                    UsuariosID.RemoveAll(Guid => Guid==valor);
+                    UsuariosID.RemoveAll(Guid => Guid == valor);
                 }
             }
             BindingList<Usuario> usuariosDgrid = new BindingList<Usuario>();
@@ -600,29 +606,31 @@ namespace Proyecto_Integrador_3.Reportes
 
         private void seleccionarBusqueda(object sender, RoutedEventArgs e)
         {
-            if(lstBusqueda.SelectedItem!=null){
+            if (lstBusqueda.SelectedItem != null)
+            {
                 loadUsuario((Usuario)lstBusqueda.SelectedItem);
             }
             grdBusqueda.Visibility = Visibility.Hidden;
         }
+
         private void cancelarBusqueda(object sender, RoutedEventArgs e)
         {
             grdBusqueda.Visibility = Visibility.Hidden;
         }
 
-        ReportePorUnidad mReportePorUnidad;
+        private ReportePorUnidad mReportePorUnidad;
 
-        string helperString;
+        private string helperString;
 
         private void dobleClickUnidades(object sender, MouseButtonEventArgs e)
         {
             ListBox origen = sender as ListBox;
-            if(origen.SelectedItem!=null){
+            if (origen.SelectedItem != null)
+            {
                 helperString = origen.SelectedItem.ToString();
                 mReportePorUnidad.tmpFuncion = dobleClickUnidadesHelper;
                 mReportePorUnidad.ShowDialog();
             }
-            
         }
 
         private void dobleClickUnidadesHelper()
@@ -656,17 +664,17 @@ namespace Proyecto_Integrador_3.Reportes
                 DateTime final = new DateTime(DateTime.Today.Year, mes, 1);
                 final = final.AddMonths(1).AddDays(-1);
 
-
-                dobleClickFecha(inicial,final);
-                
+                dobleClickFecha(inicial, final);
             }
         }
 
-        private void dobleClickFecha(DateTime inicial) {
+        private void dobleClickFecha(DateTime inicial)
+        {
             dobleClickFecha(inicial, null);
         }
 
-        private void dobleClickFecha(DateTime inicial, DateTime? final) {
+        private void dobleClickFecha(DateTime inicial, DateTime? final)
+        {
             mReportePorUnidad.inicial = inicial;
             mReportePorUnidad.final = final;
 
@@ -674,12 +682,9 @@ namespace Proyecto_Integrador_3.Reportes
             mReportePorUnidad.ShowDialog();
         }
 
-        private void dobleClickFechaHelper() {
+        private void dobleClickFechaHelper()
+        {
             mReportePorUnidad.Generar();
         }
-
-
-
-        
     }
 }

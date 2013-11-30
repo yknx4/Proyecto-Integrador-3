@@ -1,21 +1,15 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Data.SqlServerCe;
-using System.Windows;
-
 
 namespace Proyecto_Integrador_3
 {
     public partial class DBManagers
     {
-       public abstract class DBManager<T>
+        public abstract class DBManager<T>
         {
             protected DBManager(DBManagers sender)
             {
                 this.Parent = sender;
-                
             }
-
 
             abstract public void AddToDB();
 
@@ -41,8 +35,6 @@ namespace Proyecto_Integrador_3
 
             //protected SqlCeConnection connection;
 
-            
-
             public void setItem(T Input)
             {
                 heldItem = Input;
@@ -60,8 +52,8 @@ namespace Proyecto_Integrador_3
             }
 
             private string _error;
-            public string Error { get { return _error; } set { _error = value; } }
 
+            public string Error { get { return _error; } set { _error = value; } }
         }
     }
 }

@@ -18,8 +18,10 @@ namespace Proyecto_Integrador_3.Reportes
     public partial class ReportePorUnidad : MetroWindow
     {
         private UnidadPopulator mUnidadPopulator;
+
         //private List<ReporteDeUnidad> reportesIndividuales = new List<ReporteDeUnidad>();
         private BindingList<ReporteDeUnidad> reportesIndividuales = new BindingList<ReporteDeUnidad>();
+
         public DateTime? inicial;
         public DateTime? final;
         private DBManagers dbMgr;
@@ -65,7 +67,6 @@ namespace Proyecto_Integrador_3.Reportes
             mBackgroundCargarDataset.RunWorkerCompleted += _backgroundWorker_RunWorkerCompleted_CargarDataset;
             mBackgroundGenerarLista.DoWork += _backgroundWorker_DoWork_GenerarLista;
             mBackgroundGenerarLista.RunWorkerCompleted += _backgroundWorker_RunWorkerCompleted_GenerarLista; // Run the Background Worker
-            
         }
 
         private void _backgroundWorker_DoWork_CargarDataset(object sender, DoWorkEventArgs e)
@@ -77,8 +78,6 @@ namespace Proyecto_Integrador_3.Reportes
         {
             if (e.Cancelled)
             {
-                
-
                 //statusText.Text = "Cancelled";
             }
             else if (e.Error != null)
@@ -88,16 +87,16 @@ namespace Proyecto_Integrador_3.Reportes
             else
             {
                 pgrEstado.IsActive = true;
-                txtbEstado.Text= "Cargando servicios y unidades.";
+                txtbEstado.Text = "Cargando servicios y unidades.";
                 mBackgroundGenerarLista.RunWorkerAsync();
-                
+
                 //.Text = "Completed";
             }
         }
 
         private void _backgroundWorker_DoWork_GenerarLista(object sender, DoWorkEventArgs e)
         {
-            mUnidadPopulator = new UnidadPopulator(ref dbMgr,true);
+            mUnidadPopulator = new UnidadPopulator(ref dbMgr, true);
             mUnidadPopulator.generarLista();
         }
 
@@ -105,8 +104,6 @@ namespace Proyecto_Integrador_3.Reportes
         {
             if (e.Cancelled)
             {
-
-
                 //statusText.Text = "Cancelled";
             }
             else if (e.Error != null)
@@ -116,17 +113,16 @@ namespace Proyecto_Integrador_3.Reportes
             else
             {
                 pgrEstado.IsActive = false;
-                txtbEstado.Text = mUnidadPopulator.Unidades.Count.ToString()+" unidades cargadas.";
+                txtbEstado.Text = mUnidadPopulator.Unidades.Count.ToString() + " unidades cargadas.";
                 btnMostrarReporte.IsEnabled = true;
                 if (tmpFuncion != null)
                 {
                     tmpFuncion();
                 }
+
                 //.Text = "Completed";
             }
         }
-
-        
 
         private class ReporteDeUnidad
         {
@@ -239,8 +235,7 @@ namespace Proyecto_Integrador_3.Reportes
         public void Generar()
         {
             if (reportesIndividuales != null) reportesIndividuales.Clear();
-            
-            
+
             if (!inicial.HasValue && !final.HasValue)
             {
             }
@@ -279,7 +274,6 @@ namespace Proyecto_Integrador_3.Reportes
         {
             if (e.Key == Key.Enter)
             {
-                
                 e.Handled = true;
                 realizarBusqueda(txtBusqueda.Text);
             }
@@ -289,7 +283,8 @@ namespace Proyecto_Integrador_3.Reportes
             }
         }
 
-        public void realizarBusqueda(string busqueda){
+        public void realizarBusqueda(string busqueda)
+        {
             txtBusqueda.Text = txtBusqueda.Text.ToUpper().Trim();
             dtgrReportes.ItemsSource = (from reporte in reportesIndividuales where reporte.Unidad.Contains(busqueda) select reporte).ToList();
         }
@@ -311,12 +306,12 @@ namespace Proyecto_Integrador_3.Reportes
             this.inicial = null;
             this.final = null;
             this.inicial = dtpFechaReporteInicial.SelectedDate;
-            if(dtpFechaReporteFinal.IsEnabled)this.final = dtpFechaReporteFinal.SelectedDate;
+            if (dtpFechaReporteFinal.IsEnabled) this.final = dtpFechaReporteFinal.SelectedDate;
             generarReporte();
         }
 
-        public void generarReporte() {
-
+        public void generarReporte()
+        {
             Generar();
             dtgrReportes.Visibility = Visibility.Visible;
         }
@@ -326,8 +321,6 @@ namespace Proyecto_Integrador_3.Reportes
             txtbEstado.Text = "Cargando Base de Datos";
             pgrEstado.IsActive = true;
             mBackgroundCargarDataset.RunWorkerAsync();
-            
-            
         }
 
         public delegate void funcionOpcional();

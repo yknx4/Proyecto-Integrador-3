@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Proyecto_Integrador_3.TiposDato
 {
@@ -14,8 +11,11 @@ namespace Proyecto_Integrador_3.TiposDato
         }
 
         private Guid _uid;
+
         public System.Guid Uid { get { return _uid; } set { _uid = value; } }
+
         private string _nounidad;
+
         public string NoUnidad { get { return _nounidad; } set { _nounidad = value; } }
 
         public virtual ICollection<Servicio> Servicios { get; set; }
@@ -24,6 +24,5 @@ namespace Proyecto_Integrador_3.TiposDato
         {
             return !(Uid == Guid.Empty);
         }
-
     }
 }
