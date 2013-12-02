@@ -2,7 +2,7 @@
 
 namespace Proyecto_Integrador_3.TiposDato
 {
-    public partial class Servicio
+    public partial class Servicio : DBItem
     {
         private long _id;
 
@@ -28,7 +28,7 @@ namespace Proyecto_Integrador_3.TiposDato
 
         public virtual Usuario UsuarioObject { get; set; }
 
-        public bool isAdded()
+        public override bool isAdded()
         {
             return !(Id == 0);
         }

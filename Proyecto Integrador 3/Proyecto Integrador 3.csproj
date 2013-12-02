@@ -130,7 +130,6 @@
     <Compile Include="Reportes\ReportePorUnidad.xaml.cs">
       <DependentUpon>ReportePorUnidad.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\ReporteUnidad.cs" />
     <Compile Include="Tipos.cs" />
     <Compile Include="TiposDato\DBItem.cs" />
     <Compile Include="TiposDato\Servicio.cs" />
@@ -191,6 +190,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="dsServicios.xsc">
       <DependentUpon>dsServicios.xsd</DependentUpon>
     </None>

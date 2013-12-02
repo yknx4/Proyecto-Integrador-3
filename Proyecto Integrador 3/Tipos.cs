@@ -7,8 +7,7 @@ namespace Proyecto_Integrador_3
     {
         public static readonly Dictionary<int, string> Usuarios;
         public static readonly Dictionary<int, string> Meses;
-        public static readonly Dictionary<int, int> Precio;
-        public static readonly List<string> Sangre;
+        public static readonly Dictionary<int, int> Precio;        public static readonly List<string> Sangre;
         public static readonly List<string> Municipios;
 
         static Tipos()

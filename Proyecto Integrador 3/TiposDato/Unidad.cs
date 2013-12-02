@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Proyecto_Integrador_3.TiposDato
 {
-    public partial class Unidad
+    public partial class Unidad : DBItem
     {
         public Unidad()
         {
@@ -20,7 +20,7 @@ namespace Proyecto_Integrador_3.TiposDato
 
         public virtual ICollection<Servicio> Servicios { get; set; }
 
-        public bool isAdded()
+        public override bool isAdded()
         {
             return !(Uid == Guid.Empty);
         }
