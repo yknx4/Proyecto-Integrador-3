@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Proyecto_Integrador_3.App" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Constantes" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAACAAAAAAAAAAAAAAAIAAACAAAAAA=</HashCode>
+      <FileName>Constantes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.DBManagers" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAgABAACkAAgAEAEAAEAAACAAAQAAAAIBADAE=</HashCode>
+      <FileName>DBManagers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.dsServicios" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAIABAwAAAAJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.dsUnidad" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABwQAAAJABAACQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.dsUsuarios" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAwAAAAJABAAAQAAAAAgCQBgAAQAAAAEABhA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Helpers" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEABAAAAAAhAAAkAFAIAAAAAAAAAAAAAAAIAAAABAQ=</HashCode>
+      <FileName>Helpers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Log" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Log.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.MainWindow" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABCLAgAAAJAAAQAAAEAAgkAAUIEQBAAAgMAQhABAhE=</HashCode>
+      <FileName>MainWindow.Properties.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Tipos" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAQAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Tipos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACQAAABABAEBAAAAMAAgAAACgAAAAAQAAAAABIQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.dsUnidadTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAEBABAEBAAAAMAAgAAACwAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.dsUsuariosTableAdapters.UsuariosTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.dsUsuariosTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAQAABABAEBAAAAMAAgAAACgAAAAAQAEAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Generadores.CardGenerator" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Generadores\CardGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Generadores.RandChar" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Generadores\RandChar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Properties.Resources" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Properties.Settings" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAABAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Reportes.ReporteFrecuenciaDeUso" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iBACRAAgAESEIkjIAQEQCgMQA8QCgkAQAgAAAoAJABE=</HashCode>
+      <FileName>Reportes\ReporteFrecuenciaDeUso.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.Reportes.ReportePorUnidad" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAAQAAiADAAAAAPECAJEAgIQAAgAAggJAAA=</HashCode>
+      <FileName>Reportes\ReportePorUnidad.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.TiposDato.DBItem">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>TiposDato\DBItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.TiposDato.Servicio">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADBCAAABQACAEAAAhgAIAAAAAAAAAAQAAEAAAAAAA=</HashCode>
+      <FileName>TiposDato\Servicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.TiposDato.Unidad">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAACAABAAAIAABAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>TiposDato\Unidad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto_Integrador_3.TiposDato.Usuario">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="Proyecto_Integrador_3.TiposDato.Usuario.Domicilio" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TiposDato\Usuario.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="Proyecto_Integrador_3.TiposDato.Usuario.Contacto" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TiposDato\Usuario.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>EAAAAIAgIAAAAAAEgJgggAIAAIAACgAgQAMAAggAAAA=</HashCode>
+      <FileName>TiposDato\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

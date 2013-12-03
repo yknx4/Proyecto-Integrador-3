@@ -9,6 +9,8 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 using UnidadPopulator = Proyecto_Integrador_3.DBManagers.UnidadPopulator;
+using Estadistica;
+
 
 namespace Proyecto_Integrador_3.Reportes
 {
@@ -326,5 +328,15 @@ namespace Proyecto_Integrador_3.Reportes
         public delegate void funcionOpcional();
 
         public funcionOpcional tmpFuncion;
+
+        private void btnMostrarEstadistica_Click(object sender, RoutedEventArgs e)
+        {
+            //int mes = inicial.Value.Month;
+            //List<Double>;
+            //foreach (Unidad uni in mUnidadPopulator.Unidades) {
+            //    var servicios = (from servicio in uni.Servicios where servicio.Fecha.Month == mes select servicio);
+            //}
+            //frmEstadistica estad = new frmEstadistica();
+        }
     }
 }

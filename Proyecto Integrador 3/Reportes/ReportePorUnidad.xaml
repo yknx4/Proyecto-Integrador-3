@@ -73,13 +73,14 @@
                 <DatePicker x:Name="dtpFechaReporteFinal" IsEnabled="False"></DatePicker>
                 <CheckBox x:Name="chkRango" Click="clickCheckboxRangoFecha"></CheckBox>
                 <Button x:Name="btnMostrarReporte" Click="btnMostrarReporte_Click" IsEnabled="False">Generar</Button>
+                <Button x:Name="btnMostrarEstadisticas" Click="btnMostrarEstadistica_Click" IsEnabled="False" HorizontalAlignment="Right">Estadísticas por Edad</Button>
             </StackPanel>
             <StatusBar DockPanel.Dock="Bottom">
                 <StatusBarItem>
                     <TextBlock x:Name="txtbEstado" Style="{DynamicResource MetroTextBlock}">Barra de estado bonis bonis</TextBlock>
                 </StatusBarItem>
                 <StatusBarItem>
-                    <Controls:MetroProgressBar></Controls:MetroProgressBar>
+                    <Controls:MetroProgressBar Visibility="Hidden"></Controls:MetroProgressBar>
                 </StatusBarItem>
                 <StatusBarItem>
                     <Controls:ProgressRing x:Name="pgrEstado" Width="Auto" Height="Auto"></Controls:ProgressRing>

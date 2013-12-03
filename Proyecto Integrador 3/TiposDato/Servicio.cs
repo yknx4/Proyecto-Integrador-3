@@ -25,6 +25,7 @@ namespace Proyecto_Integrador_3.TiposDato
         public System.DateTime Fecha { get { return _fecha; } set { _fecha = value; } }
 
         public virtual Unidad UnidadObject { get; set; }
+        public virtual string NoUnidad { get; set; }
 
         public virtual Usuario UsuarioObject { get; set; }
 

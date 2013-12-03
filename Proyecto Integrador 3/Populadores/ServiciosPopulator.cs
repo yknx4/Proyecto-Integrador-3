@@ -38,7 +38,10 @@ namespace Proyecto_Integrador_3
                         Usuario = Row.usuario,
                         Fecha = Row.fecha
                     };
-
+                    if (Parent.mdsUnidades != null)
+                    {
+                        actual.NoUnidad = Parent.mdsUnidades.Unidad.FindByUid(Row.unidad).NoUnidad;
+                    }
                     //actual.PropertyChanged += cuentaModificada;
                     _servicios.Add(actual);
                 }

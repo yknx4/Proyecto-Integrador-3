@@ -71,7 +71,7 @@ namespace PI_Simuladores
         {
             InitializeComponent();
             mDBManagers.Fill();
-            mUsuariosPopulator = new UsuariosPopulator(ref mDBManagers,false);
+            mUsuariosPopulator = new UsuariosPopulator(ref mDBManagers,true);
             mUnidadPopulator = new UnidadPopulator(ref mDBManagers,false);
             mDBManagers.FillServicios();
             generarLista();
@@ -228,6 +228,12 @@ namespace PI_Simuladores
             }
             MessageBox.Show(tmpLog);
             File.AppendAllText(@"ServiciosRecord.txt", tmpLog);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmRecibo nFrm = new frmRecibo(currentUsuario);
+            nFrm.ShowDialog();
         }
     }
 }

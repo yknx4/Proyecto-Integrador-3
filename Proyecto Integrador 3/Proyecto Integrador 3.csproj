@@ -74,6 +74,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\MahApps.Metro.0.11.1.30-ALPHA\lib\net45\System.Windows.Interactivity.dll</HintPath>
@@ -192,6 +193,7 @@
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
     <None Include="dsServicios.xsc">
       <DependentUpon>dsServicios.xsd</DependentUpon>
     </None>
@@ -275,7 +277,12 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Estadistica\Estadistica.csproj">
+      <Project>{a2e4ee88-36ee-4f49-b449-4624992ef12c}</Project>
+      <Name>Estadistica</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="ProyectoIntegrador.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

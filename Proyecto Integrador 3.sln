@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bulk Usuarios Parser", "Bul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiciosFalsos", "ServiciosFalsos\ServiciosFalsos.csproj", "{9C760061-CAA5-4A72-889F-F3703B9036A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estadistica", "Estadistica\Estadistica.csproj", "{A2E4EE88-36EE-4F49-B449-4624992EF12C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{9C760061-CAA5-4A72-889F-F3703B9036A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C760061-CAA5-4A72-889F-F3703B9036A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C760061-CAA5-4A72-889F-F3703B9036A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2E4EE88-36EE-4F49-B449-4624992EF12C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E4EE88-36EE-4F49-B449-4624992EF12C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E4EE88-36EE-4F49-B449-4624992EF12C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E4EE88-36EE-4F49-B449-4624992EF12C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
