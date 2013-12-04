@@ -117,6 +117,7 @@ namespace Proyecto_Integrador_3.Reportes
                 pgrEstado.IsActive = false;
                 txtbEstado.Text = mUnidadPopulator.Unidades.Count.ToString() + " unidades cargadas.";
                 btnMostrarReporte.IsEnabled = true;
+                btnMostrarEstadisticas.IsEnabled = true;
                 if (tmpFuncion != null)
                 {
                     tmpFuncion();
@@ -332,11 +333,14 @@ namespace Proyecto_Integrador_3.Reportes
         private void btnMostrarEstadistica_Click(object sender, RoutedEventArgs e)
         {
             //int mes = inicial.Value.Month;
-            //List<Double>;
-            //foreach (Unidad uni in mUnidadPopulator.Unidades) {
-            //    var servicios = (from servicio in uni.Servicios where servicio.Fecha.Month == mes select servicio);
-            //}
-            //frmEstadistica estad = new frmEstadistica();
+            List<Double> frecuencia = new List<Double>();
+            foreach (Unidad uni in mUnidadPopulator.Unidades) {
+                frecuencia.Add(uni.Servicios.Count);
+            }
+            frmEstadistica estad = new frmEstadistica(frecuencia);
+            estad.Text = "Numero de abordajes por unidad durante 3 meses";
+            estad.Show();
+            estad.rehacer();
         }
     }
 }

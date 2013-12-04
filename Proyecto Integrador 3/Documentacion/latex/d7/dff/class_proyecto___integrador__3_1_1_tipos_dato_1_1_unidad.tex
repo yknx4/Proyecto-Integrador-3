@@ -1,0 +1,136 @@
+\hypertarget{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad}{\section{Referencia de la Clase Proyecto\-\_\-\-Integrador\-\_\-3.\-Tipos\-Dato.\-Unidad}
+\label{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad}\index{Proyecto\-\_\-\-Integrador\-\_\-3.\-Tipos\-Dato.\-Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3.\-Tipos\-Dato.\-Unidad}}
+}
+Diagrama de herencias de Proyecto\-\_\-\-Integrador\-\_\-3.\-Tipos\-Dato.\-Unidad\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_adcd7f607349eab8b07b34e7761b78aaa}{Unidad} ()
+\item 
+override bool \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_a6566d517c25b9048021422510c544611}{is\-Added} ()
+\begin{DoxyCompactList}\small\item\em Determina si esta instancia esta agregada a la base de datos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Propiedades}
+\begin{DoxyCompactItemize}
+\item 
+System.\-Guid \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aa2e602251694986f3d519ee3db5ffa38}{Uid}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_a75d59e9f06c1422def3f8630d2a33642}{No\-Unidad}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+virtual I\-Collection$<$ \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio}{Servicio} $>$ \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aca85e685e50da0af6be67e3ee69b1bb1}{Servicios}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Guid \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_ad0a5b9c3770801a5e32f52d7406346d8}{\-\_\-uid}
+\item 
+string \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_a02a3cfd664234b1c90c4ea2749928ac2}{\-\_\-nounidad}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+
+
+Definición en la línea 6 del archivo Unidad.\-cs.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_adcd7f607349eab8b07b34e7761b78aaa}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}!Unidad@{Unidad}}
+\index{Unidad@{Unidad}!Proyecto_Integrador_3::TiposDato::Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}}
+\subsubsection[{Unidad}]{\setlength{\rightskip}{0pt plus 5cm}Proyecto\-\_\-\-Integrador\-\_\-3.\-Tipos\-Dato.\-Unidad.\-Unidad (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_adcd7f607349eab8b07b34e7761b78aaa}
+
+
+Definición en la línea 8 del archivo Unidad.\-cs.
+
+
+\begin{DoxyCode}
+9         \{
+10             this.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aca85e685e50da0af6be67e3ee69b1bb1}{Servicios} = \textcolor{keyword}{new} HashSet<Servicio>();
+11         \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_a6566d517c25b9048021422510c544611}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}!is\-Added@{is\-Added}}
+\index{is\-Added@{is\-Added}!Proyecto_Integrador_3::TiposDato::Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}}
+\subsubsection[{is\-Added}]{\setlength{\rightskip}{0pt plus 5cm}override bool Proyecto\-\_\-\-Integrador\-\_\-3.\-Tipos\-Dato.\-Unidad.\-is\-Added (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_a6566d517c25b9048021422510c544611}
+
+
+Determina si esta instancia esta agregada a la base de datos. 
+
+\begin{DoxyReturn}{Devuelve}
+Verdadero si esta agregada, falso si no
+\end{DoxyReturn}
+
+
+Reimplementado de \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_d_b_item_ab88d7eef0fa58d7d5fdf40039867dd6e}{Proyecto\-\_\-\-Integrador\-\_\-3.\-Tipos\-Dato.\-D\-B\-Item}.
+
+
+
+Definición en la línea 23 del archivo Unidad.\-cs.
+
+
+\begin{DoxyCode}
+24         \{
+25             \textcolor{keywordflow}{return} !(\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aa2e602251694986f3d519ee3db5ffa38}{Uid} == Guid.Empty);
+26         \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_a02a3cfd664234b1c90c4ea2749928ac2}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}!\-\_\-nounidad@{\-\_\-nounidad}}
+\index{\-\_\-nounidad@{\-\_\-nounidad}!Proyecto_Integrador_3::TiposDato::Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}}
+\subsubsection[{\-\_\-nounidad}]{\setlength{\rightskip}{0pt plus 5cm}string Proyecto\-\_\-\-Integrador\-\_\-3.\-Tipos\-Dato.\-Unidad.\-\_\-nounidad\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_a02a3cfd664234b1c90c4ea2749928ac2}
+
+
+Definición en la línea 17 del archivo Unidad.\-cs.
+
+\hypertarget{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_ad0a5b9c3770801a5e32f52d7406346d8}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}!\-\_\-uid@{\-\_\-uid}}
+\index{\-\_\-uid@{\-\_\-uid}!Proyecto_Integrador_3::TiposDato::Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}}
+\subsubsection[{\-\_\-uid}]{\setlength{\rightskip}{0pt plus 5cm}Guid Proyecto\-\_\-\-Integrador\-\_\-3.\-Tipos\-Dato.\-Unidad.\-\_\-uid\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_ad0a5b9c3770801a5e32f52d7406346d8}
+
+
+Definición en la línea 13 del archivo Unidad.\-cs.
+
+
+
+\subsection{Documentación de propiedades}
+\hypertarget{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_a75d59e9f06c1422def3f8630d2a33642}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}!No\-Unidad@{No\-Unidad}}
+\index{No\-Unidad@{No\-Unidad}!Proyecto_Integrador_3::TiposDato::Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}}
+\subsubsection[{No\-Unidad}]{\setlength{\rightskip}{0pt plus 5cm}string Proyecto\-\_\-\-Integrador\-\_\-3.\-Tipos\-Dato.\-Unidad.\-No\-Unidad\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_a75d59e9f06c1422def3f8630d2a33642}
+
+
+Definición en la línea 19 del archivo Unidad.\-cs.
+
+\hypertarget{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aca85e685e50da0af6be67e3ee69b1bb1}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}!Servicios@{Servicios}}
+\index{Servicios@{Servicios}!Proyecto_Integrador_3::TiposDato::Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}}
+\subsubsection[{Servicios}]{\setlength{\rightskip}{0pt plus 5cm}virtual I\-Collection$<${\bf Servicio}$>$ Proyecto\-\_\-\-Integrador\-\_\-3.\-Tipos\-Dato.\-Unidad.\-Servicios\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aca85e685e50da0af6be67e3ee69b1bb1}
+
+
+Definición en la línea 21 del archivo Unidad.\-cs.
+
+\hypertarget{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aa2e602251694986f3d519ee3db5ffa38}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}!Uid@{Uid}}
+\index{Uid@{Uid}!Proyecto_Integrador_3::TiposDato::Unidad@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Tipos\-Dato\-::\-Unidad}}
+\subsubsection[{Uid}]{\setlength{\rightskip}{0pt plus 5cm}System.\-Guid Proyecto\-\_\-\-Integrador\-\_\-3.\-Tipos\-Dato.\-Unidad.\-Uid\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aa2e602251694986f3d519ee3db5ffa38}
+
+
+Definición en la línea 15 del archivo Unidad.\-cs.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Yknx4/\-Documents/\-Visual Studio 2012/\-Projects/\-Proyecto Integrador 3/\-Proyecto Integrador 3/\-Tipos\-Dato/\hyperlink{_unidad_8cs}{Unidad.\-cs}\end{DoxyCompactItemize}

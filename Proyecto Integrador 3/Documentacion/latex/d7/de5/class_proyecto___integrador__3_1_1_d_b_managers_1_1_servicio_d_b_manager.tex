@@ -1,0 +1,404 @@
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager}{\section{Referencia de la Clase Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicio\-D\-B\-Manager}
+\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager}\index{Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicio\-D\-B\-Manager}}
+}
+
+
+Maneja los accesos a la base de datos de los Servicios  
+
+
+Diagrama de herencias de Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicio\-D\-B\-Manager\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d7/de5/class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a409f1159870ced1800ab4ac735a94f72}{Servicio\-D\-B\-Manager} (\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers}{D\-B\-Managers} sender)
+\item 
+override void \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_abbc936c9fa59cae0fc302c44e6389876}{Add\-To\-D\-B} ()
+\item 
+override void \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a6da7980b7551fb67526270a28b7e3d35}{Add\-To\-Dataset} ()
+\item 
+override void \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a2ff2e7d573e60b876f4b183defc8675f}{Update\-D\-B\-From\-Dataset} ()
+\item 
+override void \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a2cf0e8f950669e7085314e8213b69d3e}{item\-Modified} (object sender, Property\-Changed\-Event\-Args e)
+\item 
+override void \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a903bee917e813d25c2e9a4ad87281db4}{modificar\-Dato} ()
+\item 
+virtual void \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a49ea2a7bfa58a2c536fefa4d60d488d2}{item\-Modified} (object sender, System.\-Component\-Model.\-Property\-Changed\-Event\-Args e)
+\item 
+virtual bool \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a436cb08914ca84122f9019a59485589a}{Remove\-From\-D\-B} ()
+\item 
+void \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a2d552a5e547efd19924ca4a96f685a56}{set\-Item} (T Input)
+\item 
+void \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_ad5d7f99a4a5783514bad64ba8894e1ea}{Clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_add66e324cef43fd10b491bc697fa60b5}{Active} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers}{D\-B\-Managers} \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}
+\item 
+T \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a3b67ae3b5b3b9c3793d56c1407d7dcff}{held\-Item}
+\end{DoxyCompactItemize}
+\subsection*{Propiedades}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a6e5caaed2ee1a4d067dfbf5aaa1b1fa8}{Error}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_aec27444dd8d35014f241b2b6ab0f83b9}{notify\-Error} ()
+\item 
+\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_row}{ds\-Servicios.\-Servicios\-Row} \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_ae48a4f63dee1bf94e8a93d7a47586233}{get\-Servicio\-Row} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Maneja los accesos a la base de datos de los Servicios 
+
+
+
+Definición en la línea 15 del archivo Servicio\-D\-B\-Manager.\-cs.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a409f1159870ced1800ab4ac735a94f72}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!Servicio\-D\-B\-Manager@{Servicio\-D\-B\-Manager}}
+\index{Servicio\-D\-B\-Manager@{Servicio\-D\-B\-Manager}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{Servicio\-D\-B\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicio\-D\-B\-Manager.\-Servicio\-D\-B\-Manager (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-B\-Managers}}]{sender}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a409f1159870ced1800ab4ac735a94f72}
+
+
+Definición en la línea 17 del archivo Servicio\-D\-B\-Manager.\-cs.
+
+
+\begin{DoxyCode}
+18                 : base(sender)
+19             \{
+20             \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_add66e324cef43fd10b491bc697fa60b5}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!Active@{Active}}
+\index{Active@{Active}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{Active}]{\setlength{\rightskip}{0pt plus 5cm}bool Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-D\-B\-Manager$<$ T $>$.Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_add66e324cef43fd10b491bc697fa60b5}
+
+
+Definición en la línea 48 del archivo D\-B\-Manager.\-cs.
+
+
+\begin{DoxyCode}
+49             \{
+50                 \textcolor{keywordflow}{if} (\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a3b67ae3b5b3b9c3793d56c1407d7dcff}{heldItem} == null) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+51                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+52             \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a6da7980b7551fb67526270a28b7e3d35}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!Add\-To\-Dataset@{Add\-To\-Dataset}}
+\index{Add\-To\-Dataset@{Add\-To\-Dataset}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{Add\-To\-Dataset}]{\setlength{\rightskip}{0pt plus 5cm}override void Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicio\-D\-B\-Manager.\-Add\-To\-Dataset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a6da7980b7551fb67526270a28b7e3d35}
+
+
+Implementa \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a7830332e065723c1799d5804fd202dd1}{Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-D\-B\-Manager$<$ T $>$}.
+
+
+
+Definición en la línea 33 del archivo Servicio\-D\-B\-Manager.\-cs.
+
+
+\begin{DoxyCode}
+34             \{
+35                 \textcolor{keywordflow}{if} (!\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_add66e324cef43fd10b491bc697fa60b5}{Active}())
+36                 \{
+37                     \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a6e5caaed2ee1a4d067dfbf5aaa1b1fa8}{Error} = \textcolor{stringliteral}{"No hay ningun servicio seleccionado"};
+38                     \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_aec27444dd8d35014f241b2b6ab0f83b9}{notifyError}();
+39                 \}
+40                 \textcolor{keywordflow}{if} (\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a3b67ae3b5b3b9c3793d56c1407d7dcff}{heldItem}.isAdded())
+41                 \{
+42                     \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a6e5caaed2ee1a4d067dfbf5aaa1b1fa8}{Error} = \textcolor{stringliteral}{"El servicio con ID "} + \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a3b67ae3b5b3b9c3793d56c1407d7dcff}{heldItem}.Id.ToString() + \textcolor{stringliteral}{" ya está en la
+       base de datos"};
+43                     \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_aec27444dd8d35014f241b2b6ab0f83b9}{notifyError}();
+44                 \}
+45                 dsServicios.ServiciosRow nuevoServicio = \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_ae48a4f63dee1bf94e8a93d7a47586233}{getServicioRow}();
+46                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a6b992d164f75898c6f9717fd5b839fa4}{mdsServicios}.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_a03c1b1284ccc9c2b139d6102da34f6e9}{Servicios}.
+      \hyperlink{class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_data_table_a7974644d9b5b0b8a5984af24e16700bb}{AddServiciosRow}(nuevoServicio);
+47             \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_abbc936c9fa59cae0fc302c44e6389876}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!Add\-To\-D\-B@{Add\-To\-D\-B}}
+\index{Add\-To\-D\-B@{Add\-To\-D\-B}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{Add\-To\-D\-B}]{\setlength{\rightskip}{0pt plus 5cm}override void Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicio\-D\-B\-Manager.\-Add\-To\-D\-B (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_abbc936c9fa59cae0fc302c44e6389876}
+
+
+Implementa \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a820a55f3ee3c7fde31b121f3f3ea6179}{Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-D\-B\-Manager$<$ T $>$}.
+
+
+
+Definición en la línea 27 del archivo Servicio\-D\-B\-Manager.\-cs.
+
+
+\begin{DoxyCode}
+28             \{
+29                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a6da7980b7551fb67526270a28b7e3d35}{AddToDataset}();
+30                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a2ff2e7d573e60b876f4b183defc8675f}{UpdateDBFromDataset}();
+31             \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_ad5d7f99a4a5783514bad64ba8894e1ea}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!Clear@{Clear}}
+\index{Clear@{Clear}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-D\-B\-Manager$<$ T $>$.Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_ad5d7f99a4a5783514bad64ba8894e1ea}
+
+
+Definición en la línea 43 del archivo D\-B\-Manager.\-cs.
+
+
+\begin{DoxyCode}
+44             \{
+45                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a3b67ae3b5b3b9c3793d56c1407d7dcff}{heldItem} = \textcolor{keywordflow}{default}(T);
+46             \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_ae48a4f63dee1bf94e8a93d7a47586233}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!get\-Servicio\-Row@{get\-Servicio\-Row}}
+\index{get\-Servicio\-Row@{get\-Servicio\-Row}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{get\-Servicio\-Row}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ds\-Servicios.\-Servicios\-Row} Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicio\-D\-B\-Manager.\-get\-Servicio\-Row (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_ae48a4f63dee1bf94e8a93d7a47586233}
+
+
+Definición en la línea 55 del archivo Servicio\-D\-B\-Manager.\-cs.
+
+
+\begin{DoxyCode}
+56             \{
+57                 dsServicios.ServiciosRow nuevoServicio = \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}.
+      \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a6b992d164f75898c6f9717fd5b839fa4}{mdsServicios}.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_a03c1b1284ccc9c2b139d6102da34f6e9}{Servicios}.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_data_table_acf349fca06c159ff3684420872cd39ef}{NewServiciosRow}();
+58                 nuevoServicio.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_row_a555547658fa71e0e540c35adc66bb450}{fecha} = \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a3b67ae3b5b3b9c3793d56c1407d7dcff}{heldItem}.Fecha;
+59                 nuevoServicio.tipoUsuario = \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a3b67ae3b5b3b9c3793d56c1407d7dcff}{heldItem}.TipoUsuario.ToString();
+60                 nuevoServicio.unidad = \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a3b67ae3b5b3b9c3793d56c1407d7dcff}{heldItem}.Unidad;
+61                 nuevoServicio.usuario = \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a3b67ae3b5b3b9c3793d56c1407d7dcff}{heldItem}.Usuario;
+62                 \textcolor{keywordflow}{return} nuevoServicio;
+63             \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a49ea2a7bfa58a2c536fefa4d60d488d2}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!item\-Modified@{item\-Modified}}
+\index{item\-Modified@{item\-Modified}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{item\-Modified}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-D\-B\-Manager$<$ T $>$.item\-Modified (
+\begin{DoxyParamCaption}
+\item[{object}]{sender, }
+\item[{System.\-Component\-Model.\-Property\-Changed\-Event\-Args}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a49ea2a7bfa58a2c536fefa4d60d488d2}
+
+
+Definición en la línea 20 del archivo D\-B\-Manager.\-cs.
+
+
+\begin{DoxyCode}
+21             \{
+22                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a2d552a5e547efd19924ca4a96f685a56}{setItem}((T)sender);
+23             \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a2cf0e8f950669e7085314e8213b69d3e}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!item\-Modified@{item\-Modified}}
+\index{item\-Modified@{item\-Modified}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{item\-Modified}]{\setlength{\rightskip}{0pt plus 5cm}override void Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicio\-D\-B\-Manager.\-item\-Modified (
+\begin{DoxyParamCaption}
+\item[{object}]{sender, }
+\item[{Property\-Changed\-Event\-Args}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a2cf0e8f950669e7085314e8213b69d3e}
+
+
+Definición en la línea 65 del archivo Servicio\-D\-B\-Manager.\-cs.
+
+
+\begin{DoxyCode}
+66             \{
+67                 \textcolor{comment}{//base.itemModified(sender, e);}
+68                 \textcolor{comment}{//switch (e.PropertyName)}
+69                 \textcolor{comment}{//\{}
+70                 \textcolor{comment}{//    case "Nombre":}
+71                 \textcolor{comment}{//        modificarDato(ModifiableValues.Name);}
+72                 \textcolor{comment}{//        break;}
+73 
+74                 \textcolor{comment}{//    case "Cuenta":}
+75                 \textcolor{comment}{//        modificarDato(ModifiableValues.ID);}
+76                 \textcolor{comment}{//        break;}
+77 
+78                 \textcolor{comment}{//    case "Plantel":}
+79                 \textcolor{comment}{//        modificarDato(ModifiableValues.Campus);}
+80                 \textcolor{comment}{//        break;}
+81                 \textcolor{comment}{//    default:}
+82                 \textcolor{comment}{//        throw new NotImplementedException(e.PropertyName+" hasn't been implemented.");}
+83                 \textcolor{comment}{//\}}
+84                 \textcolor{comment}{//Clear();}
+85             \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a903bee917e813d25c2e9a4ad87281db4}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!modificar\-Dato@{modificar\-Dato}}
+\index{modificar\-Dato@{modificar\-Dato}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{modificar\-Dato}]{\setlength{\rightskip}{0pt plus 5cm}override void Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicio\-D\-B\-Manager.\-modificar\-Dato (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a903bee917e813d25c2e9a4ad87281db4}
+
+
+Implementa \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a0cd8914cf3417e3df2f9d580fdb48aca}{Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-D\-B\-Manager$<$ T $>$}.
+
+
+
+Definición en la línea 87 del archivo Servicio\-D\-B\-Manager.\-cs.
+
+
+\begin{DoxyCode}
+88             \{
+89                 \textcolor{keywordflow}{if} (!\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_add66e324cef43fd10b491bc697fa60b5}{Active}())
+90                 \{
+91                     \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a6e5caaed2ee1a4d067dfbf5aaa1b1fa8}{Error} = \textcolor{stringliteral}{"No hay ningun servicio seleccionado"};
+92                     \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_aec27444dd8d35014f241b2b6ab0f83b9}{notifyError}();
+93                 \}
+94                 \textcolor{comment}{/* dsServicios.ServiciosRow servicioAModificar =
+       Parent.mdsServicios.Servicios.FindByUid(heldItem.Uid);}
+95 \textcolor{comment}{                 servicioAModificar = getServicioRow();*/}
+96                 \textcolor{keywordtype}{int} index = \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a6b992d164f75898c6f9717fd5b839fa4}{mdsServicios}.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_a03c1b1284ccc9c2b139d6102da34f6e9}{Servicios}.Rows.IndexOf(
+      \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a6b992d164f75898c6f9717fd5b839fa4}{mdsServicios}.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_a03c1b1284ccc9c2b139d6102da34f6e9}{Servicios}.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_data_table_a3b9b5f243557e8678068d79c90098010}{FindByid}(
+      \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a3b67ae3b5b3b9c3793d56c1407d7dcff}{heldItem}.Id));
+97                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a6b992d164f75898c6f9717fd5b839fa4}{mdsServicios}.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_a03c1b1284ccc9c2b139d6102da34f6e9}{Servicios}.Rows[index].ItemArray = 
+      \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_ae48a4f63dee1bf94e8a93d7a47586233}{getServicioRow}().ItemArray;
+98                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_aecf2d3981e87f16c1e3a60c7913931a8}{LastMessage} = \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}.
+      \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a1f9e67f272910356a732a882769c8dac}{mServiciosTableAdapter}.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter_aeef3160a3e0bdc86f499f0f9ad7221fd}{Update}(\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}.
+      \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a6b992d164f75898c6f9717fd5b839fa4}{mdsServicios}).ToString();
+99                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_ab1d4758dc7cca9b54a51d63ec6e6589b}{Refresh}();
+100             \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_aec27444dd8d35014f241b2b6ab0f83b9}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!notify\-Error@{notify\-Error}}
+\index{notify\-Error@{notify\-Error}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{notify\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicio\-D\-B\-Manager.\-notify\-Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_aec27444dd8d35014f241b2b6ab0f83b9}
+
+
+Definición en la línea 22 del archivo Servicio\-D\-B\-Manager.\-cs.
+
+
+\begin{DoxyCode}
+23             \{
+24                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} Exception(\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a6e5caaed2ee1a4d067dfbf5aaa1b1fa8}{Error});
+25             \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a436cb08914ca84122f9019a59485589a}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!Remove\-From\-D\-B@{Remove\-From\-D\-B}}
+\index{Remove\-From\-D\-B@{Remove\-From\-D\-B}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{Remove\-From\-D\-B}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-D\-B\-Manager$<$ T $>$.Remove\-From\-D\-B (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a436cb08914ca84122f9019a59485589a}
+
+
+Definición en la línea 27 del archivo D\-B\-Manager.\-cs.
+
+
+\begin{DoxyCode}
+28             \{
+29                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} NotImplementedException();
+30             \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a2d552a5e547efd19924ca4a96f685a56}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!set\-Item@{set\-Item}}
+\index{set\-Item@{set\-Item}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{set\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-D\-B\-Manager$<$ T $>$.set\-Item (
+\begin{DoxyParamCaption}
+\item[{T}]{Input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a2d552a5e547efd19924ca4a96f685a56}
+
+
+Definición en la línea 38 del archivo D\-B\-Manager.\-cs.
+
+
+\begin{DoxyCode}
+39             \{
+40                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a3b67ae3b5b3b9c3793d56c1407d7dcff}{heldItem} = Input;
+41             \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a2ff2e7d573e60b876f4b183defc8675f}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!Update\-D\-B\-From\-Dataset@{Update\-D\-B\-From\-Dataset}}
+\index{Update\-D\-B\-From\-Dataset@{Update\-D\-B\-From\-Dataset}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{Update\-D\-B\-From\-Dataset}]{\setlength{\rightskip}{0pt plus 5cm}override void Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicio\-D\-B\-Manager.\-Update\-D\-B\-From\-Dataset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicio_d_b_manager_a2ff2e7d573e60b876f4b183defc8675f}
+
+
+Implementa \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_aecafeb72fd4ce55d76c16c804e38dae8}{Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-D\-B\-Manager$<$ T $>$}.
+
+
+
+Definición en la línea 49 del archivo Servicio\-D\-B\-Manager.\-cs.
+
+
+\begin{DoxyCode}
+50             \{
+51                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_aecf2d3981e87f16c1e3a60c7913931a8}{LastMessage} = \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}.
+      \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a1f9e67f272910356a732a882769c8dac}{mServiciosTableAdapter}.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter_aeef3160a3e0bdc86f499f0f9ad7221fd}{Update}(\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}.
+      \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a6b992d164f75898c6f9717fd5b839fa4}{mdsServicios}).ToString();
+52                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{Parent}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_ab1d4758dc7cca9b54a51d63ec6e6589b}{Refresh}();
+53             \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a3b67ae3b5b3b9c3793d56c1407d7dcff}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!held\-Item@{held\-Item}}
+\index{held\-Item@{held\-Item}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{held\-Item}]{\setlength{\rightskip}{0pt plus 5cm}T Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-D\-B\-Manager$<$ T $>$.held\-Item\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a3b67ae3b5b3b9c3793d56c1407d7dcff}
+
+
+Definición en la línea 34 del archivo D\-B\-Manager.\-cs.
+
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!Parent@{Parent}}
+\index{Parent@{Parent}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{Parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-B\-Managers} Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-D\-B\-Manager$<$ T $>$.Parent\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a06315e75298c8f2fd46f32dc7c9a80b2}
+
+
+Definición en la línea 32 del archivo D\-B\-Manager.\-cs.
+
+
+
+\subsection{Documentación de propiedades}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a6e5caaed2ee1a4d067dfbf5aaa1b1fa8}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}!Error@{Error}}
+\index{Error@{Error}!Proyecto_Integrador_3::DBManagers::ServicioDBManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicio\-D\-B\-Manager}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}string Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-D\-B\-Manager$<$ T $>$.Error\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [inherited]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4_a6e5caaed2ee1a4d067dfbf5aaa1b1fa8}
+
+
+Definición en la línea 56 del archivo D\-B\-Manager.\-cs.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Yknx4/\-Documents/\-Visual Studio 2012/\-Projects/\-Proyecto Integrador 3/\-Proyecto Integrador 3/\-Manejadores/\hyperlink{_servicio_d_b_manager_8cs}{Servicio\-D\-B\-Manager.\-cs}\end{DoxyCompactItemize}

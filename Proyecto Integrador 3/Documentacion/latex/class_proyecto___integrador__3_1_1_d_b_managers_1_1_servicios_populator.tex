@@ -1,0 +1,142 @@
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator}{\section{Referencia de la Clase Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicios\-Populator}
+\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator}\index{Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicios\-Populator@{Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicios\-Populator}}
+}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a45260aa2e86962a10e44f3f7faefbf15}{Servicios\-Populator} (ref \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers}{D\-B\-Managers} sender)
+\item 
+void \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a61cb2ea7726cffeac2da8df50a0dd347}{clear} ()
+\item 
+void \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a9ac6be7f5ecdbdadd850b3519a985f75}{generar\-Lista} ()
+\end{DoxyCompactItemize}
+\subsection*{Propiedades}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio}{Servicio} $>$ \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a5c0044cf4a9e52ee30c25cfcb8112876}{Servicios}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio}{Servicio} $>$ \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_af7501f1e6be90cfec6b9b974b6d8b911}{\-\_\-servicios} = new List$<$\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio}{Servicio}$>$()
+\item 
+\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers}{D\-B\-Managers} \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a56aa6fea49cfd991726dc8c67e4e1742}{Parent}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+
+
+Definición en la línea 10 del archivo Servicios\-Populator.\-cs.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a45260aa2e86962a10e44f3f7faefbf15}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator}!Servicios\-Populator@{Servicios\-Populator}}
+\index{Servicios\-Populator@{Servicios\-Populator}!Proyecto_Integrador_3::DBManagers::ServiciosPopulator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator}}
+\subsubsection[{Servicios\-Populator}]{\setlength{\rightskip}{0pt plus 5cm}Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicios\-Populator.\-Servicios\-Populator (
+\begin{DoxyParamCaption}
+\item[{ref {\bf D\-B\-Managers}}]{sender}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a45260aa2e86962a10e44f3f7faefbf15}
+
+
+Definición en la línea 15 del archivo Servicios\-Populator.\-cs.
+
+
+\begin{DoxyCode}
+16             \{
+17                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a56aa6fea49cfd991726dc8c67e4e1742}{Parent} = sender;
+18 
+19                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a9ac6be7f5ecdbdadd850b3519a985f75}{generarLista}();
+20             \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a61cb2ea7726cffeac2da8df50a0dd347}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator}!clear@{clear}}
+\index{clear@{clear}!Proyecto_Integrador_3::DBManagers::ServiciosPopulator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicios\-Populator.\-clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a61cb2ea7726cffeac2da8df50a0dd347}
+
+
+Definición en la línea 22 del archivo Servicios\-Populator.\-cs.
+
+
+\begin{DoxyCode}
+23             \{
+24                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_af7501f1e6be90cfec6b9b974b6d8b911}{\_servicios} = \textcolor{keyword}{new} List<Servicio>();
+25                 System.GC.Collect();
+26             \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a9ac6be7f5ecdbdadd850b3519a985f75}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator}!generar\-Lista@{generar\-Lista}}
+\index{generar\-Lista@{generar\-Lista}!Proyecto_Integrador_3::DBManagers::ServiciosPopulator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator}}
+\subsubsection[{generar\-Lista}]{\setlength{\rightskip}{0pt plus 5cm}void Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicios\-Populator.\-generar\-Lista (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a9ac6be7f5ecdbdadd850b3519a985f75}
+
+
+Definición en la línea 28 del archivo Servicios\-Populator.\-cs.
+
+
+\begin{DoxyCode}
+29             \{
+30                 \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_af7501f1e6be90cfec6b9b974b6d8b911}{\_servicios}.Clear();
+31                 \textcolor{keywordflow}{foreach} (\hyperlink{_servicios_populator_8cs_a4fedc76bdc7093e47c2dfca7a41b823b}{ServiciosRow} Row \textcolor{keywordflow}{in} \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a56aa6fea49cfd991726dc8c67e4e1742}{Parent}.
+      \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a6b992d164f75898c6f9717fd5b839fa4}{mdsServicios}.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_a03c1b1284ccc9c2b139d6102da34f6e9}{Servicios}.Rows)
+32                 \{
+33                     \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio}{Servicio} actual = \textcolor{keyword}{new} \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio}{Servicio}
+34                     \{
+35                         \textcolor{comment}{//Id=Row.id,}
+36                         TipoUsuario = \textcolor{keywordtype}{short}.Parse(Row.tipoUsuario),
+37                         \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad}{Unidad} = Row.unidad,
+38                         \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario}{Usuario} = Row.usuario,
+39                         Fecha = Row.fecha
+40                     \};
+41                     \textcolor{keywordflow}{if} (\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a56aa6fea49cfd991726dc8c67e4e1742}{Parent}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a0e58571e4517bd6ac941eae32baaf978}{mdsUnidades} != null)
+42                     \{
+43                         actual.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio_abb92d5f6f972c2df3a7cbe4d25b713e8}{NoUnidad} = \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a56aa6fea49cfd991726dc8c67e4e1742}{Parent}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a0e58571e4517bd6ac941eae32baaf978}{mdsUnidades}.
+      \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_a78a56c4320f0067f020ea95490bdf195}{Unidad}.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_1_1_unidad_data_table_a845301b4eac74689bc5aa7d5fd96960e}{FindByUid}(Row.unidad).\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_1_1_unidad_row_a0b25b1745987d784d4554fb0f34c1f58}{NoUnidad};
+44                     \}
+45                     \textcolor{comment}{//actual.PropertyChanged += cuentaModificada;}
+46                     \hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_af7501f1e6be90cfec6b9b974b6d8b911}{\_servicios}.Add(actual);
+47                 \}
+48             \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_af7501f1e6be90cfec6b9b974b6d8b911}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator}!\-\_\-servicios@{\-\_\-servicios}}
+\index{\-\_\-servicios@{\-\_\-servicios}!Proyecto_Integrador_3::DBManagers::ServiciosPopulator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator}}
+\subsubsection[{\-\_\-servicios}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Servicio}$>$ Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicios\-Populator.\-\_\-servicios = new List$<${\bf Servicio}$>$()\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_af7501f1e6be90cfec6b9b974b6d8b911}
+
+
+Definición en la línea 12 del archivo Servicios\-Populator.\-cs.
+
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a56aa6fea49cfd991726dc8c67e4e1742}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator}!Parent@{Parent}}
+\index{Parent@{Parent}!Proyecto_Integrador_3::DBManagers::ServiciosPopulator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator}}
+\subsubsection[{Parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-B\-Managers} Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicios\-Populator.\-Parent\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a56aa6fea49cfd991726dc8c67e4e1742}
+
+
+Definición en la línea 13 del archivo Servicios\-Populator.\-cs.
+
+
+
+\subsection{Documentación de propiedades}
+\hypertarget{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a5c0044cf4a9e52ee30c25cfcb8112876}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator}!Servicios@{Servicios}}
+\index{Servicios@{Servicios}!Proyecto_Integrador_3::DBManagers::ServiciosPopulator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-D\-B\-Managers\-::\-Servicios\-Populator}}
+\subsubsection[{Servicios}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Servicio}$>$ Proyecto\-\_\-\-Integrador\-\_\-3.\-D\-B\-Managers.\-Servicios\-Populator.\-Servicios\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_proyecto___integrador__3_1_1_d_b_managers_1_1_servicios_populator_a5c0044cf4a9e52ee30c25cfcb8112876}
+
+
+Definición en la línea 51 del archivo Servicios\-Populator.\-cs.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Yknx4/\-Documents/\-Visual Studio 2012/\-Projects/\-Proyecto Integrador 3/\-Proyecto Integrador 3/\-Populadores/\hyperlink{_servicios_populator_8cs}{Servicios\-Populator.\-cs}\end{DoxyCompactItemize}

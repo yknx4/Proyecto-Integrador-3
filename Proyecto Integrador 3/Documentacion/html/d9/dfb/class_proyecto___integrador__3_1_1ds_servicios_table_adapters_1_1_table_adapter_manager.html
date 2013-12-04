@@ -1,0 +1,883 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>SmartCards: Referencia de la Clase Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../MainLogo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">SmartCards
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Sistema de control de autobuses.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>Clases</span></a></li>
+      <li><a href="../../files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
+      <li><a href="../../classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
+      <li><a href="../../hierarchy.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="../../functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Propiedades</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Eventos</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../d2/d4d/namespace_proyecto___integrador__3_1_1ds_servicios_table_adapters.html">dsServiciosTableAdapters</a></li><li class="navelem"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html">TableAdapterManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Clases</a> &#124;
+<a href="#pub-types">Tipos públicos</a> &#124;
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pro-methods">Métodos protegidos</a> &#124;
+<a href="#properties">Propiedades</a> &#124;
+<a href="#pri-methods">Métodos privados</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
+<a href="../../d3/d0e/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia de la Clase Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html" title="TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update ...">TableAdapterManager</a> is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios /summary&gt;  
+ <a href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencias de Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.png" usemap="#Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager_map" alt=""/>
+  <map id="Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager_map" name="Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Clases</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d5c/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer.html">SelfReferenceComparer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to sort self-referenced table's rows /summary&gt;  <a href="../../da/d5c/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer.html#details">Más...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Tipos públicos</h2></td></tr>
+<tr class="memitem:a9e1f8ef540de00f735f491b729080797"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a9e1f8ef540de00f735f491b729080797">UpdateOrderOption</a> { <a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a9e1f8ef540de00f735f491b729080797a27b77cb15d3da7ded0250d0001bc6755">UpdateOrderOption.InsertUpdateDelete</a> = 0, 
+<a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a9e1f8ef540de00f735f491b729080797a894fcc001e51f673d3fb5f3096473dd8">UpdateOrderOption.UpdateInsertDelete</a> = 1
+ }</td></tr>
+<tr class="memdesc:a9e1f8ef540de00f735f491b729080797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update Order Option /summary&gt;  <a href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a9e1f8ef540de00f735f491b729080797">Más...</a><br/></td></tr>
+<tr class="separator:a9e1f8ef540de00f735f491b729080797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a6eacbaae270959be1da079741a9edfac"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a6eacbaae270959be1da079741a9edfac">UpdateAll</a> (<a class="el" href="../../da/d6b/class_proyecto___integrador__3_1_1ds_servicios.html">dsServicios</a> dataSet)</td></tr>
+<tr class="memdesc:a6eacbaae270959be1da079741a9edfac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update all changes to the dataset.  <a href="#a6eacbaae270959be1da079741a9edfac">Más...</a><br/></td></tr>
+<tr class="separator:a6eacbaae270959be1da079741a9edfac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Métodos protegidos</h2></td></tr>
+<tr class="memitem:a5073eeb629932eec59c77138749d3a10"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a5073eeb629932eec59c77138749d3a10">SortSelfReferenceRows</a> (global::System.Data.DataRow[] rows, global::System.Data.DataRelation relation, bool childFirst)</td></tr>
+<tr class="separator:a5073eeb629932eec59c77138749d3a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ae64aa35a512fc0489b4806bf32e8de"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a4ae64aa35a512fc0489b4806bf32e8de">MatchTableAdapterConnection</a> (global::System.Data.IDbConnection inputConnection)</td></tr>
+<tr class="separator:a4ae64aa35a512fc0489b4806bf32e8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Propiedades</h2></td></tr>
+<tr class="memitem:a091630e6863de7670f950252387391a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a9e1f8ef540de00f735f491b729080797">UpdateOrderOption</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a091630e6863de7670f950252387391a2">UpdateOrder</a><code> [get, set]</code></td></tr>
+<tr class="separator:a091630e6863de7670f950252387391a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1da30cb8e53df13e837f76e20f242804"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html">ServiciosTableAdapter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a1da30cb8e53df13e837f76e20f242804">ServiciosTableAdapter</a><code> [get, set]</code></td></tr>
+<tr class="separator:a1da30cb8e53df13e837f76e20f242804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a746392e04b3bd5203f1e2ed6ab33595c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a746392e04b3bd5203f1e2ed6ab33595c">BackupDataSetBeforeUpdate</a><code> [get, set]</code></td></tr>
+<tr class="separator:a746392e04b3bd5203f1e2ed6ab33595c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa28c9a2ec84db34bcba3dda82809b04b"><td class="memItemLeft" align="right" valign="top">global::System.Data.IDbConnection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#aa28c9a2ec84db34bcba3dda82809b04b">Connection</a><code> [get, set]</code></td></tr>
+<tr class="separator:aa28c9a2ec84db34bcba3dda82809b04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247618c47c8308235c39b5cc88165cac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a247618c47c8308235c39b5cc88165cac">TableAdapterInstanceCount</a><code> [get]</code></td></tr>
+<tr class="separator:a247618c47c8308235c39b5cc88165cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a800bbbaf23f900584fa0b95d8c3b171b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a800bbbaf23f900584fa0b95d8c3b171b">UpdateUpdatedRows</a> (<a class="el" href="../../da/d6b/class_proyecto___integrador__3_1_1ds_servicios.html">dsServicios</a> dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allChangedRows, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)</td></tr>
+<tr class="memdesc:a800bbbaf23f900584fa0b95d8c3b171b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update rows in top-down order.  <a href="#a800bbbaf23f900584fa0b95d8c3b171b">Más...</a><br/></td></tr>
+<tr class="separator:a800bbbaf23f900584fa0b95d8c3b171b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd9bc5851d98a4a12ce07dce45912685"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#afd9bc5851d98a4a12ce07dce45912685">UpdateInsertedRows</a> (<a class="el" href="../../da/d6b/class_proyecto___integrador__3_1_1ds_servicios.html">dsServicios</a> dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)</td></tr>
+<tr class="memdesc:afd9bc5851d98a4a12ce07dce45912685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert rows in top-down order.  <a href="#afd9bc5851d98a4a12ce07dce45912685">Más...</a><br/></td></tr>
+<tr class="separator:afd9bc5851d98a4a12ce07dce45912685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804886cac0d2de3f6c24b4b36f70a2bf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a804886cac0d2de3f6c24b4b36f70a2bf">UpdateDeletedRows</a> (<a class="el" href="../../da/d6b/class_proyecto___integrador__3_1_1ds_servicios.html">dsServicios</a> dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allChangedRows)</td></tr>
+<tr class="memdesc:a804886cac0d2de3f6c24b4b36f70a2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete rows in bottom-up order.  <a href="#a804886cac0d2de3f6c24b4b36f70a2bf">Más...</a><br/></td></tr>
+<tr class="separator:a804886cac0d2de3f6c24b4b36f70a2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c8e4d34a932fd8b581e954c7e50376"><td class="memItemLeft" align="right" valign="top">global::System.Data.DataRow[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a32c8e4d34a932fd8b581e954c7e50376">GetRealUpdatedRows</a> (global::System.Data.DataRow[] updatedRows, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)</td></tr>
+<tr class="memdesc:a32c8e4d34a932fd8b581e954c7e50376"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first /summary&gt;  <a href="#a32c8e4d34a932fd8b581e954c7e50376">Más...</a><br/></td></tr>
+<tr class="separator:a32c8e4d34a932fd8b581e954c7e50376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a03766183451334c85f8632ffdcd0e0ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a9e1f8ef540de00f735f491b729080797">UpdateOrderOption</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a03766183451334c85f8632ffdcd0e0ea">_updateOrder</a></td></tr>
+<tr class="separator:a03766183451334c85f8632ffdcd0e0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac26b431a74f60f4ba1f8cc57cb5e75e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html">ServiciosTableAdapter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a></td></tr>
+<tr class="separator:ac26b431a74f60f4ba1f8cc57cb5e75e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a927989eb7658909cc36dcf21241330f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a927989eb7658909cc36dcf21241330f3">_backupDataSetBeforeUpdate</a></td></tr>
+<tr class="separator:a927989eb7658909cc36dcf21241330f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a244f510259e41c7786eaca3bbe25db9a"><td class="memItemLeft" align="right" valign="top">global::System.Data.IDbConnection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a244f510259e41c7786eaca3bbe25db9a">_connection</a></td></tr>
+<tr class="separator:a244f510259e41c7786eaca3bbe25db9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html" title="TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update ...">TableAdapterManager</a> is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios /summary&gt; </p>
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01021">1021</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+</div><h2 class="groupheader">Documentación de las enumeraciones miembro de la clase</h2>
+<a class="anchor" id="a9e1f8ef540de00f735f491b729080797"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a9e1f8ef540de00f735f491b729080797">Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager.UpdateOrderOption</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update Order Option /summary&gt; </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a9e1f8ef540de00f735f491b729080797a27b77cb15d3da7ded0250d0001bc6755"></a>InsertUpdateDelete</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a9e1f8ef540de00f735f491b729080797a894fcc001e51f673d3fb5f3096473dd8"></a>UpdateInsertDelete</em>&nbsp;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01336">1336</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;                                      {</div>
+<div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;            </div>
+<div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;            <a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a9e1f8ef540de00f735f491b729080797a27b77cb15d3da7ded0250d0001bc6755">InsertUpdateDelete</a> = 0,</div>
+<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;            </div>
+<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;            <a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a9e1f8ef540de00f735f491b729080797a894fcc001e51f673d3fb5f3096473dd8">UpdateInsertDelete</a> = 1,</div>
+<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="a32c8e4d34a932fd8b581e954c7e50376"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">global.System.Data.DataRow [] Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager.GetRealUpdatedRows </td>
+          <td>(</td>
+          <td class="paramtype">global::System.Data.DataRow[]&#160;</td>
+          <td class="paramname"><em>updatedRows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt;&#160;</td>
+          <td class="paramname"><em>allAddedRows</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first /summary&gt; </p>
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01159">1159</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;                                                                                                                                                                                       {</div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;            <span class="keywordflow">if</span> (((updatedRows == null) </div>
+<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;                        || (updatedRows.Length &lt; 1))) {</div>
+<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;                <span class="keywordflow">return</span> updatedRows;</div>
+<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;            }</div>
+<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;            <span class="keywordflow">if</span> (((allAddedRows == null) </div>
+<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;                        || (allAddedRows.Count &lt; 1))) {</div>
+<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;                <span class="keywordflow">return</span> updatedRows;</div>
+<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;            }</div>
+<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;            global::System.Collections.Generic.List&lt;global::System.Data.DataRow&gt; realUpdatedRows = <span class="keyword">new</span> global::System.Collections.Generic.List&lt;global::System.Data.DataRow&gt;();</div>
+<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; (i &lt; updatedRows.Length); i = (i + 1)) {</div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;                global::System.Data.DataRow row = updatedRows[i];</div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;                <span class="keywordflow">if</span> ((allAddedRows.Contains(row) == <span class="keyword">false</span>)) {</div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;                    realUpdatedRows.Add(row);</div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;                }</div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;            }</div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;            <span class="keywordflow">return</span> realUpdatedRows.ToArray();</div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a4ae64aa35a512fc0489b4806bf32e8de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager.MatchTableAdapterConnection </td>
+          <td>(</td>
+          <td class="paramtype">global::System.Data.IDbConnection&#160;</td>
+          <td class="paramname"><em>inputConnection</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01318">1318</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;                                                                                                            {</div>
+<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;            <span class="keywordflow">if</span> ((this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a244f510259e41c7786eaca3bbe25db9a">_connection</a> != null)) {</div>
+<div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;            }</div>
+<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;            <span class="keywordflow">if</span> (((this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#aa28c9a2ec84db34bcba3dda82809b04b">Connection</a> == null) </div>
+<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;                        || (inputConnection == null))) {</div>
+<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;            }</div>
+<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;            <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.Equals(this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#aa28c9a2ec84db34bcba3dda82809b04b">Connection</a>.ConnectionString, inputConnection.ConnectionString, global::System.StringComparison.Ordinal)) {</div>
+<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;            }</div>
+<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l01330"></a><span class="lineno"> 1330</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a5073eeb629932eec59c77138749d3a10"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager.SortSelfReferenceRows </td>
+          <td>(</td>
+          <td class="paramtype">global::System.Data.DataRow[]&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">global::System.Data.DataRelation&#160;</td>
+          <td class="paramname"><em>relation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>childFirst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01312">1312</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;                                                                                                                                                 {</div>
+<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;            global::System.Array.Sort&lt;global::System.Data.DataRow&gt;(rows, <span class="keyword">new</span> SelfReferenceComparer(relation, childFirst));</div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6eacbaae270959be1da079741a9edfac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager.UpdateAll </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d6b/class_proyecto___integrador__3_1_1ds_servicios.html">dsServicios</a>&#160;</td>
+          <td class="paramname"><em>dataSet</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update all changes to the dataset. </p>
+<p>/summary&gt; </p>
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01183">1183</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;                                                          {</div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;            <span class="keywordflow">if</span> ((dataSet == null)) {</div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> global::System.ArgumentNullException(<span class="stringliteral">&quot;dataSet&quot;</span>);</div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;            }</div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;            <span class="keywordflow">if</span> ((dataSet.HasChanges() == <span class="keyword">false</span>)) {</div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;            }</div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;            <span class="keywordflow">if</span> (((this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a> != null) </div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;                        &amp;&amp; (this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a4ae64aa35a512fc0489b4806bf32e8de">MatchTableAdapterConnection</a>(this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a>.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#afdc3759c0f8fd84ed6ae2943ee4855f5">Connection</a>) == <span class="keyword">false</span>))) {</div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> global::System.ArgumentException(<span class="stringliteral">&quot;All TableAdapters managed by a TableAdapterManager must use the same connection s&quot;</span> +</div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;                        <span class="stringliteral">&quot;tring.&quot;</span>);</div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;            }</div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;            global::System.Data.IDbConnection workConnection = this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#aa28c9a2ec84db34bcba3dda82809b04b">Connection</a>;</div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;            <span class="keywordflow">if</span> ((workConnection == null)) {</div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> global::System.ApplicationException(<span class="stringliteral">&quot;TableAdapterManager contains no connection information. Set each TableAdapterMana&quot;</span> +</div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;                        <span class="stringliteral">&quot;ger TableAdapter property to a valid TableAdapter instance.&quot;</span>);</div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;            }</div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;            <span class="keywordtype">bool</span> workConnOpened = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;            <span class="keywordflow">if</span> (((workConnection.State &amp; global::System.Data.ConnectionState.Broken) </div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;                        == global::System.Data.ConnectionState.Broken)) {</div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;                workConnection.Close();</div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;            }</div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;            <span class="keywordflow">if</span> ((workConnection.State == global::System.Data.ConnectionState.Closed)) {</div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;                workConnection.Open();</div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;                workConnOpened = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;            }</div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;            global::System.Data.IDbTransaction workTransaction = workConnection.BeginTransaction();</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;            <span class="keywordflow">if</span> ((workTransaction == null)) {</div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> global::System.ApplicationException(<span class="stringliteral">&quot;The transaction cannot begin. The current data connection does not support transa&quot;</span> +</div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;                        <span class="stringliteral">&quot;ctions or the current state is not allowing the transaction to begin.&quot;</span>);</div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;            }</div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;            global::System.Collections.Generic.List&lt;global::System.Data.DataRow&gt; allChangedRows = <span class="keyword">new</span> global::System.Collections.Generic.List&lt;global::System.Data.DataRow&gt;();</div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;            global::System.Collections.Generic.List&lt;global::System.Data.DataRow&gt; allAddedRows = <span class="keyword">new</span> global::System.Collections.Generic.List&lt;global::System.Data.DataRow&gt;();</div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;            global::System.Collections.Generic.List&lt;global::System.Data.Common.DataAdapter&gt; adaptersWithAcceptChangesDuringUpdate = <span class="keyword">new</span> global::System.Collections.Generic.List&lt;global::System.Data.Common.DataAdapter&gt;();</div>
+<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;            global::System.Collections.Generic.Dictionary&lt;object, global::System.Data.IDbConnection&gt; revertConnections = <span class="keyword">new</span> global::System.Collections.Generic.Dictionary&lt;object, global::System.Data.IDbConnection&gt;();</div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;            <span class="keywordtype">int</span> result = 0;</div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;            global::System.Data.DataSet backupDataSet = null;</div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;            <span class="keywordflow">if</span> (this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a746392e04b3bd5203f1e2ed6ab33595c">BackupDataSetBeforeUpdate</a>) {</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;                backupDataSet = <span class="keyword">new</span> global::System.Data.DataSet();</div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;                backupDataSet.Merge(dataSet);</div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;            }</div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;            <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;                <span class="comment">// ---- Prepare for update -----------</span></div>
+<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;                <span class="comment">//</span></div>
+<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;                <span class="keywordflow">if</span> ((this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a> != null)) {</div>
+<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;                    revertConnections.Add(this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a>, this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a>.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#afdc3759c0f8fd84ed6ae2943ee4855f5">Connection</a>);</div>
+<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;                    this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a>.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#afdc3759c0f8fd84ed6ae2943ee4855f5">Connection</a> = ((global::System.Data.SqlServerCe.SqlCeConnection)(workConnection));</div>
+<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;                    this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a>.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a3e7fe5479416cffb20c9576cdefb7e8e">Transaction</a> = ((global::System.Data.SqlServerCe.SqlCeTransaction)(workTransaction));</div>
+<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;                    <span class="keywordflow">if</span> (this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a>.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.AcceptChangesDuringUpdate) {</div>
+<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;                        this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a>.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.AcceptChangesDuringUpdate = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;                        adaptersWithAcceptChangesDuringUpdate.Add(this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a>.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>);</div>
+<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;                    }</div>
+<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;                }</div>
+<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;                <span class="comment">// </span></div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;                <span class="comment">//---- Perform updates -----------</span></div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;                <span class="comment">//</span></div>
+<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;                <span class="keywordflow">if</span> ((this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a091630e6863de7670f950252387391a2">UpdateOrder</a> == <a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a9e1f8ef540de00f735f491b729080797" title="Update Order Option /summary&gt; ">UpdateOrderOption</a>.UpdateInsertDelete)) {</div>
+<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;                    result = (result + this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a800bbbaf23f900584fa0b95d8c3b171b" title="Update rows in top-down order. ">UpdateUpdatedRows</a>(dataSet, allChangedRows, allAddedRows));</div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;                    result = (result + this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#afd9bc5851d98a4a12ce07dce45912685" title="Insert rows in top-down order. ">UpdateInsertedRows</a>(dataSet, allAddedRows));</div>
+<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;                }</div>
+<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;                <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;                    result = (result + this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#afd9bc5851d98a4a12ce07dce45912685" title="Insert rows in top-down order. ">UpdateInsertedRows</a>(dataSet, allAddedRows));</div>
+<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;                    result = (result + this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a800bbbaf23f900584fa0b95d8c3b171b" title="Update rows in top-down order. ">UpdateUpdatedRows</a>(dataSet, allChangedRows, allAddedRows));</div>
+<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;                }</div>
+<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;                result = (result + this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a804886cac0d2de3f6c24b4b36f70a2bf" title="Delete rows in bottom-up order. ">UpdateDeletedRows</a>(dataSet, allChangedRows));</div>
+<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;                <span class="comment">// </span></div>
+<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;                <span class="comment">//---- Commit updates -----------</span></div>
+<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;                <span class="comment">//</span></div>
+<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;                workTransaction.Commit();</div>
+<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;                <span class="keywordflow">if</span> ((0 &lt; allAddedRows.Count)) {</div>
+<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;                    global::System.Data.DataRow[] rows = <span class="keyword">new</span> System.Data.DataRow[allAddedRows.Count];</div>
+<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;                    allAddedRows.CopyTo(rows);</div>
+<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; (i &lt; rows.Length); i = (i + 1)) {</div>
+<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;                        global::System.Data.DataRow row = rows[i];</div>
+<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;                        row.AcceptChanges();</div>
+<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;                    }</div>
+<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;                }</div>
+<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;                <span class="keywordflow">if</span> ((0 &lt; allChangedRows.Count)) {</div>
+<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;                    global::System.Data.DataRow[] rows = <span class="keyword">new</span> System.Data.DataRow[allChangedRows.Count];</div>
+<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;                    allChangedRows.CopyTo(rows);</div>
+<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; (i &lt; rows.Length); i = (i + 1)) {</div>
+<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;                        global::System.Data.DataRow row = rows[i];</div>
+<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;                        row.AcceptChanges();</div>
+<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;                    }</div>
+<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;                }</div>
+<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;            }</div>
+<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;            <span class="keywordflow">catch</span> (global::System.Exception ex) {</div>
+<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;                workTransaction.Rollback();</div>
+<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;                <span class="comment">// ---- Restore the dataset -----------</span></div>
+<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;                <span class="keywordflow">if</span> (this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a746392e04b3bd5203f1e2ed6ab33595c">BackupDataSetBeforeUpdate</a>) {</div>
+<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;                    global::System.Diagnostics.Debug.Assert((backupDataSet != null));</div>
+<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;                    dataSet.Clear();</div>
+<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;                    dataSet.Merge(backupDataSet);</div>
+<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;                }</div>
+<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;                <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;                    <span class="keywordflow">if</span> ((0 &lt; allAddedRows.Count)) {</div>
+<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;                        global::System.Data.DataRow[] rows = <span class="keyword">new</span> System.Data.DataRow[allAddedRows.Count];</div>
+<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;                        allAddedRows.CopyTo(rows);</div>
+<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; (i &lt; rows.Length); i = (i + 1)) {</div>
+<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;                            global::System.Data.DataRow row = rows[i];</div>
+<div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;                            row.AcceptChanges();</div>
+<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160;                            row.SetAdded();</div>
+<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;                        }</div>
+<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;                    }</div>
+<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;                }</div>
+<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;                <span class="keywordflow">throw</span> ex;</div>
+<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;            }</div>
+<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;            <span class="keywordflow">finally</span> {</div>
+<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;                <span class="keywordflow">if</span> (workConnOpened) {</div>
+<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;                    workConnection.Close();</div>
+<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;                }</div>
+<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;                <span class="keywordflow">if</span> ((this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a> != null)) {</div>
+<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;                    this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a>.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#afdc3759c0f8fd84ed6ae2943ee4855f5">Connection</a> = ((global::System.Data.SqlServerCe.SqlCeConnection)(revertConnections[this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a>]));</div>
+<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;                    this._serviciosTableAdapter.Transaction = null;</div>
+<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;                }</div>
+<div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;                <span class="keywordflow">if</span> ((0 &lt; adaptersWithAcceptChangesDuringUpdate.Count)) {</div>
+<div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;                    global::System.Data.Common.DataAdapter[] adapters = <span class="keyword">new</span> System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];</div>
+<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;                    adaptersWithAcceptChangesDuringUpdate.CopyTo(adapters);</div>
+<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; (i &lt; adapters.Length); i = (i + 1)) {</div>
+<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;                        global::System.Data.Common.DataAdapter adapter = adapters[i];</div>
+<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;                        adapter.AcceptChangesDuringUpdate = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;                    }</div>
+<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;                }</div>
+<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;            }</div>
+<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a804886cac0d2de3f6c24b4b36f70a2bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager.UpdateDeletedRows </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d6b/class_proyecto___integrador__3_1_1ds_servicios.html">dsServicios</a>&#160;</td>
+          <td class="paramname"><em>dataSet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt;&#160;</td>
+          <td class="paramname"><em>allChangedRows</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Delete rows in bottom-up order. </p>
+<p>/summary&gt; </p>
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01141">1141</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;                                                                                                                                            {</div>
+<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;            <span class="keywordtype">int</span> result = 0;</div>
+<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;            <span class="keywordflow">if</span> ((this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a> != null)) {</div>
+<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;                global::System.Data.DataRow[] deletedRows = dataSet.Servicios.Select(null, null, global::System.Data.DataViewRowState.Deleted);</div>
+<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;                <span class="keywordflow">if</span> (((deletedRows != null) </div>
+<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;                            &amp;&amp; (0 &lt; deletedRows.Length))) {</div>
+<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;                    result = (result + this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a>.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#aeef3160a3e0bdc86f499f0f9ad7221fd">Update</a>(deletedRows));</div>
+<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;                    allChangedRows.AddRange(deletedRows);</div>
+<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;                }</div>
+<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;            }</div>
+<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="afd9bc5851d98a4a12ce07dce45912685"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager.UpdateInsertedRows </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d6b/class_proyecto___integrador__3_1_1ds_servicios.html">dsServicios</a>&#160;</td>
+          <td class="paramname"><em>dataSet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt;&#160;</td>
+          <td class="paramname"><em>allAddedRows</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Insert rows in top-down order. </p>
+<p>/summary&gt; </p>
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01123">1123</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;                                                                                                                                           {</div>
+<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;            <span class="keywordtype">int</span> result = 0;</div>
+<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;            <span class="keywordflow">if</span> ((this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a> != null)) {</div>
+<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;                global::System.Data.DataRow[] addedRows = dataSet.Servicios.Select(null, null, global::System.Data.DataViewRowState.Added);</div>
+<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;                <span class="keywordflow">if</span> (((addedRows != null) </div>
+<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;                            &amp;&amp; (0 &lt; addedRows.Length))) {</div>
+<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;                    result = (result + this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a>.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#aeef3160a3e0bdc86f499f0f9ad7221fd">Update</a>(addedRows));</div>
+<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;                    allAddedRows.AddRange(addedRows);</div>
+<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;                }</div>
+<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;            }</div>
+<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a800bbbaf23f900584fa0b95d8c3b171b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager.UpdateUpdatedRows </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d6b/class_proyecto___integrador__3_1_1ds_servicios.html">dsServicios</a>&#160;</td>
+          <td class="paramname"><em>dataSet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt;&#160;</td>
+          <td class="paramname"><em>allChangedRows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt;&#160;</td>
+          <td class="paramname"><em>allAddedRows</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update rows in top-down order. </p>
+<p>/summary&gt; </p>
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01104">1104</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;                                                                                                                                                                                                                           {</div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;            <span class="keywordtype">int</span> result = 0;</div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;            <span class="keywordflow">if</span> ((this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a> != null)) {</div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;                global::System.Data.DataRow[] updatedRows = dataSet.Servicios.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);</div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;                updatedRows = this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a32c8e4d34a932fd8b581e954c7e50376" title="Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first ...">GetRealUpdatedRows</a>(updatedRows, allAddedRows);</div>
+<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;                <span class="keywordflow">if</span> (((updatedRows != null) </div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;                            &amp;&amp; (0 &lt; updatedRows.Length))) {</div>
+<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;                    result = (result + this.<a class="code" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#ac26b431a74f60f4ba1f8cc57cb5e75e2">_serviciosTableAdapter</a>.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#aeef3160a3e0bdc86f499f0f9ad7221fd">Update</a>(updatedRows));</div>
+<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;                    allChangedRows.AddRange(updatedRows);</div>
+<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;                }</div>
+<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;            }</div>
+<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a class="anchor" id="a927989eb7658909cc36dcf21241330f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager._backupDataSetBeforeUpdate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01027">1027</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a244f510259e41c7786eaca3bbe25db9a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">global.System.Data.IDbConnection Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager._connection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01029">1029</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac26b431a74f60f4ba1f8cc57cb5e75e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html">ServiciosTableAdapter</a> Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager._serviciosTableAdapter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01025">1025</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03766183451334c85f8632ffdcd0e0ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a9e1f8ef540de00f735f491b729080797">UpdateOrderOption</a> Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager._updateOrder</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01023">1023</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de propiedades</h2>
+<a class="anchor" id="a746392e04b3bd5203f1e2ed6ab33595c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager.BackupDataSetBeforeUpdate</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01058">1058</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa28c9a2ec84db34bcba3dda82809b04b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">global.System.Data.IDbConnection Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager.Connection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01070">1070</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1da30cb8e53df13e837f76e20f242804"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html">ServiciosTableAdapter</a> Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager.ServiciosTableAdapter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01047">1047</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a247618c47c8308235c39b5cc88165cac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager.TableAdapterInstanceCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01089">1089</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a091630e6863de7670f950252387391a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/dfb/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager.html#a9e1f8ef540de00f735f491b729080797">UpdateOrderOption</a> Proyecto_Integrador_3.dsServiciosTableAdapters.TableAdapterManager.UpdateOrder</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l01033">1033</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li>C:/Users/Yknx4/Documents/Visual Studio 2012/Projects/Proyecto Integrador 3/Proyecto Integrador 3/<a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Miércoles, 4 de Diciembre de 2013 00:27:01 para SmartCards por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

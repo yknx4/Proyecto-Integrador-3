@@ -1,0 +1,548 @@
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager}{\section{Referencia de la Clase Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager}
+\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager}\index{Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager}}
+}
+
+
+\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager}{Table\-Adapter\-Manager} is used to coordinate Table\-Adapters in the dataset to enable Hierarchical Update scenarios /summary$>$  
+
+
+Diagrama de herencias de Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager}
+\end{center}
+\end{figure}
+\subsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer}{Self\-Reference\-Comparer}
+\begin{DoxyCompactList}\small\item\em Used to sort self-\/referenced table's rows /summary$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Tipos públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997}{Update\-Order\-Option} \{ \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997a27b77cb15d3da7ded0250d0001bc6755}{Update\-Order\-Option.\-Insert\-Update\-Delete} = 0, 
+\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997a894fcc001e51f673d3fb5f3096473dd8}{Update\-Order\-Option.\-Update\-Insert\-Delete} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Update Order Option /summary$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_af271d5dc921b30c284b99a8eb130e79c}{Update\-All} (\hyperlink{class_proyecto___integrador__3_1_1ds_unidad}{ds\-Unidad} data\-Set)
+\begin{DoxyCompactList}\small\item\em Update all changes to the dataset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad2def72851e1a067c2b1dd7654edb72a}{Sort\-Self\-Reference\-Rows} (global\-::\-System.\-Data.\-Data\-Row\mbox{[}$\,$\mbox{]} rows, global\-::\-System.\-Data.\-Data\-Relation relation, bool child\-First)
+\item 
+virtual bool \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3c219763f9499809f966ddd0eae2f4d5}{Match\-Table\-Adapter\-Connection} (global\-::\-System.\-Data.\-I\-Db\-Connection input\-Connection)
+\end{DoxyCompactItemize}
+\subsection*{Propiedades}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997}{Update\-Order\-Option} \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a002d41398871750c340bb6bf45a14e16}{Update\-Order}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter}{Unidad\-Table\-Adapter} \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abbc7e2e6a548ab72addf592a365be336}{Unidad\-Table\-Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_aac31a1655c1548db2583fb7edad0e251}{Backup\-Data\-Set\-Before\-Update}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+global\-::\-System.\-Data.\-I\-Db\-Connection \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3afb5118a58b6ca2f74483e39e7439e4}{Connection}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_aebaf61836a617aef6bf3a1896a6e632f}{Table\-Adapter\-Instance\-Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a1762fa6691cf10d2bd733b9b28d6cb78}{Update\-Updated\-Rows} (\hyperlink{class_proyecto___integrador__3_1_1ds_unidad}{ds\-Unidad} data\-Set, global\-::\-System.\-Collections.\-Generic.\-List$<$ global\-::\-System.\-Data.\-Data\-Row $>$ all\-Changed\-Rows, global\-::\-System.\-Collections.\-Generic.\-List$<$ global\-::\-System.\-Data.\-Data\-Row $>$ all\-Added\-Rows)
+\begin{DoxyCompactList}\small\item\em Update rows in top-\/down order. \end{DoxyCompactList}\item 
+int \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_aa6daba3bfb296d904aef4be4e00b651d}{Update\-Inserted\-Rows} (\hyperlink{class_proyecto___integrador__3_1_1ds_unidad}{ds\-Unidad} data\-Set, global\-::\-System.\-Collections.\-Generic.\-List$<$ global\-::\-System.\-Data.\-Data\-Row $>$ all\-Added\-Rows)
+\begin{DoxyCompactList}\small\item\em Insert rows in top-\/down order. \end{DoxyCompactList}\item 
+int \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3cbe0d89e42e22b2c236f8c3dc69432f}{Update\-Deleted\-Rows} (\hyperlink{class_proyecto___integrador__3_1_1ds_unidad}{ds\-Unidad} data\-Set, global\-::\-System.\-Collections.\-Generic.\-List$<$ global\-::\-System.\-Data.\-Data\-Row $>$ all\-Changed\-Rows)
+\begin{DoxyCompactList}\small\item\em Delete rows in bottom-\/up order. \end{DoxyCompactList}\item 
+global\-::\-System.\-Data.\-Data\-Row\mbox{[}$\,$\mbox{]} \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a886b0eff24cf3bb231a4fcffef18db71}{Get\-Real\-Updated\-Rows} (global\-::\-System.\-Data.\-Data\-Row\mbox{[}$\,$\mbox{]} updated\-Rows, global\-::\-System.\-Collections.\-Generic.\-List$<$ global\-::\-System.\-Data.\-Data\-Row $>$ all\-Added\-Rows)
+\begin{DoxyCompactList}\small\item\em Remove inserted rows that become updated rows after calling Table\-Adapter.\-Update(inserted rows) first /summary$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997}{Update\-Order\-Option} \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_af56e208c6589dbe5e87571536258d271}{\-\_\-update\-Order}
+\item 
+\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter}{Unidad\-Table\-Adapter} \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\-\_\-unidad\-Table\-Adapter}
+\item 
+bool \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abf5b5140a09c67f9368870e4c5161fa2}{\-\_\-backup\-Data\-Set\-Before\-Update}
+\item 
+global\-::\-System.\-Data.\-I\-Db\-Connection \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a4568ec533465a03584b39842ada40447}{\-\_\-connection}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager}{Table\-Adapter\-Manager} is used to coordinate Table\-Adapters in the dataset to enable Hierarchical Update scenarios /summary$>$ 
+
+Definición en la línea 953 del archivo ds\-Unidad.\-Designer.\-cs.
+
+
+
+\subsection{Documentación de las enumeraciones miembro de la clase}
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Update\-Order\-Option@{Update\-Order\-Option}}
+\index{Update\-Order\-Option@{Update\-Order\-Option}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{Update\-Order\-Option}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Update\-Order\-Option}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997}
+
+
+Update Order Option /summary$>$ 
+
+\begin{Desc}
+\item[Valores de enumeraciones]\par
+\begin{description}
+\index{Insert\-Update\-Delete@{Insert\-Update\-Delete}!Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Insert\-Update\-Delete@{Insert\-Update\-Delete}}\item[{\em 
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997a27b77cb15d3da7ded0250d0001bc6755}{Insert\-Update\-Delete}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997a27b77cb15d3da7ded0250d0001bc6755}
+}]\index{Update\-Insert\-Delete@{Update\-Insert\-Delete}!Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Update\-Insert\-Delete@{Update\-Insert\-Delete}}\item[{\em 
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997a894fcc001e51f673d3fb5f3096473dd8}{Update\-Insert\-Delete}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997a894fcc001e51f673d3fb5f3096473dd8}
+}]\end{description}
+\end{Desc}
+
+
+Definición en la línea 1268 del archivo ds\-Unidad.\-Designer.\-cs.
+
+
+\begin{DoxyCode}
+1268                                       \{
+1269             
+1270             \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997a27b77cb15d3da7ded0250d0001bc6755}{InsertUpdateDelete} = 0,
+1271             
+1272             \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997a894fcc001e51f673d3fb5f3096473dd8}{UpdateInsertDelete} = 1,
+1273         \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a886b0eff24cf3bb231a4fcffef18db71}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Get\-Real\-Updated\-Rows@{Get\-Real\-Updated\-Rows}}
+\index{Get\-Real\-Updated\-Rows@{Get\-Real\-Updated\-Rows}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{Get\-Real\-Updated\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}global.\-System.\-Data.\-Data\-Row \mbox{[}$\,$\mbox{]} Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Get\-Real\-Updated\-Rows (
+\begin{DoxyParamCaption}
+\item[{global\-::\-System.\-Data.\-Data\-Row\mbox{[}$\,$\mbox{]}}]{updated\-Rows, }
+\item[{global\-::\-System.\-Collections.\-Generic.\-List$<$ global\-::\-System.\-Data.\-Data\-Row $>$}]{all\-Added\-Rows}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a886b0eff24cf3bb231a4fcffef18db71}
+
+
+Remove inserted rows that become updated rows after calling Table\-Adapter.\-Update(inserted rows) first /summary$>$ 
+
+
+
+Definición en la línea 1091 del archivo ds\-Unidad.\-Designer.\-cs.
+
+
+\begin{DoxyCode}
+1091                                                                                                            
+                                                                                  \{
+1092             \textcolor{keywordflow}{if} (((updatedRows == null) 
+1093                         || (updatedRows.Length < 1))) \{
+1094                 \textcolor{keywordflow}{return} updatedRows;
+1095             \}
+1096             \textcolor{keywordflow}{if} (((allAddedRows == null) 
+1097                         || (allAddedRows.Count < 1))) \{
+1098                 \textcolor{keywordflow}{return} updatedRows;
+1099             \}
+1100             global::System.Collections.Generic.List<global::System.Data.DataRow> realUpdatedRows = \textcolor{keyword}{new} 
+      global::System.Collections.Generic.List<global::System.Data.DataRow>();
+1101             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; (i < updatedRows.Length); i = (i + 1)) \{
+1102                 global::System.Data.DataRow row = updatedRows[i];
+1103                 \textcolor{keywordflow}{if} ((allAddedRows.Contains(row) == \textcolor{keyword}{false})) \{
+1104                     realUpdatedRows.Add(row);
+1105                 \}
+1106             \}
+1107             \textcolor{keywordflow}{return} realUpdatedRows.ToArray();
+1108         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3c219763f9499809f966ddd0eae2f4d5}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Match\-Table\-Adapter\-Connection@{Match\-Table\-Adapter\-Connection}}
+\index{Match\-Table\-Adapter\-Connection@{Match\-Table\-Adapter\-Connection}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{Match\-Table\-Adapter\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Match\-Table\-Adapter\-Connection (
+\begin{DoxyParamCaption}
+\item[{global\-::\-System.\-Data.\-I\-Db\-Connection}]{input\-Connection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3c219763f9499809f966ddd0eae2f4d5}
+
+
+Definición en la línea 1250 del archivo ds\-Unidad.\-Designer.\-cs.
+
+
+\begin{DoxyCode}
+1250                                                                                                            
+       \{
+1251             \textcolor{keywordflow}{if} ((this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a4568ec533465a03584b39842ada40447}{\_connection} != null)) \{
+1252                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+1253             \}
+1254             \textcolor{keywordflow}{if} (((this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3afb5118a58b6ca2f74483e39e7439e4}{Connection} == null) 
+1255                         || (inputConnection == null))) \{
+1256                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+1257             \}
+1258             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string}.Equals(this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3afb5118a58b6ca2f74483e39e7439e4}{Connection}.ConnectionString, inputConnection.ConnectionString,
+       global::System.StringComparison.Ordinal)) \{
+1259                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+1260             \}
+1261             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+1262         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad2def72851e1a067c2b1dd7654edb72a}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Sort\-Self\-Reference\-Rows@{Sort\-Self\-Reference\-Rows}}
+\index{Sort\-Self\-Reference\-Rows@{Sort\-Self\-Reference\-Rows}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{Sort\-Self\-Reference\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Sort\-Self\-Reference\-Rows (
+\begin{DoxyParamCaption}
+\item[{global\-::\-System.\-Data.\-Data\-Row\mbox{[}$\,$\mbox{]}}]{rows, }
+\item[{global\-::\-System.\-Data.\-Data\-Relation}]{relation, }
+\item[{bool}]{child\-First}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad2def72851e1a067c2b1dd7654edb72a}
+
+
+Definición en la línea 1244 del archivo ds\-Unidad.\-Designer.\-cs.
+
+
+\begin{DoxyCode}
+1244                                                                                                            
+                                            \{
+1245             global::System.Array.Sort<global::System.Data.DataRow>(rows, \textcolor{keyword}{new} SelfReferenceComparer(relation
+      , childFirst));
+1246         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_af271d5dc921b30c284b99a8eb130e79c}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Update\-All@{Update\-All}}
+\index{Update\-All@{Update\-All}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{Update\-All}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Update\-All (
+\begin{DoxyParamCaption}
+\item[{{\bf ds\-Unidad}}]{data\-Set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_af271d5dc921b30c284b99a8eb130e79c}
+
+
+Update all changes to the dataset. 
+
+/summary$>$ 
+
+Definición en la línea 1115 del archivo ds\-Unidad.\-Designer.\-cs.
+
+
+\begin{DoxyCode}
+1115                                                        \{
+1116             \textcolor{keywordflow}{if} ((dataSet == null)) \{
+1117                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} global::System.ArgumentNullException(\textcolor{stringliteral}{"dataSet"});
+1118             \}
+1119             \textcolor{keywordflow}{if} ((dataSet.HasChanges() == \textcolor{keyword}{false})) \{
+1120                 \textcolor{keywordflow}{return} 0;
+1121             \}
+1122             \textcolor{keywordflow}{if} (((this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter} != null) 
+1123                         && (this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3c219763f9499809f966ddd0eae2f4d5}{MatchTableAdapterConnection}(this.
+      \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter}.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter_a13a9c13fd0ce4e17d7f35891158864db}{Connection}) == \textcolor{keyword}{false}))) \{
+1124                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} global::System.ArgumentException(\textcolor{stringliteral}{"All TableAdapters managed by a
+       TableAdapterManager must use the same connection s"} +
+1125                         \textcolor{stringliteral}{"tring."});
+1126             \}
+1127             global::System.Data.IDbConnection workConnection = this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3afb5118a58b6ca2f74483e39e7439e4}{Connection};
+1128             \textcolor{keywordflow}{if} ((workConnection == null)) \{
+1129                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} global::System.ApplicationException(\textcolor{stringliteral}{"TableAdapterManager contains no connection
+       information. Set each TableAdapterMana"} +
+1130                         \textcolor{stringliteral}{"ger TableAdapter property to a valid TableAdapter instance."});
+1131             \}
+1132             \textcolor{keywordtype}{bool} workConnOpened = \textcolor{keyword}{false};
+1133             \textcolor{keywordflow}{if} (((workConnection.State & global::System.Data.ConnectionState.Broken) 
+1134                         == global::System.Data.ConnectionState.Broken)) \{
+1135                 workConnection.Close();
+1136             \}
+1137             \textcolor{keywordflow}{if} ((workConnection.State == global::System.Data.ConnectionState.Closed)) \{
+1138                 workConnection.Open();
+1139                 workConnOpened = \textcolor{keyword}{true};
+1140             \}
+1141             global::System.Data.IDbTransaction workTransaction = workConnection.BeginTransaction();
+1142             \textcolor{keywordflow}{if} ((workTransaction == null)) \{
+1143                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} global::System.ApplicationException(\textcolor{stringliteral}{"The transaction cannot begin. The current
+       data connection does not support transa"} +
+1144                         \textcolor{stringliteral}{"ctions or the current state is not allowing the transaction to begin."});
+1145             \}
+1146             global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows = \textcolor{keyword}{new} 
+      global::System.Collections.Generic.List<global::System.Data.DataRow>();
+1147             global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows = \textcolor{keyword}{new} 
+      global::System.Collections.Generic.List<global::System.Data.DataRow>();
+1148             global::System.Collections.Generic.List<global::System.Data.Common.DataAdapter> 
+      adaptersWithAcceptChangesDuringUpdate = \textcolor{keyword}{new} global::System.Collections.Generic.List<global::System.Data.Common.DataAdapter>
+      ();
+1149             global::System.Collections.Generic.Dictionary<object, global::System.Data.IDbConnection> 
+      revertConnections = \textcolor{keyword}{new} global::System.Collections.Generic.Dictionary<object, global::System.Data.IDbConnection>()
+      ;
+1150             \textcolor{keywordtype}{int} result = 0;
+1151             global::System.Data.DataSet backupDataSet = null;
+1152             \textcolor{keywordflow}{if} (this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_aac31a1655c1548db2583fb7edad0e251}{BackupDataSetBeforeUpdate}) \{
+1153                 backupDataSet = \textcolor{keyword}{new} global::System.Data.DataSet();
+1154                 backupDataSet.Merge(dataSet);
+1155             \}
+1156             \textcolor{keywordflow}{try} \{
+1157                 \textcolor{comment}{// ---- Prepare for update -----------}
+1158                 \textcolor{comment}{//}
+1159                 \textcolor{keywordflow}{if} ((this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter} != null)) \{
+1160                     revertConnections.Add(this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter}, this.
+      \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter}.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter_a13a9c13fd0ce4e17d7f35891158864db}{Connection});
+1161                     this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter}.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter_a13a9c13fd0ce4e17d7f35891158864db}{Connection} = ((global::System.
+      Data.SqlServerCe.SqlCeConnection)(workConnection));
+1162                     this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter}.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter_a4bb3adb0822427867564cf7559b226cf}{Transaction} = ((global::System.
+      Data.SqlServerCe.SqlCeTransaction)(workTransaction));
+1163                     \textcolor{keywordflow}{if} (this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter}.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter_a85041318aa5a0582ef54f4af0d332411}{Adapter}.
+      AcceptChangesDuringUpdate) \{
+1164                         this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter}.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter_a85041318aa5a0582ef54f4af0d332411}{Adapter}.
+      AcceptChangesDuringUpdate = \textcolor{keyword}{false};
+1165                         adaptersWithAcceptChangesDuringUpdate.Add(this.
+      \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter}.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter_a85041318aa5a0582ef54f4af0d332411}{Adapter});
+1166                     \}
+1167                 \}
+1168                 \textcolor{comment}{// }
+1169                 \textcolor{comment}{//---- Perform updates -----------}
+1170                 \textcolor{comment}{//}
+1171                 \textcolor{keywordflow}{if} ((this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a002d41398871750c340bb6bf45a14e16}{UpdateOrder} == \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abc7bc304d216e1258eb95cc9c8b98997}{UpdateOrderOption}.UpdateInsertDelete))
+       \{
+1172                     result = (result + this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a1762fa6691cf10d2bd733b9b28d6cb78}{UpdateUpdatedRows}(dataSet, allChangedRows, 
+      allAddedRows));
+1173                     result = (result + this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_aa6daba3bfb296d904aef4be4e00b651d}{UpdateInsertedRows}(dataSet, allAddedRows));
+1174                 \}
+1175                 \textcolor{keywordflow}{else} \{
+1176                     result = (result + this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_aa6daba3bfb296d904aef4be4e00b651d}{UpdateInsertedRows}(dataSet, allAddedRows));
+1177                     result = (result + this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a1762fa6691cf10d2bd733b9b28d6cb78}{UpdateUpdatedRows}(dataSet, allChangedRows, 
+      allAddedRows));
+1178                 \}
+1179                 result = (result + this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3cbe0d89e42e22b2c236f8c3dc69432f}{UpdateDeletedRows}(dataSet, allChangedRows));
+1180                 \textcolor{comment}{// }
+1181                 \textcolor{comment}{//---- Commit updates -----------}
+1182                 \textcolor{comment}{//}
+1183                 workTransaction.Commit();
+1184                 \textcolor{keywordflow}{if} ((0 < allAddedRows.Count)) \{
+1185                     global::System.Data.DataRow[] rows = \textcolor{keyword}{new} System.Data.DataRow[allAddedRows.Count];
+1186                     allAddedRows.CopyTo(rows);
+1187                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; (i < rows.Length); i = (i + 1)) \{
+1188                         global::System.Data.DataRow row = rows[i];
+1189                         row.AcceptChanges();
+1190                     \}
+1191                 \}
+1192                 \textcolor{keywordflow}{if} ((0 < allChangedRows.Count)) \{
+1193                     global::System.Data.DataRow[] rows = \textcolor{keyword}{new} System.Data.DataRow[allChangedRows.Count];
+1194                     allChangedRows.CopyTo(rows);
+1195                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; (i < rows.Length); i = (i + 1)) \{
+1196                         global::System.Data.DataRow row = rows[i];
+1197                         row.AcceptChanges();
+1198                     \}
+1199                 \}
+1200             \}
+1201             \textcolor{keywordflow}{catch} (global::System.Exception ex) \{
+1202                 workTransaction.Rollback();
+1203                 \textcolor{comment}{// ---- Restore the dataset -----------}
+1204                 \textcolor{keywordflow}{if} (this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_aac31a1655c1548db2583fb7edad0e251}{BackupDataSetBeforeUpdate}) \{
+1205                     global::System.Diagnostics.Debug.Assert((backupDataSet != null));
+1206                     dataSet.Clear();
+1207                     dataSet.Merge(backupDataSet);
+1208                 \}
+1209                 \textcolor{keywordflow}{else} \{
+1210                     \textcolor{keywordflow}{if} ((0 < allAddedRows.Count)) \{
+1211                         global::System.Data.DataRow[] rows = \textcolor{keyword}{new} System.Data.DataRow[allAddedRows.Count];
+1212                         allAddedRows.CopyTo(rows);
+1213                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; (i < rows.Length); i = (i + 1)) \{
+1214                             global::System.Data.DataRow row = rows[i];
+1215                             row.AcceptChanges();
+1216                             row.SetAdded();
+1217                         \}
+1218                     \}
+1219                 \}
+1220                 \textcolor{keywordflow}{throw} ex;
+1221             \}
+1222             \textcolor{keywordflow}{finally} \{
+1223                 \textcolor{keywordflow}{if} (workConnOpened) \{
+1224                     workConnection.Close();
+1225                 \}
+1226                 \textcolor{keywordflow}{if} ((this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter} != null)) \{
+1227                     this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter}.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter_a13a9c13fd0ce4e17d7f35891158864db}{Connection} = ((global::System.
+      Data.SqlServerCe.SqlCeConnection)(revertConnections[this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter}]));
+1228                     this.\_unidadTableAdapter.Transaction = null;
+1229                 \}
+1230                 \textcolor{keywordflow}{if} ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) \{
+1231                     global::System.Data.Common.DataAdapter[] adapters = \textcolor{keyword}{new} System.Data.Common.DataAdapter[
+      adaptersWithAcceptChangesDuringUpdate.Count];
+1232                     adaptersWithAcceptChangesDuringUpdate.CopyTo(adapters);
+1233                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; (i < adapters.Length); i = (i + 1)) \{
+1234                         global::System.Data.Common.DataAdapter adapter = adapters[i];
+1235                         adapter.AcceptChangesDuringUpdate = \textcolor{keyword}{true};
+1236                     \}
+1237                 \}
+1238             \}
+1239             \textcolor{keywordflow}{return} result;
+1240         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3cbe0d89e42e22b2c236f8c3dc69432f}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Update\-Deleted\-Rows@{Update\-Deleted\-Rows}}
+\index{Update\-Deleted\-Rows@{Update\-Deleted\-Rows}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{Update\-Deleted\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}int Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Update\-Deleted\-Rows (
+\begin{DoxyParamCaption}
+\item[{{\bf ds\-Unidad}}]{data\-Set, }
+\item[{global\-::\-System.\-Collections.\-Generic.\-List$<$ global\-::\-System.\-Data.\-Data\-Row $>$}]{all\-Changed\-Rows}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3cbe0d89e42e22b2c236f8c3dc69432f}
+
+
+Delete rows in bottom-\/up order. 
+
+/summary$>$ 
+
+Definición en la línea 1073 del archivo ds\-Unidad.\-Designer.\-cs.
+
+
+\begin{DoxyCode}
+1073                                                                                                            
+                                    \{
+1074             \textcolor{keywordtype}{int} result = 0;
+1075             \textcolor{keywordflow}{if} ((this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter} != null)) \{
+1076                 global::System.Data.DataRow[] deletedRows = dataSet.Unidad.Select(null, null, 
+      global::System.Data.DataViewRowState.Deleted);
+1077                 \textcolor{keywordflow}{if} (((deletedRows != null) 
+1078                             && (0 < deletedRows.Length))) \{
+1079                     result = (result + this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter}.
+      \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter_ab66b8ee5e1153ac309331e6234ba7fad}{Update}(deletedRows));
+1080                     allChangedRows.AddRange(deletedRows);
+1081                 \}
+1082             \}
+1083             \textcolor{keywordflow}{return} result;
+1084         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_aa6daba3bfb296d904aef4be4e00b651d}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Update\-Inserted\-Rows@{Update\-Inserted\-Rows}}
+\index{Update\-Inserted\-Rows@{Update\-Inserted\-Rows}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{Update\-Inserted\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}int Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Update\-Inserted\-Rows (
+\begin{DoxyParamCaption}
+\item[{{\bf ds\-Unidad}}]{data\-Set, }
+\item[{global\-::\-System.\-Collections.\-Generic.\-List$<$ global\-::\-System.\-Data.\-Data\-Row $>$}]{all\-Added\-Rows}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_aa6daba3bfb296d904aef4be4e00b651d}
+
+
+Insert rows in top-\/down order. 
+
+/summary$>$ 
+
+Definición en la línea 1055 del archivo ds\-Unidad.\-Designer.\-cs.
+
+
+\begin{DoxyCode}
+1055                                                                                                            
+                                   \{
+1056             \textcolor{keywordtype}{int} result = 0;
+1057             \textcolor{keywordflow}{if} ((this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter} != null)) \{
+1058                 global::System.Data.DataRow[] addedRows = dataSet.Unidad.Select(null, null, global::System.
+      Data.DataViewRowState.Added);
+1059                 \textcolor{keywordflow}{if} (((addedRows != null) 
+1060                             && (0 < addedRows.Length))) \{
+1061                     result = (result + this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter}.
+      \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter_ab66b8ee5e1153ac309331e6234ba7fad}{Update}(addedRows));
+1062                     allAddedRows.AddRange(addedRows);
+1063                 \}
+1064             \}
+1065             \textcolor{keywordflow}{return} result;
+1066         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a1762fa6691cf10d2bd733b9b28d6cb78}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Update\-Updated\-Rows@{Update\-Updated\-Rows}}
+\index{Update\-Updated\-Rows@{Update\-Updated\-Rows}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{Update\-Updated\-Rows}]{\setlength{\rightskip}{0pt plus 5cm}int Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Update\-Updated\-Rows (
+\begin{DoxyParamCaption}
+\item[{{\bf ds\-Unidad}}]{data\-Set, }
+\item[{global\-::\-System.\-Collections.\-Generic.\-List$<$ global\-::\-System.\-Data.\-Data\-Row $>$}]{all\-Changed\-Rows, }
+\item[{global\-::\-System.\-Collections.\-Generic.\-List$<$ global\-::\-System.\-Data.\-Data\-Row $>$}]{all\-Added\-Rows}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a1762fa6691cf10d2bd733b9b28d6cb78}
+
+
+Update rows in top-\/down order. 
+
+/summary$>$ 
+
+Definición en la línea 1036 del archivo ds\-Unidad.\-Designer.\-cs.
+
+
+\begin{DoxyCode}
+1036                                                                                                            
+                                                                                                                  
+       \{
+1037             \textcolor{keywordtype}{int} result = 0;
+1038             \textcolor{keywordflow}{if} ((this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter} != null)) \{
+1039                 global::System.Data.DataRow[] updatedRows = dataSet.Unidad.Select(null, null, 
+      global::System.Data.DataViewRowState.ModifiedCurrent);
+1040                 updatedRows = this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a886b0eff24cf3bb231a4fcffef18db71}{GetRealUpdatedRows}(updatedRows, allAddedRows);
+1041                 \textcolor{keywordflow}{if} (((updatedRows != null) 
+1042                             && (0 < updatedRows.Length))) \{
+1043                     result = (result + this.\hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\_unidadTableAdapter}.
+      \hyperlink{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter_ab66b8ee5e1153ac309331e6234ba7fad}{Update}(updatedRows));
+1044                     allChangedRows.AddRange(updatedRows);
+1045                 \}
+1046             \}
+1047             \textcolor{keywordflow}{return} result;
+1048         \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abf5b5140a09c67f9368870e4c5161fa2}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!\-\_\-backup\-Data\-Set\-Before\-Update@{\-\_\-backup\-Data\-Set\-Before\-Update}}
+\index{\-\_\-backup\-Data\-Set\-Before\-Update@{\-\_\-backup\-Data\-Set\-Before\-Update}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{\-\_\-backup\-Data\-Set\-Before\-Update}]{\setlength{\rightskip}{0pt plus 5cm}bool Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-\_\-backup\-Data\-Set\-Before\-Update\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abf5b5140a09c67f9368870e4c5161fa2}
+
+
+Definición en la línea 959 del archivo ds\-Unidad.\-Designer.\-cs.
+
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a4568ec533465a03584b39842ada40447}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!\-\_\-connection@{\-\_\-connection}}
+\index{\-\_\-connection@{\-\_\-connection}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}global.\-System.\-Data.\-I\-Db\-Connection Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-\_\-connection\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a4568ec533465a03584b39842ada40447}
+
+
+Definición en la línea 961 del archivo ds\-Unidad.\-Designer.\-cs.
+
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!\-\_\-unidad\-Table\-Adapter@{\-\_\-unidad\-Table\-Adapter}}
+\index{\-\_\-unidad\-Table\-Adapter@{\-\_\-unidad\-Table\-Adapter}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{\-\_\-unidad\-Table\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unidad\-Table\-Adapter} Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-\_\-unidad\-Table\-Adapter\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_ad273398026bf55cc8cff4c34547f7564}
+
+
+Definición en la línea 957 del archivo ds\-Unidad.\-Designer.\-cs.
+
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_af56e208c6589dbe5e87571536258d271}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!\-\_\-update\-Order@{\-\_\-update\-Order}}
+\index{\-\_\-update\-Order@{\-\_\-update\-Order}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{\-\_\-update\-Order}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Update\-Order\-Option} Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-\_\-update\-Order\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_af56e208c6589dbe5e87571536258d271}
+
+
+Definición en la línea 955 del archivo ds\-Unidad.\-Designer.\-cs.
+
+
+
+\subsection{Documentación de propiedades}
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_aac31a1655c1548db2583fb7edad0e251}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Backup\-Data\-Set\-Before\-Update@{Backup\-Data\-Set\-Before\-Update}}
+\index{Backup\-Data\-Set\-Before\-Update@{Backup\-Data\-Set\-Before\-Update}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{Backup\-Data\-Set\-Before\-Update}]{\setlength{\rightskip}{0pt plus 5cm}bool Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Backup\-Data\-Set\-Before\-Update\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_aac31a1655c1548db2583fb7edad0e251}
+
+
+Definición en la línea 990 del archivo ds\-Unidad.\-Designer.\-cs.
+
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3afb5118a58b6ca2f74483e39e7439e4}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Connection@{Connection}}
+\index{Connection@{Connection}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{Connection}]{\setlength{\rightskip}{0pt plus 5cm}global.\-System.\-Data.\-I\-Db\-Connection Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Connection\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a3afb5118a58b6ca2f74483e39e7439e4}
+
+
+Definición en la línea 1002 del archivo ds\-Unidad.\-Designer.\-cs.
+
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_aebaf61836a617aef6bf3a1896a6e632f}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Table\-Adapter\-Instance\-Count@{Table\-Adapter\-Instance\-Count}}
+\index{Table\-Adapter\-Instance\-Count@{Table\-Adapter\-Instance\-Count}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{Table\-Adapter\-Instance\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Table\-Adapter\-Instance\-Count\hspace{0.3cm}{\ttfamily [get]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_aebaf61836a617aef6bf3a1896a6e632f}
+
+
+Definición en la línea 1021 del archivo ds\-Unidad.\-Designer.\-cs.
+
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abbc7e2e6a548ab72addf592a365be336}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Unidad\-Table\-Adapter@{Unidad\-Table\-Adapter}}
+\index{Unidad\-Table\-Adapter@{Unidad\-Table\-Adapter}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{Unidad\-Table\-Adapter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unidad\-Table\-Adapter} Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Unidad\-Table\-Adapter\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_abbc7e2e6a548ab72addf592a365be336}
+
+
+Definición en la línea 979 del archivo ds\-Unidad.\-Designer.\-cs.
+
+\hypertarget{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a002d41398871750c340bb6bf45a14e16}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}!Update\-Order@{Update\-Order}}
+\index{Update\-Order@{Update\-Order}!Proyecto_Integrador_3::dsUnidadTableAdapters::TableAdapterManager@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Unidad\-Table\-Adapters\-::\-Table\-Adapter\-Manager}}
+\subsubsection[{Update\-Order}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Update\-Order\-Option} Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Unidad\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Update\-Order\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}}\label{class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_table_adapter_manager_a002d41398871750c340bb6bf45a14e16}
+
+
+Definición en la línea 965 del archivo ds\-Unidad.\-Designer.\-cs.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Yknx4/\-Documents/\-Visual Studio 2012/\-Projects/\-Proyecto Integrador 3/\-Proyecto Integrador 3/\hyperlink{ds_unidad_8_designer_8cs}{ds\-Unidad.\-Designer.\-cs}\end{DoxyCompactItemize}

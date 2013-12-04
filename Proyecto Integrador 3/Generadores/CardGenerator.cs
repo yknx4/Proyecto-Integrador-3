@@ -5,6 +5,10 @@ namespace Proyecto_Integrador_3.Generadores
 {
     public static class CardGenerator
     {
+        /// <summary>
+        /// Regresa un nuevo número de tarjeta.
+        /// </summary>
+        /// <returns>Un número de tarjeta de 12 dígitos</returns>
         static public long Next()
         {
             Random mRandom = new Random();

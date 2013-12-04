@@ -73,7 +73,7 @@
                 <DatePicker x:Name="dtpFechaReporteFinal" IsEnabled="False"></DatePicker>
                 <CheckBox x:Name="chkRango" Click="clickCheckboxRangoFecha"></CheckBox>
                 <Button x:Name="btnMostrarReporte" Click="btnMostrarReporte_Click" IsEnabled="False">Generar</Button>
-                <Button x:Name="btnMostrarEstadisticas" Click="btnMostrarEstadistica_Click" IsEnabled="False" HorizontalAlignment="Right">Estadísticas por Edad</Button>
+                <Button x:Name="btnMostrarEstadisticas" Click="btnMostrarEstadistica_Click" IsEnabled="False" HorizontalAlignment="Right">Estadísticas de Número de Servicios</Button>
             </StackPanel>
             <StatusBar DockPanel.Dock="Bottom">
                 <StatusBarItem>

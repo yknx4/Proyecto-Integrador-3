@@ -116,7 +116,6 @@
     <Compile Include="Generadores\CardGenerator.cs" />
     <Compile Include="Generadores\RandChar.cs" />
     <Compile Include="Helpers.cs" />
-    <Compile Include="Log.cs" />
     <Compile Include="MainWindow.Properties.xaml.cs" />
     <Compile Include="Manejadores\ServicioDBManager.cs" />
     <Compile Include="Manejadores\UnidadDBManager.cs" />

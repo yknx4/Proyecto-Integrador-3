@@ -5,9 +5,25 @@ namespace Proyecto_Integrador_3
 {
     public static class Tipos
     {
+        /// <summary>
+        /// Lista de Tipos de Usuario
+        /// </summary>
         public static readonly Dictionary<int, string> Usuarios;
+        /// <summary>
+        /// Lista de Meses
+        /// </summary>
         public static readonly Dictionary<int, string> Meses;
-        public static readonly Dictionary<int, int> Precio;        public static readonly List<string> Sangre;
+        /// <summary>
+        /// Precios segun tipo de usuario
+        /// </summary>
+        public static readonly Dictionary<int, int> Precio;
+        /// <summary>
+        /// Tipos de sangre
+        /// </summary>
+        public static readonly List<string> Sangre;
+        /// <summary>
+        /// Municipios
+        /// </summary>
         public static readonly List<string> Municipios;
 
         static Tipos()
@@ -23,7 +39,7 @@ namespace Proyecto_Integrador_3
             Precio[3] = 3;
             Precio[4] = 3;
             String[] tipos = { "O-", "O+", "A−", "A+", "B−", "B+", "AB−", "AB+" };
-            String[] municipios = { "Armería", "Colima", "Comala", "Coquimatlán", "Cuahutemoc", "Ixtlahuacán", "Manzanillo", "Minatitlán", "Tecomán", "Villa de Alvarez" };
+            String[] municipios = { "Armería", "Colima", "Comala", "Coquimatlán", "Cuauhtémoc", "Ixtlahuacán", "Manzanillo", "Minatitlán", "Tecomán", "Villa de Álvarez" };
             Sangre = new List<string>(tipos);
             Sangre.Sort();
             Municipios = new List<string>(municipios);

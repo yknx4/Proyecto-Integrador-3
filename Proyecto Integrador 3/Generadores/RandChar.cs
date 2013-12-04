@@ -6,6 +6,10 @@ namespace Proyecto_Integrador_3.Generadores
     {
         private static Random mRandom = new Random();
 
+        /// <summary>
+        /// Devuelve un caracter al azar.
+        /// </summary>
+        /// <returns>Caracter</returns>
         static public char Next()
         {
             int compRand = mRandom.Next(64, 91);

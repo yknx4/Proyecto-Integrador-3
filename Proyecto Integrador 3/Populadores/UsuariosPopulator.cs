@@ -8,6 +8,9 @@ namespace Proyecto_Integrador_3
 {
     partial class DBManagers
     {
+        /// <summary>
+        /// Llena las listas de Usuarios
+        /// </summary>
         public class UsuariosPopulator
         {
             private List<Usuario> _usuarios = new List<Usuario>();

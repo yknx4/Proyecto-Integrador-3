@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['relations',['Relations',['../da/d6b/class_proyecto___integrador__3_1_1ds_servicios.html#a4a938f593d4405efc7c790a3b3a5b9d7',1,'Proyecto_Integrador_3.dsServicios.Relations()'],['../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a4341745873b49fbaa39cd3562161c504',1,'Proyecto_Integrador_3.dsUnidad.Relations()'],['../d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#ac1a722fbe5919c3d98ef3cc923978cec',1,'Proyecto_Integrador_3.dsUsuarios.Relations()']]],
+  ['resourcemanager',['ResourceManager',['../dd/db4/class_proyecto___integrador__3_1_1_properties_1_1_resources.html#a1b372445ca4c7c8e887fec68ab63ac40',1,'Proyecto_Integrador_3::Properties::Resources']]],
+  ['row',['Row',['../df/d11/class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_row_change_event.html#a512b019ea6afe14ff0fab96bdae1b003',1,'Proyecto_Integrador_3.dsServicios.ServiciosRowChangeEvent.Row()'],['../d9/d2c/class_proyecto___integrador__3_1_1ds_unidad_1_1_unidad_row_change_event.html#a0eb95b09cacaa2e7b7d252f9b999294e',1,'Proyecto_Integrador_3.dsUnidad.UnidadRowChangeEvent.Row()'],['../d0/daf/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_row_change_event.html#a826214dc22ebf1a596d46c1e6f19848c',1,'Proyecto_Integrador_3.dsUsuarios.UsuariosRowChangeEvent.Row()']]]
+];

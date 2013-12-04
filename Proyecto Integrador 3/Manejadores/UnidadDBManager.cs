@@ -10,7 +10,9 @@ namespace Proyecto_Integrador_3
     {
         protected dsUnidad mdsUnidades = new dsUnidad();
         protected UnidadTableAdapter mUnidadlesTableAdapter = new UnidadTableAdapter();
-
+        /// <summary>
+        /// Maneja los accesos a la base de datos de las Unidades
+        /// </summary>
         public class UnidadDBManager : DBManager<Unidad>
         {
             public UnidadDBManager(DBManagers sender)

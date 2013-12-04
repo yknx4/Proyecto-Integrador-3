@@ -1,0 +1,58 @@
+\hypertarget{class_proyecto___integrador__3_1_1_generadores_1_1_card_generator}{\section{Referencia de la Clase Proyecto\-\_\-\-Integrador\-\_\-3.\-Generadores.\-Card\-Generator}
+\label{class_proyecto___integrador__3_1_1_generadores_1_1_card_generator}\index{Proyecto\-\_\-\-Integrador\-\_\-3.\-Generadores.\-Card\-Generator@{Proyecto\-\_\-\-Integrador\-\_\-3.\-Generadores.\-Card\-Generator}}
+}
+\subsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static long \hyperlink{class_proyecto___integrador__3_1_1_generadores_1_1_card_generator_addf75ee3159eeee5f4ac4d6210652abd}{Next} ()
+\begin{DoxyCompactList}\small\item\em Regresa un nuevo número de tarjeta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+
+
+Definición en la línea 6 del archivo Card\-Generator.\-cs.
+
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_proyecto___integrador__3_1_1_generadores_1_1_card_generator_addf75ee3159eeee5f4ac4d6210652abd}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Generadores\-::\-Card\-Generator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Generadores\-::\-Card\-Generator}!Next@{Next}}
+\index{Next@{Next}!Proyecto_Integrador_3::Generadores::CardGenerator@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Generadores\-::\-Card\-Generator}}
+\subsubsection[{Next}]{\setlength{\rightskip}{0pt plus 5cm}static long Proyecto\-\_\-\-Integrador\-\_\-3.\-Generadores.\-Card\-Generator.\-Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_proyecto___integrador__3_1_1_generadores_1_1_card_generator_addf75ee3159eeee5f4ac4d6210652abd}
+
+
+Regresa un nuevo número de tarjeta. 
+
+\begin{DoxyReturn}{Devuelve}
+Un número de tarjeta de 12 dígitos
+\end{DoxyReturn}
+
+
+Definición en la línea 12 del archivo Card\-Generator.\-cs.
+
+
+\begin{DoxyCode}
+13         \{
+14             Random mRandom = \textcolor{keyword}{new} Random();
+15             \textcolor{keywordtype}{int} compRand = mRandom.Next(100, 999);
+16             \textcolor{keywordtype}{int} anio = DateTime.Today.Year % 100;
+17             \textcolor{keywordtype}{int} dia = DateTime.Today.Day;
+18             \textcolor{keywordtype}{int} \textcolor{keyword}{remove} = dia > 9 ? 2 : 1;
+19             \textcolor{keywordtype}{int} actual = 99999 - compRand;
+20             \textcolor{keywordtype}{int} mes = DateTime.Today.Month;
+21             \textcolor{keywordtype}{string} tarjeta = anio.ToString() + dia.ToString() + actual.ToString().Substring(\textcolor{keyword}{remove}) + mes.
+      ToString() + compRand.ToString();
+22             tarjeta = tarjeta.Substring(0, 6) + \textcolor{keyword}{new} string(tarjeta.Substring(6, 6).Reverse().ToArray());
+23             \textcolor{keywordtype}{long} tarjetaFinal = Int64.Parse(tarjeta);
+24             \textcolor{keywordflow}{return} tarjetaFinal;
+25         \}
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Yknx4/\-Documents/\-Visual Studio 2012/\-Projects/\-Proyecto Integrador 3/\-Proyecto Integrador 3/\-Generadores/\hyperlink{_card_generator_8cs}{Card\-Generator.\-cs}\end{DoxyCompactItemize}

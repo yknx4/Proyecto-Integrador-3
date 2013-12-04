@@ -9,7 +9,9 @@ namespace Proyecto_Integrador_3
     {
         protected dsServicios mdsServicios = new dsServicios();
         protected ServiciosTableAdapter mServiciosTableAdapter = new ServiciosTableAdapter();
-
+        /// <summary>
+        /// Maneja los accesos a la base de datos de los Servicios
+        /// </summary>
         public class ServicioDBManager : DBManager<Servicio>
         {
             public ServicioDBManager(DBManagers sender)

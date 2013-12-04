@@ -9,7 +9,9 @@ namespace Proyecto_Integrador_3
     {
         protected dsUsuarios mdsUsuarios = new dsUsuarios();
         protected UsuariosTableAdapter mUsuariosTableAdapter = new UsuariosTableAdapter();
-
+        /// <summary>
+        /// Maneja los accesos a la base de datos de los Usuarios
+        /// </summary>
         public class UsuarioDBManager : DBManager<Usuario>
         {
             public UsuarioDBManager(DBManagers sender)

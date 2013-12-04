@@ -18,20 +18,10 @@ using UsuariosPopulator = Proyecto_Integrador_3.DBManagers.UsuariosPopulator;
 namespace Proyecto_Integrador_3
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logica de interacción para la ventana principal
     /// </summary>
     ///
 
-    /*public System.Guid Uid { get; set; }
-        public string Nombre { get; set; }
-        public string Domicilio { get; set; }
-        public string Telefono { get; set; }
-        public string TipoSangre { get; set; }
-        public string Alergias { get; set; }
-        public string Contacto { get; set; }
-        public string TelefonoContacto { get; set; }
-        public short TipoUsuario { get; set; }
-        public int Saldo { get; set; }*/
 
     public partial class MainWindow : MetroWindow
     {
@@ -52,6 +42,9 @@ namespace Proyecto_Integrador_3
         private BackgroundWorker mBackgroundGenerarLista = new BackgroundWorker();
         private BackgroundWorker mBackgroundRegistrar = new BackgroundWorker();
 
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase <see cref="MainWindow"/>.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -86,12 +79,20 @@ namespace Proyecto_Integrador_3
             generarLista();
         }
 
+        /// <summary>
+        /// Evento que se dispara al cerrar la ventana de reporte.
+        /// </summary>
+        /// <param name="sender">Quien dispara el evento.</param>
+        /// <param name="e">La instancia de <see cref="EventArgs"/> conteniendo la información del evento.</param>
         private void alCerrarReporte(object sender, EventArgs e)
         {
             mReporteFrecuencia = null;
             System.GC.Collect();
         }
 
+        /// <summary>
+        /// Asigna el trabajo, a los BackgroundWorkers.
+        /// </summary>
         private void SetBackgroundWorkers()
         {
             mBackgroundGenerarLista.DoWork += _backgroundWorker_DoWork_GenerarLista;
@@ -100,11 +101,11 @@ namespace Proyecto_Integrador_3
             mBackgroundRegistrar.RunWorkerCompleted += _backgroundWorker_RunWorkerCompleted_Registro;
         }
 
-        private void SetEventHandlers()
-        {
-            //txtNumeroTarjetaRecarga.TextChanged+=Helpers.validarTarjeta;
-        }
 
+
+        /// <summary>
+        /// Genera la lista de usuarios. Para esto deshabilida los controles de Recarga, para evitar errores de referencia nula.
+        /// </summary>
         private void generarLista()
         {
             Helpers.DisableControls((Panel)tbRecarga.Content);
@@ -116,13 +117,18 @@ namespace Proyecto_Integrador_3
             mUsuariosPopulator.generarLista();
         }
 
+        /// <summary>
+        /// Realiza las funciones cuando se termina de ejecutar la accion de fondo GeneralLista.
+        /// </summary>
+        /// <param name="sender">El origen del evento.</param> 
+        /// <param name="e">La instancia <see cref="RunWorkerCompletedEventArgs"/> con los datos del evento.</param>
         private void _backgroundWorker_RunWorkerCompleted_GenerarLista(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Cancelled)
             {
                 lblEstadoPrincipal.Content = "Evento Cancelado";
 
-                //statusText.Text = "Cancelled";
+               /* //statusText.Text = "Cancelled";*/
             }
             else if (e.Error != null)
             {
@@ -131,13 +137,17 @@ namespace Proyecto_Integrador_3
             else
             {
                 Usuarios = mUsuariosPopulator.Usuarios;
-                //.Text = "Completed";
+              /*  //.Text = "Completed";*/
             }
             Helpers.EnableControls((Panel)tbRecarga.Content);
         }
 
-        
 
+
+        /// <summary>
+        /// Metodo asíncrono para procesar texto de la búsqueda.
+        /// </summary>
+        /// <param name="sender">El origen.</param>
         private void cambiaTextoBusquedaAsync(object sender)
         {
             dtgrdBusqueda.Visibility = Visibility.Hidden;
@@ -148,17 +158,21 @@ namespace Proyecto_Integrador_3
                 dtgrdBusqueda.ItemsSource = UsuariosBusqueda;
                 if (UsuariosBusqueda.Count > 0) dtgrdBusqueda.Visibility = Visibility.Visible;
 
-                //txtNumeroTarjetaRecarga.IsReadOnly = true;
+                /*//txtNumeroTarjetaRecarga.IsReadOnly = true;*/
             }
             else
             {
-                //txtNumeroTarjetaRecarga.IsReadOnly = false;
+                /*//txtNumeroTarjetaRecarga.IsReadOnly = false;*/
             }
         }
 
-       
 
 
+
+        /// <summary>
+        /// Genera un usuario en base a los datos de la ventana de registro
+        /// </summary>
+        /// <returns>Una instancia de Usuario con los datos de la ventana de registro</returns>
         private Usuario generarUsuario()
         {
             Usuario.Contacto tmpContacto = new Usuario.Contacto
@@ -191,38 +205,11 @@ namespace Proyecto_Integrador_3
             };
         }
 
-        private Usuario generarUsuario(int i)
-        {
-            Usuario.Contacto tmpContacto = new Usuario.Contacto
-            {
-                Nombre = DateTime.Now.ToShortDateString(),
-                Telefono = "312123456"
-            };
-            Usuario.Domicilio tmpDomicilio = new Usuario.Domicilio
-            {
-                Calle = "Calle",
-                Colonia = "Colonia",
-                Municipio = 1,
-                Numero = 123
-            };
 
-            return new Usuario
-            {
-                Uid = Guid.Empty,
-                Sexo = "Hombre",
-                Alergias = "Alergias",
-                Celular = "312123",
-                FechaNacimiento = DateTime.Now,
-                Nombre = DateTime.Now.ToShortDateString(),
-                TarjetaAsignada = txtNumeroTarjeta.Text,
-                TipoSangre = (short)(cmbSangre.SelectedIndex),
-                TipoUsuario = (byte)(cmbTipos.SelectedIndex + 1),
-                Telefono = "3123123",
-                mContacto = tmpContacto,
-                mDomicilio = tmpDomicilio
-            };
-        }
 
+        /// <summary>
+        /// Limpiar la ventana registro.
+        /// </summary>
         private void limpiarVentanaRegistro()
         {
             cmbSangre.SelectedItem = Tipos.Sangre.Last();
@@ -230,6 +217,11 @@ namespace Proyecto_Integrador_3
             Helpers.ClearTextBoxes((Panel)grdRegistro);
         }
 
+        /// <summary>
+        /// Realiza lo necesario al realizar click en el botón de registrar.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void onClickRegistrar(object sender, RoutedEventArgs e)
         {
             if (!validarRegistro())
@@ -244,25 +236,35 @@ namespace Proyecto_Integrador_3
             mBackgroundRegistrar.RunWorkerAsync(usuarioNuevo);
         }
 
+        /// <summary>
+        /// Realiza de manera asíncrona lo necesario para realizar un registro en la base de datos.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="DoWorkEventArgs"/> instance containing the event data.</param>
         private void _backgroundWorker_DoWork_Registro(object sender, DoWorkEventArgs e)
         {
             mUsuarioDBManager.setItem((Usuario)e.Argument);
             mUsuarioDBManager.AddToDB();
         }
 
+        /// <summary>
+        /// Realiza lo necesario cuando se realiza un registro de manera exitosa.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RunWorkerCompletedEventArgs"/> instance containing the event data.</param>
         private void _backgroundWorker_RunWorkerCompleted_Registro(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Cancelled)
             {
                 lblEstadoPrincipal.Content = "Evento Cancelado";
 
-                //statusText.Text = "Cancelled";
+             /*   //statusText.Text = "Cancelled";*/
             }
             else if (e.Error != null)
             {
                 lblEstadoPrincipal.Content = "Error al registrar. " + e.Error.ToString();
-
-                //statusText.Text = "Exception Thrown";
+                
+                /*//statusText.Text = "Exception Thrown";*/
             }
             else
             {
@@ -274,7 +276,7 @@ namespace Proyecto_Integrador_3
                 mUsuarioDBManager.Refresh();
                 generarLista();
 
-                //.Text = "Completed";
+               /* //.Text = "Completed";*/
             }
             Helpers.EnableControls((Panel)grdRegistro);
             pgrRegistrar.IsActive = false;
@@ -282,6 +284,10 @@ namespace Proyecto_Integrador_3
 
 
 
+        /// <summary>
+        /// Método asíncrono para manejar el cambio de datos en la tarjeta de recarga.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
         private void cambiaTarjetaRecargaAsync(object sender)
         {
             TextBox origen = sender as TextBox;
@@ -302,6 +308,11 @@ namespace Proyecto_Integrador_3
             }
         }
 
+        /// <summary>
+        /// Maneja el evento de cambiar el texto de la tarjeta a recargar.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="TextChangedEventArgs"/> instance containing the event data.</param>
         private void cambiaTarjetaRecarga(object sender, TextChangedEventArgs e)
         {
             Action<object> del = (object s) => cambiaTarjetaRecargaAsync(s);
@@ -317,6 +328,11 @@ namespace Proyecto_Integrador_3
             
         }
 
+        /// <summary>
+        /// Realiza lo necesario para realizar una recarga.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void recargaClick(object sender, RoutedEventArgs e)
         {
             txtNumeroTarjetaRecarga.Background = Brushes.White;
@@ -345,6 +361,9 @@ namespace Proyecto_Integrador_3
             //generarLista();
         }
 
+        /// <summary>
+        /// Simula el presionar 'Enter' al cuadro de texto de búsqueda.
+        /// </summary>
         private void PerformBusquedaEnter()
         {
             var key = Key.Enter;
@@ -364,6 +383,11 @@ namespace Proyecto_Integrador_3
                 );
         }
 
+        /// <summary>
+        /// Maneja el Enter en el cuadro de texto de búsqueda.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="KeyEventArgs"/> instance containing the event data.</param>
         private void alPresionarEnterBusqueda(object sender, KeyEventArgs e)
         {
             /*http://msdn.microsoft.com/en-us/magazine/cc163328.aspx*/
@@ -383,6 +407,11 @@ namespace Proyecto_Integrador_3
             new Thread(start).Start();
         }
         ReporteFrecuenciaDeUso mReporteFrecuencia;
+        /// <summary>
+        /// Muesta el reporte seleccionado.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void btnMostrarReporte_Click(object sender, RoutedEventArgs e)
         {
             switch (cmbTipoReporte.SelectedIndex)
@@ -415,8 +444,13 @@ namespace Proyecto_Integrador_3
             System.GC.Collect();
         }
 
-        
 
+
+        /// <summary>
+        /// Maneja el evento de doble click en el DataGrid de la búsqueda.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="MouseButtonEventArgs"/> instance containing the event data.</param>
         private void alDobleClickBusqueda(object sender, MouseButtonEventArgs e)
         {
             //MessageBox.Show("Doble Click"+dtgrdBusqueda.SelectedCells.Count.ToString());
@@ -427,6 +461,10 @@ namespace Proyecto_Integrador_3
             }
         }
 
+        /// <summary>
+        /// Realiza las validaciones necesarias para saber si los datos introducidos en el formulario de registro son correctos.
+        /// </summary>
+        /// <returns>Verdadero si todos son válidos, Falso si al menos uno es inválido.</returns>
         private bool validarRegistro()
         {
             bool estado = true;

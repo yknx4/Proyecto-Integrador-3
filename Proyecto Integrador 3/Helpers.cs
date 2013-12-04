@@ -7,8 +7,15 @@ using System.Windows.Media;
 
 namespace Proyecto_Integrador_3
 {
+    /// <summary>
+    /// Clases de ayuda general para el programa completo
+    /// </summary>
     internal static class Helpers
     {
+        /// <summary>
+        /// Limpia todas las cajas de texto dentro de un Panel.
+        /// </summary>
+        /// <param name="panel">El panel.</param>
         public static void ClearTextBoxes(Panel panel)
         {
             foreach (Control c in panel.Children.OfType<Control>())
@@ -24,6 +31,10 @@ namespace Proyecto_Integrador_3
             }
         }
 
+        /// <summary>
+        /// Asigna la validación a todos los cuadros de texto de el panel.
+        /// </summary>
+        /// <param name="panel">El panel.</param>
         public static void SetValidationTextBoxes(Panel panel)
         {
             foreach (Control c in panel.Children.OfType<Control>())
@@ -39,6 +50,11 @@ namespace Proyecto_Integrador_3
             }
         }
 
+        /// <summary>
+        /// Realiza validación estandar a un cuadro de texto.
+        /// </summary>
+        /// <param name="txt">El cuadro de texto.</param>
+        /// <returns></returns>
         public static bool validarTextBoxEstandar(TextBox txt)
         {
             //var regexItem = new Regex("^[a-zA-Z0-9 ]*$");
@@ -56,6 +72,11 @@ namespace Proyecto_Integrador_3
             return estado;
         }
 
+        /// <summary>
+        /// Realiza la validación necesario para cersiorarse de que el texto en un cuadro de téxto es un número telefónico de 10 dígitos..
+        /// </summary>
+        /// <param name="txt">El cuadro de texto.</param>
+        /// <returns></returns>
         public static bool validarTextBoxTelefono(TextBox txt)
         {
             var regexItem = new Regex("^[a-zA-Z0-9 ]*$");
@@ -73,6 +94,11 @@ namespace Proyecto_Integrador_3
             return estado;
         }
 
+        /// <summary>
+        /// Realiza la validación necesario para cersiorarse de que el texto en un cuadro de téxto es un número .
+        /// </summary>
+        /// <param name="txt">El cuadro de texto.</param>
+        /// <returns></returns>
         public static bool validarTextBoxNumero(TextBox txt)
         {
             bool estado = true;
@@ -89,6 +115,11 @@ namespace Proyecto_Integrador_3
             return estado;
         }
 
+        /// <summary>
+        /// Validar la entrada para ver si es un numero de tarjeta válido.
+        /// </summary>
+        /// <param name="input">La entrada.</param>
+        /// <returns>Verdadero si es válido, Falso si es inválido</returns>
         static public bool validarCuenta(string input)
         {
             long t;
@@ -96,6 +127,11 @@ namespace Proyecto_Integrador_3
             return false;
         }
 
+        /// <summary>
+        /// Validar la entrada para ver si es una cantidad de dinero válida.
+        /// </summary>
+        /// <param name="input">La entrada.</param>
+        /// <returns>Verdadero si es válido, Falso si es inválido</returns>
         static public bool validarDinero(string input)
         {
             decimal t;
@@ -103,6 +139,10 @@ namespace Proyecto_Integrador_3
             return false;
         }
 
+        /// <summary>
+        /// Deshabilita todos los controles en el Panel.
+        /// </summary>
+        /// <param name="panel">El panel.</param>
         public static void DisableControls(Panel panel)
         {
             foreach (Control c in panel.Children.OfType<Control>())
@@ -115,6 +155,10 @@ namespace Proyecto_Integrador_3
             }
         }
 
+        /// <summary>
+        /// Habilita todos los controles en el Panel.
+        /// </summary>
+        /// <param name="panel">El panel.</param>
         public static void EnableControls(Panel panel)
         {
             foreach (Control c in panel.Children.OfType<Control>())
@@ -139,6 +183,13 @@ namespace Proyecto_Integrador_3
             return age;
         }
 
+        /// <summary>
+        /// Devuelve el valor mas repetido en una lista.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="datos">Los datos.</param>
+        /// <param name="moda">Los valores mas repetidos.</param>
+        /// <returns>El número de veces que se repitió el valor mas repetido.</returns>
         public static int masRepetido<T>(List<T> datos, out HashSet<T> moda) where T : IComparable<T>
         {
             moda = new HashSet<T>();

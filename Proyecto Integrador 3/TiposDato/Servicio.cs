@@ -29,6 +29,7 @@ namespace Proyecto_Integrador_3.TiposDato
 
         public virtual Usuario UsuarioObject { get; set; }
 
+        
         public override bool isAdded()
         {
             return !(Id == 0);

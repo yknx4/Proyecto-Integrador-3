@@ -1,5 +1,8 @@
 ﻿namespace Proyecto_Integrador_3
 {
+    /// <summary>
+    /// Realiza la lógica de la interacción con la base de datos
+    /// </summary>
     public partial class DBManagers
     {
         public string LastMessage = "";

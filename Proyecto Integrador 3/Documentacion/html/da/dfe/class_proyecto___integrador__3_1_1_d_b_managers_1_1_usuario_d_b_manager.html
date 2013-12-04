@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>SmartCards: Referencia de la Clase Proyecto_Integrador_3.DBManagers.UsuarioDBManager</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../MainLogo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">SmartCards
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Sistema de control de autobuses.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>Clases</span></a></li>
+      <li><a href="../../files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
+      <li><a href="../../classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
+      <li><a href="../../hierarchy.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="../../functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Propiedades</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Eventos</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">DBManagers</a></li><li class="navelem"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html">UsuarioDBManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pro-methods">Métodos protegidos</a> &#124;
+<a href="#pro-attribs">Atributos protegidos</a> &#124;
+<a href="#properties">Propiedades</a> &#124;
+<a href="#pri-methods">Métodos privados</a> &#124;
+<a href="../../d8/d52/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia de la Clase Proyecto_Integrador_3.DBManagers.UsuarioDBManager</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Maneja los accesos a la base de datos de los Usuarios  
+ <a href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencias de Proyecto_Integrador_3.DBManagers.UsuarioDBManager</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.png" usemap="#Proyecto_Integrador_3.DBManagers.UsuarioDBManager_map" alt=""/>
+  <map id="Proyecto_Integrador_3.DBManagers.UsuarioDBManager_map" name="Proyecto_Integrador_3.DBManagers.UsuarioDBManager_map">
+<area href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html" alt="Proyecto_Integrador_3.DBManagers.DBManager&lt; T &gt;" shape="rect" coords="0,0,335,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a3bcff5c7839e9e78baaab699a68af438"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a3bcff5c7839e9e78baaab699a68af438">UsuarioDBManager</a> (<a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">DBManagers</a> sender)</td></tr>
+<tr class="separator:a3bcff5c7839e9e78baaab699a68af438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40976ea1cf23f128217f7379f175d504"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a40976ea1cf23f128217f7379f175d504">AddToDB</a> ()</td></tr>
+<tr class="separator:a40976ea1cf23f128217f7379f175d504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7fd33ab64b2c21ad0533c59eb77d118"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#ac7fd33ab64b2c21ad0533c59eb77d118">AddToDB</a> (Guid Uid)</td></tr>
+<tr class="separator:ac7fd33ab64b2c21ad0533c59eb77d118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3bacd63b66ffb89ff6f26156520072"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html">Usuario</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a4d3bacd63b66ffb89ff6f26156520072">getItem</a> ()</td></tr>
+<tr class="separator:a4d3bacd63b66ffb89ff6f26156520072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54c2d949592f354143fa7b7429ce1938"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a54c2d949592f354143fa7b7429ce1938">AddToDataset</a> ()</td></tr>
+<tr class="separator:a54c2d949592f354143fa7b7429ce1938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af38f312f9fd5a10d9a8d7d43e880d555"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#af38f312f9fd5a10d9a8d7d43e880d555">UpdateDBFromDataset</a> ()</td></tr>
+<tr class="separator:af38f312f9fd5a10d9a8d7d43e880d555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aa56cfd9be44c7c601b1983e63bd6d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a2aa56cfd9be44c7c601b1983e63bd6d6">Refresh</a> ()</td></tr>
+<tr class="separator:a2aa56cfd9be44c7c601b1983e63bd6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3497931d99dff8f67c2da21b1328de1c"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a3497931d99dff8f67c2da21b1328de1c">itemModified</a> (object sender, PropertyChangedEventArgs e)</td></tr>
+<tr class="separator:a3497931d99dff8f67c2da21b1328de1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a367d61aaac1f426d93800be80159eadd"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a367d61aaac1f426d93800be80159eadd">modificarDato</a> ()</td></tr>
+<tr class="separator:a367d61aaac1f426d93800be80159eadd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49ea2a7bfa58a2c536fefa4d60d488d2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a49ea2a7bfa58a2c536fefa4d60d488d2">itemModified</a> (object sender, System.ComponentModel.PropertyChangedEventArgs e)</td></tr>
+<tr class="separator:a49ea2a7bfa58a2c536fefa4d60d488d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a436cb08914ca84122f9019a59485589a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a436cb08914ca84122f9019a59485589a">RemoveFromDB</a> ()</td></tr>
+<tr class="separator:a436cb08914ca84122f9019a59485589a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d552a5e547efd19924ca4a96f685a56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a2d552a5e547efd19924ca4a96f685a56">setItem</a> (T Input)</td></tr>
+<tr class="separator:a2d552a5e547efd19924ca4a96f685a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5d7f99a4a5783514bad64ba8894e1ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#ad5d7f99a4a5783514bad64ba8894e1ea">Clear</a> ()</td></tr>
+<tr class="separator:ad5d7f99a4a5783514bad64ba8894e1ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Métodos protegidos</h2></td></tr>
+<tr class="memitem:add66e324cef43fd10b491bc697fa60b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#add66e324cef43fd10b491bc697fa60b5">Active</a> ()</td></tr>
+<tr class="separator:add66e324cef43fd10b491bc697fa60b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Atributos protegidos</h2></td></tr>
+<tr class="memitem:a06315e75298c8f2fd46f32dc7c9a80b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">DBManagers</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a></td></tr>
+<tr class="separator:a06315e75298c8f2fd46f32dc7c9a80b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b67ae3b5b3b9c3793d56c1407d7dcff"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a></td></tr>
+<tr class="separator:a3b67ae3b5b3b9c3793d56c1407d7dcff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Propiedades</h2></td></tr>
+<tr class="memitem:a6e5caaed2ee1a4d067dfbf5aaa1b1fa8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a6e5caaed2ee1a4d067dfbf5aaa1b1fa8">Error</a><code> [get, set]</code></td></tr>
+<tr class="separator:a6e5caaed2ee1a4d067dfbf5aaa1b1fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a6d2db3445fc5acc8a349b76029714a96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a6d2db3445fc5acc8a349b76029714a96">notifyError</a> ()</td></tr>
+<tr class="separator:a6d2db3445fc5acc8a349b76029714a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e531d5e782e81b5a70ce977fef09cf4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d7f/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_row.html">dsUsuarios.UsuariosRow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a4e531d5e782e81b5a70ce977fef09cf4">getUsuarioRow</a> ()</td></tr>
+<tr class="separator:a4e531d5e782e81b5a70ce977fef09cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Maneja los accesos a la base de datos de los Usuarios </p>
+
+<p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00015">15</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a class="anchor" id="a3bcff5c7839e9e78baaab699a68af438"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Proyecto_Integrador_3.DBManagers.UsuarioDBManager.UsuarioDBManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">DBManagers</a>&#160;</td>
+          <td class="paramname"><em>sender</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00017">17</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                : base(sender)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="add66e324cef43fd10b491bc697fa60b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Proyecto_Integrador_3.DBManagers.DBManager&lt; T &gt;.Active </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html#l00048">48</a> del archivo <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html">DBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a> == null) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a54c2d949592f354143fa7b7429ce1938"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void Proyecto_Integrador_3.DBManagers.UsuarioDBManager.AddToDataset </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementa <a class="el" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a7830332e065723c1799d5804fd202dd1">Proyecto_Integrador_3.DBManagers.DBManager&lt; T &gt;</a>.</p>
+
+<p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00050">50</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#add66e324cef43fd10b491bc697fa60b5">Active</a>())</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a6e5caaed2ee1a4d067dfbf5aaa1b1fa8">Error</a> = <span class="stringliteral">&quot;No hay ningun usuario seleccionado&quot;</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    <a class="code" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a6d2db3445fc5acc8a349b76029714a96">notifyError</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.Saldo = 0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                dsUsuarios.UsuariosRow nuevoUsuario = <a class="code" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a4e531d5e782e81b5a70ce977fef09cf4">getUsuarioRow</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a19d87c9abf32e08e2969847a008eb195">mdsUsuarios</a>.<a class="code" href="../../d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a79d1cfd31914c2c5cfda39b62381478b">Usuarios</a>.<a class="code" href="../../d1/d43/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_data_table.html#a5ef8027791b5ae1564a0dce426b8f135">AddUsuariosRow</a>(nuevoUsuario);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a40976ea1cf23f128217f7379f175d504"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void Proyecto_Integrador_3.DBManagers.UsuarioDBManager.AddToDB </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementa <a class="el" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a820a55f3ee3c7fde31b121f3f3ea6179">Proyecto_Integrador_3.DBManagers.DBManager&lt; T &gt;</a>.</p>
+
+<p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00027">27</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.isAdded())</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a6e5caaed2ee1a4d067dfbf5aaa1b1fa8">Error</a> = <span class="stringliteral">&quot;El usuario con ID &quot;</span> + <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.Uid.ToString() + <span class="stringliteral">&quot; ya está en la base de datos&quot;</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    <a class="code" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a6d2db3445fc5acc8a349b76029714a96">notifyError</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <a class="code" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a40976ea1cf23f128217f7379f175d504">AddToDB</a>(Guid.NewGuid());</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ac7fd33ab64b2c21ad0533c59eb77d118"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Proyecto_Integrador_3.DBManagers.UsuarioDBManager.AddToDB </td>
+          <td>(</td>
+          <td class="paramtype">Guid&#160;</td>
+          <td class="paramname"><em>Uid</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00038">38</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.Uid = Uid;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <a class="code" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a54c2d949592f354143fa7b7429ce1938">AddToDataset</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <a class="code" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#af38f312f9fd5a10d9a8d7d43e880d555">UpdateDBFromDataset</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ad5d7f99a4a5783514bad64ba8894e1ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Proyecto_Integrador_3.DBManagers.DBManager&lt; T &gt;.Clear </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html#l00043">43</a> del archivo <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html">DBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a> = <span class="keywordflow">default</span>(T);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a4d3bacd63b66ffb89ff6f26156520072"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html">Usuario</a> Proyecto_Integrador_3.DBManagers.UsuarioDBManager.getItem </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00045">45</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a4e531d5e782e81b5a70ce977fef09cf4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d7f/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_row.html">dsUsuarios.UsuariosRow</a> Proyecto_Integrador_3.DBManagers.UsuarioDBManager.getUsuarioRow </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00073">73</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                dsUsuarios.UsuariosRow nuevoUsuario = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a19d87c9abf32e08e2969847a008eb195">mdsUsuarios</a>.<a class="code" href="../../d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a79d1cfd31914c2c5cfda39b62381478b">Usuarios</a>.<a class="code" href="../../d1/d43/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_data_table.html#a70c32788626d9132796c32639fb80d2d">NewUsuariosRow</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                nuevoUsuario.<a class="code" href="../../d2/d7f/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_row.html#a52527439e50952886c2ec1ddc5e06f3d">Uid</a> = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.Uid;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                nuevoUsuario.Nombre = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.Nombre;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                nuevoUsuario.Calle = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.mDomicilio.Calle;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                nuevoUsuario.Telefono = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.Telefono;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                nuevoUsuario.TipoSangre = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.TipoSangre;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                nuevoUsuario.Alergias = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.Alergias;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                nuevoUsuario.NombreContacto = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.mContacto.Nombre;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                nuevoUsuario.TelefonoContacto = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.mContacto.Telefono;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                nuevoUsuario.TipoUsuario = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.TipoUsuario;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                nuevoUsuario.Saldo = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.Saldo;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                nuevoUsuario.TarjetaAsignada = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.TarjetaAsignada;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                nuevoUsuario.sexo = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>._sexo;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                nuevoUsuario.FechaNacimiento = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.FechaNacimiento;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                nuevoUsuario.NumeroCalle = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.mDomicilio.Numero;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                nuevoUsuario.Colonia = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.mDomicilio.Colonia;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                nuevoUsuario.Municipio = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.mDomicilio.Municipio;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                nuevoUsuario.Celular = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.Celular;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">return</span> nuevoUsuario;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a49ea2a7bfa58a2c536fefa4d60d488d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Proyecto_Integrador_3.DBManagers.DBManager&lt; T &gt;.itemModified </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">System.ComponentModel.PropertyChangedEventArgs&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html#l00020">20</a> del archivo <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html">DBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a2d552a5e547efd19924ca4a96f685a56">setItem</a>((T)sender);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3497931d99dff8f67c2da21b1328de1c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void Proyecto_Integrador_3.DBManagers.UsuarioDBManager.itemModified </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PropertyChangedEventArgs&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00097">97</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="comment">//base.itemModified(sender, e);</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="comment">//switch (e.PropertyName)</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="comment">//{</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="comment">//    case &quot;Nombre&quot;:</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="comment">//        modificarDato(ModifiableValues.Name);</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="comment">//        break;</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="comment">//    case &quot;Cuenta&quot;:</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="comment">//        modificarDato(ModifiableValues.ID);</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="comment">//        break;</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="comment">//    case &quot;Plantel&quot;:</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="comment">//        modificarDato(ModifiableValues.Campus);</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="comment">//        break;</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="comment">//    default:</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="comment">//        throw new NotImplementedException(e.PropertyName+&quot; hasn&#39;t been implemented.&quot;);</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <span class="comment">//}</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="comment">//Clear();</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a367d61aaac1f426d93800be80159eadd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void Proyecto_Integrador_3.DBManagers.UsuarioDBManager.modificarDato </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementa <a class="el" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a0cd8914cf3417e3df2f9d580fdb48aca">Proyecto_Integrador_3.DBManagers.DBManager&lt; T &gt;</a>.</p>
+
+<p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00119">119</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#add66e324cef43fd10b491bc697fa60b5">Active</a>())</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a6e5caaed2ee1a4d067dfbf5aaa1b1fa8">Error</a> = <span class="stringliteral">&quot;No hay ningun usuario seleccionado&quot;</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    <a class="code" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a6d2db3445fc5acc8a349b76029714a96">notifyError</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="comment">/* dsUsuarios.UsuariosRow usuarioAModificar = Parent.mdsUsuarios.Usuarios.FindByUid(heldItem.Uid);</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">                 usuarioAModificar = getUsuarioRow();*/</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <span class="keywordtype">int</span> index = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a19d87c9abf32e08e2969847a008eb195">mdsUsuarios</a>.<a class="code" href="../../d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a79d1cfd31914c2c5cfda39b62381478b">Usuarios</a>.Rows.IndexOf(<a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a19d87c9abf32e08e2969847a008eb195">mdsUsuarios</a>.<a class="code" href="../../d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a79d1cfd31914c2c5cfda39b62381478b">Usuarios</a>.<a class="code" href="../../d1/d43/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_data_table.html#a5ba08b370bc2f5d37395a616bc20604b">FindByUid</a>(<a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>.Uid));</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a19d87c9abf32e08e2969847a008eb195">mdsUsuarios</a>.<a class="code" href="../../d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a79d1cfd31914c2c5cfda39b62381478b">Usuarios</a>.Rows[index].ItemArray = <a class="code" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html#a4e531d5e782e81b5a70ce977fef09cf4">getUsuarioRow</a>().ItemArray;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#aecf2d3981e87f16c1e3a60c7913931a8">LastMessage</a> = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a8830e1bb507bcd7277966a4aabe3e830">mUsuariosTableAdapter</a>.<a class="code" href="../../de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a0cb310a6346b919a7ac5717ea3225d0b">Update</a>(<a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a19d87c9abf32e08e2969847a008eb195">mdsUsuarios</a>).ToString();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <span class="comment">//Parent.Refresh();</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6d2db3445fc5acc8a349b76029714a96"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Proyecto_Integrador_3.DBManagers.UsuarioDBManager.notifyError </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00022">22</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> Exception(<a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a6e5caaed2ee1a4d067dfbf5aaa1b1fa8">Error</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a2aa56cfd9be44c7c601b1983e63bd6d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Proyecto_Integrador_3.DBManagers.UsuarioDBManager.Refresh </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00067">67</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a19d87c9abf32e08e2969847a008eb195">mdsUsuarios</a>.Clear();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a8830e1bb507bcd7277966a4aabe3e830">mUsuariosTableAdapter</a>.<a class="code" href="../../de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#af746bdf2da4d481ea55a5042b1622853">Fill</a>(<a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a19d87c9abf32e08e2969847a008eb195">mdsUsuarios</a>.<a class="code" href="../../d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a79d1cfd31914c2c5cfda39b62381478b">Usuarios</a>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a436cb08914ca84122f9019a59485589a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Proyecto_Integrador_3.DBManagers.DBManager&lt; T &gt;.RemoveFromDB </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html#l00027">27</a> del archivo <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html">DBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> NotImplementedException();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a2d552a5e547efd19924ca4a96f685a56"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Proyecto_Integrador_3.DBManagers.DBManager&lt; T &gt;.setItem </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>Input</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html#l00038">38</a> del archivo <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html">DBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a> = Input;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="af38f312f9fd5a10d9a8d7d43e880d555"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void Proyecto_Integrador_3.DBManagers.UsuarioDBManager.UpdateDBFromDataset </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementa <a class="el" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#aecafeb72fd4ce55d76c16c804e38dae8">Proyecto_Integrador_3.DBManagers.DBManager&lt; T &gt;</a>.</p>
+
+<p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00062">62</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#aecf2d3981e87f16c1e3a60c7913931a8">LastMessage</a> = <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a8830e1bb507bcd7277966a4aabe3e830">mUsuariosTableAdapter</a>.<a class="code" href="../../de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a0cb310a6346b919a7ac5717ea3225d0b">Update</a>(<a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a19d87c9abf32e08e2969847a008eb195">mdsUsuarios</a>).ToString();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a class="anchor" id="a3b67ae3b5b3b9c3793d56c1407d7dcff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T Proyecto_Integrador_3.DBManagers.DBManager&lt; T &gt;.heldItem</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html#l00034">34</a> del archivo <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html">DBManager.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a06315e75298c8f2fd46f32dc7c9a80b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">DBManagers</a> Proyecto_Integrador_3.DBManagers.DBManager&lt; T &gt;.Parent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html#l00032">32</a> del archivo <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html">DBManager.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de propiedades</h2>
+<a class="anchor" id="a6e5caaed2ee1a4d067dfbf5aaa1b1fa8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Proyecto_Integrador_3.DBManagers.DBManager&lt; T &gt;.Error</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html#l00056">56</a> del archivo <a class="el" href="../../d3/d5f/_d_b_manager_8cs_source.html">DBManager.cs</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li>C:/Users/Yknx4/Documents/Visual Studio 2012/Projects/Proyecto Integrador 3/Proyecto Integrador 3/Manejadores/<a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Miércoles, 4 de Diciembre de 2013 00:26:55 para SmartCards por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

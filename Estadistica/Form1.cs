@@ -27,7 +27,7 @@ namespace Estadistica
         List<Double> dtgrDatos;
 
 
-        void llenarTabla()
+        public void llenarTabla()
         {
             /*Limpieza de la tabla*/
             dtgrTabla.Rows.Clear();
@@ -223,7 +223,7 @@ namespace Estadistica
         
 
 
-        void rehacer()
+       public void rehacer()
         {
             if (cantidadDatos() == 0) return;
 

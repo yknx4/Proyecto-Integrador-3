@@ -6,7 +6,9 @@ using UnidadRow = Proyecto_Integrador_3.dsUnidad.UnidadRow;
 namespace Proyecto_Integrador_3
 {
     partial class DBManagers
-    {
+    {/// <summary>
+        /// Llena las listas de Unidades
+        /// </summary>
         public class UnidadPopulator
         {
             private List<Unidad> _unidades = new List<Unidad>();

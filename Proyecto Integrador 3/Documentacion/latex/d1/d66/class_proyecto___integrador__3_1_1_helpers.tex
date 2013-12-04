@@ -1,0 +1,490 @@
+\hypertarget{class_proyecto___integrador__3_1_1_helpers}{\section{Referencia de la Clase Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers}
+\label{class_proyecto___integrador__3_1_1_helpers}\index{Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers}}
+}
+
+
+Clases de ayuda general para el programa completo  
+
+
+\subsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_proyecto___integrador__3_1_1_helpers_ada922af713da8f3446fd27a8b3ac3494}{Clear\-Text\-Boxes} (Panel panel)
+\begin{DoxyCompactList}\small\item\em Limpia todas las cajas de texto dentro de un Panel. \end{DoxyCompactList}\item 
+static void \hyperlink{class_proyecto___integrador__3_1_1_helpers_aaede5d9d02c3e31c447e3e9abf113afa}{Set\-Validation\-Text\-Boxes} (Panel panel)
+\begin{DoxyCompactList}\small\item\em Asigna la validación a todos los cuadros de texto de el panel. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_proyecto___integrador__3_1_1_helpers_ad5d8f36513117018c7ade0f2d6889222}{validar\-Text\-Box\-Estandar} (Text\-Box txt)
+\begin{DoxyCompactList}\small\item\em Realiza validación estandar a un cuadro de texto. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_proyecto___integrador__3_1_1_helpers_ad9d7083d38ed1ad33bac8ef8e0dfea09}{validar\-Text\-Box\-Telefono} (Text\-Box txt)
+\begin{DoxyCompactList}\small\item\em Realiza la validación necesario para cersiorarse de que el texto en un cuadro de téxto es un número telefónico de 10 dígitos. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_proyecto___integrador__3_1_1_helpers_aec73f44f21b6083802bdb77128435771}{validar\-Text\-Box\-Numero} (Text\-Box txt)
+\begin{DoxyCompactList}\small\item\em Realiza la validación necesario para cersiorarse de que el texto en un cuadro de téxto es un número . \end{DoxyCompactList}\item 
+static bool \hyperlink{class_proyecto___integrador__3_1_1_helpers_ab0cb9ffb08e0c4d6dd3c95852411fdec}{validar\-Cuenta} (string input)
+\begin{DoxyCompactList}\small\item\em Validar la entrada para ver si es un numero de tarjeta válido. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_proyecto___integrador__3_1_1_helpers_a36afc3d70450850731fc7b24735e9342}{validar\-Dinero} (string input)
+\begin{DoxyCompactList}\small\item\em Validar la entrada para ver si es una cantidad de dinero válida. \end{DoxyCompactList}\item 
+static void \hyperlink{class_proyecto___integrador__3_1_1_helpers_a7724b85162da445ab1ff1e54cf0974f2}{Disable\-Controls} (Panel panel)
+\begin{DoxyCompactList}\small\item\em Deshabilita todos los controles en el Panel. \end{DoxyCompactList}\item 
+static void \hyperlink{class_proyecto___integrador__3_1_1_helpers_abf9eb7a688a873f0767ce5dc5bd6f5af}{Enable\-Controls} (Panel panel)
+\begin{DoxyCompactList}\small\item\em Habilita todos los controles en el Panel. \end{DoxyCompactList}\item 
+static void \hyperlink{class_proyecto___integrador__3_1_1_helpers_afc8b1c92d8b5e218247f0295580dea13}{validar\-Text\-Boxt\-Color} (object sender, Text\-Changed\-Event\-Args e)
+\item 
+static int \hyperlink{class_proyecto___integrador__3_1_1_helpers_af0574bab82d761e6432dfae128e68a6c}{Age} (Date\-Time bday)
+\item 
+static int \hyperlink{class_proyecto___integrador__3_1_1_helpers_a6bc9de476926295b0feb8f636cc39f31}{mas\-Repetido$<$ T $>$} (List$<$ T $>$ datos, out Hash\-Set$<$ T $>$ moda)
+\begin{DoxyCompactList}\small\item\em Devuelve el valor mas repetido en una lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Clases de ayuda general para el programa completo 
+
+
+
+Definición en la línea 13 del archivo Helpers.\-cs.
+
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_proyecto___integrador__3_1_1_helpers_af0574bab82d761e6432dfae128e68a6c}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}!Age@{Age}}
+\index{Age@{Age}!Proyecto_Integrador_3::Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}}
+\subsubsection[{Age}]{\setlength{\rightskip}{0pt plus 5cm}static int Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers.\-Age (
+\begin{DoxyParamCaption}
+\item[{Date\-Time}]{bday}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_proyecto___integrador__3_1_1_helpers_af0574bab82d761e6432dfae128e68a6c}
+
+
+Definición en la línea 179 del archivo Helpers.\-cs.
+
+
+\begin{DoxyCode}
+180         \{
+181             \textcolor{keywordtype}{int} age = DateTime.Now.Year - bday.Year;
+182             \textcolor{keywordflow}{if} (bday > DateTime.Now.AddYears(-age)) age--;
+183             \textcolor{keywordflow}{return} age;
+184         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_helpers_ada922af713da8f3446fd27a8b3ac3494}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}!Clear\-Text\-Boxes@{Clear\-Text\-Boxes}}
+\index{Clear\-Text\-Boxes@{Clear\-Text\-Boxes}!Proyecto_Integrador_3::Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}}
+\subsubsection[{Clear\-Text\-Boxes}]{\setlength{\rightskip}{0pt plus 5cm}static void Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers.\-Clear\-Text\-Boxes (
+\begin{DoxyParamCaption}
+\item[{Panel}]{panel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_proyecto___integrador__3_1_1_helpers_ada922af713da8f3446fd27a8b3ac3494}
+
+
+Limpia todas las cajas de texto dentro de un Panel. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em panel} & El panel.\\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 19 del archivo Helpers.\-cs.
+
+
+\begin{DoxyCode}
+20         \{
+21             \textcolor{keywordflow}{foreach} (Control c \textcolor{keywordflow}{in} panel.Children.OfType<Control>())
+22             \{
+23                 \textcolor{keywordflow}{if} (c is TextBox)
+24                 \{
+25                     ((TextBox)c).Clear();
+26                 \}
+27             \}
+28             \textcolor{keywordflow}{foreach} (Panel p \textcolor{keywordflow}{in} panel.Children.OfType<Panel>())
+29             \{
+30                 \hyperlink{class_proyecto___integrador__3_1_1_helpers_ada922af713da8f3446fd27a8b3ac3494}{ClearTextBoxes}(p);
+31             \}
+32         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_helpers_a7724b85162da445ab1ff1e54cf0974f2}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}!Disable\-Controls@{Disable\-Controls}}
+\index{Disable\-Controls@{Disable\-Controls}!Proyecto_Integrador_3::Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}}
+\subsubsection[{Disable\-Controls}]{\setlength{\rightskip}{0pt plus 5cm}static void Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers.\-Disable\-Controls (
+\begin{DoxyParamCaption}
+\item[{Panel}]{panel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_proyecto___integrador__3_1_1_helpers_a7724b85162da445ab1ff1e54cf0974f2}
+
+
+Deshabilita todos los controles en el Panel. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em panel} & El panel.\\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 146 del archivo Helpers.\-cs.
+
+
+\begin{DoxyCode}
+147         \{
+148             \textcolor{keywordflow}{foreach} (Control c \textcolor{keywordflow}{in} panel.Children.OfType<Control>())
+149             \{
+150                 c.IsEnabled = \textcolor{keyword}{false};
+151             \}
+152             \textcolor{keywordflow}{foreach} (Panel p \textcolor{keywordflow}{in} panel.Children.OfType<Panel>())
+153             \{
+154                 \hyperlink{class_proyecto___integrador__3_1_1_helpers_a7724b85162da445ab1ff1e54cf0974f2}{DisableControls}(p);
+155             \}
+156         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_helpers_abf9eb7a688a873f0767ce5dc5bd6f5af}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}!Enable\-Controls@{Enable\-Controls}}
+\index{Enable\-Controls@{Enable\-Controls}!Proyecto_Integrador_3::Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}}
+\subsubsection[{Enable\-Controls}]{\setlength{\rightskip}{0pt plus 5cm}static void Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers.\-Enable\-Controls (
+\begin{DoxyParamCaption}
+\item[{Panel}]{panel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_proyecto___integrador__3_1_1_helpers_abf9eb7a688a873f0767ce5dc5bd6f5af}
+
+
+Habilita todos los controles en el Panel. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em panel} & El panel.\\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 162 del archivo Helpers.\-cs.
+
+
+\begin{DoxyCode}
+163         \{
+164             \textcolor{keywordflow}{foreach} (Control c \textcolor{keywordflow}{in} panel.Children.OfType<Control>())
+165             \{
+166                 c.IsEnabled = \textcolor{keyword}{true};
+167             \}
+168             \textcolor{keywordflow}{foreach} (Panel p \textcolor{keywordflow}{in} panel.Children.OfType<Panel>())
+169             \{
+170                 \hyperlink{class_proyecto___integrador__3_1_1_helpers_abf9eb7a688a873f0767ce5dc5bd6f5af}{EnableControls}(p);
+171             \}
+172         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_helpers_a6bc9de476926295b0feb8f636cc39f31}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}!mas\-Repetido$<$ T $>$@{mas\-Repetido$<$ T $>$}}
+\index{mas\-Repetido$<$ T $>$@{mas\-Repetido$<$ T $>$}!Proyecto_Integrador_3::Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}}
+\subsubsection[{mas\-Repetido$<$ T $>$}]{\setlength{\rightskip}{0pt plus 5cm}static int Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers.\-mas\-Repetido$<$ T $>$ (
+\begin{DoxyParamCaption}
+\item[{List$<$ T $>$}]{datos, }
+\item[{out Hash\-Set$<$ T $>$}]{moda}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_proyecto___integrador__3_1_1_helpers_a6bc9de476926295b0feb8f636cc39f31}
+
+
+Devuelve el valor mas repetido en una lista. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parámetros}
+{\em datos} & Los datos.\\
+\hline
+{\em moda} & Los valores mas repetidos.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+El número de veces que se repitió el valor mas repetido.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Restriciones de tipo]\begin{description}
+\item[{\em T} : {\em I\-Comparable$<$T$>$}]\end{description}
+\end{Desc}
+
+
+Definición en la línea 193 del archivo Helpers.\-cs.
+
+
+\begin{DoxyCode}
+193                                                                                      : IComparable<T>
+194         \{
+195             moda = \textcolor{keyword}{new} HashSet<T>();
+196             \textcolor{keywordflow}{if} (datos.Count == 0)
+197             \{
+198                 \textcolor{keywordflow}{return} 0;
+199             \}
+200             T valorActual = datos.First();
+201             \textcolor{keywordtype}{int} countValorActual = 0;
+202             \textcolor{keywordtype}{int} countValorMasFrecuente = 0;
+203             \textcolor{keywordflow}{for} (var j = 0; j <= datos.Count; j++)
+204             \{
+205                 T valor = \textcolor{keywordflow}{default}(T);
+206                 \textcolor{keywordtype}{bool} last = j == datos.Count;
+207                 \textcolor{keywordflow}{if} (!last)
+208                 \{
+209                     valor = datos[j];
+210                 \}
+211 
+212                 \textcolor{keywordflow}{if} (valor.CompareTo(valorActual) == 0 && !last)
+213                 \{
+214                     countValorActual++;
+215                 \}
+216                 \textcolor{keywordflow}{else}
+217                 \{
+218                     \textcolor{keywordflow}{if} (countValorActual == countValorMasFrecuente)
+219                     \{
+220                         moda.Add(valorActual);
+221                     \}
+222                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (countValorActual > countValorMasFrecuente)
+223                     \{
+224                         countValorMasFrecuente = countValorActual;
+225                         moda.Clear();
+226                         moda.Add(valorActual);
+227                     \}
+228                     \textcolor{keywordflow}{if} (!last) valorActual = valor;
+229                     countValorActual = 1;
+230                 \}
+231             \}
+232             \textcolor{keywordflow}{return} countValorMasFrecuente;
+233         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_helpers_aaede5d9d02c3e31c447e3e9abf113afa}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}!Set\-Validation\-Text\-Boxes@{Set\-Validation\-Text\-Boxes}}
+\index{Set\-Validation\-Text\-Boxes@{Set\-Validation\-Text\-Boxes}!Proyecto_Integrador_3::Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}}
+\subsubsection[{Set\-Validation\-Text\-Boxes}]{\setlength{\rightskip}{0pt plus 5cm}static void Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers.\-Set\-Validation\-Text\-Boxes (
+\begin{DoxyParamCaption}
+\item[{Panel}]{panel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_proyecto___integrador__3_1_1_helpers_aaede5d9d02c3e31c447e3e9abf113afa}
+
+
+Asigna la validación a todos los cuadros de texto de el panel. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em panel} & El panel.\\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 38 del archivo Helpers.\-cs.
+
+
+\begin{DoxyCode}
+39         \{
+40             \textcolor{keywordflow}{foreach} (Control c \textcolor{keywordflow}{in} panel.Children.OfType<Control>())
+41             \{
+42                 \textcolor{keywordflow}{if} (c is TextBox)
+43                 \{
+44                     ((TextBox)c).TextChanged += Helpers.validarTextBoxtColor;
+45                 \}
+46             \}
+47             \textcolor{keywordflow}{foreach} (Panel p \textcolor{keywordflow}{in} panel.Children.OfType<Panel>())
+48             \{
+49                 \hyperlink{class_proyecto___integrador__3_1_1_helpers_aaede5d9d02c3e31c447e3e9abf113afa}{SetValidationTextBoxes}(p);
+50             \}
+51         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_helpers_ab0cb9ffb08e0c4d6dd3c95852411fdec}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}!validar\-Cuenta@{validar\-Cuenta}}
+\index{validar\-Cuenta@{validar\-Cuenta}!Proyecto_Integrador_3::Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}}
+\subsubsection[{validar\-Cuenta}]{\setlength{\rightskip}{0pt plus 5cm}static bool Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers.\-validar\-Cuenta (
+\begin{DoxyParamCaption}
+\item[{string}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_proyecto___integrador__3_1_1_helpers_ab0cb9ffb08e0c4d6dd3c95852411fdec}
+
+
+Validar la entrada para ver si es un numero de tarjeta válido. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em input} & La entrada.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Verdadero si es válido, Falso si es inválido
+\end{DoxyReturn}
+
+
+Definición en la línea 123 del archivo Helpers.\-cs.
+
+
+\begin{DoxyCode}
+124         \{
+125             \textcolor{keywordtype}{long} t;
+126             \textcolor{keywordflow}{if} (input.Length == 12 && \textcolor{keywordtype}{long}.TryParse(input, out t)) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+127             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+128         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_helpers_a36afc3d70450850731fc7b24735e9342}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}!validar\-Dinero@{validar\-Dinero}}
+\index{validar\-Dinero@{validar\-Dinero}!Proyecto_Integrador_3::Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}}
+\subsubsection[{validar\-Dinero}]{\setlength{\rightskip}{0pt plus 5cm}static bool Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers.\-validar\-Dinero (
+\begin{DoxyParamCaption}
+\item[{string}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_proyecto___integrador__3_1_1_helpers_a36afc3d70450850731fc7b24735e9342}
+
+
+Validar la entrada para ver si es una cantidad de dinero válida. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em input} & La entrada.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Verdadero si es válido, Falso si es inválido
+\end{DoxyReturn}
+
+
+Definición en la línea 135 del archivo Helpers.\-cs.
+
+
+\begin{DoxyCode}
+136         \{
+137             decimal t;
+138             \textcolor{keywordflow}{if} (decimal.TryParse(input, out t)) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+139             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+140         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_helpers_ad5d8f36513117018c7ade0f2d6889222}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}!validar\-Text\-Box\-Estandar@{validar\-Text\-Box\-Estandar}}
+\index{validar\-Text\-Box\-Estandar@{validar\-Text\-Box\-Estandar}!Proyecto_Integrador_3::Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}}
+\subsubsection[{validar\-Text\-Box\-Estandar}]{\setlength{\rightskip}{0pt plus 5cm}static bool Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers.\-validar\-Text\-Box\-Estandar (
+\begin{DoxyParamCaption}
+\item[{Text\-Box}]{txt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_proyecto___integrador__3_1_1_helpers_ad5d8f36513117018c7ade0f2d6889222}
+
+
+Realiza validación estandar a un cuadro de texto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em txt} & El cuadro de texto.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+
+Definición en la línea 58 del archivo Helpers.\-cs.
+
+
+\begin{DoxyCode}
+59         \{
+60             \textcolor{comment}{//var regexItem = new Regex("^[a-zA-Z0-9 ]*$");}
+61             var regexItem = \textcolor{keyword}{new} Regex(\textcolor{stringliteral}{@"^\(\backslash\)w*(\(\backslash\)s\(\backslash\)w*)*$"});
+62             \textcolor{keywordtype}{bool} estado = \textcolor{keyword}{true};
+63             \textcolor{keywordflow}{if} (!regexItem.IsMatch(txt.Text)) estado = \textcolor{keyword}{false};
+64             \textcolor{keywordflow}{if} (txt.Text.Length < 3) estado = \textcolor{keyword}{false};
+65 
+66             \textcolor{keywordflow}{if} (!estado)
+67             \{
+68                 txt.Background = Constantes.ErrorBrush;
+69 
+70                 \textcolor{comment}{//txt.Background.Opacity = 70;}
+71             \}
+72             \textcolor{keywordflow}{return} estado;
+73         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_helpers_aec73f44f21b6083802bdb77128435771}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}!validar\-Text\-Box\-Numero@{validar\-Text\-Box\-Numero}}
+\index{validar\-Text\-Box\-Numero@{validar\-Text\-Box\-Numero}!Proyecto_Integrador_3::Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}}
+\subsubsection[{validar\-Text\-Box\-Numero}]{\setlength{\rightskip}{0pt plus 5cm}static bool Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers.\-validar\-Text\-Box\-Numero (
+\begin{DoxyParamCaption}
+\item[{Text\-Box}]{txt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_proyecto___integrador__3_1_1_helpers_aec73f44f21b6083802bdb77128435771}
+
+
+Realiza la validación necesario para cersiorarse de que el texto en un cuadro de téxto es un número . 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em txt} & El cuadro de texto.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+
+Definición en la línea 102 del archivo Helpers.\-cs.
+
+
+\begin{DoxyCode}
+103         \{
+104             \textcolor{keywordtype}{bool} estado = \textcolor{keyword}{true};
+105             \textcolor{keywordtype}{int} t;
+106             \textcolor{keywordflow}{if} (!\textcolor{keywordtype}{int}.TryParse(txt.Text, out t)) estado = \textcolor{keyword}{false};
+107             \textcolor{keywordflow}{if} (txt.Text.Length < 1) estado = \textcolor{keyword}{false};
+108 
+109             \textcolor{keywordflow}{if} (!estado)
+110             \{
+111                 txt.Background = Constantes.ErrorBrush;
+112 
+113                 \textcolor{comment}{//txt.Background.Opacity = 70;}
+114             \}
+115             \textcolor{keywordflow}{return} estado;
+116         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_helpers_afc8b1c92d8b5e218247f0295580dea13}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}!validar\-Text\-Boxt\-Color@{validar\-Text\-Boxt\-Color}}
+\index{validar\-Text\-Boxt\-Color@{validar\-Text\-Boxt\-Color}!Proyecto_Integrador_3::Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}}
+\subsubsection[{validar\-Text\-Boxt\-Color}]{\setlength{\rightskip}{0pt plus 5cm}static void Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers.\-validar\-Text\-Boxt\-Color (
+\begin{DoxyParamCaption}
+\item[{object}]{sender, }
+\item[{Text\-Changed\-Event\-Args}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_proyecto___integrador__3_1_1_helpers_afc8b1c92d8b5e218247f0295580dea13}
+
+
+Definición en la línea 174 del archivo Helpers.\-cs.
+
+
+\begin{DoxyCode}
+175         \{
+176             ((TextBox)sender).Background = Brushes.White;
+177         \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1_helpers_ad9d7083d38ed1ad33bac8ef8e0dfea09}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}!validar\-Text\-Box\-Telefono@{validar\-Text\-Box\-Telefono}}
+\index{validar\-Text\-Box\-Telefono@{validar\-Text\-Box\-Telefono}!Proyecto_Integrador_3::Helpers@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Helpers}}
+\subsubsection[{validar\-Text\-Box\-Telefono}]{\setlength{\rightskip}{0pt plus 5cm}static bool Proyecto\-\_\-\-Integrador\-\_\-3.\-Helpers.\-validar\-Text\-Box\-Telefono (
+\begin{DoxyParamCaption}
+\item[{Text\-Box}]{txt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_proyecto___integrador__3_1_1_helpers_ad9d7083d38ed1ad33bac8ef8e0dfea09}
+
+
+Realiza la validación necesario para cersiorarse de que el texto en un cuadro de téxto es un número telefónico de 10 dígitos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em txt} & El cuadro de texto.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+
+Definición en la línea 80 del archivo Helpers.\-cs.
+
+
+\begin{DoxyCode}
+81         \{
+82             var regexItem = \textcolor{keyword}{new} Regex(\textcolor{stringliteral}{"^[a-zA-Z0-9 ]*$"});
+83             \textcolor{keywordtype}{bool} estado = \textcolor{keyword}{true};
+84             \textcolor{keywordtype}{long} t;
+85             \textcolor{keywordflow}{if} (!regexItem.IsMatch(txt.Text)) estado = \textcolor{keyword}{false};
+86             \textcolor{keywordflow}{if} (!\textcolor{keywordtype}{long}.TryParse(txt.Text, out t)) estado = \textcolor{keyword}{false};
+87             \textcolor{keywordflow}{if} (txt.Text.Length != 10) estado = \textcolor{keyword}{false};
+88             \textcolor{keywordflow}{if} (!estado)
+89             \{
+90                 txt.Background = Constantes.ErrorBrush;
+91 
+92                 \textcolor{comment}{//txt.Background.Opacity = 70;}
+93             \}
+94             \textcolor{keywordflow}{return} estado;
+95         \}
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Yknx4/\-Documents/\-Visual Studio 2012/\-Projects/\-Proyecto Integrador 3/\-Proyecto Integrador 3/\hyperlink{_helpers_8cs}{Helpers.\-cs}\end{DoxyCompactItemize}

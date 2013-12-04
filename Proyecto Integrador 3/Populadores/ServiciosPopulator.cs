@@ -7,6 +7,9 @@ namespace Proyecto_Integrador_3
 {
     partial class DBManagers
     {
+        /// <summary>
+        /// Llena las listas de Servicios
+        /// </summary>
         public class ServiciosPopulator
         {
             private List<Servicio> _servicios = new List<Servicio>();

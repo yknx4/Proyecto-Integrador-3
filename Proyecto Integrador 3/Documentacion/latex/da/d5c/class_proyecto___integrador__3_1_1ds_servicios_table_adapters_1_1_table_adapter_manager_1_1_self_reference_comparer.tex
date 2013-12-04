@@ -1,0 +1,198 @@
+\hypertarget{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer}{\section{Referencia de la Clase Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Servicios\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Self\-Reference\-Comparer}
+\label{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer}\index{Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Servicios\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Self\-Reference\-Comparer@{Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Servicios\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Self\-Reference\-Comparer}}
+}
+
+
+Used to sort self-\/referenced table's rows /summary$>$  
+
+
+Diagrama de herencias de Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Servicios\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Self\-Reference\-Comparer\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.975610cm]{da/d5c/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer}
+\end{center}
+\end{figure}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a8e226852fba6e592bf7d9a81be340051}{Compare} (global\-::\-System.\-Data.\-Data\-Row row1, global\-::\-System.\-Data.\-Data\-Row row2)
+\end{DoxyCompactItemize}
+\subsection*{Funciones del 'package'}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_ab3a62ea6472e37e6d85704cdea28e806}{Self\-Reference\-Comparer} (global\-::\-System.\-Data.\-Data\-Relation relation, bool child\-First)
+\end{DoxyCompactItemize}
+\subsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+global\-::\-System.\-Data.\-Data\-Row \hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a9bf53ee3bb97ad3fc23f5d885290e9b4}{Get\-Root} (global\-::\-System.\-Data.\-Data\-Row row, out int distance)
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+global\-::\-System.\-Data.\-Data\-Relation \hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a88115b67b87d4305d472d5fa124304b0}{\-\_\-relation}
+\item 
+int \hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_abf5fed6c245e5ee78cd5472bac96e77e}{\-\_\-child\-First}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Used to sort self-\/referenced table's rows /summary$>$ 
+
+Definición en la línea 1347 del archivo ds\-Servicios.\-Designer.\-cs.
+
+
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_ab3a62ea6472e37e6d85704cdea28e806}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer}!Self\-Reference\-Comparer@{Self\-Reference\-Comparer}}
+\index{Self\-Reference\-Comparer@{Self\-Reference\-Comparer}!Proyecto_Integrador_3::dsServiciosTableAdapters::TableAdapterManager::SelfReferenceComparer@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer}}
+\subsubsection[{Self\-Reference\-Comparer}]{\setlength{\rightskip}{0pt plus 5cm}Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Servicios\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Self\-Reference\-Comparer.\-Self\-Reference\-Comparer (
+\begin{DoxyParamCaption}
+\item[{global\-::\-System.\-Data.\-Data\-Relation}]{relation, }
+\item[{bool}]{child\-First}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [package]}}}\label{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_ab3a62ea6472e37e6d85704cdea28e806}
+
+
+Definición en la línea 1355 del archivo ds\-Servicios.\-Designer.\-cs.
+
+
+\begin{DoxyCode}
+1355                                                                                                      \{
+1356                 this.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a88115b67b87d4305d472d5fa124304b0}{\_relation} = relation;
+1357                 \textcolor{keywordflow}{if} (childFirst) \{
+1358                     this.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_abf5fed6c245e5ee78cd5472bac96e77e}{\_childFirst} = -1;
+1359                 \}
+1360                 \textcolor{keywordflow}{else} \{
+1361                     this.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_abf5fed6c245e5ee78cd5472bac96e77e}{\_childFirst} = 1;
+1362                 \}
+1363             \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a8e226852fba6e592bf7d9a81be340051}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer}!Compare@{Compare}}
+\index{Compare@{Compare}!Proyecto_Integrador_3::dsServiciosTableAdapters::TableAdapterManager::SelfReferenceComparer@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer}}
+\subsubsection[{Compare}]{\setlength{\rightskip}{0pt plus 5cm}int Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Servicios\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Self\-Reference\-Comparer.\-Compare (
+\begin{DoxyParamCaption}
+\item[{global\-::\-System.\-Data.\-Data\-Row}]{row1, }
+\item[{global\-::\-System.\-Data.\-Data\-Row}]{row2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a8e226852fba6e592bf7d9a81be340051}
+
+
+Definición en la línea 1406 del archivo ds\-Servicios.\-Designer.\-cs.
+
+
+\begin{DoxyCode}
+1406                                                                                                \{
+1407                 \textcolor{keywordflow}{if} (\textcolor{keywordtype}{object}.ReferenceEquals(row1, row2)) \{
+1408                     \textcolor{keywordflow}{return} 0;
+1409                 \}
+1410                 \textcolor{keywordflow}{if} ((row1 == null)) \{
+1411                     \textcolor{keywordflow}{return} -1;
+1412                 \}
+1413                 \textcolor{keywordflow}{if} ((row2 == null)) \{
+1414                     \textcolor{keywordflow}{return} 1;
+1415                 \}
+1416 
+1417                 \textcolor{keywordtype}{int} distance1 = 0;
+1418                 global::System.Data.DataRow root1 = this.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a9bf53ee3bb97ad3fc23f5d885290e9b4}{GetRoot}(row1, out distance1);
+1419 
+1420                 \textcolor{keywordtype}{int} distance2 = 0;
+1421                 global::System.Data.DataRow root2 = this.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a9bf53ee3bb97ad3fc23f5d885290e9b4}{GetRoot}(row2, out distance2);
+1422 
+1423                 \textcolor{keywordflow}{if} (\textcolor{keywordtype}{object}.ReferenceEquals(root1, root2)) \{
+1424                     \textcolor{keywordflow}{return} (this.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_abf5fed6c245e5ee78cd5472bac96e77e}{\_childFirst} * distance1.CompareTo(distance2));
+1425                 \}
+1426                 \textcolor{keywordflow}{else} \{
+1427                     global::System.Diagnostics.Debug.Assert(((root1.Table != null) 
+1428                                     && (root2.Table != null)));
+1429                     \textcolor{keywordflow}{if} ((root1.Table.Rows.IndexOf(root1) < root2.Table.Rows.IndexOf(root2))) \{
+1430                         \textcolor{keywordflow}{return} -1;
+1431                     \}
+1432                     \textcolor{keywordflow}{else} \{
+1433                         \textcolor{keywordflow}{return} 1;
+1434                     \}
+1435                 \}
+1436             \}
+\end{DoxyCode}
+\hypertarget{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a9bf53ee3bb97ad3fc23f5d885290e9b4}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer}!Get\-Root@{Get\-Root}}
+\index{Get\-Root@{Get\-Root}!Proyecto_Integrador_3::dsServiciosTableAdapters::TableAdapterManager::SelfReferenceComparer@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer}}
+\subsubsection[{Get\-Root}]{\setlength{\rightskip}{0pt plus 5cm}global.\-System.\-Data.\-Data\-Row Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Servicios\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Self\-Reference\-Comparer.\-Get\-Root (
+\begin{DoxyParamCaption}
+\item[{global\-::\-System.\-Data.\-Data\-Row}]{row, }
+\item[{out int}]{distance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a9bf53ee3bb97ad3fc23f5d885290e9b4}
+
+
+Definición en la línea 1367 del archivo ds\-Servicios.\-Designer.\-cs.
+
+
+\begin{DoxyCode}
+1367                                                                                                        \{
+1368                 global::System.Diagnostics.Debug.Assert((row != null));
+1369                 global::System.Data.DataRow root = row;
+1370                 distance = 0;
+1371 
+1372                 global::System.Collections.Generic.IDictionary<global::System.Data.DataRow, global::System.
+      Data.DataRow> traversedRows = \textcolor{keyword}{new} global::System.Collections.Generic.Dictionary<global::System.Data.DataRow,
+       global::System.Data.DataRow>();
+1373                 traversedRows[row] = row;
+1374 
+1375                 global::System.Data.DataRow parent = row.GetParentRow(this.
+      \hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a88115b67b87d4305d472d5fa124304b0}{\_relation}, global::System.Data.DataRowVersion.Default);
+1376                 \textcolor{keywordflow}{for} (
+1377                 ; ((parent != null) 
+1378                             && (traversedRows.ContainsKey(parent) == \textcolor{keyword}{false})); 
+1379                 ) \{
+1380                     distance = (distance + 1);
+1381                     root = parent;
+1382                     traversedRows[parent] = parent;
+1383                     parent = parent.GetParentRow(this.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a88115b67b87d4305d472d5fa124304b0}{\_relation}, global::System.Data.
+      DataRowVersion.Default);
+1384                 \}
+1385 
+1386                 \textcolor{keywordflow}{if} ((distance == 0)) \{
+1387                     traversedRows.Clear();
+1388                     traversedRows[row] = row;
+1389                     parent = row.GetParentRow(this.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a88115b67b87d4305d472d5fa124304b0}{\_relation}, global::System.Data.DataRowVersion.
+      Original);
+1390                     \textcolor{keywordflow}{for} (
+1391                     ; ((parent != null) 
+1392                                 && (traversedRows.ContainsKey(parent) == \textcolor{keyword}{false})); 
+1393                     ) \{
+1394                         distance = (distance + 1);
+1395                         root = parent;
+1396                         traversedRows[parent] = parent;
+1397                         parent = parent.GetParentRow(this.\hyperlink{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a88115b67b87d4305d472d5fa124304b0}{\_relation}, global::System.Data.
+      DataRowVersion.Original);
+1398                     \}
+1399                 \}
+1400 
+1401                 \textcolor{keywordflow}{return} root;
+1402             \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de los datos miembro}
+\hypertarget{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_abf5fed6c245e5ee78cd5472bac96e77e}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer}!\-\_\-child\-First@{\-\_\-child\-First}}
+\index{\-\_\-child\-First@{\-\_\-child\-First}!Proyecto_Integrador_3::dsServiciosTableAdapters::TableAdapterManager::SelfReferenceComparer@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer}}
+\subsubsection[{\-\_\-child\-First}]{\setlength{\rightskip}{0pt plus 5cm}int Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Servicios\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Self\-Reference\-Comparer.\-\_\-child\-First\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_abf5fed6c245e5ee78cd5472bac96e77e}
+
+
+Definición en la línea 1351 del archivo ds\-Servicios.\-Designer.\-cs.
+
+\hypertarget{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a88115b67b87d4305d472d5fa124304b0}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer}!\-\_\-relation@{\-\_\-relation}}
+\index{\-\_\-relation@{\-\_\-relation}!Proyecto_Integrador_3::dsServiciosTableAdapters::TableAdapterManager::SelfReferenceComparer@{Proyecto\-\_\-\-Integrador\-\_\-3\-::ds\-Servicios\-Table\-Adapters\-::\-Table\-Adapter\-Manager\-::\-Self\-Reference\-Comparer}}
+\subsubsection[{\-\_\-relation}]{\setlength{\rightskip}{0pt plus 5cm}global.\-System.\-Data.\-Data\-Relation Proyecto\-\_\-\-Integrador\-\_\-3.\-ds\-Servicios\-Table\-Adapters.\-Table\-Adapter\-Manager.\-Self\-Reference\-Comparer.\-\_\-relation\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_a88115b67b87d4305d472d5fa124304b0}
+
+
+Definición en la línea 1349 del archivo ds\-Servicios.\-Designer.\-cs.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Yknx4/\-Documents/\-Visual Studio 2012/\-Projects/\-Proyecto Integrador 3/\-Proyecto Integrador 3/\hyperlink{ds_servicios_8_designer_8cs}{ds\-Servicios.\-Designer.\-cs}\end{DoxyCompactItemize}

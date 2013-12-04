@@ -1,0 +1,941 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>SmartCards: Referencia de la Clase Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../MainLogo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">SmartCards
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Sistema de control de autobuses.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.4 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>Clases</span></a></li>
+      <li><a href="../../files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
+      <li><a href="../../classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
+      <li><a href="../../hierarchy.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
+      <li><a href="../../functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Valores de enumeraciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Propiedades</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Eventos</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../d2/d4d/namespace_proyecto___integrador__3_1_1ds_servicios_table_adapters.html">dsServiciosTableAdapters</a></li><li class="navelem"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html">ServiciosTableAdapter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#properties">Propiedades</a> &#124;
+<a href="#pri-methods">Métodos privados</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
+<a href="../../da/d32/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referencia de la Clase Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Represents the connection and commands used to retrieve and save data.  
+ <a href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#details">Más...</a></p>
+<div class="dynheader">
+Diagrama de herencias de Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.png" usemap="#Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter_map" alt=""/>
+  <map id="Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter_map" name="Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a16021c2eb24e9ee91eafb521a4d320b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a16021c2eb24e9ee91eafb521a4d320b4">ServiciosTableAdapter</a> ()</td></tr>
+<tr class="separator:a16021c2eb24e9ee91eafb521a4d320b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a281269dec2ad3d264f15b83b4fedf"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#ad0a281269dec2ad3d264f15b83b4fedf">Fill</a> (<a class="el" href="../../dd/d4f/class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_data_table.html">dsServicios.ServiciosDataTable</a> dataTable)</td></tr>
+<tr class="separator:ad0a281269dec2ad3d264f15b83b4fedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a094ae05881b4c854d8eded668faae6c3"><td class="memItemLeft" align="right" valign="top">virtual <br class="typebreak"/>
+<a class="el" href="../../dd/d4f/class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_data_table.html">dsServicios.ServiciosDataTable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a094ae05881b4c854d8eded668faae6c3">GetData</a> ()</td></tr>
+<tr class="separator:a094ae05881b4c854d8eded668faae6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeef3160a3e0bdc86f499f0f9ad7221fd"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#aeef3160a3e0bdc86f499f0f9ad7221fd">Update</a> (<a class="el" href="../../dd/d4f/class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_data_table.html">dsServicios.ServiciosDataTable</a> dataTable)</td></tr>
+<tr class="separator:aeef3160a3e0bdc86f499f0f9ad7221fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3492851ad51e84e611ed56f599c8ed96"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a3492851ad51e84e611ed56f599c8ed96">Update</a> (<a class="el" href="../../da/d6b/class_proyecto___integrador__3_1_1ds_servicios.html">dsServicios</a> dataSet)</td></tr>
+<tr class="separator:a3492851ad51e84e611ed56f599c8ed96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029fffb4deea6ce4379d7858bc1a707c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a029fffb4deea6ce4379d7858bc1a707c">Update</a> (global::System.Data.DataRow dataRow)</td></tr>
+<tr class="separator:a029fffb4deea6ce4379d7858bc1a707c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f3888665a7a03b764670069a0e923dd"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a4f3888665a7a03b764670069a0e923dd">Update</a> (global::System.Data.DataRow[] dataRows)</td></tr>
+<tr class="separator:a4f3888665a7a03b764670069a0e923dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade09fa224ce227b1bd8132d103abb9bd"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#ade09fa224ce227b1bd8132d103abb9bd">Delete</a> (int Original_id)</td></tr>
+<tr class="separator:ade09fa224ce227b1bd8132d103abb9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fdcc35bf82db2d196e665f73000ac0c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a8fdcc35bf82db2d196e665f73000ac0c">Insert</a> (string tipoUsuario, System.Guid unidad, System.Guid usuario, System.DateTime fecha)</td></tr>
+<tr class="separator:a8fdcc35bf82db2d196e665f73000ac0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5024e7973f369f5c0e4a3478f2660a75"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a5024e7973f369f5c0e4a3478f2660a75">Update</a> (string tipoUsuario, System.Guid unidad, System.Guid usuario, System.DateTime fecha, int Original_id)</td></tr>
+<tr class="separator:a5024e7973f369f5c0e4a3478f2660a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Propiedades</h2></td></tr>
+<tr class="memitem:a6e2d84a1b2c925ab5f078c403b1e3ecf"><td class="memItemLeft" align="right" valign="top">global::System.Data.SqlServerCe.SqlCeDataAdapter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a><code> [get]</code></td></tr>
+<tr class="separator:a6e2d84a1b2c925ab5f078c403b1e3ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdc3759c0f8fd84ed6ae2943ee4855f5"><td class="memItemLeft" align="right" valign="top">global::System.Data.SqlServerCe.SqlCeConnection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#afdc3759c0f8fd84ed6ae2943ee4855f5">Connection</a><code> [get, set]</code></td></tr>
+<tr class="separator:afdc3759c0f8fd84ed6ae2943ee4855f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e7fe5479416cffb20c9576cdefb7e8e"><td class="memItemLeft" align="right" valign="top">global::System.Data.SqlServerCe.SqlCeTransaction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a3e7fe5479416cffb20c9576cdefb7e8e">Transaction</a><code> [get, set]</code></td></tr>
+<tr class="separator:a3e7fe5479416cffb20c9576cdefb7e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42d3cd780a8573cb22d9a8a3c251cbc"><td class="memItemLeft" align="right" valign="top">global::System.Data.SqlServerCe.SqlCeCommand[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#ad42d3cd780a8573cb22d9a8a3c251cbc">CommandCollection</a><code> [get]</code></td></tr>
+<tr class="separator:ad42d3cd780a8573cb22d9a8a3c251cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10403cf7d526506e7a350a7ba70cc6ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a10403cf7d526506e7a350a7ba70cc6ec">ClearBeforeFill</a><code> [get, set]</code></td></tr>
+<tr class="separator:a10403cf7d526506e7a350a7ba70cc6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a4faac695dc160139a491938577b85da5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a4faac695dc160139a491938577b85da5">InitAdapter</a> ()</td></tr>
+<tr class="separator:a4faac695dc160139a491938577b85da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba8164625c74a38ddd37f0558d58a78a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#aba8164625c74a38ddd37f0558d58a78a">InitConnection</a> ()</td></tr>
+<tr class="separator:aba8164625c74a38ddd37f0558d58a78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a780a31923b2bcea2f1c260e08fb43064"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a780a31923b2bcea2f1c260e08fb43064">InitCommandCollection</a> ()</td></tr>
+<tr class="separator:a780a31923b2bcea2f1c260e08fb43064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:adef36d1c06bafba740cd2cb94515689b"><td class="memItemLeft" align="right" valign="top">global::System.Data.SqlServerCe.SqlCeDataAdapter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a></td></tr>
+<tr class="separator:adef36d1c06bafba740cd2cb94515689b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b17efa7b400219260090a16bfccff3"><td class="memItemLeft" align="right" valign="top">global::System.Data.SqlServerCe.SqlCeConnection&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a61b17efa7b400219260090a16bfccff3">_connection</a></td></tr>
+<tr class="separator:a61b17efa7b400219260090a16bfccff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5265bf458c29343cad2cc1c7f49da90"><td class="memItemLeft" align="right" valign="top">global::System.Data.SqlServerCe.SqlCeTransaction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#ab5265bf458c29343cad2cc1c7f49da90">_transaction</a></td></tr>
+<tr class="separator:ab5265bf458c29343cad2cc1c7f49da90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dce748dfee4379f6fb18ac2d87c3e5b"><td class="memItemLeft" align="right" valign="top">global::System.Data.SqlServerCe.SqlCeCommand[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a1dce748dfee4379f6fb18ac2d87c3e5b">_commandCollection</a></td></tr>
+<tr class="separator:a1dce748dfee4379f6fb18ac2d87c3e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7f5af5748748a7cb81b440aab054f0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#af7f5af5748748a7cb81b440aab054f0e">_clearBeforeFill</a></td></tr>
+<tr class="separator:af7f5af5748748a7cb81b440aab054f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Represents the connection and commands used to retrieve and save data. </p>
+<p>/summary&gt; </p>
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00715">715</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+</div><h2 class="groupheader">Documentación del constructor y destructor</h2>
+<a class="anchor" id="a16021c2eb24e9ee91eafb521a4d320b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.ServiciosTableAdapter </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00729">729</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;                                       {</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a10403cf7d526506e7a350a7ba70cc6ec">ClearBeforeFill</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a class="anchor" id="ade09fa224ce227b1bd8132d103abb9bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.Delete </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Original_id</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00933">933</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;                                                   {</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.DeleteCommand.Parameters[0].Value = ((int)(Original_id));</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;            global::System.Data.ConnectionState previousConnectionState = this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.DeleteCommand.Connection.State;</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;            <span class="keywordflow">if</span> (((this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.DeleteCommand.Connection.State &amp; global::System.Data.ConnectionState.Open) </div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;                        != global::System.Data.ConnectionState.Open)) {</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;                this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.DeleteCommand.Connection.Open();</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;            }</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;            <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;                <span class="keywordtype">int</span> returnValue = this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.DeleteCommand.ExecuteNonQuery();</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;                <span class="keywordflow">return</span> returnValue;</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;            }</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;            <span class="keywordflow">finally</span> {</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;                <span class="keywordflow">if</span> ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;                    this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.DeleteCommand.Connection.Close();</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;                }</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;            }</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ad0a281269dec2ad3d264f15b83b4fedf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.Fill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d4f/class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_data_table.html">dsServicios.ServiciosDataTable</a>&#160;</td>
+          <td class="paramname"><em>dataTable</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00880">880</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;                                                                          {</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.SelectCommand = this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#ad42d3cd780a8573cb22d9a8a3c251cbc">CommandCollection</a>[0];</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;            <span class="keywordflow">if</span> ((this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a10403cf7d526506e7a350a7ba70cc6ec">ClearBeforeFill</a> == <span class="keyword">true</span>)) {</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;                dataTable.Clear();</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;            }</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;            <span class="keywordtype">int</span> returnValue = this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.Fill(dataTable);</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;            <span class="keywordflow">return</span> returnValue;</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a094ae05881b4c854d8eded668faae6c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dd/d4f/class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_data_table.html">dsServicios.ServiciosDataTable</a> Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.GetData </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00893">893</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;                                                                {</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.SelectCommand = this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#ad42d3cd780a8573cb22d9a8a3c251cbc">CommandCollection</a>[0];</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;            dsServicios.ServiciosDataTable dataTable = <span class="keyword">new</span> dsServicios.ServiciosDataTable();</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.Fill(dataTable);</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;            <span class="keywordflow">return</span> dataTable;</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a4faac695dc160139a491938577b85da5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.InitAdapter </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00822">822</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;                                   {</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a> = <span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeDataAdapter();</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;            global::System.Data.Common.DataTableMapping tableMapping = <span class="keyword">new</span> global::System.Data.Common.DataTableMapping();</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;            tableMapping.SourceTable = <span class="stringliteral">&quot;Table&quot;</span>;</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;            tableMapping.DataSetTable = <span class="stringliteral">&quot;Servicios&quot;</span>;</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;            tableMapping.ColumnMappings.Add(<span class="stringliteral">&quot;id&quot;</span>, <span class="stringliteral">&quot;id&quot;</span>);</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;            tableMapping.ColumnMappings.Add(<span class="stringliteral">&quot;tipoUsuario&quot;</span>, <span class="stringliteral">&quot;tipoUsuario&quot;</span>);</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;            tableMapping.ColumnMappings.Add(<span class="stringliteral">&quot;unidad&quot;</span>, <span class="stringliteral">&quot;unidad&quot;</span>);</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;            tableMapping.ColumnMappings.Add(<span class="stringliteral">&quot;usuario&quot;</span>, <span class="stringliteral">&quot;usuario&quot;</span>);</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;            tableMapping.ColumnMappings.Add(<span class="stringliteral">&quot;fecha&quot;</span>, <span class="stringliteral">&quot;fecha&quot;</span>);</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.TableMappings.Add(tableMapping);</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.DeleteCommand = <span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeCommand();</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.DeleteCommand.Connection = this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#afdc3759c0f8fd84ed6ae2943ee4855f5">Connection</a>;</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.DeleteCommand.CommandText = <span class="stringliteral">&quot;DELETE FROM [Servicios] WHERE (([id] = @Original_id))&quot;</span>;</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.DeleteCommand.CommandType = global::System.Data.CommandType.Text;</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.DeleteCommand.Parameters.Add(<span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeParameter(<span class="stringliteral">&quot;@Original_id&quot;</span>, global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, <span class="keyword">true</span>, 0, 0, <span class="stringliteral">&quot;id&quot;</span>, global::System.Data.DataRowVersion.Original, null));</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.InsertCommand = <span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeCommand();</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.InsertCommand.Connection = this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#afdc3759c0f8fd84ed6ae2943ee4855f5">Connection</a>;</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.InsertCommand.CommandText = <span class="stringliteral">&quot;INSERT INTO [Servicios] ([tipoUsuario], [unidad], [usuario], [fecha]) VALUES (@ti&quot;</span> +</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;                <span class="stringliteral">&quot;poUsuario, @unidad, @usuario, @fecha)&quot;</span>;</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.InsertCommand.CommandType = global::System.Data.CommandType.Text;</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.InsertCommand.Parameters.Add(<span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeParameter(<span class="stringliteral">&quot;@tipoUsuario&quot;</span>, global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, <span class="keyword">true</span>, 0, 0, <span class="stringliteral">&quot;tipoUsuario&quot;</span>, global::System.Data.DataRowVersion.Current, null));</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.InsertCommand.Parameters.Add(<span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeParameter(<span class="stringliteral">&quot;@unidad&quot;</span>, global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, <span class="keyword">true</span>, 0, 0, <span class="stringliteral">&quot;unidad&quot;</span>, global::System.Data.DataRowVersion.Current, null));</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.InsertCommand.Parameters.Add(<span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeParameter(<span class="stringliteral">&quot;@usuario&quot;</span>, global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, <span class="keyword">true</span>, 0, 0, <span class="stringliteral">&quot;usuario&quot;</span>, global::System.Data.DataRowVersion.Current, null));</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.InsertCommand.Parameters.Add(<span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeParameter(<span class="stringliteral">&quot;@fecha&quot;</span>, global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, <span class="keyword">true</span>, 0, 0, <span class="stringliteral">&quot;fecha&quot;</span>, global::System.Data.DataRowVersion.Current, null));</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.UpdateCommand = <span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeCommand();</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.UpdateCommand.Connection = this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#afdc3759c0f8fd84ed6ae2943ee4855f5">Connection</a>;</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.UpdateCommand.CommandText = <span class="stringliteral">&quot;UPDATE [Servicios] SET [tipoUsuario] = @tipoUsuario, [unidad] = @unidad, [usuario&quot;</span> +</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;                <span class="stringliteral">&quot;] = @usuario, [fecha] = @fecha WHERE (([id] = @Original_id))&quot;</span>;</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.UpdateCommand.CommandType = global::System.Data.CommandType.Text;</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.UpdateCommand.Parameters.Add(<span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeParameter(<span class="stringliteral">&quot;@tipoUsuario&quot;</span>, global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, <span class="keyword">true</span>, 0, 0, <span class="stringliteral">&quot;tipoUsuario&quot;</span>, global::System.Data.DataRowVersion.Current, null));</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.UpdateCommand.Parameters.Add(<span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeParameter(<span class="stringliteral">&quot;@unidad&quot;</span>, global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, <span class="keyword">true</span>, 0, 0, <span class="stringliteral">&quot;unidad&quot;</span>, global::System.Data.DataRowVersion.Current, null));</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.UpdateCommand.Parameters.Add(<span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeParameter(<span class="stringliteral">&quot;@usuario&quot;</span>, global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, <span class="keyword">true</span>, 0, 0, <span class="stringliteral">&quot;usuario&quot;</span>, global::System.Data.DataRowVersion.Current, null));</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.UpdateCommand.Parameters.Add(<span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeParameter(<span class="stringliteral">&quot;@fecha&quot;</span>, global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, <span class="keyword">true</span>, 0, 0, <span class="stringliteral">&quot;fecha&quot;</span>, global::System.Data.DataRowVersion.Current, null));</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#adef36d1c06bafba740cd2cb94515689b">_adapter</a>.UpdateCommand.Parameters.Add(<span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeParameter(<span class="stringliteral">&quot;@Original_id&quot;</span>, global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, <span class="keyword">true</span>, 0, 0, <span class="stringliteral">&quot;id&quot;</span>, global::System.Data.DataRowVersion.Original, null));</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a780a31923b2bcea2f1c260e08fb43064"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.InitCommandCollection </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00868">868</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;                                             {</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a1dce748dfee4379f6fb18ac2d87c3e5b">_commandCollection</a> = <span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeCommand[1];</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a1dce748dfee4379f6fb18ac2d87c3e5b">_commandCollection</a>[0] = <span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeCommand();</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a1dce748dfee4379f6fb18ac2d87c3e5b">_commandCollection</a>[0].Connection = this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#afdc3759c0f8fd84ed6ae2943ee4855f5">Connection</a>;</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a1dce748dfee4379f6fb18ac2d87c3e5b">_commandCollection</a>[0].CommandText = <span class="stringliteral">&quot;SELECT Servicios.*\r\nFROM     Servicios&quot;</span>;</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a1dce748dfee4379f6fb18ac2d87c3e5b">_commandCollection</a>[0].CommandType = global::System.Data.CommandType.Text;</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aba8164625c74a38ddd37f0558d58a78a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.InitConnection </td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00861">861</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;                                      {</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a61b17efa7b400219260090a16bfccff3">_connection</a> = <span class="keyword">new</span> global::System.Data.SqlServerCe.SqlCeConnection();</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a61b17efa7b400219260090a16bfccff3">_connection</a>.ConnectionString = global::Proyecto_Integrador_3.Properties.Settings.Default.ProyectoIntegradorConnectionString;</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a8fdcc35bf82db2d196e665f73000ac0c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.Insert </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tipoUsuario</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">System.Guid&#160;</td>
+          <td class="paramname"><em>unidad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">System.Guid&#160;</td>
+          <td class="paramname"><em>usuario</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">System.DateTime&#160;</td>
+          <td class="paramname"><em>fecha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00955">955</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;                                                                                                                      {</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;            <span class="keywordflow">if</span> ((tipoUsuario == null)) {</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> global::System.ArgumentNullException(<span class="stringliteral">&quot;tipoUsuario&quot;</span>);</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;            }</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;                this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.InsertCommand.Parameters[0].Value = ((string)(tipoUsuario));</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;            }</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.InsertCommand.Parameters[1].Value = ((System.Guid)(unidad));</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.InsertCommand.Parameters[2].Value = ((System.Guid)(usuario));</div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.InsertCommand.Parameters[3].Value = ((System.DateTime)(fecha));</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;            global::System.Data.ConnectionState previousConnectionState = this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.InsertCommand.Connection.State;</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;            <span class="keywordflow">if</span> (((this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.InsertCommand.Connection.State &amp; global::System.Data.ConnectionState.Open) </div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;                        != global::System.Data.ConnectionState.Open)) {</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;                this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.InsertCommand.Connection.Open();</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;            }</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;            <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;                <span class="keywordtype">int</span> returnValue = this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.InsertCommand.ExecuteNonQuery();</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;                <span class="keywordflow">return</span> returnValue;</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;            }</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;            <span class="keywordflow">finally</span> {</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;                <span class="keywordflow">if</span> ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {</div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;                    this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.InsertCommand.Connection.Close();</div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;                }</div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;            }</div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aeef3160a3e0bdc86f499f0f9ad7221fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.Update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d4f/class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_data_table.html">dsServicios.ServiciosDataTable</a>&#160;</td>
+          <td class="paramname"><em>dataTable</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00903">903</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;                                                                            {</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;            <span class="keywordflow">return</span> this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.Update(dataTable);</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3492851ad51e84e611ed56f599c8ed96"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.Update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d6b/class_proyecto___integrador__3_1_1ds_servicios.html">dsServicios</a>&#160;</td>
+          <td class="paramname"><em>dataSet</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00910">910</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;                                                       {</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;            <span class="keywordflow">return</span> this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.Update(dataSet, <span class="stringliteral">&quot;Servicios&quot;</span>);</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a029fffb4deea6ce4379d7858bc1a707c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.Update </td>
+          <td>(</td>
+          <td class="paramtype">global::System.Data.DataRow&#160;</td>
+          <td class="paramname"><em>dataRow</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00917">917</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;                                                                     {</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;            <span class="keywordflow">return</span> this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.Update(<span class="keyword">new</span> global::System.Data.DataRow[] {</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;                        dataRow});</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a4f3888665a7a03b764670069a0e923dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.Update </td>
+          <td>(</td>
+          <td class="paramtype">global::System.Data.DataRow[]&#160;</td>
+          <td class="paramname"><em>dataRows</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00925">925</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;                                                                        {</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;            <span class="keywordflow">return</span> this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.Update(dataRows);</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a5024e7973f369f5c0e4a3478f2660a75"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.Update </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tipoUsuario</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">System.Guid&#160;</td>
+          <td class="paramname"><em>unidad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">System.Guid&#160;</td>
+          <td class="paramname"><em>usuario</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">System.DateTime&#160;</td>
+          <td class="paramname"><em>fecha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Original_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00985">985</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;                                                                                                                                       {</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;            <span class="keywordflow">if</span> ((tipoUsuario == null)) {</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> global::System.ArgumentNullException(<span class="stringliteral">&quot;tipoUsuario&quot;</span>);</div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;            }</div>
+<div class="line"><a name="l00989"></a><span class="lineno">  989</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00990"></a><span class="lineno">  990</span>&#160;                this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.UpdateCommand.Parameters[0].Value = ((string)(tipoUsuario));</div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;            }</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.UpdateCommand.Parameters[1].Value = ((System.Guid)(unidad));</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.UpdateCommand.Parameters[2].Value = ((System.Guid)(usuario));</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.UpdateCommand.Parameters[3].Value = ((System.DateTime)(fecha));</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;            this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.UpdateCommand.Parameters[4].Value = ((int)(Original_id));</div>
+<div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;            global::System.Data.ConnectionState previousConnectionState = this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.UpdateCommand.Connection.State;</div>
+<div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;            <span class="keywordflow">if</span> (((this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.UpdateCommand.Connection.State &amp; global::System.Data.ConnectionState.Open) </div>
+<div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;                        != global::System.Data.ConnectionState.Open)) {</div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;                this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.UpdateCommand.Connection.Open();</div>
+<div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;            }</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;            <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;                <span class="keywordtype">int</span> returnValue = this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.UpdateCommand.ExecuteNonQuery();</div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;                <span class="keywordflow">return</span> returnValue;</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;            }</div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;            <span class="keywordflow">finally</span> {</div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;                <span class="keywordflow">if</span> ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {</div>
+<div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160;                    this.<a class="code" href="../../d4/d3f/class_proyecto___integrador__3_1_1ds_servicios_table_adapters_1_1_servicios_table_adapter.html#a6e2d84a1b2c925ab5f078c403b1e3ecf">Adapter</a>.UpdateCommand.Connection.Close();</div>
+<div class="line"><a name="l01008"></a><span class="lineno"> 1008</span>&#160;                }</div>
+<div class="line"><a name="l01009"></a><span class="lineno"> 1009</span>&#160;            }</div>
+<div class="line"><a name="l01010"></a><span class="lineno"> 1010</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a class="anchor" id="adef36d1c06bafba740cd2cb94515689b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">global.System.Data.SqlServerCe.SqlCeDataAdapter Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter._adapter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00717">717</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af7f5af5748748a7cb81b440aab054f0e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter._clearBeforeFill</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00725">725</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1dce748dfee4379f6fb18ac2d87c3e5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">global.System.Data.SqlServerCe.SqlCeCommand [] Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter._commandCollection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00723">723</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a61b17efa7b400219260090a16bfccff3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">global.System.Data.SqlServerCe.SqlCeConnection Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter._connection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00719">719</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5265bf458c29343cad2cc1c7f49da90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">global.System.Data.SqlServerCe.SqlCeTransaction Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter._transaction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00721">721</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de propiedades</h2>
+<a class="anchor" id="a6e2d84a1b2c925ab5f078c403b1e3ecf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">global.System.Data.SqlServerCe.SqlCeDataAdapter Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.Adapter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00735">735</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a10403cf7d526506e7a350a7ba70cc6ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.ClearBeforeFill</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00811">811</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad42d3cd780a8573cb22d9a8a3c251cbc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">global.System.Data.SqlServerCe.SqlCeCommand [] Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.CommandCollection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00800">800</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afdc3759c0f8fd84ed6ae2943ee4855f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">global.System.Data.SqlServerCe.SqlCeConnection Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.Connection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00746">746</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3e7fe5479416cffb20c9576cdefb7e8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">global.System.Data.SqlServerCe.SqlCeTransaction Proyecto_Integrador_3.dsServiciosTableAdapters.ServiciosTableAdapter.Transaction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00774">774</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir del siguiente fichero:<ul>
+<li>C:/Users/Yknx4/Documents/Visual Studio 2012/Projects/Proyecto Integrador 3/Proyecto Integrador 3/<a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Miércoles, 4 de Diciembre de 2013 00:27:01 para SmartCards por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>
