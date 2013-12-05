@@ -16,7 +16,7 @@ Diagrama de herencias de Proyecto\-\_\-\-Integrador\-\_\-3.\-Reportes.\-Reporte\
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{struct_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_1_1_estadistica_result}{Estadistica\-Result}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Estructura contenedora de datos estadisticos \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
@@ -340,29 +340,29 @@ Definición en la línea 76 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af1670c725412822eadab58e78323de42}
 
 
-Definición en la línea 283 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 286 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-284         \{
-285             \textcolor{comment}{//MessageBox.Show("Ejecuto");}
-286             \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{string})e.Argument != \textcolor{stringliteral}{""})
-287             \{
-288                 \textcolor{keywordflow}{try}
-289                 \{
-290                     e.Result = (from unidades in \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a91106ba7bf23e61d729bc0399ef5fa98}{mUnidadPopulator}.Unidades where unidades.
+287         \{
+288             \textcolor{comment}{//MessageBox.Show("Ejecuto");}
+289             \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{string})e.Argument != \textcolor{stringliteral}{""})
+290             \{
+291                 \textcolor{keywordflow}{try}
+292                 \{
+293                     e.Result = (from unidades in \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a91106ba7bf23e61d729bc0399ef5fa98}{mUnidadPopulator}.Unidades where unidades.
       NoUnidad == (string)e.Argument select unidades).First();
-291                 \}
-292                 \textcolor{keywordflow}{catch} (System.Exception)
-293                 \{
-294                     e.Result = null;
-295                 \}
-296             \}
-297             \textcolor{keywordflow}{else}
-298             \{
-299                 \textcolor{comment}{//txtNumeroTarjetaRecarga.IsReadOnly = false;}
-300             \}
-301         \}
+294                 \}
+295                 \textcolor{keywordflow}{catch} (System.Exception)
+296                 \{
+297                     e.Result = null;
+298                 \}
+299             \}
+300             \textcolor{keywordflow}{else}
+301             \{
+302                 \textcolor{comment}{//txtNumeroTarjetaRecarga.IsReadOnly = false;}
+303             \}
+304         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a5a5ae9866b6f2c5460930cd9a04a2ab1}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Buscar\-Usuario@{\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Buscar\-Usuario}}
 \index{\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Buscar\-Usuario@{\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Buscar\-Usuario}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -374,29 +374,29 @@ Definición en la línea 283 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a5a5ae9866b6f2c5460930cd9a04a2ab1}
 
 
-Definición en la línea 379 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 382 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-380         \{
-381             \textcolor{comment}{//MessageBox.Show("Ejecuto");}
-382             \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{string})e.Argument != \textcolor{stringliteral}{""})
-383             \{
-384                 \textcolor{keywordflow}{try}
-385                 \{
-386                     e.Result = (from usuarios in \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.Usuarios where 
+383         \{
+384             \textcolor{comment}{//MessageBox.Show("Ejecuto");}
+385             \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{string})e.Argument != \textcolor{stringliteral}{""})
+386             \{
+387                 \textcolor{keywordflow}{try}
+388                 \{
+389                     e.Result = (from usuarios in \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.Usuarios where 
       usuarios.TarjetaAsignada == (string)e.Argument select usuarios).First();
-387                 \}
-388                 \textcolor{keywordflow}{catch} (System.Exception)
-389                 \{
-390                     e.Result = null;
-391                 \}
-392             \}
-393             \textcolor{keywordflow}{else}
-394             \{
-395                 \textcolor{comment}{//txtNumeroTarjetaRecarga.IsReadOnly = false;}
-396             \}
-397         \}
+390                 \}
+391                 \textcolor{keywordflow}{catch} (System.Exception)
+392                 \{
+393                     e.Result = null;
+394                 \}
+395             \}
+396             \textcolor{keywordflow}{else}
+397             \{
+398                 \textcolor{comment}{//txtNumeroTarjetaRecarga.IsReadOnly = false;}
+399             \}
+400         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a55002e8c14e9ba578b5831767447cdd3}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Cargar\-Dataset@{\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Cargar\-Dataset}}
 \index{\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Cargar\-Dataset@{\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Cargar\-Dataset}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -408,13 +408,13 @@ Definición en la línea 379 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a55002e8c14e9ba578b5831767447cdd3}
 
 
-Definición en la línea 334 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 337 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-335         \{
-336             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a8d158836625cf21ca7515c256ec7bda2}{mDBManagers}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a3766dfbef6eb8494cf1fd9e28a135bd7}{Fill}();
-337         \}
+338         \{
+339             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a8d158836625cf21ca7515c256ec7bda2}{mDBManagers}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_a3766dfbef6eb8494cf1fd9e28a135bd7}{Fill}();
+340         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a4cabbcb55d061df36809f52408c6e5c6}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Estadisticas\-Tipo\-Usuario@{\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Estadisticas\-Tipo\-Usuario}}
 \index{\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Estadisticas\-Tipo\-Usuario@{\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Estadisticas\-Tipo\-Usuario}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -426,46 +426,46 @@ Definición en la línea 334 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a4cabbcb55d061df36809f52408c6e5c6}
 
 
-Definición en la línea 198 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 201 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-199         \{
-200             EstadisticaResult resultado = \textcolor{keyword}{new} EstadisticaResult();
-201             List<Servicio> General = \textcolor{keyword}{new} List<Servicio>();
-202             \textcolor{keywordflow}{foreach} (var serv \textcolor{keywordflow}{in} (from usuario \textcolor{keywordflow}{in} \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.Usuarios where 
+202         \{
+203             EstadisticaResult resultado = \textcolor{keyword}{new} EstadisticaResult();
+204             List<Servicio> General = \textcolor{keyword}{new} List<Servicio>();
+205             \textcolor{keywordflow}{foreach} (var serv \textcolor{keywordflow}{in} (from usuario \textcolor{keywordflow}{in} \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.Usuarios where 
       usuario.TipoUsuario == 1 select usuario.Servicios))
-203             \{
-204                 General.AddRange(serv);
-205             \}
-206             List<Servicio> Estudiante = \textcolor{keyword}{new} List<Servicio>();
-207             \textcolor{keywordflow}{foreach} (var serv \textcolor{keywordflow}{in} (from usuario \textcolor{keywordflow}{in} \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.Usuarios where 
+206             \{
+207                 General.AddRange(serv);
+208             \}
+209             List<Servicio> Estudiante = \textcolor{keyword}{new} List<Servicio>();
+210             \textcolor{keywordflow}{foreach} (var serv \textcolor{keywordflow}{in} (from usuario \textcolor{keywordflow}{in} \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.Usuarios where 
       usuario.TipoUsuario == 2 select usuario.Servicios))
-208             \{
-209                 Estudiante.AddRange(serv);
-210             \}
-211             List<Servicio> TerceraEdad = \textcolor{keyword}{new} List<Servicio>();
-212             \textcolor{keywordflow}{foreach} (var serv \textcolor{keywordflow}{in} (from usuario \textcolor{keywordflow}{in} \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.Usuarios where 
+211             \{
+212                 Estudiante.AddRange(serv);
+213             \}
+214             List<Servicio> TerceraEdad = \textcolor{keyword}{new} List<Servicio>();
+215             \textcolor{keywordflow}{foreach} (var serv \textcolor{keywordflow}{in} (from usuario \textcolor{keywordflow}{in} \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.Usuarios where 
       usuario.TipoUsuario == 3 select usuario.Servicios))
-213             \{
-214                 TerceraEdad.AddRange(serv);
-215             \}
-216             List<Servicio> Discapacidad = \textcolor{keyword}{new} List<Servicio>();
-217             \textcolor{keywordflow}{foreach} (var serv \textcolor{keywordflow}{in} (from usuario \textcolor{keywordflow}{in} \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.Usuarios where 
+216             \{
+217                 TerceraEdad.AddRange(serv);
+218             \}
+219             List<Servicio> Discapacidad = \textcolor{keyword}{new} List<Servicio>();
+220             \textcolor{keywordflow}{foreach} (var serv \textcolor{keywordflow}{in} (from usuario \textcolor{keywordflow}{in} \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.Usuarios where 
       usuario.TipoUsuario == 4 select usuario.Servicios))
-218             \{
-219                 Discapacidad.AddRange(serv);
-220             \}
-221             resultado.GData = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad858394f90552b0c6240293e2acf2bdd}{parseServicios}(General);
-222             resultado.EData = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad858394f90552b0c6240293e2acf2bdd}{parseServicios}(Estudiante);
-223             resultado.TData = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad858394f90552b0c6240293e2acf2bdd}{parseServicios}(TerceraEdad);
-224             resultado.CData = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad858394f90552b0c6240293e2acf2bdd}{parseServicios}(Discapacidad);
-225             resultado.General = General.Count;
-226             resultado.Estudiante = Estudiante.Count;
-227             resultado.TerceraEdad = TerceraEdad.Count;
-228             resultado.Discapacidad = Discapacidad.Count;
-229             e.Result = resultado;
-230         \}
+221             \{
+222                 Discapacidad.AddRange(serv);
+223             \}
+224             resultado.GData = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad858394f90552b0c6240293e2acf2bdd}{parseServicios}(General);
+225             resultado.EData = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad858394f90552b0c6240293e2acf2bdd}{parseServicios}(Estudiante);
+226             resultado.TData = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad858394f90552b0c6240293e2acf2bdd}{parseServicios}(TerceraEdad);
+227             resultado.CData = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad858394f90552b0c6240293e2acf2bdd}{parseServicios}(Discapacidad);
+228             resultado.General = General.Count;
+229             resultado.Estudiante = Estudiante.Count;
+230             resultado.TerceraEdad = TerceraEdad.Count;
+231             resultado.Discapacidad = Discapacidad.Count;
+232             e.Result = resultado;
+233         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a78fff58c4b0b7e6d610313c107fc5de6}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Generar\-Lista@{\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Generar\-Lista}}
 \index{\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Generar\-Lista@{\-\_\-background\-Worker\-\_\-\-Do\-Work\-\_\-\-Generar\-Lista}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -477,21 +477,21 @@ Definición en la línea 198 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a78fff58c4b0b7e6d610313c107fc5de6}
 
 
-Definición en la línea 366 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 369 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-367         \{
-368             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.generarLista();
-369             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a91106ba7bf23e61d729bc0399ef5fa98}{mUnidadPopulator}.generarLista();
-370 
-371             \textcolor{comment}{//mUsuariosPopulator.generarLista();}
-372             \textcolor{comment}{//mUnidadPopulator.generarLista();}
-373             \textcolor{comment}{//Usuarios.Start();}
-374             \textcolor{comment}{//Unidades.Start();}
-375             \textcolor{comment}{//Unidades.Join();}
-376             \textcolor{comment}{//Usuarios.Join();}
-377         \}
+370         \{
+371             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.generarLista();
+372             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a91106ba7bf23e61d729bc0399ef5fa98}{mUnidadPopulator}.generarLista();
+373 
+374             \textcolor{comment}{//mUsuariosPopulator.generarLista();}
+375             \textcolor{comment}{//mUnidadPopulator.generarLista();}
+376             \textcolor{comment}{//Usuarios.Start();}
+377             \textcolor{comment}{//Unidades.Start();}
+378             \textcolor{comment}{//Unidades.Join();}
+379             \textcolor{comment}{//Usuarios.Join();}
+380         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af8847d828992da2c7a993175d2a1e4a3}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Buscar\-General@{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Buscar\-General}}
 \index{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Buscar\-General@{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Buscar\-General}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -547,39 +547,39 @@ Definición en la línea 97 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_addf6a2f2f936125f48c64b9e5245e153}
 
 
-Definición en la línea 303 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 306 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-304         \{
-305             \textcolor{keywordflow}{if} (e.Cancelled)
-306             \{
-307                 \textcolor{comment}{//lblEstadoPrincipal.Content = "Evento Cancelado";}
-308 
-309                 \textcolor{comment}{//statusText.Text = "Cancelled";}
-310             \}
-311             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (e.Error != null)
-312             \{
-313                 MessageBox.Show(e.Error.ToString());
-314             \}
-315             \textcolor{keywordflow}{else}
-316             \{
-317                 \textcolor{keywordflow}{if} (e.Result != null)
-318                 \{
-319                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a518c39e6486c8e68350a36322f04a4ad}{currentUnidad} = (\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad}{Unidad})e.Result;
-320                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Unidad encontrada."};
-321                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a990d1ef15326a4a269e1c28840ca0876}{loadUnidad}(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a518c39e6486c8e68350a36322f04a4ad}{currentUnidad});
-322                 \}
-323                 \textcolor{keywordflow}{else}
-324                 \{
-325                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"No se encontró la unidad"};
-326                 \}
-327             \}
-328             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{false};
-329 
-330             \textcolor{comment}{//MessageBox.Show("Termino");}
-331             \textcolor{comment}{//EnableControls((Panel)tbRecarga.Content);}
-332         \}
+307         \{
+308             \textcolor{keywordflow}{if} (e.Cancelled)
+309             \{
+310                 \textcolor{comment}{//lblEstadoPrincipal.Content = "Evento Cancelado";}
+311 
+312                 \textcolor{comment}{//statusText.Text = "Cancelled";}
+313             \}
+314             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (e.Error != null)
+315             \{
+316                 MessageBox.Show(e.Error.ToString());
+317             \}
+318             \textcolor{keywordflow}{else}
+319             \{
+320                 \textcolor{keywordflow}{if} (e.Result != null)
+321                 \{
+322                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a518c39e6486c8e68350a36322f04a4ad}{currentUnidad} = (\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad}{Unidad})e.Result;
+323                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Unidad encontrada."};
+324                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a990d1ef15326a4a269e1c28840ca0876}{loadUnidad}(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a518c39e6486c8e68350a36322f04a4ad}{currentUnidad});
+325                 \}
+326                 \textcolor{keywordflow}{else}
+327                 \{
+328                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"No se encontró la unidad"};
+329                 \}
+330             \}
+331             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{false};
+332 
+333             \textcolor{comment}{//MessageBox.Show("Termino");}
+334             \textcolor{comment}{//EnableControls((Panel)tbRecarga.Content);}
+335         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a4009e26dcce0ad4f21848fa2af4debb9}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Buscar\-Usuario@{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Buscar\-Usuario}}
 \index{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Buscar\-Usuario@{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Buscar\-Usuario}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -591,39 +591,39 @@ Definición en la línea 303 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a4009e26dcce0ad4f21848fa2af4debb9}
 
 
-Definición en la línea 429 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 432 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-430         \{
-431             \textcolor{keywordflow}{if} (e.Cancelled)
-432             \{
-433                 \textcolor{comment}{//lblEstadoPrincipal.Content = "Evento Cancelado";}
-434 
-435                 \textcolor{comment}{//statusText.Text = "Cancelled";}
-436             \}
-437             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (e.Error != null)
-438             \{
-439                 MessageBox.Show(e.Error.ToString());
-440             \}
-441             \textcolor{keywordflow}{else}
-442             \{
-443                 \textcolor{keywordflow}{if} (e.Result != null)
-444                 \{
-445                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad32fba0c33dc851eee94df8e83afb5f3}{currentUsuario} = (\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario}{Usuario})e.Result;
-446                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Usuario encontrado."};
-447                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2f3f5d9e8de8f54d2031cb05f67d514b}{loadUsuario}(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad32fba0c33dc851eee94df8e83afb5f3}{currentUsuario});
-448                 \}
-449                 \textcolor{keywordflow}{else}
-450                 \{
-451                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"No se encontró al usuario"};
-452                 \}
-453             \}
-454             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{false};
-455 
-456             \textcolor{comment}{//MessageBox.Show("Termino");}
-457             \textcolor{comment}{//EnableControls((Panel)tbRecarga.Content);}
-458         \}
+433         \{
+434             \textcolor{keywordflow}{if} (e.Cancelled)
+435             \{
+436                 \textcolor{comment}{//lblEstadoPrincipal.Content = "Evento Cancelado";}
+437 
+438                 \textcolor{comment}{//statusText.Text = "Cancelled";}
+439             \}
+440             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (e.Error != null)
+441             \{
+442                 MessageBox.Show(e.Error.ToString());
+443             \}
+444             \textcolor{keywordflow}{else}
+445             \{
+446                 \textcolor{keywordflow}{if} (e.Result != null)
+447                 \{
+448                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad32fba0c33dc851eee94df8e83afb5f3}{currentUsuario} = (\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario}{Usuario})e.Result;
+449                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Usuario encontrado."};
+450                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2f3f5d9e8de8f54d2031cb05f67d514b}{loadUsuario}(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad32fba0c33dc851eee94df8e83afb5f3}{currentUsuario});
+451                 \}
+452                 \textcolor{keywordflow}{else}
+453                 \{
+454                     \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"No se encontró al usuario"};
+455                 \}
+456             \}
+457             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{false};
+458 
+459             \textcolor{comment}{//MessageBox.Show("Termino");}
+460             \textcolor{comment}{//EnableControls((Panel)tbRecarga.Content);}
+461         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a7f78d38cf4064aa67d74c183b574e2c6}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Cargar\-Dataset@{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Cargar\-Dataset}}
 \index{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Cargar\-Dataset@{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Cargar\-Dataset}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -635,28 +635,28 @@ Definición en la línea 429 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a7f78d38cf4064aa67d74c183b574e2c6}
 
 
-Definición en la línea 339 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 342 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-340         \{
-341             \textcolor{keywordflow}{if} (e.Cancelled)
-342             \{
-343                 \textcolor{comment}{//statusText.Text = "Cancelled";}
-344             \}
-345             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (e.Error != null)
-346             \{
-347                 MessageBox.Show(e.Error.ToString());
-348             \}
-349             \textcolor{keywordflow}{else}
-350             \{
-351                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{true};
-352                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Cargando servicios, unidades y usuarios."};
-353                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a3de6e539551d839570776f07debecacb}{generarLista}();
-354 
-355                 \textcolor{comment}{//.Text = "Completed";}
-356             \}
-357         \}
+343         \{
+344             \textcolor{keywordflow}{if} (e.Cancelled)
+345             \{
+346                 \textcolor{comment}{//statusText.Text = "Cancelled";}
+347             \}
+348             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (e.Error != null)
+349             \{
+350                 MessageBox.Show(e.Error.ToString());
+351             \}
+352             \textcolor{keywordflow}{else}
+353             \{
+354                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{true};
+355                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Cargando servicios, unidades y usuarios."};
+356                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a3de6e539551d839570776f07debecacb}{generarLista}();
+357 
+358                 \textcolor{comment}{//.Text = "Completed";}
+359             \}
+360         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a179c5612b58f592d8599eb91de5dee49}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Estadisticas\-Tipo\-Usuario@{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Estadisticas\-Tipo\-Usuario}}
 \index{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Estadisticas\-Tipo\-Usuario@{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Estadisticas\-Tipo\-Usuario}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -668,49 +668,49 @@ Definición en la línea 339 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a179c5612b58f592d8599eb91de5dee49}
 
 
-Definición en la línea 232 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 235 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-233         \{
-234             \textcolor{keywordflow}{if} (e.Cancelled)
-235             \{
-236                 \textcolor{comment}{//statusText.Text = "Cancelled";}
-237             \}
-238             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (e.Error != null)
-239             \{
-240                 MessageBox.Show(e.Error.ToString());
-241             \}
-242             \textcolor{keywordflow}{else}
-243             \{
-244                 EstadisticaResult r = (EstadisticaResult)e.Result;
-245                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a9460b0c95f1995a1b69bbedac9c7994b}{txtGServicios}.Text = r.General.ToString();
-246                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a22182387460111695b414013af099899}{txtEServicios}.Text = r.Estudiante.ToString();
-247                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a64a10f33c6df7de8fee16db2bccdfdeb}{txtTServicios}.Text = r.TerceraEdad.ToString();
-248                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a9abdaf17fc6ada9d897e36cf81413c23}{txtCServicios}.Text = r.Discapacidad.ToString();
-249                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab7449cb696ced128cf9d785055ca3850}{txtGTotal}.Text = \textcolor{stringliteral}{"$"} + (r.General * Constantes.PrecioNormal).ToString();
-250                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a889f0abb3a420a38d963de4e364ef744}{txtETotal}.Text = \textcolor{stringliteral}{"$"} + (r.Estudiante * Constantes.PrecioEspecial).ToString();
-251                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a220671fb7be4b6c864281288bce5fc86}{txtTTotal}.Text = \textcolor{stringliteral}{"$"} + (r.TerceraEdad * Constantes.PrecioEspecial).ToString();
-252                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_abaf1d4ad66a8f620177fc6049ffddcbc}{txtCTotal}.Text = \textcolor{stringliteral}{"$"} + (r.Discapacidad * Constantes.PrecioEspecial).ToString();
-253 
-254                 \textcolor{comment}{//txtGUnidadM.Text = r.GData.Unidades;}
-255                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a809e49373e88f304b1f3d5283d757c61}{lstGUnidadM}.ItemsSource = r.GData.Unidades;
-256                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a53386efc7578719e8fa049b5b2540f66}{lstGDiasM}.ItemsSource = r.GData.Dias;
-257                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a8c5a6768727a54835e71fce7e83a1392}{lstGMesesM}.ItemsSource = r.GData.Meses;
-258                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a061126bfb2b2fa1c828210ef06f6c495}{lstEUnidadM}.ItemsSource = r.EData.Unidades;
-259                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2b516015fab6b55141fe0b999e36e520}{lstEDiasM}.ItemsSource = r.EData.Dias;
-260                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a5adb40758c162bfdc84fd55c49440e4e}{lstEMesesM}.ItemsSource = r.EData.Meses;
-261                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab12e78b5f637eefdfde63fba310cfaf5}{lstTUnidadM}.ItemsSource = r.TData.Unidades;
-262                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aef12e55c0fc89f85f601163eda0ffac4}{lstTDiasM}.ItemsSource = r.TData.Dias;
-263                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a54c8c7cb624219a3e3f23d61eded187b}{lstTMesesM}.ItemsSource = r.TData.Meses;
-264                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab371c0b71730bbb785efdca10a7d2d41}{lstCUnidadM}.ItemsSource = r.CData.Unidades;
-265                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a8ce6aa1fd7ce5c054b011ee702ee1d03}{lstCDiasM}.ItemsSource = r.CData.Dias;
-266                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad82bcab9a8b0b8d06f3c9b604da3c3be}{lstCMesesM}.ItemsSource = r.CData.Meses;
-267 
-268                 Helpers.EnableControls(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a07daaedf61ed6ed6d9b36a92b037dd53}{grdTipoUsuarios});
-269                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a6e3380fcd1c9e0e520f2867c8a98d9f0}{pgrTipoUsuario}.IsActive = \textcolor{keyword}{false};
-270             \}
-271         \}
+236         \{
+237             \textcolor{keywordflow}{if} (e.Cancelled)
+238             \{
+239                 \textcolor{comment}{//statusText.Text = "Cancelled";}
+240             \}
+241             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (e.Error != null)
+242             \{
+243                 MessageBox.Show(e.Error.ToString());
+244             \}
+245             \textcolor{keywordflow}{else}
+246             \{
+247                 EstadisticaResult r = (EstadisticaResult)e.Result;
+248                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a9460b0c95f1995a1b69bbedac9c7994b}{txtGServicios}.Text = r.General.ToString();
+249                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a22182387460111695b414013af099899}{txtEServicios}.Text = r.Estudiante.ToString();
+250                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a64a10f33c6df7de8fee16db2bccdfdeb}{txtTServicios}.Text = r.TerceraEdad.ToString();
+251                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a9abdaf17fc6ada9d897e36cf81413c23}{txtCServicios}.Text = r.Discapacidad.ToString();
+252                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab7449cb696ced128cf9d785055ca3850}{txtGTotal}.Text = \textcolor{stringliteral}{"$"} + (r.General * Constantes.PrecioNormal).ToString();
+253                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a889f0abb3a420a38d963de4e364ef744}{txtETotal}.Text = \textcolor{stringliteral}{"$"} + (r.Estudiante * Constantes.PrecioEspecial).ToString();
+254                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a220671fb7be4b6c864281288bce5fc86}{txtTTotal}.Text = \textcolor{stringliteral}{"$"} + (r.TerceraEdad * Constantes.PrecioEspecial).ToString();
+255                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_abaf1d4ad66a8f620177fc6049ffddcbc}{txtCTotal}.Text = \textcolor{stringliteral}{"$"} + (r.Discapacidad * Constantes.PrecioEspecial).ToString();
+256 
+257                 \textcolor{comment}{//txtGUnidadM.Text = r.GData.Unidades;}
+258                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a809e49373e88f304b1f3d5283d757c61}{lstGUnidadM}.ItemsSource = r.GData.Unidades;
+259                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a53386efc7578719e8fa049b5b2540f66}{lstGDiasM}.ItemsSource = r.GData.Dias;
+260                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a8c5a6768727a54835e71fce7e83a1392}{lstGMesesM}.ItemsSource = r.GData.Meses;
+261                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a061126bfb2b2fa1c828210ef06f6c495}{lstEUnidadM}.ItemsSource = r.EData.Unidades;
+262                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2b516015fab6b55141fe0b999e36e520}{lstEDiasM}.ItemsSource = r.EData.Dias;
+263                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a5adb40758c162bfdc84fd55c49440e4e}{lstEMesesM}.ItemsSource = r.EData.Meses;
+264                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab12e78b5f637eefdfde63fba310cfaf5}{lstTUnidadM}.ItemsSource = r.TData.Unidades;
+265                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aef12e55c0fc89f85f601163eda0ffac4}{lstTDiasM}.ItemsSource = r.TData.Dias;
+266                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a54c8c7cb624219a3e3f23d61eded187b}{lstTMesesM}.ItemsSource = r.TData.Meses;
+267                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab371c0b71730bbb785efdca10a7d2d41}{lstCUnidadM}.ItemsSource = r.CData.Unidades;
+268                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a8ce6aa1fd7ce5c054b011ee702ee1d03}{lstCDiasM}.ItemsSource = r.CData.Dias;
+269                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad82bcab9a8b0b8d06f3c9b604da3c3be}{lstCMesesM}.ItemsSource = r.CData.Meses;
+270 
+271                 Helpers.EnableControls(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a07daaedf61ed6ed6d9b36a92b037dd53}{grdTipoUsuarios});
+272                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a6e3380fcd1c9e0e520f2867c8a98d9f0}{pgrTipoUsuario}.IsActive = \textcolor{keyword}{false};
+273             \}
+274         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a4b950282d32a7745be1b30b79621183b}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Generar\-Lista@{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Generar\-Lista}}
 \index{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Generar\-Lista@{\-\_\-background\-Worker\-\_\-\-Run\-Worker\-Completed\-\_\-\-Generar\-Lista}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -722,39 +722,39 @@ Definición en la línea 232 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a4b950282d32a7745be1b30b79621183b}
 
 
-Definición en la línea 399 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 402 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-400         \{
-401             \textcolor{keywordflow}{if} (e.Cancelled)
-402             \{
-403                 \textcolor{comment}{//lblEstadoPrincipal.Content = "Evento Cancelado";}
-404 
-405                 \textcolor{comment}{//statusText.Text = "Cancelled";}
-406             \}
-407             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (e.Error != null)
-408             \{
-409                 MessageBox.Show(e.Error.ToString());
-410             \}
-411             \textcolor{keywordflow}{else}
-412             \{
-413                 \textcolor{comment}{//Usuarios = mUsuariosPopulator.Usuarios;}
-414 
-415                 \textcolor{comment}{//.Text = "Completed";}
-416                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{false};
-417                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a91106ba7bf23e61d729bc0399ef5fa98}{mUnidadPopulator}.Unidades.Count.ToString() + \textcolor{stringliteral}{"
+403         \{
+404             \textcolor{keywordflow}{if} (e.Cancelled)
+405             \{
+406                 \textcolor{comment}{//lblEstadoPrincipal.Content = "Evento Cancelado";}
+407 
+408                 \textcolor{comment}{//statusText.Text = "Cancelled";}
+409             \}
+410             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (e.Error != null)
+411             \{
+412                 MessageBox.Show(e.Error.ToString());
+413             \}
+414             \textcolor{keywordflow}{else}
+415             \{
+416                 \textcolor{comment}{//Usuarios = mUsuariosPopulator.Usuarios;}
+417 
+418                 \textcolor{comment}{//.Text = "Completed";}
+419                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{false};
+420                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a91106ba7bf23e61d729bc0399ef5fa98}{mUnidadPopulator}.Unidades.Count.ToString() + \textcolor{stringliteral}{"
        unidades cargadas."} + Environment.NewLine + \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.Usuarios.Count.ToString() +
        \textcolor{stringliteral}{" usuarios cargadas."};
-418                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a6e3380fcd1c9e0e520f2867c8a98d9f0}{pgrTipoUsuario}.IsActive = \textcolor{keyword}{true};
-419                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a8d42c7455eb1b9669a3de163047f357f}{mBackgroundEstadisticasTipoUsuario}.RunWorkerAsync();
-420             \}
-421 
-422             \textcolor{comment}{//EnableControls((Panel)tbRecarga.Content);}
-423             \textcolor{comment}{//Helpers.EnableControls(grdTipoUsuarios);}
-424             Helpers.EnableControls(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0054ea7e45426e7bc4779c6d4e3144b8}{grdUnidades});
-425             Helpers.EnableControls(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a559e1b9ac74bc2111e3d7c07400db096}{grdUsuarios});
-426         \}
+421                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a6e3380fcd1c9e0e520f2867c8a98d9f0}{pgrTipoUsuario}.IsActive = \textcolor{keyword}{true};
+422                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a8d42c7455eb1b9669a3de163047f357f}{mBackgroundEstadisticasTipoUsuario}.RunWorkerAsync();
+423             \}
+424 
+425             \textcolor{comment}{//EnableControls((Panel)tbRecarga.Content);}
+426             \textcolor{comment}{//Helpers.EnableControls(grdTipoUsuarios);}
+427             Helpers.EnableControls(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0054ea7e45426e7bc4779c6d4e3144b8}{grdUnidades});
+428             Helpers.EnableControls(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a559e1b9ac74bc2111e3d7c07400db096}{grdUsuarios});
+429         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_afd0c390a99896fc7030fee9239e1c52c}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!al\-Cerrar@{al\-Cerrar}}
 \index{al\-Cerrar@{al\-Cerrar}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -766,13 +766,13 @@ Definición en la línea 399 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_afd0c390a99896fc7030fee9239e1c52c}
 
 
-Definición en la línea 521 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 524 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-522         \{
-523             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a8d158836625cf21ca7515c256ec7bda2}{mDBManagers}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_ac449742a91d365aa025fd4f10db38604}{ClearServicios}();
-524         \}
+525         \{
+526             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a8d158836625cf21ca7515c256ec7bda2}{mDBManagers}.\hyperlink{class_proyecto___integrador__3_1_1_d_b_managers_ac449742a91d365aa025fd4f10db38604}{ClearServicios}();
+527         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab492b354529c37416df38afe0c49a20d}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!al\-Modificar\-No\-Unidad@{al\-Modificar\-No\-Unidad}}
 \index{al\-Modificar\-No\-Unidad@{al\-Modificar\-No\-Unidad}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -784,22 +784,22 @@ Definición en la línea 521 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab492b354529c37416df38afe0c49a20d}
 
 
-Definición en la línea 526 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 529 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-527         \{
-528             \textcolor{keywordflow}{if} (e.Key != Key.Enter)
-529             \{
-530                 \textcolor{keywordflow}{return};
-531             \}
-532             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsEnabled = \textcolor{keyword}{true};
-533             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{true};
-534             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad3104fe9d62ad8d1d810606d9b182b9c}{txtNuUnidadR}.Text = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad3104fe9d62ad8d1d810606d9b182b9c}{txtNuUnidadR}.Text.ToUpper().Trim();
-535             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Buscando "} + \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad3104fe9d62ad8d1d810606d9b182b9c}{txtNuUnidadR}.Text;
-536             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a411c812e105cbc256ea0100a5a482180}{mBackgroundBusquedaUnidad}.RunWorkerAsync(
+530         \{
+531             \textcolor{keywordflow}{if} (e.Key != Key.Enter)
+532             \{
+533                 \textcolor{keywordflow}{return};
+534             \}
+535             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsEnabled = \textcolor{keyword}{true};
+536             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{true};
+537             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad3104fe9d62ad8d1d810606d9b182b9c}{txtNuUnidadR}.Text = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad3104fe9d62ad8d1d810606d9b182b9c}{txtNuUnidadR}.Text.ToUpper().Trim();
+538             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Buscando "} + \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad3104fe9d62ad8d1d810606d9b182b9c}{txtNuUnidadR}.Text;
+539             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a411c812e105cbc256ea0100a5a482180}{mBackgroundBusquedaUnidad}.RunWorkerAsync(
       \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad3104fe9d62ad8d1d810606d9b182b9c}{txtNuUnidadR}.Text);
-537         \}
+540         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a251221ea583a538202260b210e1bdc6e}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!al\-Modificar\-Numero\-Tarjeta@{al\-Modificar\-Numero\-Tarjeta}}
 \index{al\-Modificar\-Numero\-Tarjeta@{al\-Modificar\-Numero\-Tarjeta}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -811,29 +811,29 @@ Definición en la línea 526 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a251221ea583a538202260b210e1bdc6e}
 
 
-Definición en la línea 501 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 504 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-502         \{
-503             TextBox origen = sender as TextBox;
-504             \textcolor{keywordflow}{if} (e.Key != Key.Enter)
-505             \{
-506                 \textcolor{keywordflow}{return};
-507             \}
-508             origen.Background = Brushes.White;
-509             \textcolor{keywordflow}{if} (!Helpers.validarCuenta(origen.Text))
-510             \{
-511                 origen.Focus();
-512                 origen.Background = Constantes.ErrorBrush;
-513                 \textcolor{keywordflow}{return};
-514             \}
-515             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsEnabled = \textcolor{keyword}{true};
-516             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{true};
-517             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Buscando "} + \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2282faf2e30330dc4f45b9bc0264ceaf}{txtTarjetaUsuario}.Text;
-518             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a722de2d89e3789161b58c1f56bce02cd}{mBackgroundBusquedaUsuario}.RunWorkerAsync(
+505         \{
+506             TextBox origen = sender as TextBox;
+507             \textcolor{keywordflow}{if} (e.Key != Key.Enter)
+508             \{
+509                 \textcolor{keywordflow}{return};
+510             \}
+511             origen.Background = Brushes.White;
+512             \textcolor{keywordflow}{if} (!Helpers.validarCuenta(origen.Text))
+513             \{
+514                 origen.Focus();
+515                 origen.Background = Constantes.ErrorBrush;
+516                 \textcolor{keywordflow}{return};
+517             \}
+518             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsEnabled = \textcolor{keyword}{true};
+519             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{true};
+520             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Buscando "} + \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2282faf2e30330dc4f45b9bc0264ceaf}{txtTarjetaUsuario}.Text;
+521             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a722de2d89e3789161b58c1f56bce02cd}{mBackgroundBusquedaUsuario}.RunWorkerAsync(
       \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2282faf2e30330dc4f45b9bc0264ceaf}{txtTarjetaUsuario}.Text);
-519         \}
+522         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aabe66d19df09b28ab8f1c034935091c0}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!busqueda\-Enter@{busqueda\-Enter}}
 \index{busqueda\-Enter@{busqueda\-Enter}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -845,21 +845,21 @@ Definición en la línea 501 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aabe66d19df09b28ab8f1c034935091c0}
 
 
-Definición en la línea 594 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 597 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-595         \{
-596             \textcolor{keywordflow}{if} (e.Key != Key.Enter)
-597             \{
-598                 \textcolor{keywordflow}{return};
-599             \}
-600             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsEnabled = \textcolor{keyword}{true};
-601             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{true};
-602             ((TextBox)sender).Text = ((TextBox)sender).Text.Trim();
-603             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Buscando "} + ((TextBox)sender).Text;
-604             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af1330b4734c90167f8359a46e027b2ae}{mBackgroundBusquedaGeneral}.RunWorkerAsync(((TextBox)sender).Text);
-605         \}
+598         \{
+599             \textcolor{keywordflow}{if} (e.Key != Key.Enter)
+600             \{
+601                 \textcolor{keywordflow}{return};
+602             \}
+603             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsEnabled = \textcolor{keyword}{true};
+604             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{true};
+605             ((TextBox)sender).Text = ((TextBox)sender).Text.Trim();
+606             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Buscando "} + ((TextBox)sender).Text;
+607             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af1330b4734c90167f8359a46e027b2ae}{mBackgroundBusquedaGeneral}.RunWorkerAsync(((TextBox)sender).Text);
+608         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_afa88104f4465581dd82871abd5e45355}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!cancelar\-Busqueda@{cancelar\-Busqueda}}
 \index{cancelar\-Busqueda@{cancelar\-Busqueda}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -871,13 +871,13 @@ Definición en la línea 594 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_afa88104f4465581dd82871abd5e45355}
 
 
-Definición en la línea 616 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 619 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-617         \{
-618             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af86d8cdcb91a2f6d6954bf44f4ad2b6c}{grdBusqueda}.Visibility = Visibility.Hidden;
-619         \}
+620         \{
+621             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af86d8cdcb91a2f6d6954bf44f4ad2b6c}{grdBusqueda}.Visibility = Visibility.Hidden;
+622         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a592c9a15278659afd7ca868e5b20ea65}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!Connect@{Connect}}
 \index{Connect@{Connect}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1555,18 +1555,18 @@ Definición en la línea 510 del archivo Reporte\-Frecuencia\-De\-Uso.\-g.\-cs.
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a946fe04d8a5fec967f095b989f5a8277}
 
 
-Definición en la línea 491 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 494 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-492         \{
-493             Helpers.DisableControls(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a07daaedf61ed6ed6d9b36a92b037dd53}{grdTipoUsuarios});
-494             Helpers.DisableControls(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0054ea7e45426e7bc4779c6d4e3144b8}{grdUnidades});
-495             Helpers.DisableControls(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a559e1b9ac74bc2111e3d7c07400db096}{grdUsuarios});
-496             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Cargando base de datos. (Puede tomar varios minutos)"};
-497             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{true};
-498             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aea2b091673c31936e12f6b48128d94c2}{mBackgroundCargarDataset}.RunWorkerAsync();
-499         \}
+495         \{
+496             Helpers.DisableControls(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a07daaedf61ed6ed6d9b36a92b037dd53}{grdTipoUsuarios});
+497             Helpers.DisableControls(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0054ea7e45426e7bc4779c6d4e3144b8}{grdUnidades});
+498             Helpers.DisableControls(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a559e1b9ac74bc2111e3d7c07400db096}{grdUsuarios});
+499             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab5dad4dbd48cba1238ec0914d940c499}{txtbEstado}.Text = \textcolor{stringliteral}{"Cargando base de datos. (Puede tomar varios minutos)"};
+500             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a40046fa9e14c98adb20dbc8f99f83842}{pgrEstado}.IsActive = \textcolor{keyword}{true};
+501             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aea2b091673c31936e12f6b48128d94c2}{mBackgroundCargarDataset}.RunWorkerAsync();
+502         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2ab966196c9bc681df237775e5084d8d}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!doble\-Click\-Dias@{doble\-Click\-Dias}}
 \index{doble\-Click\-Dias@{doble\-Click\-Dias}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1578,18 +1578,18 @@ Definición en la línea 491 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2ab966196c9bc681df237775e5084d8d}
 
 
-Definición en la línea 642 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 645 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-643         \{
-644             ListBox origen = sender as ListBox;
-645             \textcolor{keywordflow}{if} (origen.SelectedItem != null)
-646             \{
-647                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a445e3fd272881069a4fb7c71982c185b}{helperString} = origen.SelectedItem.ToString();
-648                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a416028f36197f7e057f32eadbf7b1eb5}{dobleClickFecha}(DateTime.Parse(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a445e3fd272881069a4fb7c71982c185b}{helperString}));
-649             \}
-650         \}
+646         \{
+647             ListBox origen = sender as ListBox;
+648             \textcolor{keywordflow}{if} (origen.SelectedItem != null)
+649             \{
+650                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a445e3fd272881069a4fb7c71982c185b}{helperString} = origen.SelectedItem.ToString();
+651                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a416028f36197f7e057f32eadbf7b1eb5}{dobleClickFecha}(DateTime.Parse(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a445e3fd272881069a4fb7c71982c185b}{helperString}));
+652             \}
+653         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a7e667426a6de02c099f4ad03df9c7853}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!doble\-Click\-Dtgrd@{doble\-Click\-Dtgrd}}
 \index{doble\-Click\-Dtgrd@{doble\-Click\-Dtgrd}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1601,19 +1601,19 @@ Definición en la línea 642 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a7e667426a6de02c099f4ad03df9c7853}
 
 
-Definición en la línea 584 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 587 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-585         \{
-586             \textcolor{keywordflow}{if} (\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a76928c8b382b0997a3e7a9f57369c6c0}{dtgrdReporteUnidad}.SelectedItems.Count == 1)
-587             \{
-588                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad32fba0c33dc851eee94df8e83afb5f3}{currentUsuario} = (\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario}{Usuario})
+588         \{
+589             \textcolor{keywordflow}{if} (\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a76928c8b382b0997a3e7a9f57369c6c0}{dtgrdReporteUnidad}.SelectedItems.Count == 1)
+590             \{
+591                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad32fba0c33dc851eee94df8e83afb5f3}{currentUsuario} = (\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario}{Usuario})
       \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a76928c8b382b0997a3e7a9f57369c6c0}{dtgrdReporteUnidad}.SelectedItems[0];
-589                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2f3f5d9e8de8f54d2031cb05f67d514b}{loadUsuario}(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad32fba0c33dc851eee94df8e83afb5f3}{currentUsuario});
-590                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a33854de6395bbc0369295eec9598bba5}{tbsControles}.SelectedIndex = 0;
-591             \}
-592         \}
+592                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2f3f5d9e8de8f54d2031cb05f67d514b}{loadUsuario}(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad32fba0c33dc851eee94df8e83afb5f3}{currentUsuario});
+593                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a33854de6395bbc0369295eec9598bba5}{tbsControles}.SelectedIndex = 0;
+594             \}
+595         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a416028f36197f7e057f32eadbf7b1eb5}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!doble\-Click\-Fecha@{doble\-Click\-Fecha}}
 \index{doble\-Click\-Fecha@{doble\-Click\-Fecha}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1624,13 +1624,13 @@ Definición en la línea 584 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a416028f36197f7e057f32eadbf7b1eb5}
 
 
-Definición en la línea 671 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 674 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-672         \{
-673             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a416028f36197f7e057f32eadbf7b1eb5}{dobleClickFecha}(inicial, null);
-674         \}
+675         \{
+676             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a416028f36197f7e057f32eadbf7b1eb5}{dobleClickFecha}(inicial, null);
+677         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a1121f3333a68a74dedb08e99da228d6f}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!doble\-Click\-Fecha@{doble\-Click\-Fecha}}
 \index{doble\-Click\-Fecha@{doble\-Click\-Fecha}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1642,18 +1642,18 @@ Definición en la línea 671 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a1121f3333a68a74dedb08e99da228d6f}
 
 
-Definición en la línea 676 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 679 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-677         \{
-678             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a580b30fc38c300431b3827dd370c794b}{inicial} = inicial;
-679             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a1f1ef326bff361e8fad3182f10c5da2f}{final} = \textcolor{keyword}{final};
-680 
-681             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a2f638ddb1de1e8a845093312f55b07db}{tmpFuncion} = 
+680         \{
+681             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a580b30fc38c300431b3827dd370c794b}{inicial} = inicial;
+682             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a1f1ef326bff361e8fad3182f10c5da2f}{final} = \textcolor{keyword}{final};
+683 
+684             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a2f638ddb1de1e8a845093312f55b07db}{tmpFuncion} = 
       \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a59f59be488ca78728ed46771cf691b7b}{dobleClickFechaHelper};
-682             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.ShowDialog();
-683         \}
+685             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.ShowDialog();
+686         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a59f59be488ca78728ed46771cf691b7b}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!doble\-Click\-Fecha\-Helper@{doble\-Click\-Fecha\-Helper}}
 \index{doble\-Click\-Fecha\-Helper@{doble\-Click\-Fecha\-Helper}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1664,13 +1664,13 @@ Definición en la línea 676 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a59f59be488ca78728ed46771cf691b7b}
 
 
-Definición en la línea 685 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 688 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-686         \{
-687             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a781b2efaa6699e16f45ff2f9b56ff2d6}{Generar}();
-688         \}
+689         \{
+690             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a781b2efaa6699e16f45ff2f9b56ff2d6}{Generar}();
+691         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a50be2c40af6717361795d2ca8e9b6bf3}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!doble\-Click\-Meses@{doble\-Click\-Meses}}
 \index{doble\-Click\-Meses@{doble\-Click\-Meses}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1682,27 +1682,27 @@ Definición en la línea 685 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a50be2c40af6717361795d2ca8e9b6bf3}
 
 
-Definición en la línea 652 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 655 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-653         \{
-654             ListBox origen = sender as ListBox;
-655             \textcolor{keywordflow}{if} (origen.SelectedItem != null)
-656             \{
-657                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a445e3fd272881069a4fb7c71982c185b}{helperString} = origen.SelectedItem.ToString();
-658                 \textcolor{keywordtype}{int} mes = (from p in Tipos.Meses
-659                            where p.Value.Contains(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a445e3fd272881069a4fb7c71982c185b}{helperString})
-660                            select p.Key)
-661     .FirstOrDefault();
-662 
-663                 DateTime inicial = \textcolor{keyword}{new} DateTime(DateTime.Today.Year, mes, 1);
-664                 DateTime \textcolor{keyword}{final} = \textcolor{keyword}{new} DateTime(DateTime.Today.Year, mes, 1);
-665                 \textcolor{keyword}{final} = \textcolor{keyword}{final}.AddMonths(1).AddDays(-1);
-666 
-667                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a416028f36197f7e057f32eadbf7b1eb5}{dobleClickFecha}(inicial, \textcolor{keyword}{final});
-668             \}
-669         \}
+656         \{
+657             ListBox origen = sender as ListBox;
+658             \textcolor{keywordflow}{if} (origen.SelectedItem != null)
+659             \{
+660                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a445e3fd272881069a4fb7c71982c185b}{helperString} = origen.SelectedItem.ToString();
+661                 \textcolor{keywordtype}{int} mes = (from p in Tipos.Meses
+662                            where p.Value.Contains(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a445e3fd272881069a4fb7c71982c185b}{helperString})
+663                            select p.Key)
+664     .FirstOrDefault();
+665 
+666                 DateTime inicial = \textcolor{keyword}{new} DateTime(DateTime.Today.Year, mes, 1);
+667                 DateTime \textcolor{keyword}{final} = \textcolor{keyword}{new} DateTime(DateTime.Today.Year, mes, 1);
+668                 \textcolor{keyword}{final} = \textcolor{keyword}{final}.AddMonths(1).AddDays(-1);
+669 
+670                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a416028f36197f7e057f32eadbf7b1eb5}{dobleClickFecha}(inicial, \textcolor{keyword}{final});
+671             \}
+672         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a85f2c2307781a5f965e7785e2ad097c9}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!doble\-Click\-Unidades@{doble\-Click\-Unidades}}
 \index{doble\-Click\-Unidades@{doble\-Click\-Unidades}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1714,20 +1714,20 @@ Definición en la línea 652 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a85f2c2307781a5f965e7785e2ad097c9}
 
 
-Definición en la línea 625 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 628 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-626         \{
-627             ListBox origen = sender as ListBox;
-628             \textcolor{keywordflow}{if} (origen.SelectedItem != null)
-629             \{
-630                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a445e3fd272881069a4fb7c71982c185b}{helperString} = origen.SelectedItem.ToString();
-631                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a2f638ddb1de1e8a845093312f55b07db}{tmpFuncion} = 
+629         \{
+630             ListBox origen = sender as ListBox;
+631             \textcolor{keywordflow}{if} (origen.SelectedItem != null)
+632             \{
+633                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a445e3fd272881069a4fb7c71982c185b}{helperString} = origen.SelectedItem.ToString();
+634                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a2f638ddb1de1e8a845093312f55b07db}{tmpFuncion} = 
       \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad45d4ac134e025ecf247e9cdb642b4dd}{dobleClickUnidadesHelper};
-632                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.ShowDialog();
-633             \}
-634         \}
+635                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.ShowDialog();
+636             \}
+637         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad45d4ac134e025ecf247e9cdb642b4dd}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!doble\-Click\-Unidades\-Helper@{doble\-Click\-Unidades\-Helper}}
 \index{doble\-Click\-Unidades\-Helper@{doble\-Click\-Unidades\-Helper}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1738,15 +1738,15 @@ Definición en la línea 625 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad45d4ac134e025ecf247e9cdb642b4dd}
 
 
-Definición en la línea 636 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 639 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-637         \{
-638             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a781b2efaa6699e16f45ff2f9b56ff2d6}{Generar}();
-639             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a7fcbd0b72d999e44e7afbfed853f3243}{realizarBusqueda}(
+640         \{
+641             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a781b2efaa6699e16f45ff2f9b56ff2d6}{Generar}();
+642             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}{mReportePorUnidad}.\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_a7fcbd0b72d999e44e7afbfed853f3243}{realizarBusqueda}(
       \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a445e3fd272881069a4fb7c71982c185b}{helperString});
-640         \}
+643         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a3de6e539551d839570776f07debecacb}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!generar\-Lista@{generar\-Lista}}
 \index{generar\-Lista@{generar\-Lista}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1757,15 +1757,15 @@ Definición en la línea 636 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a3de6e539551d839570776f07debecacb}
 
 
-Definición en la línea 359 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 362 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-360         \{
-361             \textcolor{comment}{//DisableControls((Panel)tbRecarga.Content);}
-362 
-363             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a131fca07c9b7c921f201e4b45a634ca5}{mBackgroundGenerarLista}.RunWorkerAsync();
-364         \}
+363         \{
+364             \textcolor{comment}{//DisableControls((Panel)tbRecarga.Content);}
+365 
+366             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a131fca07c9b7c921f201e4b45a634ca5}{mBackgroundGenerarLista}.RunWorkerAsync();
+367         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab0c2c9d5584ade92aa8142d2299bfe06}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!Initialize\-Component@{Initialize\-Component}}
 \index{Initialize\-Component@{Initialize\-Component}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1840,18 +1840,18 @@ Definición en la línea 490 del archivo Reporte\-Frecuencia\-De\-Uso.\-g.\-i.\-
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a89175d2bfbb547618d00e07c74b2c7ab}
 
 
-Definición en la línea 481 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 484 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-482         \{
-483             \textcolor{keywordtype}{string} res = \textcolor{stringliteral}{""};
-484             \textcolor{keywordflow}{foreach} (\textcolor{keywordtype}{string} var \textcolor{keywordflow}{in} input)
-485             \{
-486                 res += var + \textcolor{stringliteral}{" "};
-487             \}
-488             \textcolor{keywordflow}{return} res;
-489         \}
+485         \{
+486             \textcolor{keywordtype}{string} res = \textcolor{stringliteral}{""};
+487             \textcolor{keywordflow}{foreach} (\textcolor{keywordtype}{string} var \textcolor{keywordflow}{in} input)
+488             \{
+489                 res += var + \textcolor{stringliteral}{" "};
+490             \}
+491             \textcolor{keywordflow}{return} res;
+492         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a990d1ef15326a4a269e1c28840ca0876}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!load\-Unidad@{load\-Unidad}}
 \index{load\-Unidad@{load\-Unidad}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1862,58 +1862,58 @@ Definición en la línea 481 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a990d1ef15326a4a269e1c28840ca0876}
 
 
-Definición en la línea 539 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 542 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-540         \{
-541             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ac57af5c45eb5829244bdb033e19a7ea8}{txtDiasMUnidad}.Clear();
-542             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ae9d8312f5f3d8cef187f25210a97ad43}{txtMesMUnidad}.Clear();
-543             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0b2b2103ff7f1f55f8698b23e1672dbe}{txtUsuariosDUnidad}.Clear();
-544             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a94304e1e8d7eae9ba6aad17385c65664}{txtUsuariosMUnidad}.Clear();
-545 
-546             List<DateTime> Fecha = (from servicio in unidad.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aca85e685e50da0af6be67e3ee69b1bb1}{Servicios} select servicio.Fecha.Date).
+543         \{
+544             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ac57af5c45eb5829244bdb033e19a7ea8}{txtDiasMUnidad}.Clear();
+545             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ae9d8312f5f3d8cef187f25210a97ad43}{txtMesMUnidad}.Clear();
+546             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0b2b2103ff7f1f55f8698b23e1672dbe}{txtUsuariosDUnidad}.Clear();
+547             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a94304e1e8d7eae9ba6aad17385c65664}{txtUsuariosMUnidad}.Clear();
+548 
+549             List<DateTime> Fecha = (from servicio in unidad.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aca85e685e50da0af6be67e3ee69b1bb1}{Servicios} select servicio.Fecha.Date).
       ToList();
-547             List<int> Mes = (from servicio in unidad.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aca85e685e50da0af6be67e3ee69b1bb1}{Servicios} select servicio.Fecha.Month).ToList
+550             List<int> Mes = (from servicio in unidad.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aca85e685e50da0af6be67e3ee69b1bb1}{Servicios} select servicio.Fecha.Month).ToList
       ();
-548             List<Guid> UsuariosID = (from servicio in unidad.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aca85e685e50da0af6be67e3ee69b1bb1}{Servicios} select servicio.Usuario).
+551             List<Guid> UsuariosID = (from servicio in unidad.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aca85e685e50da0af6be67e3ee69b1bb1}{Servicios} select servicio.Usuario).
       ToList();
-549             HashSet<DateTime> Res;
-550             HashSet<int> ResM;
-551             HashSet<Guid> ResU;
-552             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0b2b2103ff7f1f55f8698b23e1672dbe}{txtUsuariosDUnidad}.Text = Helpers.masRepetido<DateTime>(Fecha, out Res).
+552             HashSet<DateTime> Res;
+553             HashSet<int> ResM;
+554             HashSet<Guid> ResU;
+555             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0b2b2103ff7f1f55f8698b23e1672dbe}{txtUsuariosDUnidad}.Text = Helpers.masRepetido<DateTime>(Fecha, out Res).
       ToString();
-553             \textcolor{keywordflow}{foreach} (DateTime valor \textcolor{keywordflow}{in} Res.Cast<DateTime>().ToList())
-554             \{
-555                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ac57af5c45eb5829244bdb033e19a7ea8}{txtDiasMUnidad}.Text += valor.ToShortDateString() + \textcolor{stringliteral}{" "};
-556             \}
-557             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a94304e1e8d7eae9ba6aad17385c65664}{txtUsuariosMUnidad}.Text = Helpers.masRepetido<\textcolor{keywordtype}{int}>(Mes, out ResM).ToString();
-558             \textcolor{keywordflow}{foreach} (\textcolor{keywordtype}{int} valor \textcolor{keywordflow}{in} ResM)
-559             \{
-560                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ae9d8312f5f3d8cef187f25210a97ad43}{txtMesMUnidad}.Text += Tipos.Meses[valor] + \textcolor{stringliteral}{" "};
-561 
-562                 \textcolor{comment}{//txtMesMUnidad.Text += valor.ToString() + " ";}
-563             \}
-564             HashSet<Guid> usuariosMasFrecuentes = \textcolor{keyword}{new} HashSet<Guid>();
-565 
-566             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 1; i++)
-567             \{
-568                 Helpers.masRepetido<Guid>(UsuariosID, out ResU);
-569 
-570                 \textcolor{keywordflow}{foreach} (Guid valor \textcolor{keywordflow}{in} ResU)
-571                 \{
-572                     usuariosMasFrecuentes.Add(valor);
-573                     UsuariosID.RemoveAll(Guid => Guid == valor);
-574                 \}
-575             \}
-576             BindingList<Usuario> usuariosDgrid = \textcolor{keyword}{new} BindingList<Usuario>();
-577             \textcolor{keywordflow}{foreach} (Guid user \textcolor{keywordflow}{in} usuariosMasFrecuentes)
-578             \{
-579                 usuariosDgrid.Add(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.Usuarios.Find(
+556             \textcolor{keywordflow}{foreach} (DateTime valor \textcolor{keywordflow}{in} Res.Cast<DateTime>().ToList())
+557             \{
+558                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ac57af5c45eb5829244bdb033e19a7ea8}{txtDiasMUnidad}.Text += valor.ToShortDateString() + \textcolor{stringliteral}{" "};
+559             \}
+560             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a94304e1e8d7eae9ba6aad17385c65664}{txtUsuariosMUnidad}.Text = Helpers.masRepetido<\textcolor{keywordtype}{int}>(Mes, out ResM).ToString();
+561             \textcolor{keywordflow}{foreach} (\textcolor{keywordtype}{int} valor \textcolor{keywordflow}{in} ResM)
+562             \{
+563                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ae9d8312f5f3d8cef187f25210a97ad43}{txtMesMUnidad}.Text += Tipos.Meses[valor] + \textcolor{stringliteral}{" "};
+564 
+565                 \textcolor{comment}{//txtMesMUnidad.Text += valor.ToString() + " ";}
+566             \}
+567             HashSet<Guid> usuariosMasFrecuentes = \textcolor{keyword}{new} HashSet<Guid>();
+568 
+569             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 1; i++)
+570             \{
+571                 Helpers.masRepetido<Guid>(UsuariosID, out ResU);
+572 
+573                 \textcolor{keywordflow}{foreach} (Guid valor \textcolor{keywordflow}{in} ResU)
+574                 \{
+575                     usuariosMasFrecuentes.Add(valor);
+576                     UsuariosID.RemoveAll(Guid => Guid == valor);
+577                 \}
+578             \}
+579             BindingList<Usuario> usuariosDgrid = \textcolor{keyword}{new} BindingList<Usuario>();
+580             \textcolor{keywordflow}{foreach} (Guid user \textcolor{keywordflow}{in} usuariosMasFrecuentes)
+581             \{
+582                 usuariosDgrid.Add(\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad66e9ccc04488afa646ac2e65bf7db35}{mUsuariosPopulator}.Usuarios.Find(
       \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario}{Usuario} => \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario}{Usuario}.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_ae9cfa8c8b462028b8c166f7a1eff5f1f}{Uid} == user));
-580             \}
-581             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a76928c8b382b0997a3e7a9f57369c6c0}{dtgrdReporteUnidad}.ItemsSource = usuariosDgrid;
-582         \}
+583             \}
+584             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a76928c8b382b0997a3e7a9f57369c6c0}{dtgrdReporteUnidad}.ItemsSource = usuariosDgrid;
+585         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2f3f5d9e8de8f54d2031cb05f67d514b}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!load\-Usuario@{load\-Usuario}}
 \index{load\-Usuario@{load\-Usuario}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1924,31 +1924,31 @@ Definición en la línea 539 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2f3f5d9e8de8f54d2031cb05f67d514b}
 
 
-Definición en la línea 460 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 463 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-461         \{
-462             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af8bd143e56528392c10ffa7c3cd6d107}{txtDiaM}.Clear();
-463             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a09866a06c2de29cae45eec70baaa743c}{txtMesM}.Clear();
-464             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a5f1eb7192932de54000a607fd13e1c00}{txtUnidadM}.Clear();
-465             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a801cfb9352eddd0840ad7203a734d5e8}{txtNombre}.Text = user.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_a22974b12ffb877b220ac230d9ce48615}{sNombre};
-466             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aaa51d4046ba0f85ed3aebb8261a30d5e}{lblEdad}.Content = ((int)(((DateTime.Now - user.
+464         \{
+465             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af8bd143e56528392c10ffa7c3cd6d107}{txtDiaM}.Clear();
+466             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a09866a06c2de29cae45eec70baaa743c}{txtMesM}.Clear();
+467             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a5f1eb7192932de54000a607fd13e1c00}{txtUnidadM}.Clear();
+468             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a801cfb9352eddd0840ad7203a734d5e8}{txtNombre}.Text = user.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_a22974b12ffb877b220ac230d9ce48615}{sNombre};
+469             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aaa51d4046ba0f85ed3aebb8261a30d5e}{lblEdad}.Content = ((int)(((DateTime.Now - user.
       \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_acb7c4051a5323df336c32d932b5e83bb}{FechaNacimiento}).Days) / 365)).ToString();
-467             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a44722cad98505b8eaad8df7e5ffcee2c}{lblTipoUser}.Content = Tipos.Usuarios[user.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_a56f1e08f344ba5851703edab28232278}{TipoUsuario}];
-468             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a6cd14267e6c8f8bd3ad6396122576187}{lblSaldo}.Content = \textcolor{stringliteral}{"$"} + user.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_ad29821993f63ad36d711b1e2b90b1be0}{Saldo};
-469             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aaa51d4046ba0f85ed3aebb8261a30d5e}{lblEdad}.Content = Helpers.Age(user.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_acb7c4051a5323df336c32d932b5e83bb}{FechaNacimiento}).ToString();
-470             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aad6d42ec1def08d2c9851f5952be9428}{lblConsumo}.Content = \textcolor{stringliteral}{"$"} + user.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_a17dc01f570b4c27936b81d486fc4a8bb}{Consumo}.ToString();
-471             EstadisticaResult.Datos Result = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad858394f90552b0c6240293e2acf2bdd}{parseServicios}(user.
+470             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a44722cad98505b8eaad8df7e5ffcee2c}{lblTipoUser}.Content = Tipos.Usuarios[user.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_a56f1e08f344ba5851703edab28232278}{TipoUsuario}];
+471             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a6cd14267e6c8f8bd3ad6396122576187}{lblSaldo}.Content = \textcolor{stringliteral}{"$"} + user.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_ad29821993f63ad36d711b1e2b90b1be0}{Saldo};
+472             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aaa51d4046ba0f85ed3aebb8261a30d5e}{lblEdad}.Content = Helpers.Age(user.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_acb7c4051a5323df336c32d932b5e83bb}{FechaNacimiento}).ToString();
+473             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aad6d42ec1def08d2c9851f5952be9428}{lblConsumo}.Content = \textcolor{stringliteral}{"$"} + user.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_a17dc01f570b4c27936b81d486fc4a8bb}{Consumo}.ToString();
+474             EstadisticaResult.Datos Result = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad858394f90552b0c6240293e2acf2bdd}{parseServicios}(user.
       \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_a95e6bba4296f208230d6374df201f24b}{Servicios}.ToList());
-472             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af8bd143e56528392c10ffa7c3cd6d107}{txtDiaM}.Text = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a89175d2bfbb547618d00e07c74b2c7ab}{listToString}(Result.Dias);
-473             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a09866a06c2de29cae45eec70baaa743c}{txtMesM}.Text = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a89175d2bfbb547618d00e07c74b2c7ab}{listToString}(Result.Meses);
-474             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a5f1eb7192932de54000a607fd13e1c00}{txtUnidadM}.Text = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a89175d2bfbb547618d00e07c74b2c7ab}{listToString}(Result.Unidades);
-475             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a939dae08740f0d01990fe4ceea680731}{txtCantidadDiasU}.Text = Result.Dcount.ToString();
-476             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a8132ea90b7430a179c01f1c6e3216d0c}{txtCantidadMesU}.Text = Result.Mcount.ToString();
-477             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad46d30c5b21fe0ba956859aeb8af08b3}{txtCantidadUnidadU}.Text = Result.Ucount.ToString();
-478             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2282faf2e30330dc4f45b9bc0264ceaf}{txtTarjetaUsuario}.Text = user.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_a4ecaaf4c0f0b8e78d71fcab8c7da253a}{TarjetaAsignada};
-479         \}
+475             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af8bd143e56528392c10ffa7c3cd6d107}{txtDiaM}.Text = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a89175d2bfbb547618d00e07c74b2c7ab}{listToString}(Result.Dias);
+476             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a09866a06c2de29cae45eec70baaa743c}{txtMesM}.Text = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a89175d2bfbb547618d00e07c74b2c7ab}{listToString}(Result.Meses);
+477             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a5f1eb7192932de54000a607fd13e1c00}{txtUnidadM}.Text = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a89175d2bfbb547618d00e07c74b2c7ab}{listToString}(Result.Unidades);
+478             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a939dae08740f0d01990fe4ceea680731}{txtCantidadDiasU}.Text = Result.Dcount.ToString();
+479             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a8132ea90b7430a179c01f1c6e3216d0c}{txtCantidadMesU}.Text = Result.Mcount.ToString();
+480             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad46d30c5b21fe0ba956859aeb8af08b3}{txtCantidadUnidadU}.Text = Result.Ucount.ToString();
+481             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2282faf2e30330dc4f45b9bc0264ceaf}{txtTarjetaUsuario}.Text = user.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario_a4ecaaf4c0f0b8e78d71fcab8c7da253a}{TarjetaAsignada};
+482         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad858394f90552b0c6240293e2acf2bdd}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!parse\-Servicios@{parse\-Servicios}}
 \index{parse\-Servicios@{parse\-Servicios}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -1959,50 +1959,50 @@ Definición en la línea 460 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-c
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ad858394f90552b0c6240293e2acf2bdd}
 
 
-Definición en la línea 157 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 160 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-158         \{
-159             EstadisticaResult.Datos resultado = \textcolor{keyword}{new} EstadisticaResult.Datos();
-160             List<DateTime> Fecha = (from servicio in servicios select servicio.Fecha.Date).ToList();
-161             List<int> Mes = (from servicio in servicios select servicio.Fecha.Month).ToList();
-162             List<Guid> UnidadesID = (from servicio in servicios select servicio.Unidad).ToList();
-163             HashSet<DateTime> Res;
-164             HashSet<int> ResM;
-165             HashSet<Guid> ResU;
-166             resultado.Dcount = Helpers.masRepetido<DateTime>(Fecha, out Res);
-167             resultado.Dias = \textcolor{keyword}{new} List<string>();
-168             \textcolor{keywordflow}{foreach} (DateTime valor \textcolor{keywordflow}{in} Res.Cast<DateTime>().ToList())
-169             \{
-170                 \textcolor{comment}{//resultado.Dias += valor.ToShortDateString() + " ";}
-171                 resultado.Dias.Add(valor.ToShortDateString());
-172             \}
-173             resultado.Mcount = Helpers.masRepetido<\textcolor{keywordtype}{int}>(Mes, out ResM);
-174             resultado.Meses = \textcolor{keyword}{new} List<string>();
-175             \textcolor{keywordflow}{foreach} (\textcolor{keywordtype}{int} valor \textcolor{keywordflow}{in} ResM)
-176             \{
-177                 \textcolor{comment}{//resultado.Meses += Tipos.Meses[valor] + " ";}
-178                 resultado.Meses.Add(Tipos.Meses[valor]);
-179             \}
-180             resultado.Ucount = Helpers.masRepetido<Guid>(UnidadesID, out ResU);
-181             \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad}{Unidad} res;
-182             resultado.Unidades = \textcolor{keyword}{new} List<string>();
-183             \textcolor{keywordflow}{foreach} (Guid valor \textcolor{keywordflow}{in} ResU)
-184             \{
-185                 res = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a91106ba7bf23e61d729bc0399ef5fa98}{mUnidadPopulator}.Unidades.Find(\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad}{Unidad} => 
+161         \{
+162             EstadisticaResult.Datos resultado = \textcolor{keyword}{new} EstadisticaResult.Datos();
+163             List<DateTime> Fecha = (from servicio in servicios select servicio.Fecha.Date).ToList();
+164             List<int> Mes = (from servicio in servicios select servicio.Fecha.Month).ToList();
+165             List<Guid> UnidadesID = (from servicio in servicios select servicio.Unidad).ToList();
+166             HashSet<DateTime> Res;
+167             HashSet<int> ResM;
+168             HashSet<Guid> ResU;
+169             resultado.Dcount = Helpers.masRepetido<DateTime>(Fecha, out Res);
+170             resultado.Dias = \textcolor{keyword}{new} List<string>();
+171             \textcolor{keywordflow}{foreach} (DateTime valor \textcolor{keywordflow}{in} Res.Cast<DateTime>().ToList())
+172             \{
+173                 \textcolor{comment}{//resultado.Dias += valor.ToShortDateString() + " ";}
+174                 resultado.Dias.Add(valor.ToShortDateString());
+175             \}
+176             resultado.Mcount = Helpers.masRepetido<\textcolor{keywordtype}{int}>(Mes, out ResM);
+177             resultado.Meses = \textcolor{keyword}{new} List<string>();
+178             \textcolor{keywordflow}{foreach} (\textcolor{keywordtype}{int} valor \textcolor{keywordflow}{in} ResM)
+179             \{
+180                 \textcolor{comment}{//resultado.Meses += Tipos.Meses[valor] + " ";}
+181                 resultado.Meses.Add(Tipos.Meses[valor]);
+182             \}
+183             resultado.Ucount = Helpers.masRepetido<Guid>(UnidadesID, out ResU);
+184             \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad}{Unidad} res;
+185             resultado.Unidades = \textcolor{keyword}{new} List<string>();
+186             \textcolor{keywordflow}{foreach} (Guid valor \textcolor{keywordflow}{in} ResU)
+187             \{
+188                 res = \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a91106ba7bf23e61d729bc0399ef5fa98}{mUnidadPopulator}.Unidades.Find(\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad}{Unidad} => 
       \hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad}{Unidad}.\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad_aa2e602251694986f3d519ee3db5ffa38}{Uid} == valor);
-186 
-187                 \textcolor{comment}{//resultado.Unidades+= res.NoUnidad + " ";}
-188                 resultado.Unidades.Add(res.NoUnidad);
-189             \}
-190 
-191             \textcolor{comment}{//lstGUnidadM.ItemsSource = unidades;}
-192 
-193             \textcolor{comment}{/*resultado.Mcount = (from unidades)*/}
-194 
-195             \textcolor{keywordflow}{return} resultado;
-196         \}
+189 
+190                 \textcolor{comment}{//resultado.Unidades+= res.NoUnidad + " ";}
+191                 resultado.Unidades.Add(res.NoUnidad);
+192             \}
+193 
+194             \textcolor{comment}{//lstGUnidadM.ItemsSource = unidades;}
+195 
+196             \textcolor{comment}{/*resultado.Mcount = (from unidades)*/}
+197 
+198             \textcolor{keywordflow}{return} resultado;
+199         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a4b2535d30960eeadac98c0629d2bb246}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!reporte\-Cerrado@{reporte\-Cerrado}}
 \index{reporte\-Cerrado@{reporte\-Cerrado}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -2034,17 +2034,17 @@ Definición en la línea 54 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ab7a4518073890159b8582f0a55979295}
 
 
-Definición en la línea 607 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 610 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-608         \{
-609             \textcolor{keywordflow}{if} (\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a94c9a9f5043efbb40679b90827da897e}{lstBusqueda}.SelectedItem != null)
-610             \{
-611                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2f3f5d9e8de8f54d2031cb05f67d514b}{loadUsuario}((\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario}{Usuario})\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a94c9a9f5043efbb40679b90827da897e}{lstBusqueda}.SelectedItem);
-612             \}
-613             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af86d8cdcb91a2f6d6954bf44f4ad2b6c}{grdBusqueda}.Visibility = Visibility.Hidden;
-614         \}
+611         \{
+612             \textcolor{keywordflow}{if} (\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a94c9a9f5043efbb40679b90827da897e}{lstBusqueda}.SelectedItem != null)
+613             \{
+614                 \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a2f3f5d9e8de8f54d2031cb05f67d514b}{loadUsuario}((\hyperlink{class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario}{Usuario})\hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a94c9a9f5043efbb40679b90827da897e}{lstBusqueda}.SelectedItem);
+615             \}
+616             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af86d8cdcb91a2f6d6954bf44f4ad2b6c}{grdBusqueda}.Visibility = Visibility.Hidden;
+617         \}
 \end{DoxyCode}
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aeecd10971fbcdb28fa27ae4dd46597fa}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!Set\-Background\-Workers@{Set\-Background\-Workers}}
 \index{Set\-Background\-Workers@{Set\-Background\-Workers}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -2097,18 +2097,18 @@ Definición en la línea 60 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs
 )\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aefbfda56e68a84e456a7923b48b53c32}
 
 
-Definición en la línea 273 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 276 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 
 \begin{DoxyCode}
-274         \{
-275             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ae9f936afc28740aa73600b6ebd3bb07c}{dgtcNombre}.Binding = \textcolor{keyword}{new} Binding(\textcolor{stringliteral}{"sNombre"});
-276             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a3c20691f91322ac840de110154029356}{dgtcNumeroTarjeta}.Binding = \textcolor{keyword}{new} Binding(\textcolor{stringliteral}{"TarjetaAsignada"});
-277             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a62c05d7f22acb7b7a12bc1e8777906cc}{dgtcTipoUsuario}.Binding = \textcolor{keyword}{new} Binding(\textcolor{stringliteral}{"TipoUsuario"});
-278             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ace0842b0e456ad2ad1cf360884b6c699}{dgtcServicios}.Binding = \textcolor{keyword}{new} Binding(\textcolor{stringliteral}{"ServiciosCount"});
-279             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af2b92d2a2c7a62227fa89dc9bf22009b}{dgtcConsumo}.Binding = \textcolor{keyword}{new} Binding(\textcolor{stringliteral}{"Consumo"});
-280             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af2b92d2a2c7a62227fa89dc9bf22009b}{dgtcConsumo}.Binding.StringFormat = \textcolor{stringliteral}{"$\{0\}"};
-281         \}
+277         \{
+278             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ae9f936afc28740aa73600b6ebd3bb07c}{dgtcNombre}.Binding = \textcolor{keyword}{new} Binding(\textcolor{stringliteral}{"sNombre"});
+279             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a3c20691f91322ac840de110154029356}{dgtcNumeroTarjeta}.Binding = \textcolor{keyword}{new} Binding(\textcolor{stringliteral}{"TarjetaAsignada"});
+280             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a62c05d7f22acb7b7a12bc1e8777906cc}{dgtcTipoUsuario}.Binding = \textcolor{keyword}{new} Binding(\textcolor{stringliteral}{"TipoUsuario"});
+281             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_ace0842b0e456ad2ad1cf360884b6c699}{dgtcServicios}.Binding = \textcolor{keyword}{new} Binding(\textcolor{stringliteral}{"ServiciosCount"});
+282             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af2b92d2a2c7a62227fa89dc9bf22009b}{dgtcConsumo}.Binding = \textcolor{keyword}{new} Binding(\textcolor{stringliteral}{"Consumo"});
+283             \hyperlink{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_af2b92d2a2c7a62227fa89dc9bf22009b}{dgtcConsumo}.Binding.StringFormat = \textcolor{stringliteral}{"$\{0\}"};
+284         \}
 \end{DoxyCode}
 
 
@@ -2209,7 +2209,7 @@ Definición en la línea 102 del archivo Reporte\-Frecuencia\-De\-Uso.\-g.\-cs.
 \subsubsection[{helper\-String}]{\setlength{\rightskip}{0pt plus 5cm}string Proyecto\-\_\-\-Integrador\-\_\-3.\-Reportes.\-Reporte\-Frecuencia\-De\-Uso.\-helper\-String\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a445e3fd272881069a4fb7c71982c185b}
 
 
-Definición en la línea 623 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 626 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_aad6d42ec1def08d2c9851f5952be9428}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!lbl\-Consumo@{lbl\-Consumo}}
 \index{lbl\-Consumo@{lbl\-Consumo}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}
@@ -2384,7 +2384,7 @@ Definición en la línea 23 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs
 \subsubsection[{m\-Reporte\-Por\-Unidad}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reporte\-Por\-Unidad} Proyecto\-\_\-\-Integrador\-\_\-3.\-Reportes.\-Reporte\-Frecuencia\-De\-Uso.\-m\-Reporte\-Por\-Unidad\hspace{0.3cm}{\ttfamily [private]}}}\label{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a0e61625363a522a2378ccd73b1ebbfb2}
 
 
-Definición en la línea 621 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
+Definición en la línea 624 del archivo Reporte\-Frecuencia\-De\-Uso.\-xaml.\-cs.
 
 \hypertarget{class_proyecto___integrador__3_1_1_reportes_1_1_reporte_frecuencia_de_uso_a91106ba7bf23e61d729bc0399ef5fa98}{\index{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}!m\-Unidad\-Populator@{m\-Unidad\-Populator}}
 \index{m\-Unidad\-Populator@{m\-Unidad\-Populator}!Proyecto_Integrador_3::Reportes::ReporteFrecuenciaDeUso@{Proyecto\-\_\-\-Integrador\-\_\-3\-::\-Reportes\-::\-Reporte\-Frecuencia\-De\-Uso}}

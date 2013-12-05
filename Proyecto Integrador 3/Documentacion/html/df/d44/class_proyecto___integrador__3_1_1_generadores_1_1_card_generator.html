@@ -113,6 +113,9 @@ $(document).ready(function(){initNavTree('df/d44/class_proyecto___integrador__3_
 <div class="title">Referencia de la Clase Proyecto_Integrador_3.Generadores.CardGenerator</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Clase generadora de tarjetas  
+ <a href="../../df/d44/class_proyecto___integrador__3_1_1_generadores_1_1_card_generator.html#details">Más...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Métodos públicos estáticos</h2></td></tr>
@@ -121,8 +124,9 @@ Métodos públicos estáticos</h2></td></tr>
 <tr class="separator:addf75ee3159eeee5f4ac4d6210652abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock">
-<p>Definición en la línea <a class="el" href="../../d3/d0c/_card_generator_8cs_source.html#l00006">6</a> del archivo <a class="el" href="../../d3/d0c/_card_generator_8cs_source.html">CardGenerator.cs</a>.</p>
+<div class="textblock"><p>Clase generadora de tarjetas </p>
+
+<p>Definición en la línea <a class="el" href="../../d3/d0c/_card_generator_8cs_source.html#l00009">9</a> del archivo <a class="el" href="../../d3/d0c/_card_generator_8cs_source.html">CardGenerator.cs</a>.</p>
 </div><h2 class="groupheader">Documentación de las funciones miembro</h2>
 <a class="anchor" id="addf75ee3159eeee5f4ac4d6210652abd"></a>
 <div class="memitem">
@@ -148,20 +152,20 @@ Métodos públicos estáticos</h2></td></tr>
 <p>Regresa un nuevo número de tarjeta. </p>
 <dl class="section return"><dt>Devuelve</dt><dd>Un número de tarjeta de 12 dígitos</dd></dl>
 
-<p>Definición en la línea <a class="el" href="../../d3/d0c/_card_generator_8cs_source.html#l00012">12</a> del archivo <a class="el" href="../../d3/d0c/_card_generator_8cs_source.html">CardGenerator.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            Random mRandom = <span class="keyword">new</span> Random();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordtype">int</span> compRand = mRandom.Next(100, 999);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordtype">int</span> anio = DateTime.Today.Year % 100;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordtype">int</span> dia = DateTime.Today.Day;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordtype">int</span> <span class="keyword">remove</span> = dia &gt; 9 ? 2 : 1;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordtype">int</span> actual = 99999 - compRand;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordtype">int</span> mes = DateTime.Today.Month;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordtype">string</span> tarjeta = anio.ToString() + dia.ToString() + actual.ToString().Substring(<span class="keyword">remove</span>) + mes.ToString() + compRand.ToString();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            tarjeta = tarjeta.Substring(0, 6) + <span class="keyword">new</span> string(tarjeta.Substring(6, 6).Reverse().ToArray());</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordtype">long</span> tarjetaFinal = Int64.Parse(tarjeta);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">return</span> tarjetaFinal;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<p>Definición en la línea <a class="el" href="../../d3/d0c/_card_generator_8cs_source.html#l00015">15</a> del archivo <a class="el" href="../../d3/d0c/_card_generator_8cs_source.html">CardGenerator.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            Random mRandom = <span class="keyword">new</span> Random();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordtype">int</span> compRand = mRandom.Next(100, 999);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordtype">int</span> anio = DateTime.Today.Year % 100;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordtype">int</span> dia = DateTime.Today.Day;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordtype">int</span> <span class="keyword">remove</span> = dia &gt; 9 ? 2 : 1;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordtype">int</span> actual = 99999 - compRand;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordtype">int</span> mes = DateTime.Today.Month;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordtype">string</span> tarjeta = anio.ToString() + dia.ToString() + actual.ToString().Substring(<span class="keyword">remove</span>) + mes.ToString() + compRand.ToString();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            tarjeta = tarjeta.Substring(0, 6) + <span class="keyword">new</span> string(tarjeta.Substring(6, 6).Reverse().ToArray());</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordtype">long</span> tarjetaFinal = Int64.Parse(tarjeta);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">return</span> tarjetaFinal;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -174,7 +178,7 @@ Métodos públicos estáticos</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../dd/d24/namespace_proyecto___integrador__3_1_1_generadores.html">Generadores</a></li><li class="navelem"><a class="el" href="../../df/d44/class_proyecto___integrador__3_1_1_generadores_1_1_card_generator.html">CardGenerator</a></li>
-    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:50:10 para SmartCards por
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 20:26:17 para SmartCards por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

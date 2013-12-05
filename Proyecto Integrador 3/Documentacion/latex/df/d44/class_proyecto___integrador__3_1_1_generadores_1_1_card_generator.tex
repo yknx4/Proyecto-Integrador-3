@@ -1,6 +1,11 @@
 \hypertarget{class_proyecto___integrador__3_1_1_generadores_1_1_card_generator}{\section{Referencia de la Clase Proyecto\-\_\-\-Integrador\-\_\-3.\-Generadores.\-Card\-Generator}
 \label{class_proyecto___integrador__3_1_1_generadores_1_1_card_generator}\index{Proyecto\-\_\-\-Integrador\-\_\-3.\-Generadores.\-Card\-Generator@{Proyecto\-\_\-\-Integrador\-\_\-3.\-Generadores.\-Card\-Generator}}
 }
+
+
+Clase generadora de tarjetas  
+
+
 \subsection*{Métodos públicos estáticos}
 \begin{DoxyCompactItemize}
 \item 
@@ -9,9 +14,11 @@ static long \hyperlink{class_proyecto___integrador__3_1_1_generadores_1_1_card_g
 
 
 \subsection{Descripción detallada}
+Clase generadora de tarjetas 
 
 
-Definición en la línea 6 del archivo Card\-Generator.\-cs.
+
+Definición en la línea 9 del archivo Card\-Generator.\-cs.
 
 
 
@@ -32,24 +39,24 @@ Un número de tarjeta de 12 dígitos
 \end{DoxyReturn}
 
 
-Definición en la línea 12 del archivo Card\-Generator.\-cs.
+Definición en la línea 15 del archivo Card\-Generator.\-cs.
 
 
 \begin{DoxyCode}
-13         \{
-14             Random mRandom = \textcolor{keyword}{new} Random();
-15             \textcolor{keywordtype}{int} compRand = mRandom.Next(100, 999);
-16             \textcolor{keywordtype}{int} anio = DateTime.Today.Year % 100;
-17             \textcolor{keywordtype}{int} dia = DateTime.Today.Day;
-18             \textcolor{keywordtype}{int} \textcolor{keyword}{remove} = dia > 9 ? 2 : 1;
-19             \textcolor{keywordtype}{int} actual = 99999 - compRand;
-20             \textcolor{keywordtype}{int} mes = DateTime.Today.Month;
-21             \textcolor{keywordtype}{string} tarjeta = anio.ToString() + dia.ToString() + actual.ToString().Substring(\textcolor{keyword}{remove}) + mes.
+16         \{
+17             Random mRandom = \textcolor{keyword}{new} Random();
+18             \textcolor{keywordtype}{int} compRand = mRandom.Next(100, 999);
+19             \textcolor{keywordtype}{int} anio = DateTime.Today.Year % 100;
+20             \textcolor{keywordtype}{int} dia = DateTime.Today.Day;
+21             \textcolor{keywordtype}{int} \textcolor{keyword}{remove} = dia > 9 ? 2 : 1;
+22             \textcolor{keywordtype}{int} actual = 99999 - compRand;
+23             \textcolor{keywordtype}{int} mes = DateTime.Today.Month;
+24             \textcolor{keywordtype}{string} tarjeta = anio.ToString() + dia.ToString() + actual.ToString().Substring(\textcolor{keyword}{remove}) + mes.
       ToString() + compRand.ToString();
-22             tarjeta = tarjeta.Substring(0, 6) + \textcolor{keyword}{new} string(tarjeta.Substring(6, 6).Reverse().ToArray());
-23             \textcolor{keywordtype}{long} tarjetaFinal = Int64.Parse(tarjeta);
-24             \textcolor{keywordflow}{return} tarjetaFinal;
-25         \}
+25             tarjeta = tarjeta.Substring(0, 6) + \textcolor{keyword}{new} string(tarjeta.Substring(6, 6).Reverse().ToArray());
+26             \textcolor{keywordtype}{long} tarjetaFinal = Int64.Parse(tarjeta);
+27             \textcolor{keywordflow}{return} tarjetaFinal;
+28         \}
 \end{DoxyCode}
 
 
