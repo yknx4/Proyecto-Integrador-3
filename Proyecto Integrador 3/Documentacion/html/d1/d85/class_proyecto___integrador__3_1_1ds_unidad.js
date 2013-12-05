@@ -1,0 +1,27 @@
+var class_proyecto___integrador__3_1_1ds_unidad =
+[
+    [ "UnidadDataTable", "dc/df4/class_proyecto___integrador__3_1_1ds_unidad_1_1_unidad_data_table.html", "dc/df4/class_proyecto___integrador__3_1_1ds_unidad_1_1_unidad_data_table" ],
+    [ "UnidadRow", "dc/d17/class_proyecto___integrador__3_1_1ds_unidad_1_1_unidad_row.html", "dc/d17/class_proyecto___integrador__3_1_1ds_unidad_1_1_unidad_row" ],
+    [ "UnidadRowChangeEvent", "d9/d2c/class_proyecto___integrador__3_1_1ds_unidad_1_1_unidad_row_change_event.html", "d9/d2c/class_proyecto___integrador__3_1_1ds_unidad_1_1_unidad_row_change_event" ],
+    [ "dsUnidad", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#ab6be91d0b9503d2e08dacc48aaaf6446", null ],
+    [ "dsUnidad", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a9d5496ffefb43b59ba2420116b3e2d4a", null ],
+    [ "Clone", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#ad50ce5632222d5d4b14388a90c3949cd", null ],
+    [ "GetSchemaSerializable", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a094f29a5828868f8d88d76bd813b4b50", null ],
+    [ "GetTypedDataSetSchema", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#aa5a56d2c39b52246f40a12eda82883d7", null ],
+    [ "InitClass", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a13ea02006bd9c08f3314b470de662f66", null ],
+    [ "InitializeDerivedDataSet", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#ac07b966c4ac3259fd73bee4f81126c61", null ],
+    [ "InitVars", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a264991defd8f2856787ed46e2f0a3881", null ],
+    [ "InitVars", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a7a2a64e67f40f263bd085984f14e3c7a", null ],
+    [ "ReadXmlSerializable", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a064b596793a1a55b0296efd51a5e850e", null ],
+    [ "SchemaChanged", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a11ade5cd6b1b18f1ee25ffc978b6575b", null ],
+    [ "ShouldSerializeRelations", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a77c6010bdd6224c53a5be25776db3f8f", null ],
+    [ "ShouldSerializeTables", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a6982015d2a16c61dffbe6abf7cf07478", null ],
+    [ "ShouldSerializeUnidad", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a90147697e43270e586da18302ddd99ed", null ],
+    [ "UnidadRowChangeEventHandler", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a351cda84e90913df1583510ff35bd48d", null ],
+    [ "_schemaSerializationMode", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a7ff1a6a5ace8cb74effc4d302dfe4039", null ],
+    [ "tableUnidad", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a32b0791208b2679b9dee83455af6ff07", null ],
+    [ "Relations", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a4341745873b49fbaa39cd3562161c504", null ],
+    [ "SchemaSerializationMode", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#ae681aadb8c80cfb04e19826c6608871d", null ],
+    [ "Tables", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#ac3f1357f878bf8848284f29737f47276", null ],
+    [ "Unidad", "d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a78a56c4320f0067f020ea95490bdf195", null ]
+];

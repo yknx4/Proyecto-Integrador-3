@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -40,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Página&#160;principal</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="../../namespaces.html"><span>Paquetes</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Clases</span></a></li>
       <li><a href="../../files.html"><span>Archivos</span></a></li>
       <li>
@@ -69,6 +76,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
       <li><a href="../../functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +105,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../db/df8/namespace_proyecto___integrador__3_1_1_reportes.html">Reportes</a></li><li class="navelem"><a class="el" href="../../de/dc0/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad.html">ReportePorUnidad</a></li><li class="navelem"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">ReporteDeUnidad</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad Lista de los miembros</div>  </div>
@@ -97,13 +114,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 <p>Lista completa de los miembros de <a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a>, incluyendo todos los heredados:</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#aab1b6d38fcca26f0ea36a0ef7285d90e">_unidad</a></td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a1f3b29a66464d88586dfd777e3f230e0">Contar</a>()</td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a1f3b29a66464d88586dfd777e3f230e0">Contar</a>()</td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a8b1b43b2d7a81d3b06a588eac0ecea6f">discapacitado</a></td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a1f6de144584bd3705d824d4f06dd6cf0">estudiante</a></td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a9e0e8780e5b3f5f6d09c96c104732388">general</a></td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a25b2af179a4601db1a2129d8200e7eee">ReporteDeUnidad</a>(Unidad unidad, DateTime inicial, DateTime final)</td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a91a1d773085fef47d41042be0162a587">ReporteDeUnidad</a>(Unidad unidad, DateTime inicial)</td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a128dcb976c1c91cfcc1311c21fc7fa7a">ReporteDeUnidad</a>(Unidad unidad)</td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a25b2af179a4601db1a2129d8200e7eee">ReporteDeUnidad</a>(Unidad unidad, DateTime inicial, DateTime final)</td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a91a1d773085fef47d41042be0162a587">ReporteDeUnidad</a>(Unidad unidad, DateTime inicial)</td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a128dcb976c1c91cfcc1311c21fc7fa7a">ReporteDeUnidad</a>(Unidad unidad)</td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a527d8262f236a73916ca9717fdb1335d">servicios</a></td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a4d2da0add4a77d8ed5cc5c330668a2f5">terceraedad</a></td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#aa8bef252a8dd45d28c2ee1b24f6a1a69">Total</a></td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"></td></tr>
@@ -113,11 +130,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <tr class="even"><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a4f6bbb5f64597b687fc92b97b6080b7a">UsuarioGeneral</a></td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html#a059c79268e28b401f6792a4990807e25">UsuarioTerceraEdad</a></td><td class="entry"><a class="el" href="../../d5/d3b/class_proyecto___integrador__3_1_1_reportes_1_1_reporte_por_unidad_1_1_reporte_de_unidad.html">Proyecto_Integrador_3.Reportes.ReportePorUnidad.ReporteDeUnidad</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado el Miércoles, 4 de Diciembre de 2013 00:27:05 para SmartCards por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:50:11 para SmartCards por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -40,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Página&#160;principal</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="../../namespaces.html"><span>Paquetes</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Clases</span></a></li>
       <li><a href="../../files.html"><span>Archivos</span></a></li>
       <li>
@@ -69,6 +76,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
       <li><a href="../../functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d2/d7f/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_row.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +105,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html">dsUsuarios</a></li><li class="navelem"><a class="el" href="../../d2/d7f/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_row.html">UsuariosRow</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Métodos públicos</a> &#124;
@@ -248,7 +265,7 @@ Atributos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -265,9 +282,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a4d09dacf380262a3059cf42c59cf1d2a"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsAlergiasNull </td>
@@ -276,11 +290,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01114">1114</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -293,9 +302,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a7a8d2746f278272b3d69a84ccb365c4f"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsCalleNull </td>
@@ -304,11 +310,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01078">1078</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -321,9 +322,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a91df593253badb10ea5a851145664375"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsCelularNull </td>
@@ -332,11 +330,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01246">1246</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -349,9 +342,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="ad756cb185f318c957103cc1470e098fa"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsColoniaNull </td>
@@ -360,11 +350,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01222">1222</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -377,9 +362,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a30b17be77e21851cfdab66af76c984f9"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsFechaNacimientoNull </td>
@@ -388,11 +370,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01198">1198</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -405,9 +382,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a16f077a1f2458872bb676a01c791e680"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsMunicipioNull </td>
@@ -416,11 +390,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01234">1234</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -433,9 +402,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a6deaacb2f4769f93f505f5dd9ac87648"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsNombreContactoNull </td>
@@ -444,11 +410,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01126">1126</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -461,9 +422,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a8bd27421a1054b917ea8cf5d8ee022a5"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsNombreNull </td>
@@ -472,11 +430,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01066">1066</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -489,9 +442,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="af7f8e7f33db7077fb17928de4b54d78b"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsNumeroCalleNull </td>
@@ -500,11 +450,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01210">1210</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -517,9 +462,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a92443a3dd51413248e7b27d7b3d9f758"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsSaldoNull </td>
@@ -528,11 +470,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01162">1162</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -545,9 +482,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a24390db5126774844e377adf88c2469f"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IssexoNull </td>
@@ -556,11 +490,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01186">1186</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -573,9 +502,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="ac962a7d6a957b31f1b25fc5e0b0c7c45"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsTarjetaAsignadaNull </td>
@@ -584,11 +510,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01174">1174</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -601,9 +522,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="aa217392e90d3440f1be9e2aa56335720"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsTelefonoContactoNull </td>
@@ -612,11 +530,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01138">1138</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -629,9 +542,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="aac8b36d21a59fe1aaf5530dba9425968"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsTelefonoNull </td>
@@ -640,11 +550,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01090">1090</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -657,9 +562,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="ac0affeb4de860a91af002553e0c76bca"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsTipoSangreNull </td>
@@ -668,11 +570,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01102">1102</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -685,9 +582,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a09309116f24e5c455b625cc6d06adb82"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool Proyecto_Integrador_3.dsUsuarios.UsuariosRow.IsTipoUsuarioNull </td>
@@ -696,11 +590,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01150">1150</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -713,9 +602,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a8e273c731e2573d37b46d606c65535e7"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetAlergiasNull </td>
@@ -724,11 +610,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01120">1120</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -741,9 +622,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a517d7961e86d79b71e38907d8224334d"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetCalleNull </td>
@@ -752,11 +630,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01084">1084</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -769,9 +642,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a41d4aabf17b3c2d96a6fff800b2c5bb9"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetCelularNull </td>
@@ -780,11 +650,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01252">1252</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -797,9 +662,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="ac466ee8841f0797f997cd4f058439fbf"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetColoniaNull </td>
@@ -808,11 +670,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01228">1228</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -825,9 +682,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="ac1bafe8261b930f1594e50cc0ef4c1fc"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetFechaNacimientoNull </td>
@@ -836,11 +690,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01204">1204</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -853,9 +702,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="acd888a79fcad0d01ecbb9ed5bf545fa5"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetMunicipioNull </td>
@@ -864,11 +710,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01240">1240</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -881,9 +722,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a3b03343c0753d220ebc86951be8a7ae8"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetNombreContactoNull </td>
@@ -892,11 +730,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01132">1132</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -909,9 +742,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a5056f9f0d604c17aeb58a4e8bc5a93d0"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetNombreNull </td>
@@ -920,11 +750,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01072">1072</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -937,9 +762,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a9bbca47e43232252616e83b04a99d52c"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetNumeroCalleNull </td>
@@ -948,11 +770,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01216">1216</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -965,9 +782,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a4d34e46fdae6f4181a12b9134b48a6ed"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetSaldoNull </td>
@@ -976,11 +790,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01168">1168</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -993,9 +802,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a4dbceacf3925b86203d5e506e31c774a"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetsexoNull </td>
@@ -1004,11 +810,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01192">1192</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -1021,9 +822,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a69463821db8b47772bb0a85729eb39a7"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetTarjetaAsignadaNull </td>
@@ -1032,11 +830,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01180">1180</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -1049,9 +842,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a6f1782a67618ee06a485d5b633ec464d"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetTelefonoContactoNull </td>
@@ -1060,11 +850,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01144">1144</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -1077,9 +862,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a9a0244526cb1be6d40b9881de5c178d5"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetTelefonoNull </td>
@@ -1088,11 +870,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01096">1096</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -1105,9 +882,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a7eeaf498704c6cbd4c632524319dd8bf"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetTipoSangreNull </td>
@@ -1116,11 +890,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01108">1108</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -1133,9 +902,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a71fd9bb2fc35514673578c3118e66ff3"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsUsuarios.UsuariosRow.SetTipoUsuarioNull </td>
@@ -1144,11 +910,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html#l01156">1156</a> del archivo <a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a>.</p>
@@ -1560,11 +1321,15 @@ Atributos privados</h2></td></tr>
 <li>C:/Users/Yknx4/Documents/Visual Studio 2012/Projects/Proyecto Integrador 3/Proyecto Integrador 3/<a class="el" href="../../d0/d9f/ds_usuarios_8_designer_8cs_source.html">dsUsuarios.Designer.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado el Miércoles, 4 de Diciembre de 2013 00:27:00 para SmartCards por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html">dsUsuarios</a></li><li class="navelem"><a class="el" href="../../d2/d7f/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_row.html">UsuariosRow</a></li>
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:50:05 para SmartCards por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
 </body>
 </html>

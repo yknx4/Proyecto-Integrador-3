@@ -1,0 +1,27 @@
+var class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter =
+[
+    [ "UnidadTableAdapter", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#acd553f95bf3151af8b6b4b877dab67e5", null ],
+    [ "Delete", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#aa7acce7d136cd2115babbff7d95992f9", null ],
+    [ "Fill", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a9b4cd452e334a4f1c9b587bc7d955f21", null ],
+    [ "GetData", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#aa6880a92e220af9c45d78c8ad17a2b93", null ],
+    [ "InitAdapter", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a206969f647e2d7297a8ac0d2f3dbc553", null ],
+    [ "InitCommandCollection", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a9679b7b20d598bf335bcd5c4aad67984", null ],
+    [ "InitConnection", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#afd0c6a49e203d9fa6d0c1c2c613f0fe2", null ],
+    [ "Insert", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#ae9b51295d2db0d2f844a63f10ddd6346", null ],
+    [ "Update", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#ab66b8ee5e1153ac309331e6234ba7fad", null ],
+    [ "Update", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a5a943cac3ec30c6fa91b0059b8af7413", null ],
+    [ "Update", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#ae1789a516a249268c6230d4c71e45bd3", null ],
+    [ "Update", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a8008a1cbe0e208e9a6a582a950b93249", null ],
+    [ "Update", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#abfebbd44695319d75cd6ffaa8c3570fa", null ],
+    [ "Update", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a9234374de0d3fa62b8c390465c024415", null ],
+    [ "_adapter", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#ab399a596bea65cb98131fe8b2f74a979", null ],
+    [ "_clearBeforeFill", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#aaffc291ca29a78e13577e8a89efa9551", null ],
+    [ "_commandCollection", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#af19313099dd39bcd72211352e291e1fa", null ],
+    [ "_connection", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a1248a70b1ff6e674c43448a8a8afe9ab", null ],
+    [ "_transaction", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a902952d8f7e85197f0a9a3b00b0612ac", null ],
+    [ "Adapter", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a85041318aa5a0582ef54f4af0d332411", null ],
+    [ "ClearBeforeFill", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#ac370b6e489375c1b39ec5d7f66472767", null ],
+    [ "CommandCollection", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a1337b1ebd88dbe10e874222a4720ab71", null ],
+    [ "Connection", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a13a9c13fd0ce4e17d7f35891158864db", null ],
+    [ "Transaction", "df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a4bb3adb0822427867564cf7559b226cf", null ]
+];

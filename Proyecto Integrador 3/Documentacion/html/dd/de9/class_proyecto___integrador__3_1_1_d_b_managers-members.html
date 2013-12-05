@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -40,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Página&#160;principal</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="../../namespaces.html"><span>Paquetes</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Clases</span></a></li>
       <li><a href="../../files.html"><span>Archivos</span></a></li>
       <li>
@@ -69,6 +76,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
       <li><a href="../../functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +105,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">DBManagers</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Proyecto_Integrador_3.DBManagers Lista de los miembros</div>  </div>
@@ -99,15 +116,15 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#ae2ca731707c9af5dce9d66be4744cf64">AreServiciosFilled</a></td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a440e953b052887695a270a359fc9051c">AreUnidadesFilled</a></td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#ae2d3910ba77a23556e32c950f9886644">AreUsuariosFilled</a></td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a2af606713823aab2912dd18c719aeb48">Clear</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#ac449742a91d365aa025fd4f10db38604">ClearServicios</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#aa0c3c65b856fa31237f75b6a74194d03">ClearUnidades</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a51daa549b13a4bc2b6f12c0960286bae">ClearUsuarios</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#ae18ebe2d8858254a6077fbb32842f2ab">DBManagers</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a3766dfbef6eb8494cf1fd9e28a135bd7">Fill</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#af60e768a1ec8417d606d3e718d6a22d5">FillServicios</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#af664570cb8838acf770610b1d14eecea">FillUnidades</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a27dce97a7e23ba80a56b545ccfeb73ee">FillUsuarios</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a2af606713823aab2912dd18c719aeb48">Clear</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#ac449742a91d365aa025fd4f10db38604">ClearServicios</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#aa0c3c65b856fa31237f75b6a74194d03">ClearUnidades</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a51daa549b13a4bc2b6f12c0960286bae">ClearUsuarios</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#ae18ebe2d8858254a6077fbb32842f2ab">DBManagers</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a3766dfbef6eb8494cf1fd9e28a135bd7">Fill</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#af60e768a1ec8417d606d3e718d6a22d5">FillServicios</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#af664570cb8838acf770610b1d14eecea">FillUnidades</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a27dce97a7e23ba80a56b545ccfeb73ee">FillUsuarios</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#aecf2d3981e87f16c1e3a60c7913931a8">LastMessage</a></td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a6b992d164f75898c6f9717fd5b839fa4">mdsServicios</a></td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a0e58571e4517bd6ac941eae32baaf978">mdsUnidades</a></td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
@@ -115,13 +132,16 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a1f9e67f272910356a732a882769c8dac">mServiciosTableAdapter</a></td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a5d36d244f440437683f2b0cd30720ac5">mUnidadlesTableAdapter</a></td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a8830e1bb507bcd7277966a4aabe3e830">mUsuariosTableAdapter</a></td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#ab1d4758dc7cca9b54a51d63ec6e6589b">Refresh</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#ab1d4758dc7cca9b54a51d63ec6e6589b">Refresh</a>()</td><td class="entry"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">Proyecto_Integrador_3.DBManagers</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado el Miércoles, 4 de Diciembre de 2013 00:26:54 para SmartCards por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:49:59 para SmartCards por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
 </body>
 </html>

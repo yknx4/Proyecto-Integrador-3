@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -40,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Página&#160;principal</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="../../namespaces.html"><span>Paquetes</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Clases</span></a></li>
       <li><a href="../../files.html"><span>Archivos</span></a></li>
       <li>
@@ -69,6 +76,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
       <li><a href="../../functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +105,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">dsUnidad</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Proyecto_Integrador_3.dsUnidad Lista de los miembros</div>  </div>
@@ -97,32 +114,35 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 <p>Lista completa de los miembros de <a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a>, incluyendo todos los heredados:</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a7ff1a6a5ace8cb74effc4d302dfe4039">_schemaSerializationMode</a></td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#ad50ce5632222d5d4b14388a90c3949cd">Clone</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#ab6be91d0b9503d2e08dacc48aaaf6446">dsUnidad</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a9d5496ffefb43b59ba2420116b3e2d4a">dsUnidad</a>(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context)</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a094f29a5828868f8d88d76bd813b4b50">GetSchemaSerializable</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#aa5a56d2c39b52246f40a12eda82883d7">GetTypedDataSetSchema</a>(global::System.Xml.Schema.XmlSchemaSet xs)</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a13ea02006bd9c08f3314b470de662f66">InitClass</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#ac07b966c4ac3259fd73bee4f81126c61">InitializeDerivedDataSet</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a264991defd8f2856787ed46e2f0a3881">InitVars</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">package</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a7a2a64e67f40f263bd085984f14e3c7a">InitVars</a>(bool initTable)</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">package</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a064b596793a1a55b0296efd51a5e850e">ReadXmlSerializable</a>(global::System.Xml.XmlReader reader)</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#ad50ce5632222d5d4b14388a90c3949cd">Clone</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#ab6be91d0b9503d2e08dacc48aaaf6446">dsUnidad</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a9d5496ffefb43b59ba2420116b3e2d4a">dsUnidad</a>(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context)</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a094f29a5828868f8d88d76bd813b4b50">GetSchemaSerializable</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#aa5a56d2c39b52246f40a12eda82883d7">GetTypedDataSetSchema</a>(global::System.Xml.Schema.XmlSchemaSet xs)</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a13ea02006bd9c08f3314b470de662f66">InitClass</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#ac07b966c4ac3259fd73bee4f81126c61">InitializeDerivedDataSet</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a264991defd8f2856787ed46e2f0a3881">InitVars</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">package</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a7a2a64e67f40f263bd085984f14e3c7a">InitVars</a>(bool initTable)</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">package</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a064b596793a1a55b0296efd51a5e850e">ReadXmlSerializable</a>(global::System.Xml.XmlReader reader)</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a4341745873b49fbaa39cd3562161c504">Relations</a></td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a11ade5cd6b1b18f1ee25ffc978b6575b">SchemaChanged</a>(object sender, global::System.ComponentModel.CollectionChangeEventArgs e)</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a11ade5cd6b1b18f1ee25ffc978b6575b">SchemaChanged</a>(object sender, global::System.ComponentModel.CollectionChangeEventArgs e)</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#ae681aadb8c80cfb04e19826c6608871d">SchemaSerializationMode</a></td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a77c6010bdd6224c53a5be25776db3f8f">ShouldSerializeRelations</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a6982015d2a16c61dffbe6abf7cf07478">ShouldSerializeTables</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a90147697e43270e586da18302ddd99ed">ShouldSerializeUnidad</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a77c6010bdd6224c53a5be25776db3f8f">ShouldSerializeRelations</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a6982015d2a16c61dffbe6abf7cf07478">ShouldSerializeTables</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a90147697e43270e586da18302ddd99ed">ShouldSerializeUnidad</a>()</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#ac3f1357f878bf8848284f29737f47276">Tables</a></td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a32b0791208b2679b9dee83455af6ff07">tableUnidad</a></td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a78a56c4320f0067f020ea95490bdf195">Unidad</a></td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html#a351cda84e90913df1583510ff35bd48d">UnidadRowChangeEventHandler</a>(object sender, UnidadRowChangeEvent e)</td><td class="entry"><a class="el" href="../../d1/d85/class_proyecto___integrador__3_1_1ds_unidad.html">Proyecto_Integrador_3.dsUnidad</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado el Miércoles, 4 de Diciembre de 2013 00:26:57 para SmartCards por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:50:02 para SmartCards por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -40,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Página&#160;principal</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="../../namespaces.html"><span>Paquetes</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Clases</span></a></li>
       <li><a href="../../files.html"><span>Archivos</span></a></li>
       <li>
@@ -69,6 +76,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
       <li><a href="../../functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +105,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../d6/d27/namespace_proyecto___integrador__3_1_1_tipos_dato.html">TiposDato</a></li><li class="navelem"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html">Unidad</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Proyecto_Integrador_3.TiposDato.Unidad Lista de los miembros</div>  </div>
@@ -98,17 +115,20 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a02a3cfd664234b1c90c4ea2749928ac2">_nounidad</a></td><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html">Proyecto_Integrador_3.TiposDato.Unidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#ad0a5b9c3770801a5e32f52d7406346d8">_uid</a></td><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html">Proyecto_Integrador_3.TiposDato.Unidad</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a6566d517c25b9048021422510c544611">isAdded</a>()</td><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html">Proyecto_Integrador_3.TiposDato.Unidad</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a6566d517c25b9048021422510c544611">isAdded</a>()</td><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html">Proyecto_Integrador_3.TiposDato.Unidad</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a75d59e9f06c1422def3f8630d2a33642">NoUnidad</a></td><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html">Proyecto_Integrador_3.TiposDato.Unidad</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#aca85e685e50da0af6be67e3ee69b1bb1">Servicios</a></td><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html">Proyecto_Integrador_3.TiposDato.Unidad</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#aa2e602251694986f3d519ee3db5ffa38">Uid</a></td><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html">Proyecto_Integrador_3.TiposDato.Unidad</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#adcd7f607349eab8b07b34e7761b78aaa">Unidad</a>()</td><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html">Proyecto_Integrador_3.TiposDato.Unidad</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#adcd7f607349eab8b07b34e7761b78aaa">Unidad</a>()</td><td class="entry"><a class="el" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html">Proyecto_Integrador_3.TiposDato.Unidad</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado el Miércoles, 4 de Diciembre de 2013 00:27:06 para SmartCards por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:50:13 para SmartCards por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
 </body>
 </html>

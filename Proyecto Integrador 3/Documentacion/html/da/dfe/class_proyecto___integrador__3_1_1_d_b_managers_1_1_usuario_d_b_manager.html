@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -40,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Página&#160;principal</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="../../namespaces.html"><span>Paquetes</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Clases</span></a></li>
       <li><a href="../../files.html"><span>Archivos</span></a></li>
       <li>
@@ -69,6 +76,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
       <li><a href="../../functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +105,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">DBManagers</a></li><li class="navelem"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html">UsuarioDBManager</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Métodos públicos</a> &#124;
@@ -174,9 +191,6 @@ Métodos privados</h2></td></tr>
 <a class="anchor" id="a3bcff5c7839e9e78baaab699a68af438"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Proyecto_Integrador_3.DBManagers.UsuarioDBManager.UsuarioDBManager </td>
@@ -186,11 +200,6 @@ Métodos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00017">17</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
@@ -217,7 +226,7 @@ Métodos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -246,7 +255,7 @@ Métodos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -283,7 +292,7 @@ Métodos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -306,9 +315,6 @@ Métodos privados</h2></td></tr>
 <a class="anchor" id="ac7fd33ab64b2c21ad0533c59eb77d118"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.DBManagers.UsuarioDBManager.AddToDB </td>
@@ -318,11 +324,6 @@ Métodos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00038">38</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
@@ -350,7 +351,7 @@ Métodos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -365,9 +366,6 @@ Métodos privados</h2></td></tr>
 <a class="anchor" id="a4d3bacd63b66ffb89ff6f26156520072"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html">Usuario</a> Proyecto_Integrador_3.DBManagers.UsuarioDBManager.getItem </td>
@@ -376,11 +374,6 @@ Métodos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00045">45</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
@@ -406,7 +399,7 @@ Métodos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -464,7 +457,7 @@ Métodos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -479,9 +472,6 @@ Métodos privados</h2></td></tr>
 <a class="anchor" id="a3497931d99dff8f67c2da21b1328de1c"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">override void Proyecto_Integrador_3.DBManagers.UsuarioDBManager.itemModified </td>
@@ -501,11 +491,6 @@ Métodos privados</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00097">97</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
@@ -548,7 +533,7 @@ Métodos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -589,7 +574,7 @@ Métodos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -604,9 +589,6 @@ Métodos privados</h2></td></tr>
 <a class="anchor" id="a2aa56cfd9be44c7c601b1983e63bd6d6"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.DBManagers.UsuarioDBManager.Refresh </td>
@@ -615,11 +597,6 @@ Métodos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html#l00067">67</a> del archivo <a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a>.</p>
@@ -646,7 +623,7 @@ Métodos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -675,7 +652,7 @@ Métodos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -703,7 +680,7 @@ Métodos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -789,11 +766,15 @@ Métodos privados</h2></td></tr>
 <li>C:/Users/Yknx4/Documents/Visual Studio 2012/Projects/Proyecto Integrador 3/Proyecto Integrador 3/Manejadores/<a class="el" href="../../d1/d89/_usuario_d_b_manager_8cs_source.html">UsuarioDBManager.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado el Miércoles, 4 de Diciembre de 2013 00:26:55 para SmartCards por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">DBManagers</a></li><li class="navelem"><a class="el" href="../../da/dfe/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuario_d_b_manager.html">UsuarioDBManager</a></li>
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:50:00 para SmartCards por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,0 +1,27 @@
+var class_proyecto___integrador__3_1_1ds_usuarios =
+[
+    [ "UsuariosDataTable", "d1/d43/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_data_table.html", "d1/d43/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_data_table" ],
+    [ "UsuariosRow", "d2/d7f/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_row.html", "d2/d7f/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_row" ],
+    [ "UsuariosRowChangeEvent", "d0/daf/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_row_change_event.html", "d0/daf/class_proyecto___integrador__3_1_1ds_usuarios_1_1_usuarios_row_change_event" ],
+    [ "dsUsuarios", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a74b500ded4355addab6e2a2190a26775", null ],
+    [ "dsUsuarios", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#aa420b8cf327ef197b2777836d2973ac7", null ],
+    [ "Clone", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a76ef59d7c92fca1a02c2b9f053dc43bb", null ],
+    [ "GetSchemaSerializable", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#ad6fda7e9196e9950572eebfceb728a9e", null ],
+    [ "GetTypedDataSetSchema", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a8146763ee935baa8f1f578b9b35561e1", null ],
+    [ "InitClass", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#ad0c908e49d82059c569e57ea67647273", null ],
+    [ "InitializeDerivedDataSet", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a376fcd38fd48cc992c13823ad66407b5", null ],
+    [ "InitVars", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#ab120e453e46f20e82cdb1440541a8bfc", null ],
+    [ "InitVars", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#aee9d56106e0fb5888c9fe50cd9ac51b2", null ],
+    [ "ReadXmlSerializable", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a9b6ce8f4cc266f936be2eaa58345a961", null ],
+    [ "SchemaChanged", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a48c9727d0752dcca6fa0cc10e6937861", null ],
+    [ "ShouldSerializeRelations", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#ade2213652e4c181990f6cbaa7ea26010", null ],
+    [ "ShouldSerializeTables", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#abfc4f5e8927f3e3a4200e26d42dec316", null ],
+    [ "ShouldSerializeUsuarios", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a3f560338d4d7d5d6592ceb8ab433b1a6", null ],
+    [ "UsuariosRowChangeEventHandler", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a571e2cc717092f4996c9c805a464415b", null ],
+    [ "_schemaSerializationMode", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#ade4264ac0fd740b0a613434466196ccd", null ],
+    [ "tableUsuarios", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#ac781e37ef17f9af35bb464c73a041847", null ],
+    [ "Relations", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#ac1a722fbe5919c3d98ef3cc923978cec", null ],
+    [ "SchemaSerializationMode", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#aed33539fcaa97590918e8ab6153de8ba", null ],
+    [ "Tables", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a5a3e80b30906b3389a7282cdf5dd621c", null ],
+    [ "Usuarios", "d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a79d1cfd31914c2c5cfda39b62381478b", null ]
+];

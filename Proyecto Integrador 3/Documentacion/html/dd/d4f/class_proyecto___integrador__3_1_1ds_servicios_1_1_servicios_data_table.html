@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -40,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Página&#160;principal</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="../../namespaces.html"><span>Paquetes</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Clases</span></a></li>
       <li><a href="../../files.html"><span>Archivos</span></a></li>
       <li>
@@ -69,6 +76,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
       <li><a href="../../functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('dd/d4f/class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_data_table.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +105,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../da/d6b/class_proyecto___integrador__3_1_1ds_servicios.html">dsServicios</a></li><li class="navelem"><a class="el" href="../../dd/d4f/class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_data_table.html">ServiciosDataTable</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Métodos públicos</a> &#124;
@@ -222,9 +239,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="af447c5ce011f17746ed48380ef8f5373"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Proyecto_Integrador_3.dsServicios.ServiciosDataTable.ServiciosDataTable </td>
@@ -233,11 +247,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00294">294</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
@@ -267,7 +276,7 @@ Atributos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -317,7 +326,7 @@ Atributos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -334,9 +343,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a7974644d9b5b0b8a5984af24e16700bb"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsServicios.ServiciosDataTable.AddServiciosRow </td>
@@ -346,11 +352,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00396">396</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
@@ -363,9 +364,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="ad1be2ae4d234bb0b02c800b641a588d3"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../d8/d29/class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_row.html">ServiciosRow</a> Proyecto_Integrador_3.dsServicios.ServiciosDataTable.AddServiciosRow </td>
@@ -397,11 +395,6 @@ Atributos privados</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00402">402</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
@@ -423,9 +416,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a18c623c7de1cbb4a820376247c4cc80c"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">override global.System.Data.DataTable Proyecto_Integrador_3.dsServicios.ServiciosDataTable.Clone </td>
@@ -434,11 +424,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00424">424</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
@@ -466,7 +451,7 @@ Atributos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -481,9 +466,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="a3b9b5f243557e8678068d79c90098010"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../d8/d29/class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_row.html">ServiciosRow</a> Proyecto_Integrador_3.dsServicios.ServiciosDataTable.FindByid </td>
@@ -493,11 +475,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00417">417</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
@@ -524,7 +501,7 @@ Atributos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -553,7 +530,7 @@ Atributos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -638,7 +615,7 @@ Atributos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -688,7 +665,7 @@ Atributos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">package</span></span>  </td>
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -721,7 +698,7 @@ Atributos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -736,9 +713,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="acf349fca06c159ff3684420872cd39ef"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../d8/d29/class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_row.html">ServiciosRow</a> Proyecto_Integrador_3.dsServicios.ServiciosDataTable.NewServiciosRow </td>
@@ -747,11 +721,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00476">476</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
@@ -778,7 +747,7 @@ Atributos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -810,7 +779,7 @@ Atributos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -842,7 +811,7 @@ Atributos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -874,7 +843,7 @@ Atributos privados</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -892,9 +861,6 @@ Atributos privados</h2></td></tr>
 <a class="anchor" id="af3be40086cae340eb21f7bb459fc2fe7"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Proyecto_Integrador_3.dsServicios.ServiciosDataTable.RemoveServiciosRow </td>
@@ -904,11 +870,6 @@ Atributos privados</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Definición en la línea <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html#l00530">530</a> del archivo <a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a>.</p>
@@ -1245,11 +1206,15 @@ Atributos privados</h2></td></tr>
 <li>C:/Users/Yknx4/Documents/Visual Studio 2012/Projects/Proyecto Integrador 3/Proyecto Integrador 3/<a class="el" href="../../d1/dc4/ds_servicios_8_designer_8cs_source.html">dsServicios.Designer.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado el Miércoles, 4 de Diciembre de 2013 00:26:56 para SmartCards por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../da/d6b/class_proyecto___integrador__3_1_1ds_servicios.html">dsServicios</a></li><li class="navelem"><a class="el" href="../../dd/d4f/class_proyecto___integrador__3_1_1ds_servicios_1_1_servicios_data_table.html">ServiciosDataTable</a></li>
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:50:01 para SmartCards por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
 </body>
 </html>

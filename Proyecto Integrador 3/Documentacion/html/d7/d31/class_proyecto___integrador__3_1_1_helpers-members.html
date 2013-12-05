@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -40,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Página&#160;principal</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="../../namespaces.html"><span>Paquetes</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Clases</span></a></li>
       <li><a href="../../files.html"><span>Archivos</span></a></li>
       <li>
@@ -69,6 +76,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
       <li><a href="../../functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d1/d66/class_proyecto___integrador__3_1_1_helpers.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +105,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Helpers</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Proyecto_Integrador_3.Helpers Lista de los miembros</div>  </div>
@@ -96,24 +113,27 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 
 <p>Lista completa de los miembros de <a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a>, incluyendo todos los heredados:</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#af0574bab82d761e6432dfae128e68a6c">Age</a>(DateTime bday)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#ada922af713da8f3446fd27a8b3ac3494">ClearTextBoxes</a>(Panel panel)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#a7724b85162da445ab1ff1e54cf0974f2">DisableControls</a>(Panel panel)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#abf9eb7a688a873f0767ce5dc5bd6f5af">EnableControls</a>(Panel panel)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#a6bc9de476926295b0feb8f636cc39f31">masRepetido&lt; T &gt;</a>(List&lt; T &gt; datos, out HashSet&lt; T &gt; moda)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#aaede5d9d02c3e31c447e3e9abf113afa">SetValidationTextBoxes</a>(Panel panel)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#ab0cb9ffb08e0c4d6dd3c95852411fdec">validarCuenta</a>(string input)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#a36afc3d70450850731fc7b24735e9342">validarDinero</a>(string input)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#ad5d8f36513117018c7ade0f2d6889222">validarTextBoxEstandar</a>(TextBox txt)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#aec73f44f21b6083802bdb77128435771">validarTextBoxNumero</a>(TextBox txt)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#afc8b1c92d8b5e218247f0295580dea13">validarTextBoxtColor</a>(object sender, TextChangedEventArgs e)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#ad9d7083d38ed1ad33bac8ef8e0dfea09">validarTextBoxTelefono</a>(TextBox txt)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#af0574bab82d761e6432dfae128e68a6c">Age</a>(DateTime bday)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#ada922af713da8f3446fd27a8b3ac3494">ClearTextBoxes</a>(Panel panel)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#a7724b85162da445ab1ff1e54cf0974f2">DisableControls</a>(Panel panel)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#abf9eb7a688a873f0767ce5dc5bd6f5af">EnableControls</a>(Panel panel)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#a6bc9de476926295b0feb8f636cc39f31">masRepetido&lt; T &gt;</a>(List&lt; T &gt; datos, out HashSet&lt; T &gt; moda)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#aaede5d9d02c3e31c447e3e9abf113afa">SetValidationTextBoxes</a>(Panel panel)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#ab0cb9ffb08e0c4d6dd3c95852411fdec">validarCuenta</a>(string input)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#a36afc3d70450850731fc7b24735e9342">validarDinero</a>(string input)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#ad5d8f36513117018c7ade0f2d6889222">validarTextBoxEstandar</a>(TextBox txt)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#aec73f44f21b6083802bdb77128435771">validarTextBoxNumero</a>(TextBox txt)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#afc8b1c92d8b5e218247f0295580dea13">validarTextBoxtColor</a>(object sender, TextChangedEventArgs e)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html#ad9d7083d38ed1ad33bac8ef8e0dfea09">validarTextBoxTelefono</a>(TextBox txt)</td><td class="entry"><a class="el" href="../../d1/d66/class_proyecto___integrador__3_1_1_helpers.html">Proyecto_Integrador_3.Helpers</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado el Miércoles, 4 de Diciembre de 2013 00:27:00 para SmartCards por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:50:05 para SmartCards por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
 </body>
 </html>

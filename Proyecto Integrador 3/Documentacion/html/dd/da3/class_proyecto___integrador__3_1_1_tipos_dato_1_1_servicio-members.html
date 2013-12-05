@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -40,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Página&#160;principal</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="../../namespaces.html"><span>Paquetes</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Clases</span></a></li>
       <li><a href="../../files.html"><span>Archivos</span></a></li>
       <li>
@@ -69,6 +76,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
       <li><a href="../../functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +105,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../d6/d27/namespace_proyecto___integrador__3_1_1_tipos_dato.html">TiposDato</a></li><li class="navelem"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html">Servicio</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Proyecto_Integrador_3.TiposDato.Servicio Lista de los miembros</div>  </div>
@@ -103,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <tr class="even"><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html#aea0939faf5d7273f1cb5a9cf7fd88896">_usuario</a></td><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html">Proyecto_Integrador_3.TiposDato.Servicio</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html#adfd9654485b999c795437dee578fac98">Fecha</a></td><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html">Proyecto_Integrador_3.TiposDato.Servicio</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html#a81c451c62cc6b77b6f80614df5ffb80d">Id</a></td><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html">Proyecto_Integrador_3.TiposDato.Servicio</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html#a84ccd70aa17d65df0afff55a14faeeec">isAdded</a>()</td><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html">Proyecto_Integrador_3.TiposDato.Servicio</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html#a84ccd70aa17d65df0afff55a14faeeec">isAdded</a>()</td><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html">Proyecto_Integrador_3.TiposDato.Servicio</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html#abb92d5f6f972c2df3a7cbe4d25b713e8">NoUnidad</a></td><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html">Proyecto_Integrador_3.TiposDato.Servicio</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html#a756753eda712db3ba3d85b87bd35ba3a">TipoUsuario</a></td><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html">Proyecto_Integrador_3.TiposDato.Servicio</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html#a44520809b1552502c483547044c33d6e">Unidad</a></td><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html">Proyecto_Integrador_3.TiposDato.Servicio</a></td><td class="entry"></td></tr>
@@ -111,11 +128,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <tr class="even"><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html#a9321964b41ee188556767aabeecfc737">Usuario</a></td><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html">Proyecto_Integrador_3.TiposDato.Servicio</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html#addfdec1cd1f2629003b19752e0e0020b">UsuarioObject</a></td><td class="entry"><a class="el" href="../../da/de4/class_proyecto___integrador__3_1_1_tipos_dato_1_1_servicio.html">Proyecto_Integrador_3.TiposDato.Servicio</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado el Miércoles, 4 de Diciembre de 2013 00:27:06 para SmartCards por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:50:12 para SmartCards por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
 </body>
 </html>

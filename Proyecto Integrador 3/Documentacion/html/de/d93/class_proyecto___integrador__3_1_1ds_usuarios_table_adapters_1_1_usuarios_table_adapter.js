@@ -1,0 +1,27 @@
+var class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter =
+[
+    [ "UsuariosTableAdapter", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a797ab917f7e82755f62fe9d0d79070d5", null ],
+    [ "Delete", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#aeeaf19cd15c750f670fe1ba2584693de", null ],
+    [ "Fill", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#af746bdf2da4d481ea55a5042b1622853", null ],
+    [ "GetData", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#afd320186ece4a3b67316cc51110f64b3", null ],
+    [ "InitAdapter", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#aab7b7fb4f9fbe9464af77bca23ae2280", null ],
+    [ "InitCommandCollection", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#aa94a57bf2cb6e23db82913c8a37669af", null ],
+    [ "InitConnection", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a893f92d20a2f44a55ad38391dd0c3d7c", null ],
+    [ "Insert", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#afe0ac5364d4900a3029e182186300cdf", null ],
+    [ "Update", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a0cb310a6346b919a7ac5717ea3225d0b", null ],
+    [ "Update", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a17c57c49d7bda936d56a1259a81fc469", null ],
+    [ "Update", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a1d5bcbd23ee368dbf8ad7e26afbbf863", null ],
+    [ "Update", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#ab5b846871861d3074de589dcfc12c6c7", null ],
+    [ "Update", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#ad3c95d16bd229a4017bcc53351f7fcea", null ],
+    [ "Update", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#ad1e68781eac45453d074bde517d8d1bf", null ],
+    [ "_adapter", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#ab48b9b83ce2db01dbbc83ad45b428a80", null ],
+    [ "_clearBeforeFill", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a3895271a2af9b0afa87a2b69ee6b5826", null ],
+    [ "_commandCollection", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a75eb89ec1d18b81a4b7301b99894478e", null ],
+    [ "_connection", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a0250533a5325c3381c6c4e82d364aa9d", null ],
+    [ "_transaction", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a190d15c8d49c6f2014c79e83efc26011", null ],
+    [ "Adapter", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a46252bad9dadbf20130beca25d50b5bc", null ],
+    [ "ClearBeforeFill", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#ab6ed4304ca20381f5dbee95dff3d0256", null ],
+    [ "CommandCollection", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a2370ce01d492aec3d4779061bf88707d", null ],
+    [ "Connection", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#a84b2a5b2b50b633d359dc7a29ce2e439", null ],
+    [ "Transaction", "de/d93/class_proyecto___integrador__3_1_1ds_usuarios_table_adapters_1_1_usuarios_table_adapter.html#ace60df28b07f0149183cf344d90398f9", null ]
+];

@@ -8,6 +8,13 @@
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/search.js"></script>
 <script type="text/javascript">
@@ -40,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Página&#160;principal</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="../../namespaces.html"><span>Paquetes</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Clases</span></a></li>
       <li><a href="../../files.html"><span>Archivos</span></a></li>
       <li>
@@ -69,6 +76,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
       <li><a href="../../functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html','../../');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,11 +105,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../da/d91/namespace_proyecto___integrador__3_1_1ds_unidad_table_adapters.html">dsUnidadTableAdapters</a></li><li class="navelem"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">UnidadTableAdapter</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter Lista de los miembros</div>  </div>
@@ -105,27 +122,30 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Buscar');
   <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#ac370b6e489375c1b39ec5d7f66472767">ClearBeforeFill</a></td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a1337b1ebd88dbe10e874222a4720ab71">CommandCollection</a></td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a13a9c13fd0ce4e17d7f35891158864db">Connection</a></td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">package</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#aa7acce7d136cd2115babbff7d95992f9">Delete</a>(System.Guid Original_Uid, string Original_NoUnidad)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a9b4cd452e334a4f1c9b587bc7d955f21">Fill</a>(dsUnidad.UnidadDataTable dataTable)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#aa6880a92e220af9c45d78c8ad17a2b93">GetData</a>()</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a206969f647e2d7297a8ac0d2f3dbc553">InitAdapter</a>()</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a9679b7b20d598bf335bcd5c4aad67984">InitCommandCollection</a>()</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#afd0c6a49e203d9fa6d0c1c2c613f0fe2">InitConnection</a>()</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#ae9b51295d2db0d2f844a63f10ddd6346">Insert</a>(System.Guid Uid, string NoUnidad)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#aa7acce7d136cd2115babbff7d95992f9">Delete</a>(System.Guid Original_Uid, string Original_NoUnidad)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a9b4cd452e334a4f1c9b587bc7d955f21">Fill</a>(dsUnidad.UnidadDataTable dataTable)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#aa6880a92e220af9c45d78c8ad17a2b93">GetData</a>()</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a206969f647e2d7297a8ac0d2f3dbc553">InitAdapter</a>()</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a9679b7b20d598bf335bcd5c4aad67984">InitCommandCollection</a>()</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#afd0c6a49e203d9fa6d0c1c2c613f0fe2">InitConnection</a>()</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#ae9b51295d2db0d2f844a63f10ddd6346">Insert</a>(System.Guid Uid, string NoUnidad)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a4bb3adb0822427867564cf7559b226cf">Transaction</a></td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">package</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#acd553f95bf3151af8b6b4b877dab67e5">UnidadTableAdapter</a>()</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#ab66b8ee5e1153ac309331e6234ba7fad">Update</a>(dsUnidad.UnidadDataTable dataTable)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a5a943cac3ec30c6fa91b0059b8af7413">Update</a>(dsUnidad dataSet)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#ae1789a516a249268c6230d4c71e45bd3">Update</a>(global::System.Data.DataRow dataRow)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a8008a1cbe0e208e9a6a582a950b93249">Update</a>(global::System.Data.DataRow[] dataRows)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#abfebbd44695319d75cd6ffaa8c3570fa">Update</a>(System.Guid Uid, string NoUnidad, System.Guid Original_Uid, string Original_NoUnidad)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a9234374de0d3fa62b8c390465c024415">Update</a>(string NoUnidad, System.Guid Original_Uid, string Original_NoUnidad)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#acd553f95bf3151af8b6b4b877dab67e5">UnidadTableAdapter</a>()</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#ab66b8ee5e1153ac309331e6234ba7fad">Update</a>(dsUnidad.UnidadDataTable dataTable)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a5a943cac3ec30c6fa91b0059b8af7413">Update</a>(dsUnidad dataSet)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#ae1789a516a249268c6230d4c71e45bd3">Update</a>(global::System.Data.DataRow dataRow)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a8008a1cbe0e208e9a6a582a950b93249">Update</a>(global::System.Data.DataRow[] dataRows)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#abfebbd44695319d75cd6ffaa8c3570fa">Update</a>(System.Guid Uid, string NoUnidad, System.Guid Original_Uid, string Original_NoUnidad)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html#a9234374de0d3fa62b8c390465c024415">Update</a>(string NoUnidad, System.Guid Original_Uid, string Original_NoUnidad)</td><td class="entry"><a class="el" href="../../df/d2f/class_proyecto___integrador__3_1_1ds_unidad_table_adapters_1_1_unidad_table_adapter.html">Proyecto_Integrador_3.dsUnidadTableAdapters.UnidadTableAdapter</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado el Miércoles, 4 de Diciembre de 2013 00:27:02 para SmartCards por &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="../../doxygen.png" alt="doxygen"/>
-</a> 1.8.4
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:50:08 para SmartCards por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
+  </ul>
+</div>
 </body>
 </html>
