@@ -127,6 +127,9 @@ namespace Proyecto_Integrador_3.Reportes
             }
         }
 
+        /// <summary>
+        /// Clase vista para los reportes por unidad
+        /// </summary>
         private class ReporteDeUnidad
         {
             private Unidad _unidad;

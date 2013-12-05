@@ -218,12 +218,12 @@ Atributos privados estáticos</h2></td></tr>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <a class="code" href="../../dd/daa/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuarios_populator.html#a4e30b143aa6f019cf45324d6192ea802">_usuarios</a>.Clear();</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">foreach</span> (<a class="code" href="../../d6/d44/_usuarios_populator_8cs.html#aa27cbda541025f3d54af720636434d1f">UsuariosRow</a> Row <span class="keywordflow">in</span> <a class="code" href="../../dd/daa/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuarios_populator.html#a262c4a0f4d44e86a9030208d6cb6d26a">Parent</a>.<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html#a19d87c9abf32e08e2969847a008eb195">mdsUsuarios</a>.<a class="code" href="../../d7/d52/class_proyecto___integrador__3_1_1ds_usuarios.html#a79d1cfd31914c2c5cfda39b62381478b">Usuarios</a>.Rows)</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    <a class="code" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html">Usuario</a>.Contacto tmpContacto = <span class="keyword">new</span> <a class="code" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html">Usuario</a>.Contacto</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    <a class="code" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html" title="Modelo del usuario ">Usuario</a>.Contacto tmpContacto = <span class="keyword">new</span> <a class="code" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html" title="Modelo del usuario ">Usuario</a>.Contacto</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        Nombre = Row.NombreContacto,</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        Telefono = Row.TelefonoContacto</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    };</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    <a class="code" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html">Usuario</a>.Domicilio tmpDomicilio = <span class="keyword">new</span> <a class="code" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html">Usuario</a>.Domicilio</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    <a class="code" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html" title="Modelo del usuario ">Usuario</a>.Domicilio tmpDomicilio = <span class="keyword">new</span> <a class="code" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html" title="Modelo del usuario ">Usuario</a>.Domicilio</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                        Calle = Row.Calle,</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                        Colonia = Row.Colonia,</div>
@@ -231,7 +231,7 @@ Atributos privados estáticos</h2></td></tr>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                        Numero = Row.NumeroCalle</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    };</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    <a class="code" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html">Usuario</a> actual = <span class="keyword">new</span> <a class="code" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html">Usuario</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    <a class="code" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html" title="Modelo del usuario ">Usuario</a> actual = <span class="keyword">new</span> <a class="code" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html" title="Modelo del usuario ">Usuario</a></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        Uid = Row.<a class="code" href="../../d8/dc0/class_proyecto___integrador__3_1_1_tipos_dato_1_1_usuario.html#ae9cfa8c8b462028b8c166f7a1eff5f1f">Uid</a>,</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        Saldo = Row.Saldo,</div>
@@ -409,7 +409,7 @@ Atributos privados estáticos</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d5/dff/namespace_proyecto___integrador__3.html">Proyecto_Integrador_3</a></li><li class="navelem"><a class="el" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html">DBManagers</a></li><li class="navelem"><a class="el" href="../../dd/daa/class_proyecto___integrador__3_1_1_d_b_managers_1_1_usuarios_populator.html">UsuariosPopulator</a></li>
-    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:50:00 para SmartCards por
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 20:26:09 para SmartCards por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

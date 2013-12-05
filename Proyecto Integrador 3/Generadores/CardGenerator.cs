@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace Proyecto_Integrador_3.Generadores
 {
+    /// <summary>
+    /// Clase generadora de tarjetas
+    /// </summary>
     public static class CardGenerator
     {
         /// <summary>

@@ -2,6 +2,9 @@
 
 namespace Proyecto_Integrador_3.TiposDato
 {
+    /// <summary>
+    /// Modelo del servicio
+    /// </summary>
     public partial class Servicio : DBItem
     {
         private long _id;

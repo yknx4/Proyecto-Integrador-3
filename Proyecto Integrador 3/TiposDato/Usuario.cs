@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Proyecto_Integrador_3.TiposDato
 {
+    /// <summary>
+    /// Modelo del usuario
+    /// </summary>
     public partial class Usuario : DBItem
     {
         public struct Domicilio

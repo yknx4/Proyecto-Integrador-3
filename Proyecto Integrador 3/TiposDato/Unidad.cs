@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Proyecto_Integrador_3.TiposDato
 {
+    /// <summary>
+    /// Modelo de la unidad
+    /// </summary>
     public partial class Unidad : DBItem
     {
         public Unidad()

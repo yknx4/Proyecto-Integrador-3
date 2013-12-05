@@ -2,6 +2,9 @@
 
 namespace Proyecto_Integrador_3
 {
+    /// <summary>
+    /// Clase base para la interacción con la base de datos.
+    /// </summary>
     public partial class DBManagers
     {
         public abstract class DBManager<T>

@@ -125,6 +125,9 @@ namespace Proyecto_Integrador_3.Reportes
             pgrEstado.IsActive = false;
         }
 
+        /// <summary>
+        /// Estructura contenedora de datos estadisticos
+        /// </summary>
         private struct EstadisticaResult
         {
             public int General;

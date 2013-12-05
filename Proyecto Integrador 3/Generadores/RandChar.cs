@@ -2,6 +2,9 @@
 
 namespace Proyecto_Integrador_3.Generadores
 {
+    /// <summary>
+    /// Clase generadora de caracteres aleatorios
+    /// </summary>
     public static class RandChar
     {
         private static Random mRandom = new Random();

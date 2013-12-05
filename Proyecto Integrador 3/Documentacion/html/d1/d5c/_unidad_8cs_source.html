@@ -113,36 +113,36 @@ $(document).ready(function(){initNavTree('d1/d5c/_unidad_8cs_source.html','../..
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span>Proyecto_Integrador_3.TiposDato</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html">    6</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">partial class </span><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html">Unidad</a> : <a class="code" href="../../db/d99/class_proyecto___integrador__3_1_1_tipos_dato_1_1_d_b_item.html">DBItem</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#adcd7f607349eab8b07b34e7761b78aaa">    8</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#adcd7f607349eab8b07b34e7761b78aaa">Unidad</a>()</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            this.Servicios = <span class="keyword">new</span> HashSet&lt;Servicio&gt;();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        }</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#ad0a5b9c3770801a5e32f52d7406346d8">   13</a></span>&#160;        <span class="keyword">private</span> Guid <a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#ad0a5b9c3770801a5e32f52d7406346d8">_uid</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#aa2e602251694986f3d519ee3db5ffa38">   15</a></span>&#160;        <span class="keyword">public</span> System.Guid Uid { <span class="keyword">get</span> { <span class="keywordflow">return</span> _uid; } set { _uid = value; } }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a02a3cfd664234b1c90c4ea2749928ac2">   17</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">string</span> <a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a02a3cfd664234b1c90c4ea2749928ac2">_nounidad</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a75d59e9f06c1422def3f8630d2a33642">   19</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> NoUnidad { <span class="keyword">get</span> { <span class="keywordflow">return</span> _nounidad; } set { _nounidad = value; } }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#aca85e685e50da0af6be67e3ee69b1bb1">   21</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> ICollection&lt;Servicio&gt; Servicios { <span class="keyword">get</span>; set; }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a6566d517c25b9048021422510c544611">   23</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a6566d517c25b9048021422510c544611" title="Determina si esta instancia esta agregada a la base de datos. ">isAdded</a>()</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">return</span> !(Uid == Guid.Empty);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">partial class </span><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html" title="Modelo de la unidad ">Unidad</a> : <a class="code" href="../../db/d99/class_proyecto___integrador__3_1_1_tipos_dato_1_1_d_b_item.html" title="Modelo abstracto de un objeto de la base de datos ">DBItem</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#adcd7f607349eab8b07b34e7761b78aaa">   11</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#adcd7f607349eab8b07b34e7761b78aaa">Unidad</a>()</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            this.Servicios = <span class="keyword">new</span> HashSet&lt;Servicio&gt;();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#ad0a5b9c3770801a5e32f52d7406346d8">   16</a></span>&#160;        <span class="keyword">private</span> Guid <a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#ad0a5b9c3770801a5e32f52d7406346d8">_uid</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#aa2e602251694986f3d519ee3db5ffa38">   18</a></span>&#160;        <span class="keyword">public</span> System.Guid Uid { <span class="keyword">get</span> { <span class="keywordflow">return</span> _uid; } set { _uid = value; } }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a02a3cfd664234b1c90c4ea2749928ac2">   20</a></span>&#160;        <span class="keyword">private</span> <span class="keywordtype">string</span> <a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a02a3cfd664234b1c90c4ea2749928ac2">_nounidad</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a75d59e9f06c1422def3f8630d2a33642">   22</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> NoUnidad { <span class="keyword">get</span> { <span class="keywordflow">return</span> _nounidad; } set { _nounidad = value; } }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#aca85e685e50da0af6be67e3ee69b1bb1">   24</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> ICollection&lt;Servicio&gt; Servicios { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a6566d517c25b9048021422510c544611">   26</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/dff/class_proyecto___integrador__3_1_1_tipos_dato_1_1_unidad.html#a6566d517c25b9048021422510c544611" title="Determina si esta instancia esta agregada a la base de datos. ">isAdded</a>()</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> !(Uid == Guid.Empty);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_465cd21ea440caa4f6b2a5d61e3d1ea5.html">TiposDato</a></li><li class="navelem"><a class="el" href="../../d1/d5c/_unidad_8cs.html">Unidad.cs</a></li>
-    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:49:55 para SmartCards por
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 20:26:05 para SmartCards por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

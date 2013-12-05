@@ -112,68 +112,68 @@ $(document).ready(function(){initNavTree('d3/d5f/_d_b_manager_8cs_source.html','
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span>Proyecto_Integrador_3</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">public</span> <span class="keyword">partial class </span>DBManagers</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    {</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html">    7</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span>DBManager&lt;T&gt;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        {</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#afc677f4083b556311e37ad8a42cb8dd8">    9</a></span>&#160;            <span class="keyword">protected</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#afc677f4083b556311e37ad8a42cb8dd8">DBManager</a>(<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html" title="Realiza la lógica de la interacción con la base de datos ">DBManagers</a> sender)</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                this.Parent = sender;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            }</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keyword">abstract</span> <span class="keyword">public</span> <span class="keywordtype">void</span> AddToDB();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">abstract</span> <span class="keyword">public</span> <span class="keywordtype">void</span> AddToDataset();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keyword">abstract</span> <span class="keyword">public</span> <span class="keywordtype">void</span> UpdateDBFromDataset();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a49ea2a7bfa58a2c536fefa4d60d488d2">   20</a></span>&#160;            <span class="keyword">virtual</span> <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a49ea2a7bfa58a2c536fefa4d60d488d2">itemModified</a>(<span class="keywordtype">object</span> sender, System.ComponentModel.PropertyChangedEventArgs e)</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                setItem((T)sender);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">abstract</span> <span class="keyword">public</span> <span class="keywordtype">void</span> modificarDato();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a436cb08914ca84122f9019a59485589a">   27</a></span>&#160;            <span class="keyword">virtual</span> <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a436cb08914ca84122f9019a59485589a">RemoveFromDB</a>()</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> NotImplementedException();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">   32</a></span>&#160;            <span class="keyword">protected</span> <a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html" title="Realiza la lógica de la interacción con la base de datos ">DBManagers</a> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">   34</a></span>&#160;            <span class="keyword">protected</span> T <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="comment">//protected SqlCeConnection connection;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a2d552a5e547efd19924ca4a96f685a56">   38</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a2d552a5e547efd19924ca4a96f685a56">setItem</a>(T Input)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                heldItem = Input;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#ad5d7f99a4a5783514bad64ba8894e1ea">   43</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#ad5d7f99a4a5783514bad64ba8894e1ea">Clear</a>()</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                heldItem = <span class="keywordflow">default</span>(T);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#add66e324cef43fd10b491bc697fa60b5">   48</a></span>&#160;            <span class="keyword">protected</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#add66e324cef43fd10b491bc697fa60b5">Active</a>()</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">if</span> (heldItem == null) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a72ee684c84a301ba5a3c48f863bc950f">   54</a></span>&#160;            <span class="keyword">private</span> <span class="keywordtype">string</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a72ee684c84a301ba5a3c48f863bc950f">_error</a>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a6e5caaed2ee1a4d067dfbf5aaa1b1fa8">   56</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">string</span> Error { <span class="keyword">get</span> { <span class="keywordflow">return</span> _error; } set { _error = value; } }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span> <span class="keyword">partial class </span>DBManagers</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html">   10</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span>DBManager&lt;T&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#afc677f4083b556311e37ad8a42cb8dd8">   12</a></span>&#160;            <span class="keyword">protected</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#afc677f4083b556311e37ad8a42cb8dd8">DBManager</a>(<a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html" title="Realiza la lógica de la interacción con la base de datos ">DBManagers</a> sender)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                this.Parent = sender;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">abstract</span> <span class="keyword">public</span> <span class="keywordtype">void</span> AddToDB();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keyword">abstract</span> <span class="keyword">public</span> <span class="keywordtype">void</span> AddToDataset();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">abstract</span> <span class="keyword">public</span> <span class="keywordtype">void</span> UpdateDBFromDataset();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a49ea2a7bfa58a2c536fefa4d60d488d2">   23</a></span>&#160;            <span class="keyword">virtual</span> <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a49ea2a7bfa58a2c536fefa4d60d488d2">itemModified</a>(<span class="keywordtype">object</span> sender, System.ComponentModel.PropertyChangedEventArgs e)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                setItem((T)sender);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">abstract</span> <span class="keyword">public</span> <span class="keywordtype">void</span> modificarDato();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a436cb08914ca84122f9019a59485589a">   30</a></span>&#160;            <span class="keyword">virtual</span> <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a436cb08914ca84122f9019a59485589a">RemoveFromDB</a>()</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> NotImplementedException();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">   35</a></span>&#160;            <span class="keyword">protected</span> <a class="code" href="../../d0/da2/class_proyecto___integrador__3_1_1_d_b_managers.html" title="Realiza la lógica de la interacción con la base de datos ">DBManagers</a> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a06315e75298c8f2fd46f32dc7c9a80b2">Parent</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">   37</a></span>&#160;            <span class="keyword">protected</span> T <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a3b67ae3b5b3b9c3793d56c1407d7dcff">heldItem</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="comment">//protected SqlCeConnection connection;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a2d552a5e547efd19924ca4a96f685a56">   41</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a2d552a5e547efd19924ca4a96f685a56">setItem</a>(T Input)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                heldItem = Input;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#ad5d7f99a4a5783514bad64ba8894e1ea">   46</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#ad5d7f99a4a5783514bad64ba8894e1ea">Clear</a>()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                heldItem = <span class="keywordflow">default</span>(T);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#add66e324cef43fd10b491bc697fa60b5">   51</a></span>&#160;            <span class="keyword">protected</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#add66e324cef43fd10b491bc697fa60b5">Active</a>()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">if</span> (heldItem == null) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a72ee684c84a301ba5a3c48f863bc950f">   57</a></span>&#160;            <span class="keyword">private</span> <span class="keywordtype">string</span> <a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a72ee684c84a301ba5a3c48f863bc950f">_error</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="../../d7/d0e/class_proyecto___integrador__3_1_1_d_b_managers_1_1_d_b_manager_3_01_t_01_4.html#a6e5caaed2ee1a4d067dfbf5aaa1b1fa8">   59</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">string</span> Error { <span class="keyword">get</span> { <span class="keywordflow">return</span> _error; } set { _error = value; } }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_11656a7fbebc48e0f648e9adb3698ec9.html">Manejadores</a></li><li class="navelem"><a class="el" href="../../d3/d5f/_d_b_manager_8cs.html">DBManager.cs</a></li>
-    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 18:49:55 para SmartCards por
+    <li class="footer">Generado el Miércoles, 4 de Diciembre de 2013 20:26:05 para SmartCards por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Proyecto_Integrador_3
 {
+    /// <summary>
+    /// Datos del programa
+    /// </summary>
     public static class Tipos
     {
         /// <summary>
